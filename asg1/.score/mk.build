@@ -1,0 +1,8 @@
+#!/bin/sh -x
+# $Id: mk.build,v 1.1 2010-12-13 17:24:57-08 - - $
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+export PATH
+FILES="README Makefile jfmt.java auxlib.java"
+if [ -r PARTNER ] ; then FILES="$FILES PARTNER" ; fi
+checksource $FILES 2>&1 | tee check.log
+gmake 2>&1 | tee gmake.log

@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting parseint.java
+parseint.java: $Id: parseint.java,v 1.6 2012-01-05 19:31:08-08 - - $
+javac -Xlint parseint.java
+jar cfm parseint Manifest parseint.class
+chmod +x parseint
+rm -f parseint.class
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished parseint.java

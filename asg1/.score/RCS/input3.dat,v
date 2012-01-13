@@ -1,0 +1,58 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2010.12.14.01.24.57;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@	This paragraph is indented by a tab.
+Are tabs deleted at the front of the line?
+
+
+
+
+
+
+
+                    What
+                    about
+                    spaces?
+                    Do
+                    they 
+                    work
+                    like
+                    pfmt.perl?
+
+
+
+a long word should be on a line by itself
+sometimesthereisaverylongwordwhichpokesoutsidethenormalmarginsometimesthereisaverylongwordwhichpokesoutsidethenormalmargin
+if the word exceeds the margin
+
+
+This	paragraph	has	lots	of	tabs	on	input.
+Tabs	should	be	replaced	by	spaces	on	output.
+
+
+                 This paragraph					
+                 has lots of leading					
+                 spaces and trailing					
+                 tabs on input.					
+
+$Id: input3.dat,v 1.1 2010-03-24 16:23:56-07 - - $
+@

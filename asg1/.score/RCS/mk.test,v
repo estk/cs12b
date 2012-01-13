@@ -1,0 +1,54 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2010.12.14.01.24.57;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@#!/bin/sh
+# $Id: mk.test,v 1.1 2010-03-24 16:23:56-07 - - $
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+export PATH
+RUN=runprogram.perl
+PROG=./jfmt
+
+# Test suite (a) - simple stdin
+$RUN -otest-a1 -0input1.dat $PROG
+$RUN -otest-a2 -0input2.dat $PROG
+$RUN -otest-a3 -0input3.dat $PROG
+
+# Test suite (b) - simple args[0]
+$RUN -otest-b1              $PROG input1.dat
+$RUN -otest-b2              $PROG input2.dat
+$RUN -otest-b3              $PROG input3.dat
+
+# Test suite (c) - multiple input
+$RUN -otest-c               $PROG input*.dat
+
+# Test suite (d) - multiple files and stdin
+$RUN -otest-d  -0input2.dat $PROG input1.dat - input3.dat
+
+# Test suite (e) - testing line lengths
+$RUN -otest-e80             $PROG -80 input*.dat
+$RUN -otest-e10             $PROG -10 input*.dat
+
+# Test suite (f) - error tests
+$RUN -otest-f1              $PROG -foobar input1.dat
+$RUN -otest-f2              $PROG /no/such/file input1.dat
+$RUN -otest-f3              $PROG foo bar baz qux
+@

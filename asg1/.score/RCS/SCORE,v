@@ -1,0 +1,106 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2010.12.14.01.24.57;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@$Id: SCORE,v 1.1 2010-03-24 16:23:56-07 - - $
+
+Grader copy all files into student's submit directory.
+Note any negative points in the margin and insert a comment
+as to why points were deducted immediately below it.
+
+=================================================================
+
+SOURCE CODE /30 points
+
+    (3) checksource (look in file check.log):
+        3 pts if 0 to  5 complaints; 2 pts if 6 to 15 complaints;
+        1 pt if 16 to 30 complaints; 0 pts if 31 or more complaints.
+
+    (3) general appearance, decent indentation, 
+        filenames exactly as specified in the astt.
+
+    (3) good use of comments, no 1-letter identifiers,
+        meaningful identifiers
+
+    (3) As per specs, did not code list directly but used
+        List <String> words = new LinkedList <String> ();
+
+    (3) Main function checks for width option and converts string
+        to int.
+
+    (3) Code to iterate over input, adding words to the list,
+        stopping at end of paragraph.
+
+    (3) Code to iterate over list, printing paragraph.
+
+    (3) Output lines are of correct length.
+
+    (3) Used auxlib to print error messages.
+
+    (3) Deleted debug statements from original code
+
+total source points=
+min 1, max 30
+
+=================================================================
+
+PROGRAM TESTING /30 points
+
+    (3) grep STATUS test*.log
+        Are all exit status 0 for test a-e, and 1 for testf*?
+
+    (3) Are all the test*err 0 length files (nothing in them),
+        except test f for errors, and test f has proper error
+        messages.
+
+    (3) Correct output for test suite (a).
+
+    (3) Correct output for test suite (b).
+
+    (3) Test suite (c) - multiple input files merged to stdout.
+
+    (3) Test suite (d) - did stdin (input2) come between input1, 3,
+        where the filename "-" was stdin?
+
+    (3) Test suite (e) - line lengths 10 and 80 respectively.
+
+    (3) Test suite (f1) usage error message
+
+    (3) Test suite (f2) did run input1.dat
+
+    (3) All test runs ran to completion and none caused main
+        to fail on an exception.
+
+total testing points=
+min 0, max 30
+
+=================================================================
+
+SUBTOTAL=
+min 1, max 60
+
+If pair programming, TOTALSCORE = SUBTOTAL - TOTAL1.
+If not, TOTALSCORE = SUBTOTAL.
+
+TOTALSCORE=
+min 1, max 60
+
+@

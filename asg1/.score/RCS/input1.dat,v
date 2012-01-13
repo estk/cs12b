@@ -1,0 +1,45 @@
+head	1.1;
+access;
+symbols;
+locks;
+comment	@# @;
+
+
+1.1
+date	2010.12.14.01.24.57;	author -;	state -;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@-
+@
+text
+@This is test file #1.
+This is test file #1.
+This is test file #1.
+This is test file #1.
+This is test file #1.
+This is test file #1.
+This is test file #1.
+This is test file #1.
+
+It is very regular and is used to check to see if word wrap works.
+It is very regular and is used to check to see if word wrap works.
+It is very regular and is used to check to see if word wrap works.
+It is very regular and is used to check to see if word wrap works.
+It is very regular and is used to check to see if word wrap works.
+It is very regular and is used to check to see if word wrap works.
+It is very regular and is used to check to see if word wrap works.
+It is very regular and is used to check to see if word wrap works.
+
+Does it work with a one line paragraph?
+
+$Id: input1.dat,v 1.1 2010-03-24 16:23:56-07 - - $
+
+@

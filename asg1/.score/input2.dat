@@ -1,0 +1,40 @@
+This is another file of test data for test number two.
+Some lines are short.
+Other lines are very long lines, exceeding even the line length that checksource.perl likes to see and will complain about.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Are multiple input blank lines squeezed to a single output
+blank
+line?
+
+
+
+
+What                    
+happens                    
+if                    
+there                    
+is                     
+only                    
+one                     
+word                    
+per                    
+line.                    
+
+$Id: input2.dat,v 1.1 2010-12-13 17:24:57-08 - - $

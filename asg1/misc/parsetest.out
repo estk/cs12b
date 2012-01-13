@@ -1,0 +1,5 @@
+args[0] = "214748": is int 214748
+args[1] = "hello": NumberFormatException: For input string: "hello"
+args[2] = "-33": is int -33
+args[3] = "": NumberFormatException: For input string: ""
+args[4] = "987": is int 987

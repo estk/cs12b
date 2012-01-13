@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Id: mkp,v 1.1 2012-01-05 19:16:54-08 - - $
+./pfmt.perl ../.score/*.dat >pfmt.output1
+./pfmt.perl -40 *.java >pfmt.output2
+mkpspdf pfmt.listing.ps pfmt.perl $0 pfmt.output*
