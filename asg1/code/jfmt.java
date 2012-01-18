@@ -8,6 +8,7 @@
 //
 
 import java.io.*;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -19,6 +20,7 @@ class jfmt {
    public static final int EXIT_SUCCESS = 0;
    public static final int EXIT_FAILURE = 1;
    public static int exit_status = EXIT_SUCCESS;
+   public static int width = 65;
 
    // A basename is the final component of a pathname.
    // If a java program is run from a jar, the classpath is the
@@ -30,7 +32,6 @@ class jfmt {
       return jarpath.substring (lastslash + 1);
    }
 
-
    // Formats a single file.
    static void format (Scanner infile) {
       // Read each line from the opened file, one after the other.
@@ -56,12 +57,11 @@ class jfmt {
          out.printf ("list:");
 
          // Use iterator syntax to print out all of the words.
-         for (String word: words) out.printf (" %s", word);
+         for (String word: words) out.printf ("%s ", word);
          out.printf ("%n");
       }
    }
 
-
    // Main function scans arguments and opens/closes files.
    public static void main (String[] args) {
       if (args.length == 0) {
@@ -69,6 +69,20 @@ class jfmt {
          out.printf ("FILE: -%n");
          format (new Scanner (in));
       }else {
+         // Check for width option
+		 if (args[0].startsWith("-")) {
+		    int width = Integer.parseInt( args[0].substring(1) );
+			if (args.length == 1) {
+	            // There are no filenames given on the command line.
+	            out.printf ("FILE: -%n");
+	            format (new Scanner (in));
+			}	
+			String[] tmp = new String[args.length-1];
+			for (int i = 0 ; i < args.length; ++i) tmp[i] = args[i+1];
+			args = tmp;
+			out.print("width: " + width);
+		 }
+		 
          // Iterate over each filename given on the command line.
          for (int argix = 0; argix < args.length; ++argix) {
             String filename = args[argix];
