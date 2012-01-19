@@ -21,6 +21,8 @@ class jfmt {
    public static final int EXIT_FAILURE = 1;
    public static int exit_status = EXIT_SUCCESS;
    public static int width = 65;
+   public static int wcount = 0;
+   public static boolean blankline = false;
    
 	public static int get_width(String[] args) {
 		try {
@@ -42,28 +44,17 @@ class jfmt {
       return jarpath.substring (lastslash + 1);
    }
    
-   static void printParagraph(List<String> words) {
-	   StringBuffer strBuf = new StringBuffer();
-	   if (words.size() == 0) return;
-	   for (String word: words) {
-		   if (strBuf.length() + word.length() > width) {
-			   if (strBuf.length() != 0) {
-				   String str = strBuf.toString();
-			   	   str = str.replaceAll("\\s+$", "");
-			       out.println( str );
-			       strBuf = new StringBuffer();
-			   }
-		   }
-		   strBuf.append(word + " ");
-	   }
+   // prints an array of words that comprise a paragraph.
+   static void printParagraph(StringBuffer strBuf) {
 	   String str = strBuf.toString();
-	   str = str.replaceAll("\\s+$", "");
-	   out.println( str );
+	   str = str.replaceAll("\\s+\n", "\n");
+   	   str = str.replaceAll("\\s+$", "");
+	   out.printf( "%s%n%n", str );
    }
 
-   // Formats a single file.
    static void format (Scanner infile) {
 	   out.printf("%n");
+	   StringBuffer strBuf = new StringBuffer();
 	   for (int linenr = 1; infile.hasNextLine (); ++ linenr) {
 		   String line = infile.nextLine ();
 		   List<String> words = new LinkedList<String> ();
@@ -71,8 +62,26 @@ class jfmt {
 			   if (word.length () == 0) continue;
 			   words.add(word);
 		   }
-		   printParagraph(words);
+		   if (words.size() == 0) {
+			   if (blankline) { continue; }
+			   else {
+				   printParagraph(strBuf);
+				   blankline = true;
+				   strBuf = new StringBuffer();
+				   wcount = 0;
+			   }
+		   }
+		   else {
+		      for (String word : words) {
+				  // out.println("wcount == " + wcount);
+				  if (wcount + word.length() > width) { strBuf.append("\n"); wcount = 0; }
+				  strBuf.append(word + " ");
+	  			   blankline = false;
+				  wcount += word.length() + 1;
+			  }
+	       }
 	   }
+	   wcount = 0;
    }
 
 
