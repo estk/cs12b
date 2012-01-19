@@ -21,8 +21,6 @@ class jfmt {
    public static final int EXIT_FAILURE = 1;
    public static int exit_status = EXIT_SUCCESS;
    public static int width = 65;
-   public static boolean newLine = false;
-   
    
 	public static int get_width(String[] args) {
 		try {
@@ -46,12 +44,13 @@ class jfmt {
    
    static void printParagraph(List<String> words) {
 	   StringBuffer strBuf = new StringBuffer();
+	   if (words.size() == 0) return;
 	   for (String word: words) {
 		   if (strBuf.length() + word.length() > width) {
 			   if (strBuf.length() != 0) {
 				   String str = strBuf.toString();
 			   	   str = str.replaceAll("\\s+$", "");
-			       out.print( str );
+			       out.println( str );
 			       strBuf = new StringBuffer();
 			   }
 		   }
@@ -59,7 +58,7 @@ class jfmt {
 	   }
 	   String str = strBuf.toString();
 	   str = str.replaceAll("\\s+$", "");
-	   out.print( str );
+	   out.println( str );
    }
 
    // Formats a single file.
