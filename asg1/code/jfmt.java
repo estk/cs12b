@@ -21,6 +21,18 @@ class jfmt {
    public static final int EXIT_FAILURE = 1;
    public static int exit_status = EXIT_SUCCESS;
    public static int width = 65;
+   public static boolean newLine = false;
+   
+   
+	public static int get_width(String[] args) {
+		try {
+			return( Integer.parseInt( args[0].substring(1) ) );
+		}catch (NumberFormatException error) {
+			out.printf ("NumberFormatException: %s%n",
+		            error.getMessage());
+			return(65);
+		}
+	}
 
    // A basename is the final component of a pathname.
    // If a java program is run from a jar, the classpath is the
@@ -31,36 +43,39 @@ class jfmt {
       if (lastslash < 0) return jarpath;
       return jarpath.substring (lastslash + 1);
    }
+   
+   static void printParagraph(List<String> words) {
+	   StringBuffer strBuf = new StringBuffer();
+	   for (String word: words) {
+		   if (strBuf.length() + word.length() > width) {
+			   if (strBuf.length() != 0) {
+				   String str = strBuf.toString();
+			   	   str = str.replaceAll("\\s+$", "");
+			       out.print( str );
+			       strBuf = new StringBuffer();
+			   }
+		   }
+		   strBuf.append(word + " ");
+	   }
+	   String str = strBuf.toString();
+	   str = str.replaceAll("\\s+$", "");
+	   out.print( str );
+   }
 
    // Formats a single file.
    static void format (Scanner infile) {
-      // Read each line from the opened file, one after the other.
-      // Stop the loop at end of file.
-      for (int linenr = 1; infile.hasNextLine (); ++linenr) {
-         String line = infile.nextLine ();
-         out.printf ("line %3d: [%s]%n", linenr, line);
-
-         // Create a LinkedList of Strings.
-         List<String> words = new LinkedList<String> ();
-
-         // Split the line into words around white space and iterate
-         // over the words.
-         for (String word: line.split ("\\s+")) {
-
-            // Skip an empty word if such is found.
-            if (word.length () == 0) continue;
-            out.printf ("...[%s]%n", word);
-            // Append the word to the end of the linked list.
-            words.add (word);
-
-         }
-         out.printf ("list:");
-
-         // Use iterator syntax to print out all of the words.
-         for (String word: words) out.printf ("%s ", word);
-         out.printf ("%n");
-      }
+	   out.printf("%n");
+	   for (int linenr = 1; infile.hasNextLine (); ++ linenr) {
+		   String line = infile.nextLine ();
+		   List<String> words = new LinkedList<String> ();
+		   for (String word : line.split("\\s+")) {
+			   if (word.length () == 0) continue;
+			   words.add(word);
+		   }
+		   printParagraph(words);
+	   }
    }
+
 
    // Main function scans arguments and opens/closes files.
    public static void main (String[] args) {
@@ -71,16 +86,16 @@ class jfmt {
       }else {
          // Check for width option
 		 if (args[0].startsWith("-")) {
-		    int width = Integer.parseInt( args[0].substring(1) );
+		    int width = get_width(args);
 			if (args.length == 1) {
 	            // There are no filenames given on the command line.
 	            out.printf ("FILE: -%n");
 	            format (new Scanner (in));
-			}	
+			}
 			String[] tmp = new String[args.length-1];
 			for (int i = 0 ; i < args.length; ++i) tmp[i] = args[i+1];
 			args = tmp;
-			out.print("width: " + width);
+			out.print("width: " + width); // debug
 		 }
 		 
          // Iterate over each filename given on the command line.
@@ -94,7 +109,7 @@ class jfmt {
                // Open the file and read it, or error out.
                try {
                   Scanner infile = new Scanner (new File (filename));
-                  out.printf ("FILE: %s%n", filename);
+                  // out.printf ("FILE: %s%n", filename); // debug
                   format (infile);
                   infile.close ();
                }catch (IOException error) {
