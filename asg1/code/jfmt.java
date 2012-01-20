@@ -22,13 +22,12 @@ class jfmt {
    public static int exit_status = EXIT_SUCCESS;
    public static int width = 65;
    
-	public static int get_width(String[] args) {
+	public static void set_width(String[] args) {
 		try {
-			return( Integer.parseInt( args[0].substring(1) ) );
+			width = Integer.parseInt( args[0].substring(1) );
 		}catch (NumberFormatException error) {
 			out.printf ("NumberFormatException: %s%n",
 		            error.getMessage());
-			return(65);
 		}
 	}
 
@@ -95,16 +94,18 @@ class jfmt {
       }else {
          // Check for width option
 		 if (args[0].startsWith("-")) {
-		    int width = get_width(args);
+		    set_width(args);
 			if (args.length == 1) {
 	            // There are no filenames given on the command line.
 	            out.printf ("FILE: -%n");
 	            format (new Scanner (in));
 			}
+			else {
 			String[] tmp = new String[args.length-1];
-			for (int i = 0 ; i < args.length; ++i) tmp[i] = args[i+1];
+			for (int i = 0 ; i < tmp.length; ++i) tmp[i] = args[i+1];
 			args = tmp;
 			// out.print("width: " + width); // debug
+			}
 		 }
 		 
          // Iterate over each filename given on the command line.
