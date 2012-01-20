@@ -1,6 +1,7 @@
 #!/bin/sh -x
 # $Id$
 
-javac exit1.javaecho Main-class: exit1 >Manifest
+javac exit1.java
+echo Main-class: exit1 >Manifest
 jar cvfm exit1 Manifest exit1.class
 yes | rm -i Manifest exit1.class
