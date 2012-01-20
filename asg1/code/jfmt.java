@@ -21,8 +21,6 @@ class jfmt {
    public static final int EXIT_FAILURE = 1;
    public static int exit_status = EXIT_SUCCESS;
    public static int width = 65;
-   public static int wcount = 0;
-   public static boolean blankline = false;
    
 	public static int get_width(String[] args) {
 		try {
@@ -49,12 +47,14 @@ class jfmt {
 	   String str = strBuf.toString();
 	   str = str.replaceAll("\\s+\n", "\n");
    	   str = str.replaceAll("\\s+$", "");
-	   out.printf( "%s%n%n", str );
+	   out.printf( "%s%n", str );
    }
 
    static void format (Scanner infile) {
 	   out.printf("%n");
 	   StringBuffer strBuf = new StringBuffer();
+	   int wcount = 0;
+	   boolean blankline = false;
 	   for (int linenr = 1; infile.hasNextLine (); ++ linenr) {
 		   String line = infile.nextLine ();
 		   List<String> words = new LinkedList<String> ();
@@ -66,6 +66,7 @@ class jfmt {
 			   if (blankline) { continue; }
 			   else {
 				   printParagraph(strBuf);
+				   out.printf("%n");
 				   blankline = true;
 				   strBuf = new StringBuffer();
 				   wcount = 0;
@@ -81,7 +82,7 @@ class jfmt {
 			  }
 	       }
 	   }
-	   wcount = 0;
+	   if (!blankline) printParagraph(strBuf);
    }
 
 
@@ -103,7 +104,7 @@ class jfmt {
 			String[] tmp = new String[args.length-1];
 			for (int i = 0 ; i < args.length; ++i) tmp[i] = args[i+1];
 			args = tmp;
-			out.print("width: " + width); // debug
+			// out.print("width: " + width); // debug
 		 }
 		 
          // Iterate over each filename given on the command line.
