@@ -1,0 +1,201 @@
+CMPS-012M · Winter 2012 · Lab 2 · Unix, shells, gmake           page 1
+$Id: lab2u-unix-shells.mm,v 1.30 2012-01-17 19:43:17-08 - - $
+/afs/cats.ucsc.edu/courses/cmps012b-wm/Labs-cmps012m/lab2u-unix-
+shells
+
+/usr/share/groff/1.18.1.1/tmac/gm.tmac:1593: backtrace: string `F'
+lab2u-unix-shells.mm:289: warning: request results in non-positive
+point size; set to 1 In this lab, you will become familiar with some
+features of Unix and its shells.  Unix interaction is generally done
+with either the bash shell or the tcsh shell.
+
+1.  Reading assignment
+
+Following are suggested readings to become familiar with Unix:
+
+ (a) Your Unix, by Sumitabha Das, chapters 1-4 and 7.  If you have a
+     different Unix book, read the introductory chapters.
+
+ (b) Unix is a Four Letter Word... and Vi is a Two Letter
+     Abbreviation, available at:
+        http://unix.t-a-y-l-o-r.com/,
+        /afs/cats.ucsc.edu/courses/cmps012b-wm/Tutorials/unix.t-a-y-l-
+     o-r.com,
+        http://www2.ucsc.edu/courses/cmps012b-wm/://Tutorials/unix.t-
+     a-y-l-o-r.com/.
+
+ (c) http://www2.ucsc.edu/courses/cmps012b-wm/://Tutorials/www.ee.
+     surrey.ac.uk/unixtut/
+     is another source for learning Unix.
+
+ (d) You should also be learning one of the editors vi, vim, gvim, or
+     emacs.
+
+ (e) The UCSC library has subscribed to Safai Books Online
+        http://proquest.safaribooksonline.com/
+     so if you go to that URL using a UCSC computer, you can read them
+     for free.  Search for ``Learning the Unix Operating System''.
+
+Note that there is no web page for this course, but the Unix directory
+/afs/cats.ucsc.edu/courses/cmps012b-wm is accessible from the web from
+http://www2.ucsc.edu/courses/cmps012b-wm/:/.
+
+2.  Lab exercises
+
+Following are the lab exercises you are to do.  For each one submit a
+file as specified under each point.
+
+ (1) The find(1) command is a useful one for locating files when you
+     know the name or part of it and don't remember which directory it
+     is in.  Find all of the files in my directory that contain the
+     word ``yes'' as part of the filename:
+        cd /afs/cats.ucsc.edu/courses/cmps012b-wm
+        find . -name '*yes*'
+     Note that many error messages are generated to stderr because you
+     don't have permission to access some of my directories.  Stop
+     this by redirecting stderr:
+        find . -name '*yes*' 2>/dev/null
+     The file /dev/null is a pseudo-device which discards bytes
+     written to it.1 The above command works only with bash.  Now
+     redirect the output into the file you are to submit:
+        find . -name '*yes*' >~/files.found 2>/dev/null
+
+     Submit:  files.found
+
+ (2) Make sure that my bin scripts directory is in your path.  This is
+     done in one of two ways, depending on which shell you use.
+
+      (i) If you use bash:  Put the following line in ~/.bashrc, that
+          is, a file in your home directory:
+             export PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/
+          bin
+          Then source it with the command:
+             . ~/.bashrc
+
+          Submit:  .bashrc
+
+     (ii) If you use tcsh or csh:  Put the following line in ~/.cshrc:
+             set path=($path /afs/cats.ucsc.edu/courses/cmps012b-wm/
+          bin)
+          Then source it with:
+             source ~/.cshrc
+
+          Submit:  .cshrc
+     Type the commands:
+        which checksource >which.scripts
+        which cid >>which.scripts
+     Note that > redirects and (re)creates the file, but >> appends to
+     the file.
+
+     Submit:  which.scripts
+
+ (3) Write a program in Java that will print the message ``EXIT 1'' to
+     the standard error and the exit with a status of 1.
+
+     Submit:  exit1.java
+
+     Write a shell script called mkexit1 which compiles that program
+     and puts it in a jar file.  The first line of the script must be
+        #!/bin/sh -x
+     The second line should be an RCS Id string:
+        # $Id$
+     Also put the RCS Id string in your java program from the previous
+     part.
+
+ (4) Type the following commands at a terminal and note that they
+     build a jar:
+        javac exit1.java
+        echo Main-class: exit1 >Manifest
+        jar cvfm exit1 Manifest exit1.class
+        yes | rm -i Manifest exit1.class
+     Put all of them in the script file mkexit1 Use chmod +x mkexit1
+     to make it executable.  Run the script by typing its name at the
+     command line:
+        mkexit1
+        exit1 >/dev/null
+        echo $?
+     Note that you still see the error message.  The last of these
+     command shows you the exit status.
+
+     Submit:  mkexit1
+
+ (5) Use my script cid to check these files into an RCS subdirectory
+     before submitting.  If you have already submitted, check them in,
+     and submit again.  Note that ci will edit the RCS Id line, and it
+     must always be in a comment in any program or script file.
+
+ (6) Use the find(1) command to find all files in all of my courses/
+     cmps012b-wm directories which have the characters auxlib as part
+     of their names.  Redirect stdout but not stderr when running that
+     command into a file called auxlib.found.
+
+     Submit:  auxlib.found
+
+ (7) Use a command to find all files in my directory that match the
+     wildcard *.java and pipe this into the command xargs grep -li
+     auxlib.  The pipe is the stick character (|).  Redirect stdout
+     into a file called java.auxlibs.
+
+     Submit:  java.auxlibs
+
+ (8) Pipe example:
+        sed 's/.*://' /etc/passwd | sort | uniq -c | sort
+     This shows you how many people are using each shell.  Redirect
+     the output of this command into a file called shell.count.
+
+     Submit:  shell.count
+
+ (9) Verify that your private directory is properly protected.  Use
+     the command fs la $HOME/private, and redirect its output into a
+     file called privacy.  Append to this file the output from the
+     command echo $HOME.
+
+     Submit:  privacy
+
+(10) Make a copy of exit1.java, calling it exit255.java, and have it
+     return an exit code of 255.  Create a Makefile with a target all,
+     which depends on the jar file exit255.  The jar target exit255
+     depends on exit255.class, which, in turn, depends on
+     exit255.java.  Add commands under the last two dependencies such
+     that it builds the jar.
+
+     Submit:  exit255.java
+
+(11) To this same Makefile, add a target called test, which runs the
+     jar exit255, redirecting its output into a file called
+     255.output.  It then appends the value of the exit code to that
+     same file.  Do not submit 255.output, the grader will create it
+     via gmake test.
+
+     Submit:  Makefile
+
+(12) Run the command
+        grep '^ *Submit:' *.tt
+     and redirect its output into a file called grep.submit.
+
+     Submit:  grep.submit
+
+3.  What to submit
+
+You were instructed to submit many files.  Verify each of them by
+looking in the submit directory.  If you are in doubt as to the
+contents of a file you submitted, submit it again.  You may submit any
+file as many times as you want, as long as you do it before the due
+date.
+
+If you are doing pair programming, also submit README and PARTNER.
+Run partnercheck to verify that your PARTNER file is correct.
+
+Look in the subdirectory .score for instructions to the graders.
+
+Read the submit checklist file in the generic syllabus directory.
+
+2
+
+____________________
+
+1. It's the bit bucket.  Empty it when full.  :-)
+
+2. With  apologies  to  Marcus  Porcius  Cato  Maior  (DXX-DCV   AUC):
+   «Praeterea, censeo Microflaccidem esse delendam.»
+

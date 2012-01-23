@@ -5,8 +5,8 @@
 5: done
 6: done
 7: done
-8:
+8: done
 9: done
-10: 
-11: 
-12:
+10: done 
+11: done
+12: done
