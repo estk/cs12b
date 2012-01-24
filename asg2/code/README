@@ -1,0 +1,10 @@
+This directory contains starter code for your project and a
+Makefile which can be used to build it.  Begin by copying this
+directory int your private volume before beginning work.
+
+The Perl program is not part of your project, but is a reference
+implementation.  Your program should produce the same output,
+except possibly for minor variations in the format of the error
+messages.
+
+$Id: README,v 1.1 2010-04-13 13:21:40-07 - - $

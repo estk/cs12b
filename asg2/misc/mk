@@ -1,0 +1,4 @@
+#!/bin/sh
+# $Id$
+cid + pxref.perl
+mkpspdf ../asg2j-jxref.misc.ps pxref.perl

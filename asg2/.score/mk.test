@@ -1,0 +1,13 @@
+#!/bin/sh
+# $Id: mk.test,v 1.1 2010-04-13 13:22:30-07 - - $
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+export PATH
+RUN=runprogram.perl
+PROG=./jxref
+$RUN -otest0a             $PROG test0.in
+$RUN -otest0b  -0test0.in $PROG
+$RUN -otest1a             $PROG test1.in
+$RUN -otest1b  -0test1.in $PROG
+$RUN -otest2              $PROG *.in
+$RUN -otestmk             $PROG mk.*
+$RUN -otesterr            $PROG /foo/bar ./nosuchfile /dev/null

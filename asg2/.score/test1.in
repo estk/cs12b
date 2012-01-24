@@ -1,0 +1,14 @@
+This is a file of test data.
+Some of the words are repeated.
+Does your output match the output given by pxref.perl?
+The assignment requires creating a cross reference or xref.
+
+This is a file of test data.
+This is a file of test data.
+
+Some lines are empty.
+Most of the lines have words in them.
+Check for punctuation and hyph-enated words.
+Don't doesn't doesn't.
+10:43.
+$Id: test1.in,v 1.1 2010-04-13 13:22:30-07 - - $.

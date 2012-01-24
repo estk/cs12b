@@ -1,0 +1,765 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/20/12)Tj
+-0.659766 -12.8004 Td
+(17:24:00)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 279.296 736.5 Tm
+(jxref.java)Tj
+-119.585 18 Td
+($cmps012b-wm/Assignments/asg2j-jxref-lists/code/)Tj
+/R10 10 Tf
+-91.7113 -35.5 Td
+[(1:)-600(// $Id: jxref.java,v 1.11 2012-01-19 19:43:07-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(import java.io.*;)]TJ
+T*[(4:)-600(import java.util.Iterator;)]TJ
+T*[(5:)-600(import java.util.Map.Entry;)]TJ
+T*[(6:)-600(import java.util.NoSuchElementException;)]TJ
+T*[(7:)-600(import java.util.Scanner;)]TJ
+T*[(8:)-600(import java.util.regex.Matcher;)]TJ
+T*[(9:)-600(import java.util.regex.Pattern;)]TJ
+-6 -11 Td
+[(10:)-600(import static java.lang.System.*;)]TJ
+(11:)'
+T*[(12:)-600(class jxref {)]TJ
+T*[(13:)-600(   // Static program constants.)]TJ
+T*[(14:)-600(   private static final String STDIN_FILENAME = "-";)]TJ
+T*[(15:)-600(   private static final String JARNAME = get_jarname\(\);)]TJ
+T*[(16:)-600(   private static final int EXIT_SUCCESS = 0;)]TJ
+T*[(17:)-600(   private static final int EXIT_FAILURE = 1;)]TJ
+(18:)'
+T*[(19:)-600(   // Static exit status variable.)]TJ
+T*[(20:)-600(   private static int exit_status = EXIT_SUCCESS;)]TJ
+(21:)'
+T*[(22:)-600(   // A basename is the final component of a pathname.)]TJ
+T*[(23:)-600(   // If a java program is run from a jar, the classpath is the)]TJ
+T*[(24:)-600(   // pathname of the jar.)]TJ
+T*[(25:)-600(   private static String get_jarname\(\) {)]TJ
+T*[(26:)-600(      String jarpath = getProperty \("java.class.path"\);)]TJ
+T*[(27:)-600(      int lastslash = jarpath.lastIndexOf \('/'\);)]TJ
+T*[(28:)-600(      if \(lastslash < 0\) return jarpath;)]TJ
+T*[(29:)-600(      return jarpath.substring \(lastslash + 1\);)]TJ
+T*[(30:)-600(   })]TJ
+(31:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+2030
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/20/12)Tj
+-0.659766 -12.8004 Td
+(17:24:00)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 279.296 736.5 Tm
+(jxref.java)Tj
+-119.585 18 Td
+($cmps012b-wm/Assignments/asg2j-jxref-lists/code/)Tj
+/R10 10 Tf
+-97.7113 -35.5 Td
+(32:)Tj
+11 TL
+T*[(33:)-600(   private static final String WORD_REGEX = "\\\\w+\([-'.:/]\\\\w+\)*";)]TJ
+T*[(34:)-600(   private static final Pattern WORD_PATTERN)]TJ
+T*[(35:)-600(                      = Pattern.compile \(WORD_REGEX\);)]TJ
+T*[(36:)-600(   private static void xref_file \(String filename, Scanner file\) {)]TJ
+T*[(37:)-600(      err.printf \("TRACE: filename = %s%n", filename\);)]TJ
+T*[(38:)-600(      listmap map = new listmap\(\);)]TJ
+T*[(39:)-600(      for \(int linenr = 1; file.hasNextLine\(\); ++linenr\) {)]TJ
+T*[(40:)-600(         String line = file.nextLine\(\);)]TJ
+T*[(41:)-600(         err.printf \("TRACE: %s: %4d: %s%n", filename, linenr, line\);)]TJ
+T*[(42:)-600(         Matcher match = WORD_PATTERN.matcher \(line\);)]TJ
+T*[(43:)-600(         while \(match.find\(\)\) {)]TJ
+T*[(44:)-600(            String word = match.group\(\);)]TJ
+T*[(45:)-600(            err.printf \("TRACE: word = %s%n", word\);)]TJ
+T*[(46:)-600(         })]TJ
+T*[(47:)-600(      })]TJ
+T*[(48:)-600(      for \(Entry<String, intqueue> entry: map\) {)]TJ
+T*[(49:)-600(         err.printf \("STUB: %s \(%s, %s\)%n", entry,)]TJ
+T*[(50:)-600(                     entry.getKey\(\), entry.getValue\(\)\);)]TJ
+T*[(51:)-600(      })]TJ
+T*[(52:)-600(   })]TJ
+(53:)'
+T*[(54:)-600(   // For each filename, open the file, cross reference it, and print.)]TJ
+T*[(55:)-600(   private static void xref_filename \(String filename\) {)]TJ
+T*[(56:)-600(      if \(filename.equals \(STDIN_FILENAME\)\) {)]TJ
+T*[(57:)-600(         xref_file \(filename, new Scanner \(System.in\)\);)]TJ
+T*[(58:)-600(      }else {)]TJ
+T*[(59:)-600(         try {)]TJ
+T*[(60:)-600(            Scanner file = new Scanner \(new File \(filename\)\);)]TJ
+T*[(61:)-600(            xref_file \(filename, file\);)]TJ
+T*[(62:)-600(            file.close\(\);)]TJ
+T*[(63:)-600(         }catch \(IOException error\) {)]TJ
+T*[(64:)-600(            exit_status = EXIT_FAILURE;)]TJ
+T*[(65:)-600(            err.printf \("%s: %s%n", JARNAME, error.getMessage\(\)\);)]TJ
+T*[(66:)-600(         })]TJ
+T*[(67:)-600(      })]TJ
+T*[(68:)-600(   })]TJ
+(69:)'
+T*[(70:)-600(   // Main function scans arguments to cross reference files.)]TJ
+T*[(71:)-600(   public static void main \(String[] args\) {)]TJ
+T*[(72:)-600(      if \(args.length == 0\) {)]TJ
+T*[(73:)-600(         // No files specified on the command line.)]TJ
+T*[(74:)-600(         xref_filename \(STDIN_FILENAME\);)]TJ
+T*[(75:)-600(      }else {)]TJ
+T*[(76:)-600(         // Iterate over each filename given on the command line.)]TJ
+T*[(77:)-600(         for \(int argi = 0; argi < args.length; ++argi\) {)]TJ
+T*[(78:)-600(            xref_filename \(args[argi]\);)]TJ
+T*[(79:)-600(         })]TJ
+T*[(80:)-600(      })]TJ
+T*[(81:)-600(      exit \(exit_status\);)]TJ
+T*[(82:)-600(   })]TJ
+(83:)'
+T*[(84:)-600(})]TJ
+(85:)'
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+3350
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/20/12)Tj
+-0.659766 -12.8004 Td
+(17:24:00)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 271.974 736.5 Tm
+(listmap.java)Tj
+-112.263 18 Td
+($cmps012b-wm/Assignments/asg2j-jxref-lists/code/)Tj
+/R10 10 Tf
+-91.7113 -35.5 Td
+[(1:)-600(// $Id: listmap.java,v 1.13 2012-01-19 19:43:07-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(import java.util.Iterator;)]TJ
+T*[(4:)-600(import java.util.Map.Entry;)]TJ
+T*[(5:)-600(import java.util.NoSuchElementException;)]TJ
+T*[(6:)-600(import static java.lang.System.*;)]TJ
+(7:)'
+T*[(8:)-600(class listmap implements Iterable<Entry<String, intqueue>> {)]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(   private node head = null;)]TJ
+T*[(11:)-600(   private class node implements Entry<String, intqueue> {)]TJ
+T*[(12:)-600(      String key;)]TJ
+T*[(13:)-600(      intqueue queue = new intqueue\(\);)]TJ
+T*[(14:)-600(      node link;)]TJ
+T*[(15:)-600(      public String getKey\(\) {)]TJ
+T*[(16:)-600(         return key;)]TJ
+T*[(17:)-600(      })]TJ
+T*[(18:)-600(      public intqueue getValue\(\) {)]TJ
+T*[(19:)-600(         return queue;)]TJ
+T*[(20:)-600(      })]TJ
+T*[(21:)-600(      public intqueue setValue \(intqueue queue\) {)]TJ
+T*[(22:)-600(         throw new UnsupportedOperationException\(\);)]TJ
+T*[(23:)-600(      })]TJ
+T*[(24:)-600(   })]TJ
+(25:)'
+T*[(26:)-600(   public listmap\(\) {)]TJ
+T*[(27:)-600(      err.printf \("TRACE: new %s%n", this\);)]TJ
+T*[(28:)-600(   })]TJ
+(29:)'
+T*[(30:)-600(   public void insert \(String key, int linenr\) {)]TJ
+T*[(31:)-600(      err.printf \("STUB: insert \(%s, %s\)%n", key, linenr\);)]TJ
+T*[(32:)-600(   })]TJ
+(33:)'
+T*[(34:)-600(   public Iterator<Entry<String, intqueue>> iterator\(\) {)]TJ
+T*[(35:)-600(      return new itor\(\);)]TJ
+T*[(36:)-600(   })]TJ
+(37:)'
+T*[(38:)-600(   private class itor implements Iterator<Entry<String, intqueue>> {)]TJ
+T*[(39:)-600(      node curr = head;)]TJ
+(40:)'
+T*[(41:)-600(      public boolean hasNext\(\) {)]TJ
+T*[(42:)-600(         return curr != null;)]TJ
+T*[(43:)-600(      })]TJ
+(44:)'
+T*[(45:)-600(      public Entry<String, intqueue> next\(\) {)]TJ
+T*[(46:)-600(         if \(curr == null\) throw new NoSuchElementException\(\);)]TJ
+T*[(47:)-600(         node next = curr;)]TJ
+T*[(48:)-600(         curr = curr.link;)]TJ
+T*[(49:)-600(         return next;)]TJ
+T*[(50:)-600(      })]TJ
+(51:)'
+T*[(52:)-600(      public void remove\(\) {)]TJ
+T*[(53:)-600(         throw new UnsupportedOperationException\(\);)]TJ
+T*[(54:)-600(      })]TJ
+(55:)'
+T*[(56:)-600(   })]TJ
+(57:)'
+T*[(58:)-600(})]TJ
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+2805
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/20/12)Tj
+-0.659766 -12.8004 Td
+(17:24:00)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 268.481 736.5 Tm
+(intqueue.java)Tj
+-108.77 18 Td
+($cmps012b-wm/Assignments/asg2j-jxref-lists/code/)Tj
+/R10 10 Tf
+-91.7113 -35.5 Td
+[(1:)-600(// $Id: intqueue.java,v 1.4 2012-01-19 19:43:07-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(import java.util.Iterator;)]TJ
+T*[(4:)-600(import java.util.NoSuchElementException;)]TJ
+(5:)'
+T*[(6:)-600(class intqueue implements Iterable<Integer> {)]TJ
+(7:)'
+T*[(8:)-600(   private int count = 0;)]TJ
+T*[(9:)-600(   private node front = null;)]TJ
+-6 -11 Td
+[(10:)-600(   private node rear = null;)]TJ
+T*[(11:)-600(   private class node {)]TJ
+T*[(12:)-600(      int linenr;)]TJ
+T*[(13:)-600(      node link;)]TJ
+T*[(14:)-600(   })]TJ
+(15:)'
+T*[(16:)-600(   public void insert \(int number\) {)]TJ
+T*[(17:)-600(      ++count;)]TJ
+T*[(18:)-600(   })]TJ
+(19:)'
+T*[(20:)-600(   public boolean empty\(\) {)]TJ
+T*[(21:)-600(      return count == 0;)]TJ
+T*[(22:)-600(   })]TJ
+(23:)'
+T*[(24:)-600(   public int getcount\(\) {)]TJ
+T*[(25:)-600(      return count;)]TJ
+T*[(26:)-600(   })]TJ
+(27:)'
+T*[(28:)-600(   public Iterator<Integer> iterator\(\) {)]TJ
+T*[(29:)-600(      return new itor\(\);)]TJ
+T*[(30:)-600(   })]TJ
+(31:)'
+T*[(32:)-600(   private class itor implements Iterator<Integer> {)]TJ
+T*[(33:)-600(      node curr = front;)]TJ
+(34:)'
+T*[(35:)-600(      public boolean hasNext\(\) {)]TJ
+T*[(36:)-600(         return curr != null;)]TJ
+T*[(37:)-600(      })]TJ
+(38:)'
+T*[(39:)-600(      public Integer next\(\) {)]TJ
+T*[(40:)-600(         if \(curr == null\) throw new NoSuchElementException\(\);)]TJ
+T*[(41:)-600(         Integer next = curr.linenr;)]TJ
+T*[(42:)-600(         curr = curr.link;)]TJ
+T*[(43:)-600(         return next;)]TJ
+T*[(44:)-600(      })]TJ
+(45:)'
+T*[(46:)-600(      public void remove\(\) {)]TJ
+T*[(47:)-600(         throw new UnsupportedOperationException\(\);)]TJ
+T*[(48:)-600(      })]TJ
+T*[(49:)-600(   })]TJ
+(50:)'
+T*[(51:)-600(})]TJ
+(52:)'
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+2294
+endobj
+26 0 obj
+<</Length 27 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/20/12)Tj
+-0.659766 -12.8004 Td
+(17:24:00)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.773 736.5 Tm
+(Makefile)Tj
+-121.061 18 Td
+($cmps012b-wm/Assignments/asg2j-jxref-lists/code/)Tj
+/R10 10 Tf
+-91.7113 -35.5 Td
+[(1:)-600(# $Id: Makefile,v 1.3 2012-01-19 19:14:44-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(JAVASRC    = jxref.java listmap.java intqueue.java)]TJ
+T*[(4:)-600(SOURCES    = ${JAVASRC} Makefile README)]TJ
+T*[(5:)-600(MAINCLASS  = jxref)]TJ
+T*[(6:)-600(CLASSES    = ${JAVASRC:.java=.class})]TJ
+T*[(7:)-600(JARCLASSES = ${CLASSES} \\)]TJ
+T*[(8:)-600(             intqueue\\$$1.class listmap\\$$1.class \\)]TJ
+T*[(9:)-600(             intqueue\\$$itor.class listmap\\$$itor.class \\)]TJ
+-6 -11 Td
+[(10:)-600(             intqueue\\$$node.class listmap\\$$node.class)]TJ
+T*[(11:)-600(JARFILE    = jxref)]TJ
+T*[(12:)-600(LISTING    = ../asg2j-jxref.code.ps)]TJ
+T*[(13:)-600(SUBMITDIR  = cmps012b-wm.w12 asg2)]TJ
+(14:)'
+T*[(15:)-600(all : ${JARFILE})]TJ
+(16:)'
+T*[(17:)-600(${JARFILE} : ${CLASSES})]TJ
+T*[(18:)-600(        echo Main-class: ${MAINCLASS} >Manifest)]TJ
+T*[(19:)-600(        jar cvfm ${JARFILE} Manifest ${JARCLASSES})]TJ
+T*[(20:)-600(        chmod +x ${JARFILE})]TJ
+(21:)'
+T*[(22:)-600(%.class : %.java)]TJ
+T*[(23:)-600(        - checksource $<)]TJ
+T*[(24:)-600(        - cid + $<)]TJ
+T*[(25:)-600(        javac $<)]TJ
+(26:)'
+T*[(27:)-600(clean :)]TJ
+T*[(28:)-600(        - rm ${JARCLASSES} Manifest)]TJ
+(29:)'
+T*[(30:)-600(spotless : clean)]TJ
+T*[(31:)-600(        - rm ${JARFILE})]TJ
+(32:)'
+T*[(33:)-600(ci : ${SOURCES})]TJ
+T*[(34:)-600(        - checksource ${SOURCES})]TJ
+T*[(35:)-600(        cid + ${SOURCES})]TJ
+(36:)'
+T*[(37:)-600(lis : ${SOURCES})]TJ
+T*[(38:)-600(        mkpspdf ${LISTING} ${SOURCES})]TJ
+(39:)'
+T*[(40:)-600(submit : ${SOURCES})]TJ
+T*[(41:)-600(        submit ${SUBMITDIR} ${SOURCES})]TJ
+(42:)'
+T*[(43:)-600(again : ${SOURCES})]TJ
+T*[(44:)-600(        gmake --no-print-directory spotless ci all lis)]TJ
+T*[(45:)-600(        )]TJ
+ET
+Q
+Q
+endstream
+endobj
+27 0 obj
+2279
+endobj
+30 0 obj
+<</Length 31 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/20/12)Tj
+-0.659766 -12.8004 Td
+(17:24:00)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 276.551 736.5 Tm
+(README)Tj
+-116.84 18 Td
+($cmps012b-wm/Assignments/asg2j-jxref-lists/code/)Tj
+/R10 10 Tf
+-91.7113 -35.5 Td
+[(1:)-600(This directory contains starter code for your project and a)]TJ
+11 TL
+T*[(2:)-600(Makefile which can be used to build it.  Begin by copying this)]TJ
+T*[(3:)-600(directory int your private volume before beginning work.)]TJ
+(4:)'
+T*[(5:)-600(The Perl program is not part of your project, but is a reference)]TJ
+T*[(6:)-600(implementation.  Your program should produce the same output,)]TJ
+T*[(7:)-600(except possibly for minor variations in the format of the error)]TJ
+T*[(8:)-600(messages.)]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600($Id: README,v 1.1 2010-04-13 13:21:40-07 - - $)]TJ
+ET
+Q
+Q
+endstream
+endobj
+31 0 obj
+1099
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+25 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 28 0 R
+>>
+/Contents 26 0 R
+>>
+endobj
+29 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 32 0 R
+>>
+/Contents 30 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+25 0 R
+29 0 R
+] /Count 6
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+28 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+32 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120120172401)
+/ModDate(D:20120120172401)>>endobj
+xref
+0 33
+0000000000 65535 f 
+0000015203 00000 n 
+0000015947 00000 n 
+0000015109 00000 n 
+0000014301 00000 n 
+0000000009 00000 n 
+0000002089 00000 n 
+0000015745 00000 n 
+0000015616 00000 n 
+0000015814 00000 n 
+0000015682 00000 n 
+0000015879 00000 n 
+0000015251 00000 n 
+0000014434 00000 n 
+0000002109 00000 n 
+0000005511 00000 n 
+0000015321 00000 n 
+0000014569 00000 n 
+0000005532 00000 n 
+0000008389 00000 n 
+0000015380 00000 n 
+0000014704 00000 n 
+0000008410 00000 n 
+0000010756 00000 n 
+0000015439 00000 n 
+0000014839 00000 n 
+0000010777 00000 n 
+0000013108 00000 n 
+0000015498 00000 n 
+0000014974 00000 n 
+0000013129 00000 n 
+0000014280 00000 n 
+0000015557 00000 n 
+trailer
+<< /Size 33 /Root 1 0 R /Info 2 0 R
+/ID [<D0146F685D25DDDEDA04D1264B0440E8><D0146F685D25DDDEDA04D1264B0440E8>]
+>>
+startxref
+16058
+%%EOF

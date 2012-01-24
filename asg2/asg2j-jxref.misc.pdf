@@ -1,0 +1,163 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(01/20/12)Tj
+-0.659766 -12.8004 Td
+(17:23:18)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 278.442 736.5 Tm
+(pxref.perl)Tj
+-118.737 18 Td
+($cmps012b-wm/Assignments/asg2j-jxref-lists/misc/)Tj
+/R10 10 Tf
+-91.7043 -35.5 Td
+[(1:)-600(#!/usr/bin/perl)]TJ
+11 TL
+T*[(2:)-600(# $Id: pxref.perl,v 1.1 2012-01-19 18:49:53-08 - - $)]TJ
+T*[(3:)-600(use strict;)]TJ
+T*[(4:)-600(use warnings;)]TJ
+(5:)'
+T*[(6:)-600($0 =~ s|^.*/||;)]TJ
+T*[(7:)-600(my $exit_status = 0;)]TJ
+T*[(8:)-600(END {exit $exit_status})]TJ
+T*[(9:)-600(sub note\(@\) {print STDERR "@_"};)]TJ
+-6 -11 Td
+[(10:)-600($SIG{'__WARN__'} = sub {note @_; $exit_status = 1};)]TJ
+T*[(11:)-600($SIG{'__DIE__'} = sub {warn @_; exit};)]TJ
+(12:)'
+T*[(13:)-600(my $sep = ":" x 32;)]TJ
+T*[(14:)-600(push @ARGV, "-" unless @ARGV;)]TJ
+(15:)'
+T*[(16:)-600(for my $filename \(@ARGV\) {)]TJ
+T*[(17:)-600(   my %xref;)]TJ
+T*[(18:)-600(   open my $file, "<$filename" or warn "$0: $filename: $!\\n" and next;)]TJ
+T*[(19:)-600(   while \(defined \(my $line = <$file>\)\) {)]TJ
+T*[(20:)-600(      push @{$xref{$1}}, $. while $line =~ s|^.*?\(\\w+\([-'.:/]\\w+\)*\)||;)]TJ
+T*[(21:)-600(   })]TJ
+T*[(22:)-600(   close $file;)]TJ
+T*[(23:)-600(   print "$sep\\n$filename\\n$sep\\n";)]TJ
+T*[(24:)-600(   printf "%s [%d] %s\\n", $_, @{$xref{$_}} + 0, join " ", @{$xref{$_}})]TJ
+T*[(25:)-600(          for sort keys %xref;)]TJ
+T*[(26:)-600(})]TJ
+(27:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+1683
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+] /Count 1
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Encoding 13 0 R/Subtype/Type1>>
+endobj
+13 0 obj
+<</Type/Encoding/Differences[
+126/tilde]>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120120172319)
+/ModDate(D:20120120172319)>>endobj
+xref
+0 14
+0000000000 65535 f 
+0000001954 00000 n 
+0000002478 00000 n 
+0000001895 00000 n 
+0000001762 00000 n 
+0000000009 00000 n 
+0000001742 00000 n 
+0000002276 00000 n 
+0000002072 00000 n 
+0000002345 00000 n 
+0000002138 00000 n 
+0000002410 00000 n 
+0000002002 00000 n 
+0000002217 00000 n 
+trailer
+<< /Size 14 /Root 1 0 R /Info 2 0 R
+/ID [<AC14D09C058DCA29BFFC220F642DB333><AC14D09C058DCA29BFFC220F642DB333>]
+>>
+startxref
+2589
+%%EOF

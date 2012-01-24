@@ -1,0 +1,7 @@
+#!/bin/sh -x
+# $Id: mk.build,v 1.1 2010-04-13 13:22:30-07 - - $
+#
+# This does the build and runs checksource.
+#
+checksource *.java Makefile README 2>&1 | tee check.log
+gmake 2>&1 | tee gmake.log

@@ -1,0 +1,88 @@
+$Id: SCORE,v 1.2 2012-01-19 19:18:20-08 - - $
+
+First, copy all files from the grading directory into the
+student's directory.  For each point deduction, give a reason.
+Numbers in parens are the max points for each check.
+
+*****************************************************************
+
+SOURCE CODE /30 points
+
+    Note:  minimum 1 point for this section, no matter what.
+
+    (3)  checksource (look in file check.log):
+         Deduct 1 point for 0..5 complaints, 2 points for 6..15
+         complaints, and 3 points for 16+ complaints
+          
+    (3)  Decent indentation and use of meaningful variable names
+
+    (3)  All output done by class jxref, none in container classes
+
+    (3)  implemented listmap as a separate class
+
+    (3)  implemented intqueue as a separate class and uses
+         the head and tail pointers as in the original code
+
+    (3)  listmap.insert uses prev and curr pointers to find
+         insertion point
+
+    (3)  listmap.insert does insert in a second phase, but does
+         not duplicate an entry
+
+    (3)  jxref.xref_file modified appropriately to do the job,
+         and inappropriate code from the sample is removed
+
+    (3)  jxref.xref_file uses iterators defined in listmap and
+         intqueue to print the results.
+
+    (3)  error messages for files not accessible
+    
+
+*****************************************************************
+
+PROGRAM TESTING /30 points
+
+    mk.test runs the program runprogram.perl and generates output
+    files.  check on the various different tests
+    runprogram.perl generates files *.err for stderr, *.out for
+    stdout and *.log containing the exit status
+
+    Note:  0 points for this section if the program did not compile.
+
+    (3)  gmake worked and built the jar file (see gmake.log)
+         If, not build the jar yourself.
+
+    (3)  exit status was 0 normally and 1 when a file could not
+         be accessed
+
+    (3)  none of the test runs crashed on any kind of exception
+         with traceback printed
+
+    (3)  output same as pxref program.
+ 
+    (3)  output same as pxref program, but only prints words and
+         counts but no xref numbers.  [this is for students with
+         a partial implemention and no intqueue]
+
+    (3)  counts are correct
+
+    (3)  line numbers are correct
+
+    (3)  no missing words
+
+    (3)  error messages to stderr, normal output to stdout.
+
+    (3)  words are printed in lexicographic order
+
+
+*****************************************************************
+
+SUBTOTAL=
+min 1, max 60
+
+If pair programming, TOTALSCORE = SUBTOTAL - TOTAL1.
+If not, TOTALSCORE = SUBTOTAL.
+
+TOTALSCORE=
+min 1, max 60
+
