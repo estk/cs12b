@@ -1,0 +1,9 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting hello.c
+hello.c: $Id: hello.c,v 1.1 2012-01-24 19:58:03-08 - - $
+gcc -g -O0 -Wall -Wextra -std=gnu99 hello.c -o hello -lm
+lint -Xa -fd -m -u -x -errchk=%all hello.c
+
+function returns value which is always ignored
+    fprintf             printf          
+rm -f hello.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished hello.c

@@ -1,0 +1,34 @@
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+log: hello.lis1.log
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	Script  : /afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprogram.perl
+     2	limit c :    0 max core file size (KB)
+     3	limit f : 4194303 max output file size (KB)
+     4	limit t : 4294967295 max CPU time (sec)
+     5	stdin   : /dev/null
+     6	stdout  : hello.lis1.out
+     7	stderr  : hello.lis1.err
+     8	log     : hello.lis1.log
+     9	listing : hello.lis1
+    10	Command : ./hello
+    11	starting: pid 27198: 19:58:03.00
+    12	finished: pid 27198: 19:58:03.00, real 0.00, user 0.00, sys 0.00
+    13	pstatus: 0x0000 EXIT STATUS = 0
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stdin: /dev/null
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stdout: hello.lis1.out
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	Hello, World!
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stderr: hello.lis1.err
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+

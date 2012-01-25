@@ -1,0 +1,9 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting scanner.c
+scanner.c: $Id: scanner.c,v 1.19 2012-01-24 21:00:42-08 - - $
+gcc -g -O0 -Wall -Wextra -std=gnu99 scanner.c -o scanner -lm
+lint -Xa -fd -m -u -x -errchk=%all scanner.c
+
+function returns value which is always ignored
+    printf          
+rm -f scanner.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished scanner.c

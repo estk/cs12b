@@ -1,0 +1,53 @@
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+log: scanner.log
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	Script  : /afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprog
+     2	limit c :    0 max core file size (KB)
+     3	limit f : 4194303 max output file size (KB)
+     4	limit t : 4294967295 max CPU time (sec)
+     5	stdin   : -
+     6	stdout  : scanner.out
+     7	stderr  : scanner.err
+     8	log     : scanner.log
+     9	listing : scanner.lis
+    10	Command : ./scanner
+    11	starting: pid 2872: 21:00:42.00
+    12	finished: pid 2872: 21:00:42.00, real 0.00, user 0.00, sys 0.00
+    13	pstatus: 0x0000 EXIT STATUS = 0
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stdout: scanner.out
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	./scanner:
+     2	      3.14159265358979   36 "3.1415926535897932384626433832795029"
+     3	      2.71828182845905   36 "2.7182818284590452353602874713526625"
+     4	              6.02e+23    7 "6.02e23"
+     5	not numeric               5 "hello", endptr->"hello"
+     6	not numeric               5 "world", endptr->"world"
+     7	not numeric               1 "+", endptr->"+"
+     8	not numeric               1 "-", endptr->"-"
+     9	not numeric               1 "*", endptr->"*"
+    10	not numeric               1 "/", endptr->"/"
+    11	not numeric               1 ";", endptr->";"
+    12	                   inf    9 "1e1000000"
+    13	                   inf    9 "+Infinity"
+    14	                  -inf    9 "-Infinity"
+    15	                   nan    3 "NaN"
+    16	not numeric              10 "1234foobar", endptr->"foobar"
+    17	                    -0    8 "-5e-5000"
+    18	                     1   30 ".99999999999999999999999999999"
+    19	               -220000    5 "-22e4"
+    20	 -3.33333333333333e-30   39 "-3.33333333333333333333333333333333e-30"
+    21	                 65535    6 "0xFFFF"
+    22	            4294967295   10 "0xFFFFFFFF"
+    23	                  1024    6 "0x1p10"
+    24	               1048576    6 "0x1p20"
+    25	EOF
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stderr: scanner.err
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
