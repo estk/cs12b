@@ -68,7 +68,7 @@ class jrpn {
     void add() {
         double a = pop();
         double b = pop();
-        push ( a + b );
+        push ( b + a );
     }
 
     void sub() {
@@ -80,7 +80,7 @@ class jrpn {
     void mul() {
         double a = pop();
         double b = pop();
-        push ( a * b );
+        push ( b * a );
     }
 
     void div() {
