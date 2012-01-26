@@ -9,6 +9,66 @@
 double stack[STACK_SIZE];
 int top = EMPTY;
 
+void
+push(double num) {
+    stack[top+1] = num;
+    top += 1;
+}
+
+int
+pop() {
+    double res = stack[top];
+    top -= 1;
+    return res;
+}
+
+void
+add() {
+    double a = pop();
+    double b = pop();
+    push ( b + a );
+}
+
+void
+sub() {
+    double a = pop();
+    double b = pop();
+    push ( b - a );
+}
+
+void
+mul() {
+    double a = pop();
+    double b = pop();
+    push ( b * a );
+}
+
+void
+divi() {
+    double a = pop();
+    double b = pop();
+    push ( b / a );
+}
+
+int
+show() {
+    int i;
+    for (i=0 ; i <= top ; i++)
+        printf( "%22.15g\n", stack[i] );
+}
+
+void
+operate(size_t len, char buf[]) {
+    if (len != 1) return;
+    switch (buf[0]) {
+        case '+': add();  break;
+        case '-': sub();  break;
+        case '*': mul();  break;
+        case '/': divi();  break;
+        case ';': show(); break;
+    }
+}
+
 int
 main(int argc, char const *argv[])
 {
@@ -19,7 +79,6 @@ main(int argc, char const *argv[])
       // Read in a word and stop at EOF.
       int scanct = scanf ("%1023s", buffer);
       if (scanct == EOF) {
-         printf ("EOF\n"); // debug
          break;
       }
       assert (scanct == 1);
@@ -37,59 +96,4 @@ main(int argc, char const *argv[])
     return 0;
 }
 
-void
-operate(size_t len, char buf[]) {
-    if (len != 1) return;
-    switch (buf[0]) {
-        case '+': add();  break;
-        case '-': sub();  break;
-        case '*': mul();  break;
-        case '/': divi();  break;
-        case ';': show(); break;
-    }
-}
-
-void
-add() {
-    printf ("adding\n");
-}
-
-int
-sub() {
-    printf ("subtracting\n");
-    return 0;
-}
-
-int
-mul() {
-    printf ("multiplying\n");
-    return 0;
-}
-
-int
-divi() {
-    printf ("dividing\n");
-    return 0;
-}
-
-int
-show() {
-    int i;
-    for (i=0 ; i <= top ; i++)
-        printf( "%22.15g\n", stack[i] );
-}
-
-int
-push(double num) {
-    stack[top+1] = num;
-    top += 1;
-    return 0;
-}
-
-int
-pop() {
-    double res = stack[top];
-    top -= 1;
-    return res;
-}
 
