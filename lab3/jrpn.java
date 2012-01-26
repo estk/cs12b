@@ -14,6 +14,7 @@ class jrpn {
         jrpn calc = new jrpn();
         while ( scan.hasNext() ) {
             String str = scan.next();
+            if ( str.startsWith("#") ) continue;
             calc.evaluate(str);
         }
     }

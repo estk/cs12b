@@ -84,7 +84,10 @@ main(int argc, char const *argv[])
       assert (scanct == 1);
       size_t length = strlen (buffer);
 
-      // dispatch if string is a number
+      // check if commented
+      if ( buffer[0] == '#' ) continue;
+
+      // dispatch if string is a number or operator
       char *endptr;
       double number = strtod (buffer, &endptr);
       if (*endptr == '\0') {
