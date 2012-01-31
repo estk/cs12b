@@ -60,6 +60,10 @@ show() {
 void
 operate(size_t len, char buf[]) {
     if (len != 1) return;
+    if (buf[0] != ';' && top < 1) {
+       printf("%s\n", "Not enough numbers in the stack!");
+       return;
+    }
     switch (buf[0]) {
         case '+': add();  break;
         case '-': sub();  break;
