@@ -56,6 +56,10 @@ class jrpn {
     throws OperatorFormatException {
         if (str.length() != 1) throw new OperatorFormatException();
         char c = str.charAt(0);
+        if (c != ';' && top < 1) {
+            out.printf("Not enough numbers in the stack!%n");
+            return;
+        }
         switch (c) {
             case '+': add();  break;
             case '-': sub();  break;
