@@ -21,7 +21,6 @@ ${JARFILE} : ${CLASSES}
 
 %.class : %.java
 	- checksource $<
-	- cid + $<
 	javac $<
 
 clean :
@@ -29,10 +28,6 @@ clean :
 
 spotless : clean
 	- rm ${JARFILE}
-
-ci : ${SOURCES}
-	- checksource ${SOURCES}
-	cid + ${SOURCES}
 
 lis : ${SOURCES}
 	mkpspdf ${LISTING} ${SOURCES}
