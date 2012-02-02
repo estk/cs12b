@@ -30,6 +30,12 @@ class jxref {
    }
 
 
+   private static void printmap(listmap map) {
+      for (Entry<String, intqueue> entry: map) {
+         out.printf ("%s => %s%n", entry.getKey(), entry.getValue().toString());
+      }
+   }
+
    private static final String WORD_REGEX = "\\w+([-'.:/]\\w+)*";
    private static final Pattern WORD_PATTERN
                       = Pattern.compile (WORD_REGEX);
@@ -42,13 +48,15 @@ class jxref {
          Matcher match = WORD_PATTERN.matcher (line);
          while (match.find()) {
             String word = match.group();
+            map.insert(word, linenr);
             err.printf ("TRACE: word = %s%n", word);
          }
       }
-      for (Entry<String, intqueue> entry: map) {
-         err.printf ("STUB: %s (%s, %s)%n", entry,
-                     entry.getKey(), entry.getValue());
-      }
+      // for (Entry<String, intqueue> entry: map) {
+      //    err.printf ("STUB: %s (%s, %s)%n", entry,
+      //                entry.getKey(), entry.getValue());
+      // }
+      printmap(map);
    }
 
    // For each filename, open the file, cross reference it, and print.

@@ -28,6 +28,36 @@ class listmap implements Iterable<Entry<String, intqueue>> {
    }
 
    public void insert (String key, int linenr) {
+      if (head == null) {
+         head = new node ();
+         head.key = key;
+         head.queue.insert(linenr);
+         err.println(head.queue); // debug
+         return;
+      }
+      node prev = null;
+      node curr = head;
+      int cmp = 1;
+      // Phase 1 - find insertion point. -- O(n)
+      while (curr != null) {
+         cmp = curr.key.compareTo (key);
+         if (cmp >= 0) break;
+         prev = curr;
+         curr = curr.link;
+      }
+      if (cmp == 0) {
+         curr.queue.insert(linenr);
+      }
+      // Phase 2 - insert if not already there. -- O(1)
+      else {
+         node tmp = new node ();
+         tmp.key = key;
+         tmp.queue.insert(linenr);
+         tmp.link = curr;
+         err.println(head.queue); // debug
+         if (prev == null) head = tmp;
+         else prev.link = tmp;
+      }         
       err.printf ("STUB: insert (%s, %s)%n", key, linenr);
    }
 
