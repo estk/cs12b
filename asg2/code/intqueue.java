@@ -15,6 +15,12 @@ class intqueue implements Iterable<Integer> {
 
    public void insert (int number) {
       ++count;
+      node tmp = new node ();
+      tmp.linenr = number;
+      tmp.link = null;
+      if (rear == null) front = tmp;
+      else rear.link = tmp;
+      rear = tmp;
    }
 
    public boolean empty() {
@@ -23,6 +29,15 @@ class intqueue implements Iterable<Integer> {
 
    public int getcount() {
       return count;
+   }
+
+   public String toString() {
+      String res = "{";
+      for (int n : this) {
+         res += " " + n + ",";
+      }
+      res = res.substring(0, res.length()-1);
+      return res + " }";
    }
 
    public Iterator<Integer> iterator() {
