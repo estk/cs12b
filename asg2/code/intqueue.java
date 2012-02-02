@@ -32,12 +32,11 @@ class intqueue implements Iterable<Integer> {
    }
 
    public String toString() {
-      String res = "{";
+      String res = String.format("[%s]", count);
       for (int n : this) {
-         res += " " + n + ",";
+         res += " " + n;
       }
-      res = res.substring(0, res.length()-1);
-      return res + " }";
+      return res;
    }
 
    public Iterator<Integer> iterator() {

@@ -30,9 +30,13 @@ class jxref {
    }
 
 
-   private static void printmap(listmap map) {
+   private static void printmap(String filename, listmap map) {
+      out.println("::::::::::::::::::::::::::::::::");
+      out.println(filename);
+      out.println("::::::::::::::::::::::::::::::::");
+      
       for (Entry<String, intqueue> entry: map) {
-         out.printf ("%s => %s%n", entry.getKey(), entry.getValue().toString());
+         out.printf ("%s %s%n", entry.getKey(), entry.getValue().toString());
       }
    }
 
@@ -56,7 +60,7 @@ class jxref {
       //    err.printf ("STUB: %s (%s, %s)%n", entry,
       //                entry.getKey(), entry.getValue());
       // }
-      printmap(map);
+      printmap(filename, map);
    }
 
    // For each filename, open the file, cross reference it, and print.
