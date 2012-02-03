@@ -1,0 +1,10 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting structopts.c
+structopts.c: $Id: structopts.c,v 1.1 2012-01-31 18:13:32-08 - - $
+gcc -g -O0 -Wall -Wextra -std=gnu99 structopts.c -o structopts -lm
+lint -Xa -fd -m -u -x -errchk=%all structopts.c
+
+function returns value which is always ignored
+    fflush              fprintf             printf              memset
+
+rm -f structopts.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished structopts.c

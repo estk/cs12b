@@ -1,0 +1,4 @@
+#!/bin/sh
+# $Id: mk,v 1.1 2012-02-01 13:37:17-08 - - $
+cid + $0 pxref.perl
+mkpspdf Listing.pcat.ps pcat.perl

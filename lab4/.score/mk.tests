@@ -1,0 +1,12 @@
+#!/bin/sh
+# $Id: mk.tests,v 1.1 2012-01-31 18:01:17-08 - - $
+
+RUN=/afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprogram.perl
+prog=./bcat
+$RUN -ootest1              $prog test*data
+$RUN -ootest2 -0test0.data $prog test1.data - test1.data
+$RUN -ootest3              $prog -mn test*data
+$RUN -ootest4              $prog -m -n test*data
+$RUN -ootest5              $prog -s test*data
+$RUN -ootest7              $prog foo bar baz
+

@@ -1,0 +1,49 @@
+/*
+*****************************************************************
+
+Whenever a man page is referenced, read it online.  For example,
+when we refer to `stdio(3c)', you can read it with ``man -s 3C
+stdio''.
+
+As described in stdio(3c), there are three FILE* handles that
+are always opened when a program starts:  `stdin', `stdout', and
+`stderr'.  These are, respectively, the standard input, standard
+output, and standard error.  Normal output is written to stdout,
+while error messages are written to stderr.
+
+The usual format of an error message is something like:
+.   progname: object_or_function: reason
+The reason a system call has failed is given in the external
+variable `errno'.  This can be translated into English via
+strerror(3c).
+
+`fopen(3c)' opens a file and returns a pointer to a `FILE',
+given a filename.  `fclose(3c)' closes that file, given a
+FILE*.  `putchar(3c)' writes one byte to stdout.  `getc(3c)'
+reads one byte from the FILE* given as an argument and returns
+an int containing the character, if one exists.  If not, returns
+EOF (-1).  Note that end of line is signalled by '\n'.  To
+signal EOF from a Unix terminal, type Control/D as the first
+character on a line.
+
+Strings are represented as arrays of characters.  Each string
+ends with a null plug ('\0').  `strcmp(3c)' compares two such
+character strings and returns a number that is <, =, or > 0,
+depending on the relationship.  See Java's compareTo function.
+
+Some functions return values instead of void, but we often don't
+care what these values are, so we use the function in a
+statement context.  This causes lint(1) to complain:  ``function
+returns value which is always ignored''.  So we explicitly cast
+the results of these functions to (void) in order to suppress
+this error.  Alternately we could have use a drop-in macro to
+replace them.
+
+The call fflush (NULL) causes all opened FILE* handles to be
+flushed.  When a program writes data, it is buffered in memory
+before being written to the disk.  This causes immediate writing
+instead of waiting until the buffer is full.  We do this so that
+anything written to stdout and stderr are properly interleaved.
+
+*****************************************************************
+*/

@@ -1,0 +1,499 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/01/12)Tj
+-0.659766 -12.8004 Td
+(13:37:21)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 273.843 736.5 Tm
+(structopts.c)Tj
+-131.555 18 Td
+($cmps012b-wm/Labs-cmps012m/lab4c-stdio-getopt/misc/)Tj
+/R10 10 Tf
+-74.2883 -35.5 Td
+[(1:)-600(// $Id: structopts.c,v 1.1 2012-01-31 18:13:32-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(//)]TJ
+T*[(4:)-600(// NAME)]TJ
+T*[(5:)-600(//    structopts - checks and prints out some option values)]TJ
+T*[(6:)-600(//)]TJ
+T*[(7:)-600(// SYNOPSIS)]TJ
+T*[(8:)-600(//    structopts [-cmnstv])]TJ
+T*[(9:)-600(//)]TJ
+-6 -11 Td
+[(10:)-600(// DESCRIPTION)]TJ
+T*[(11:)-600(//    Uses getopt\(3\) to scan options.  Prints out the values of the)]TJ
+T*[(12:)-600(//    resulting option structure.)]TJ
+T*[(13:)-600(//)]TJ
+(14:)'
+T*[(15:)-600(#include <libgen.h>)]TJ
+T*[(16:)-600(#include <stdarg.h>)]TJ
+T*[(17:)-600(#include <stdio.h>)]TJ
+T*[(18:)-600(#include <stdlib.h>)]TJ
+T*[(19:)-600(#include <string.h>)]TJ
+T*[(20:)-600(#include <unistd.h>)]TJ
+(21:)'
+T*[(22:)-600(typedef enum {FALSE = 0, TRUE = 1} bool;)]TJ
+(23:)'
+T*[(24:)-600(struct options {)]TJ
+T*[(25:)-600(   bool moretitles;    // -m print file titles \340 la `more')]TJ
+T*[(26:)-600(   bool numberlines;   // -n print line numbers in left column)]TJ
+T*[(27:)-600(   bool squeeze;       // -s squeeze multiple blank lines into one)]TJ
+T*[(28:)-600(};)]TJ
+(29:)'
+T*[(30:)-600(//)]TJ
+T*[(31:)-600(// Function to print out the options.  Note that the inline struct)]TJ
+T*[(32:)-600(// from the main program is passed by reference.)]TJ
+T*[(33:)-600(//)]TJ
+T*[(34:)-600(void printoptions \(struct options *options_ref\) {)]TJ
+T*[(35:)-600(   printf \("moretitles   = %d\\n", options_ref->moretitles  \);)]TJ
+T*[(36:)-600(   printf \("numberlines  = %d\\n", options_ref->numberlines \);)]TJ
+T*[(37:)-600(   printf \("squeeze      = %d\\n", options_ref->squeeze     \);)]TJ
+T*[(38:)-600(})]TJ
+(39:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+2175
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/01/12)Tj
+-0.659766 -12.8004 Td
+(13:37:21)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 273.843 736.5 Tm
+(structopts.c)Tj
+-131.555 18 Td
+($cmps012b-wm/Labs-cmps012m/lab4c-stdio-getopt/misc/)Tj
+/R10 10 Tf
+-80.2883 -35.5 Td
+(40:)Tj
+11 TL
+T*[(41:)-600(//)]TJ
+T*[(42:)-600(// Main function to analyze options and print them.)]TJ
+T*[(43:)-600(//)]TJ
+(44:)'
+T*[(45:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(46:)-600(   char *progname = basename \(argv[0]\);)]TJ
+T*[(47:)-600(   int exit_status = EXIT_SUCCESS;)]TJ
+T*[(48:)-600(   struct options options;)]TJ
+T*[(49:)-600(   int argi;)]TJ
+T*[(50:)-600(   memset \(&options, 0, sizeof options\); // set all opts FALSE)]TJ
+(51:)'
+T*[(52:)-600(   //)]TJ
+T*[(53:)-600(   // Scan arguments and set flags.)]TJ
+T*[(54:)-600(   //)]TJ
+T*[(55:)-600(   opterr = FALSE;)]TJ
+T*[(56:)-600(   for \(;;\) {)]TJ
+T*[(57:)-600(      int option = getopt \(argc, argv, "mns"\);)]TJ
+T*[(58:)-600(      if \(option == EOF\) break;)]TJ
+T*[(59:)-600(      switch \(option\) {)]TJ
+T*[(60:)-600(         case 'm': options.moretitles   = TRUE; break;)]TJ
+T*[(61:)-600(         case 'n': options.numberlines  = TRUE; break;)]TJ
+T*[(62:)-600(         case 's': options.squeeze      = TRUE; break;)]TJ
+T*[(63:)-600(         default : fflush \(NULL\);)]TJ
+T*[(64:)-600(                   fprintf \(stderr, "%s: -%c: invalid option\\n",)]TJ
+T*[(65:)-600(                            progname, optopt\);)]TJ
+T*[(66:)-600(                   fflush \(NULL\);)]TJ
+T*[(67:)-600(                   exit_status = EXIT_FAILURE;)]TJ
+T*[(68:)-600(      };)]TJ
+T*[(69:)-600(   };)]TJ
+(70:)'
+T*[(71:)-600(   //)]TJ
+T*[(72:)-600(   // Print options and operands.)]TJ
+T*[(73:)-600(   //)]TJ
+T*[(74:)-600(   printoptions \(&options\);)]TJ
+(75:)'
+T*[(76:)-600(   for \(argi = optind; argi < argc; ++argi\) {)]TJ
+T*[(77:)-600(      printf \("argv[%d] operand = \\"%s\\"\\n", argi, argv[argi]\);)]TJ
+T*[(78:)-600(   };)]TJ
+(79:)'
+T*[(80:)-600(   return exit_status;)]TJ
+T*[(81:)-600(})]TJ
+(82:)'
+T*[(83:)-600(//TEST// runprog -x structopts.lis structopts -m -n foo bar)]TJ
+T*[(84:)-600(//TEST// mkpspdf Listing.structopts.ps structopts.c* structopts.lis*)]TJ
+(85:)'
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+2473
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/01/12)Tj
+-0.659766 -12.8004 Td
+(13:37:21)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 263.147 736.5 Tm
+(structopts.c.log)Tj
+-120.859 18 Td
+($cmps012b-wm/Labs-cmps012m/lab4c-stdio-getopt/misc/)Tj
+/R10 10 Tf
+-74.2883 -35.5 Td
+[(1:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting structopts.c)]TJ
+11 TL
+T*[(2:)-600(structopts.c: $Id: structopts.c,v 1.1 2012-01-31 18:13:32-08 - - $)]TJ
+T*[(3:)-600(gcc -g -O0 -Wall -Wextra -std=gnu99 structopts.c -o structopts -lm)]TJ
+T*[(4:)-600(lint -Xa -fd -m -u -x -errchk=%all structopts.c)]TJ
+(5:)'
+T*[(6:)-600(function returns value which is always ignored)]TJ
+T*[(7:)-600(    fflush              fprintf             printf              memset)]TJ
+(8:)'
+T*[(9:)-600(rm -f structopts.o)]TJ
+-6 -11 Td
+[(10:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished structopts.c)]TJ
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+1124
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/01/12)Tj
+-0.659766 -12.8004 Td
+(13:37:21)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 270.336 736.5 Tm
+(structopts.lis)Tj
+-128.048 18 Td
+($cmps012b-wm/Labs-cmps012m/lab4c-stdio-getopt/misc/)Tj
+/R10 10 Tf
+-74.2883 -35.5 Td
+(1:)Tj
+11 TL
+T*[(2:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(3:)-600(log: structopts.log)]TJ
+T*[(4:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(5:)'
+T*[(6:)-600(     1  Script  : /afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprog)]TJ
+T*[(7:)-600(     2  limit c :    0 max core file size \(KB\))]TJ
+T*[(8:)-600(     3  limit f : 4194303 max output file size \(KB\))]TJ
+T*[(9:)-600(     4  limit t : 4294967295 max CPU time \(sec\))]TJ
+-6 -11 Td
+[(10:)-600(     5  stdin   : /dev/null)]TJ
+T*[(11:)-600(     6  stdout  : structopts.out)]TJ
+T*[(12:)-600(     7  stderr  : structopts.err)]TJ
+T*[(13:)-600(     8  log     : structopts.log)]TJ
+T*[(14:)-600(     9  listing : structopts.lis)]TJ
+T*[(15:)-600(    10  Command : structopts -m -n foo bar)]TJ
+T*[(16:)-600(    11  starting: pid 26207: 13:37:21.00)]TJ
+T*[(17:)-600(    12  finished: pid 26207: 13:37:21.00, real 0.00, user 0.00, sys 0.00)]TJ
+T*[(18:)-600(    13  pstatus: 0x0000 EXIT STATUS = 0)]TJ
+(19:)'
+T*[(20:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(21:)-600(stdin: /dev/null)]TJ
+T*[(22:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(23:)'
+(24:)'
+T*[(25:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(26:)-600(stdout: structopts.out)]TJ
+T*[(27:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(28:)'
+T*[(29:)-600(     1  moretitles   = 1)]TJ
+T*[(30:)-600(     2  numberlines  = 1)]TJ
+T*[(31:)-600(     3  squeeze      = 0)]TJ
+T*[(32:)-600(     4  argv[3] operand = "foo")]TJ
+T*[(33:)-600(     5  argv[4] operand = "bar")]TJ
+(34:)'
+T*[(35:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(36:)-600(stderr: structopts.err)]TJ
+T*[(37:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(38:)'
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+2431
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+] /Count 4
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Encoding 25 0 R/Subtype/Type1>>
+endobj
+25 0 obj
+<</Type/Encoding/Differences[
+224/agrave]>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120201133722)
+/ModDate(D:20120201133722)>>endobj
+xref
+0 26
+0000000000 65535 f 
+0000009119 00000 n 
+0000009821 00000 n 
+0000009039 00000 n 
+0000008501 00000 n 
+0000000009 00000 n 
+0000002234 00000 n 
+0000009619 00000 n 
+0000009414 00000 n 
+0000009688 00000 n 
+0000009480 00000 n 
+0000009753 00000 n 
+0000009167 00000 n 
+0000008634 00000 n 
+0000002254 00000 n 
+0000004779 00000 n 
+0000009237 00000 n 
+0000008769 00000 n 
+0000004800 00000 n 
+0000005976 00000 n 
+0000009296 00000 n 
+0000008904 00000 n 
+0000005997 00000 n 
+0000008480 00000 n 
+0000009355 00000 n 
+0000009559 00000 n 
+trailer
+<< /Size 26 /Root 1 0 R /Info 2 0 R
+/ID [<D35B76D18134C6D00E722C6433B05393><D35B76D18134C6D00E722C6433B05393>]
+>>
+startxref
+9932
+%%EOF

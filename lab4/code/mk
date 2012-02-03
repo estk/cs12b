@@ -1,0 +1,5 @@
+#!/bin/sh
+# $Id: mk,v 1.3 2012-02-01 13:40:55-08 - - $
+cid + $0 *.c *.txt
+mkc *.c 2>&1 | tee compile.log
+mkpspdf Listing.bcat.ps *.c *.txt *.log

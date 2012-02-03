@@ -1,0 +1,9 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting bcat.c
+bcat.c: $Id: bcat.c,v 1.2 2012-02-01 13:40:11-08 - - $
+gcc -g -O0 -Wall -Wextra -std=gnu99 bcat.c -o bcat -lm
+lint -Xa -fd -m -u -x -errchk=%all bcat.c
+
+function returns value which is always ignored
+    fclose              fflush              fprintf         
+rm -f bcat.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished bcat.c

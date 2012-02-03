@@ -1,0 +1,488 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/01/12)Tj
+-0.659766 -12.8004 Td
+(13:40:55)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 289.48 736.5 Tm
+(bcat.c)Tj
+-147.186 18 Td
+($cmps012b-wm/Labs-cmps012m/lab4c-stdio-getopt/code/)Tj
+/R10 10 Tf
+-74.2949 -35.5 Td
+[(1:)-600(// $Id: bcat.c,v 1.2 2012-02-01 13:40:11-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(//)]TJ
+T*[(4:)-600(// NAME)]TJ
+T*[(5:)-600(//    bcat - concatenate and display files)]TJ
+T*[(6:)-600(//)]TJ
+T*[(7:)-600(// SYNOPSIS)]TJ
+T*[(8:)-600(//    bcat [filename...])]TJ
+T*[(9:)-600(//)]TJ
+-6 -11 Td
+[(10:)-600(// DESCRIPTION)]TJ
+T*[(11:)-600(//    The `bcat' utility reads each file in sequence and writes it)]TJ
+T*[(12:)-600(//    to stdout.  If any filename is given as the single character)]TJ
+T*[(13:)-600(//    `-', stdin is read at that point.  If no filenames are given)]TJ
+T*[(14:)-600(//    then stdin is read as the only file.)]TJ
+T*[(15:)-600(//)]TJ
+(16:)'
+T*[(17:)-600(#include <errno.h>)]TJ
+T*[(18:)-600(#include <libgen.h>)]TJ
+T*[(19:)-600(#include <stdarg.h>)]TJ
+T*[(20:)-600(#include <stdio.h>)]TJ
+T*[(21:)-600(#include <stdlib.h>)]TJ
+T*[(22:)-600(#include <string.h>)]TJ
+(23:)'
+T*[(24:)-600(//)]TJ
+T*[(25:)-600(// cat -)]TJ
+T*[(26:)-600(// Copy the contents of an already-opened file to stdout.)]TJ
+T*[(27:)-600(//)]TJ
+(28:)'
+T*[(29:)-600(void catfile \(FILE *input\) {)]TJ
+T*[(30:)-600(   for \(;;\) {)]TJ
+T*[(31:)-600(      int byte = getc \(input\);)]TJ
+T*[(32:)-600(      if \(byte == EOF\) break;)]TJ
+T*[(33:)-600(      \(void\) putchar \(byte\);)]TJ
+T*[(34:)-600(   };)]TJ
+T*[(35:)-600(})]TJ
+(36:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+1843
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/01/12)Tj
+-0.659766 -12.8004 Td
+(13:40:55)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 289.48 736.5 Tm
+(bcat.c)Tj
+-147.186 18 Td
+($cmps012b-wm/Labs-cmps012m/lab4c-stdio-getopt/code/)Tj
+/R10 10 Tf
+-80.2949 -35.5 Td
+(37:)Tj
+11 TL
+T*[(38:)-600(//)]TJ
+T*[(39:)-600(// main -)]TJ
+T*[(40:)-600(// Loop over files, if any, and cat each of them to stdout.)]TJ
+T*[(41:)-600(// Print error messages if appropriate.)]TJ
+T*[(42:)-600(//)]TJ
+(43:)'
+T*[(44:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(45:)-600(   int exit_status = EXIT_SUCCESS;)]TJ
+T*[(46:)-600(   char *progname = basename \(argv[0]\);)]TJ
+T*[(47:)-600(   if \(argc == 1\) {)]TJ
+T*[(48:)-600(      catfile \(stdin\);)]TJ
+T*[(49:)-600(   }else{)]TJ
+T*[(50:)-600(      for \(int argi = 1; argi < argc; ++argi\) {)]TJ
+T*[(51:)-600(         if \(strcmp \(argv[argi], "-"\) == 0\) {)]TJ
+T*[(52:)-600(            catfile \(stdin\);)]TJ
+T*[(53:)-600(         }else{)]TJ
+T*[(54:)-600(            FILE *input = fopen \(argv[argi], "r"\);)]TJ
+T*[(55:)-600(            if \(input == NULL\) {)]TJ
+T*[(56:)-600(               fflush \(NULL\);)]TJ
+T*[(57:)-600(               fprintf \(stderr, "%s: %s: %s\\n", progname,)]TJ
+T*[(58:)-600(                        argv[argi], strerror \(errno\)\);)]TJ
+T*[(59:)-600(               fflush \(NULL\);)]TJ
+T*[(60:)-600(               exit_status = EXIT_FAILURE;)]TJ
+T*[(61:)-600(            }else{)]TJ
+T*[(62:)-600(               catfile \(input\);)]TJ
+T*[(63:)-600(               fclose \(input\);)]TJ
+T*[(64:)-600(            };)]TJ
+T*[(65:)-600(         };)]TJ
+T*[(66:)-600(      };)]TJ
+T*[(67:)-600(   };)]TJ
+T*[(68:)-600(   return exit_status;)]TJ
+T*[(69:)-600(})]TJ
+(70:)'
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+1976
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/01/12)Tj
+-0.659766 -12.8004 Td
+(13:39:50)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 268.082 736.5 Tm
+(comments.txt)Tj
+-125.787 18 Td
+($cmps012b-wm/Labs-cmps012m/lab4c-stdio-getopt/code/)Tj
+/R10 10 Tf
+-74.2949 -35.5 Td
+[(1:)-600(/*)]TJ
+11 TL
+T*[(2:)-600(*****************************************************************)]TJ
+(3:)'
+T*[(4:)-600(Whenever a man page is referenced, read it online.  For example,)]TJ
+T*[(5:)-600(when we refer to `stdio\(3c\)', you can read it with ``man -s 3C)]TJ
+T*[(6:)-600(stdio''.)]TJ
+(7:)'
+T*[(8:)-600(As described in stdio\(3c\), there are three FILE* handles that)]TJ
+T*[(9:)-600(are always opened when a program starts:  `stdin', `stdout', and)]TJ
+-6 -11 Td
+[(10:)-600(`stderr'.  These are, respectively, the standard input, standard)]TJ
+T*[(11:)-600(output, and standard error.  Normal output is written to stdout,)]TJ
+T*[(12:)-600(while error messages are written to stderr.)]TJ
+(13:)'
+T*[(14:)-600(The usual format of an error message is something like:)]TJ
+T*[(15:)-600(.   progname: object_or_function: reason)]TJ
+T*[(16:)-600(The reason a system call has failed is given in the external)]TJ
+T*[(17:)-600(variable `errno'.  This can be translated into English via)]TJ
+T*[(18:)-600(strerror\(3c\).)]TJ
+(19:)'
+T*[(20:)-600(`fopen\(3c\)' opens a file and returns a pointer to a `FILE',)]TJ
+T*[(21:)-600(given a filename.  `fclose\(3c\)' closes that file, given a)]TJ
+T*[(22:)-600(FILE*.  `putchar\(3c\)' writes one byte to stdout.  `getc\(3c\)')]TJ
+T*[(23:)-600(reads one byte from the FILE* given as an argument and returns)]TJ
+T*[(24:)-600(an int containing the character, if one exists.  If not, returns)]TJ
+T*[(25:)-600(EOF \(-1\).  Note that end of line is signalled by '\\n'.  To)]TJ
+T*[(26:)-600(signal EOF from a Unix terminal, type Control/D as the first)]TJ
+T*[(27:)-600(character on a line.)]TJ
+(28:)'
+T*[(29:)-600(Strings are represented as arrays of characters.  Each string)]TJ
+T*[(30:)-600(ends with a null plug \('\\0'\).  `strcmp\(3c\)' compares two such)]TJ
+T*[(31:)-600(character strings and returns a number that is <, =, or > 0,)]TJ
+T*[(32:)-600(depending on the relationship.  See Java's compareTo function.)]TJ
+(33:)'
+T*[(34:)-600(Some functions return values instead of void, but we often don't)]TJ
+T*[(35:)-600(care what these values are, so we use the function in a)]TJ
+T*[(36:)-600(statement context.  This causes lint\(1\) to complain:  ``function)]TJ
+T*[(37:)-600(returns value which is always ignored''.  So we explicitly cast)]TJ
+T*[(38:)-600(the results of these functions to \(void\) in order to suppress)]TJ
+T*[(39:)-600(this error.  Alternately we could have use a drop-in macro to)]TJ
+T*[(40:)-600(replace them.)]TJ
+(41:)'
+T*[(42:)-600(The call fflush \(NULL\) causes all opened FILE* handles to be)]TJ
+T*[(43:)-600(flushed.  When a program writes data, it is buffered in memory)]TJ
+T*[(44:)-600(before being written to the disk.  This causes immediate writing)]TJ
+T*[(45:)-600(instead of waiting until the buffer is full.  We do this so that)]TJ
+T*[(46:)-600(anything written to stdout and stderr are properly interleaved.)]TJ
+(47:)'
+T*[(48:)-600(*****************************************************************)]TJ
+T*[(49:)-600(*/)]TJ
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+3521
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/01/12)Tj
+-0.659766 -12.8004 Td
+(13:40:55)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 272.75 736.5 Tm
+(compile.log)Tj
+-130.455 18 Td
+($cmps012b-wm/Labs-cmps012m/lab4c-stdio-getopt/code/)Tj
+/R10 10 Tf
+-74.2949 -35.5 Td
+[(1:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting bcat.c)]TJ
+11 TL
+T*[(2:)-600(bcat.c: $Id: bcat.c,v 1.2 2012-02-01 13:40:11-08 - - $)]TJ
+T*[(3:)-600(gcc -g -O0 -Wall -Wextra -std=gnu99 bcat.c -o bcat -lm)]TJ
+T*[(4:)-600(lint -Xa -fd -m -u -x -errchk=%all bcat.c)]TJ
+(5:)'
+T*[(6:)-600(function returns value which is always ignored)]TJ
+T*[(7:)-600(    fclose              fflush              fprintf         )]TJ
+T*[(8:)-600(rm -f bcat.o)]TJ
+T*[(9:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished bcat.c)]TJ
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+1045
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+] /Count 4
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120201134056)
+/ModDate(D:20120201134056)>>endobj
+xref
+0 25
+0000000000 65535 f 
+0000009301 00000 n 
+0000009927 00000 n 
+0000009221 00000 n 
+0000008683 00000 n 
+0000000009 00000 n 
+0000001902 00000 n 
+0000009725 00000 n 
+0000009596 00000 n 
+0000009794 00000 n 
+0000009662 00000 n 
+0000009859 00000 n 
+0000009349 00000 n 
+0000008816 00000 n 
+0000001922 00000 n 
+0000003950 00000 n 
+0000009419 00000 n 
+0000008951 00000 n 
+0000003971 00000 n 
+0000007544 00000 n 
+0000009478 00000 n 
+0000009086 00000 n 
+0000007565 00000 n 
+0000008662 00000 n 
+0000009537 00000 n 
+trailer
+<< /Size 25 /Root 1 0 R /Info 2 0 R
+/ID [<8292D908428466C0B3A4BA395E6179DC><8292D908428466C0B3A4BA395E6179DC>]
+>>
+startxref
+10038
+%%EOF
