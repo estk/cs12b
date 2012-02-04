@@ -29,6 +29,7 @@ int mflag, nflag, sflag;
 //
 
 void catfile (char *filename, FILE *input) {
+   int newlines=0;
 
    if (mflag) {
       char head[65] = "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::";
@@ -48,7 +49,13 @@ void catfile (char *filename, FILE *input) {
    for (;;) {
       int byte = getc (input);
       if (byte == EOF) break;
-      (void) putchar (byte);
+      if (sflag) {
+         if (byte == '\n') newlines++;
+         else newlines = 0;
+         if (newlines <= 2) putchar (byte);
+      }else {
+         putchar (byte);
+      }
    };
 }
 
