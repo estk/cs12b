@@ -32,8 +32,8 @@ void catfile (char *filename, FILE *input) {
 
    if (mflag) {
       char head[65] = "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::";
-      printf("\n\n%s\n", head);
-      printf("filename");
+      printf("\n%s\n", head);
+      printf("%s", filename);
       printf("\n%s\n\n", head);
    }
 
@@ -64,23 +64,22 @@ void usage() {
 //
 
 int main (int argc, char **argv) {
-   printf("%s", "hello");
    int exit_status = EXIT_SUCCESS;
    char *progname = basename (argv[0]);
    // add "-" to argv if no args
     if (argc != 1){
       char ch;
-      int optind;
+      int optind = 0;
       mflag = nflag = sflag = 0;
       // check for flags, then remove from argv
       while ((ch = getopt(argc, argv, "mns")) != -1) {
          switch (ch) {
          case 'm':
-            mflag = 1; break;
+            mflag = 1; optind++; break;
          case 'n':
-            nflag = 1; break;
+            nflag = 1; optind++; break;
          case 's':
-            sflag = 1; break;
+            sflag = 1; optind++; break;
          default:
             usage();
          }
@@ -89,10 +88,14 @@ int main (int argc, char **argv) {
       argv += optind;
    }
 
+   if (argc == 1) {
+      catfile ("-", stdin);
+   }
+
    for (int argi = 1; argi < argc; ++argi) {
       if (strcmp (argv[argi], "-") == 0) {
          catfile ("-", stdin);
-      }else{
+      }else {
          FILE *input = fopen (argv[argi], "r");
          if (input == NULL) {
             fflush (NULL);
