@@ -13,7 +13,7 @@
 //    `-', stdin is read at that point.  If no filenames are given
 //    then stdin is read as the only file.
 //
-#include <libc.h>
+#include <unistd.h>
 #include <errno.h>
 #include <libgen.h>
 #include <stdarg.h>
