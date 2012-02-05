@@ -30,32 +30,41 @@ int mflag, nflag, sflag;
 
 void catfile (char *filename, FILE *input) {
    int newlines=0;
+   int newline=1;
+   int linen=1;
 
    if (mflag) {
       char head[65] = "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::";
       printf("\n%s\n", head);
       printf("%s", filename);
       printf("\n%s\n\n", head);
-   }
-
-   if (nflag) {
-      
-   }
-
-   if (sflag) {
-      
+      newlines = 2;
    }
 
    for (;;) {
       int byte = getc (input);
       if (byte == EOF) break;
-      if (sflag) {
-         if (byte == '\n') newlines++;
-         else newlines = 0;
-         if (newlines <= 2) putchar (byte);
-      }else {
+      // accounting for n, s flags
+      if (byte == '\n') { newlines++; linen++; }
+      else newlines = 0;
+
+      if (newlines <= 2) {
+         if ( nflag && newline ) printf("%d  ", linen);
          putchar (byte);
       }
+      else {
+         if (!sflag) {
+            if ( nflag && newline ) printf("%d  ", linen);
+            putchar (byte);
+         }
+      }
+      
+      if ( byte == '\n' ) newline = 1;
+      else newline = 0;
+
+      // if (sflag && (newlines <= 2) ) putchar (byte);
+      // else if (!sflag) putchar (byte); 
+      // if ( nflag && (newlines == 1) ) { printf("%6d  ", linen); 
    };
 }
 
