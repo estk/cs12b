@@ -34,7 +34,8 @@ void catfile (char *filename, FILE *input) {
    int linen=1;
 
    if (mflag) {
-      char head[65] = "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::";
+      char head[65] = "::::::::::::::::::::::::::::::::::::"
+                      "::::::::::::::::::::::::::::";
       printf("\n%s\n", head);
       printf("%s", filename);
       printf("\n%s\n\n", head);
@@ -68,7 +69,7 @@ void catfile (char *filename, FILE *input) {
    };
 }
 
-void usage() {
+void usage () {
    printf("%s", "bcat [-mns] [filename...]");
    exit(1);
 }
