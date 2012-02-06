@@ -1,0 +1,14 @@
+#!/bin/sh -x
+# $Id: mk,v 1.3 2011-04-25 13:18:21-07 - - $
+#
+# This script takes the names of C source files and compiles them
+# into executable images.  Each source must be a complete program.
+#
+for CSOURCE in $*
+do
+   cid + $CSOURCE
+   checksource $CSOURCE
+   lint -Xa -fd -m -u -x -errchk=%all $CSOURCE
+   EXECBIN=`echo $CSOURCE | sed 's/\.c$//'`
+   gcc -g -O0 -Wall -Wextra -std=gnu99 $CSOURCE -o $EXECBIN -lm
+done

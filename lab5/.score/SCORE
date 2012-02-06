@@ -1,0 +1,51 @@
+$Id: SCORE,v 1.1 2011-04-25 13:12:09-07 - - $
+
+Copy this file into the student's submit directory and edit it.
+
+*****************************************************************
+
+There are 10 parts to this gdb valgrind lab.  Each part
+should have a file submitted for it.  Check each of the submit
+requirements and assign between 0 and 3 points for that section.
+Add up the scores for each part, which total to 30 points
+maximum, 1 point minimum.  For each part, if you deducted
+points, write a short note explaining why.
+
+Do not accept files with a lot of junk in them.  Verify that
+they are clean and legible and without typing errors.
+And make sure there is no junk from full screen editing.
+Carriage returns (visible as ^M) in these files are OK.
+Do not run checksource on the script files.
+
+*****************************************************************
+
+score part 01 =
+
+score part 02 =
+
+score part 03 =
+
+score part 04 =
+
+score part 05 =
+
+score part 06 =
+
+score part 07 =
+
+score part 08 =
+
+score part 09 =
+
+score part 10 =
+
+*****************************************************************
+
+SUBTOTAL=
+min 1, max 30
+
+If pair programming, TOTALSCORE = SUBTOTAL - TOTAL2.
+If not, TOTALSCORE = SUBTOTAL.
+
+TOTALSCORE=
+min 1, max 30
