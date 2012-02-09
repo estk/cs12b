@@ -1,0 +1,90 @@
+Script started on Thu 09 Feb 2012 03:53:38 PM PST
+bash-3.2$ mbk[K[Kk uninit.c
++ for CSOURCE in '$*'
++ cid + uninit.c
++ checksource uninit.c
++ lint -Xa -fd -m -u -x -errchk=%all uninit.c
+(8) warning: variable may be used before set: foo
+(10) warning: variable may be used before set: pointer
+
+argument unused in function
+    (6) argc in main
+    (6) argv in main
+
+function returns value which is always ignored
+    printf          
+++ echo uninit.c
+++ sed 's/\.c$//'
++ EXECBIN=uninit
++ gcc -g -O0 -Wall -Wextra -std=gnu99 uninit.c -o uninit -lm
+uninit.c:6: warning: unused parameter ‘argc’
+uninit.c:6: warning: unused parameter ‘argv’
+bash-3.2$ valgring[Kd uninit
+==2660== Memcheck, a memory error detector
+==2660== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==2660== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==2660== Command: uninit
+==2660== 
+==2660== Use of uninitialised value of size 8
+==2660==    at 0x3BD5E419BD: _itoa_word (in /lib64/libc-2.5.so)
+==2660==    by 0x3BD5E44E5A: vfprintf (in /lib64/libc-2.5.so)
+==2660==    by 0x3BD5E4D3F9: printf (in /lib64/libc-2.5.so)
+==2660==    by 0x4004E8: main (uninit.c:8)
+==2660== 
+==2660== Conditional jump or move depends on uninitialised value(s)
+==2660==    at 0x3BD5E419C7: _itoa_word (in /lib64/libc-2.5.so)
+==2660==    by 0x3BD5E44E5A: vfprintf (in /lib64/libc-2.5.so)
+==2660==    by 0x3BD5E4D3F9: printf (in /lib64/libc-2.5.so)
+==2660==    by 0x4004E8: main (uninit.c:8)
+==2660== 
+==2660== Conditional jump or move depends on uninitialised value(s)
+==2660==    at 0x3BD5E44ED4: vfprintf (in /lib64/libc-2.5.so)
+==2660==    by 0x3BD5E4D3F9: printf (in /lib64/libc-2.5.so)
+==2660==    by 0x4004E8: main (uninit.c:8)
+==2660== 
+==2660== Conditional jump or move depends on uninitialised value(s)
+==2660==    at 0x3BD5E4563F: vfprintf (in /lib64/libc-2.5.so)
+==2660==    by 0x3BD5E4D3F9: printf (in /lib64/libc-2.5.so)
+==2660==    by 0x4004E8: main (uninit.c:8)
+==2660== 
+==2660== Conditional jump or move depends on uninitialised value(s)
+==2660==    at 0x3BD5E43B60: vfprintf (in /lib64/libc-2.5.so)
+==2660==    by 0x3BD5E4D3F9: printf (in /lib64/libc-2.5.so)
+==2660==    by 0x4004E8: main (uninit.c:8)
+==2660== 
+7
+==2660== Use of uninitialised value of size 8
+==2660==    at 0x4004ED: main (uninit.c:10)
+==2660== 
+==2660== Invalid read of size 4
+==2660==    at 0x4004ED: main (uninit.c:10)
+==2660==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==2660== 
+==2660== 
+==2660== Process terminating with default action of signal 11 (SIGSEGV)
+==2660==  Access not within mapped region at address 0x0
+==2660==    at 0x4004ED: main (uninit.c:10)
+==2660==  If you believe this happened as a result of a stack
+==2660==  overflow in your program's main thread (unlikely but
+==2660==  possible), you can try to increase the size of the
+==2660==  main thread stack using the --main-stacksize= flag.
+==2660==  The main thread stack size used in this run was 10485760.
+==2660== 
+==2660== HEAP SUMMARY:
+==2660==     in use at exit: 0 bytes in 0 blocks
+==2660==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==2660== 
+==2660== All heap blocks were freed -- no leaks are possible
+==2660== 
+==2660== For counts of detected and suppressed errors, rerun with: -v
+==2660== Use --track-origins=yes to see where uninitialised values come from
+==2660== ERROR SUMMARY: 7 errors from 7 contexts (suppressed: 4 from 4)
+Segmentation fault
+bash-3.2$ echo $?
+139
+bash-3.2$ pstatus 139
+pstatus: 0x008B TERMINATED 11: Segmentation fault (core dumped)
+bash-3.2$ exit
+exit
+
+Script done on Thu 09 Feb 2012 03:54:53 PM PST
