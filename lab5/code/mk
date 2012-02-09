@@ -6,7 +6,6 @@
 #
 for CSOURCE in $*
 do
-   cid + $CSOURCE
    checksource $CSOURCE
    lint -Xa -fd -m -u -x -errchk=%all $CSOURCE
    EXECBIN=`echo $CSOURCE | sed 's/\.c$//'`
