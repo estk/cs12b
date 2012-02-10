@@ -1,0 +1,28 @@
+Script started on Thu 09 Feb 2012 04:17:25 PM PST
+bash-3.2$ mk list1.c
++ for CSOURCE in '$*'
++ checksource list1.c
++ lint -Xa -fd -m -u -x -errchk=%all list1.c
+(15) warning: improper pointer/integer combination: op "="
+(15) warning: implicit function declaration: malloc
+(15) warning: cast to pointer from 32-bit integer
+(18) warning: variable may be used before set: head
+
+argument unused in function
+    (12) argc in main
+
+function returns value which is always ignored
+    printf          
+++ echo list1.c
+++ sed 's/\.c$//'
++ EXECBIN=list1
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list1.c -o list1 -lm
+list1.c: In function ‘main’:
+list1.c:15: warning: implicit declaration of function ‘malloc’
+list1.c:15: warning: incompatible implicit declaration of built-in function ‘malloc’
+list1.c: At top level:
+list1.c:12: warning: unused parameter ‘argc’
+bash-3.2$ exit
+exit
+
+Script done on Thu 09 Feb 2012 04:17:47 PM PST

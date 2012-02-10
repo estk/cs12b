@@ -1,0 +1,164 @@
+Script started on Thu 09 Feb 2012 04:22:54 PM PST
+bash-3.2$ mk list2.c
++ for CSOURCE in '$*'
++ checksource list2.c
++ lint -Xa -fd -m -u -x -errchk=%all list2.c
+(19) warning: variable may be used before set: head
+
+argument unused in function
+    (13) argc in main
+
+function returns value which is always ignored
+    printf          
+++ echo list2.c
+++ sed 's/\.c$//'
++ EXECBIN=list2
++ gcc -g -O0 -Wall -Wextra -std=gnu99 list2.c -o list2 -lm
+list2.c:13: warning: unused parameter ‘argc’
+bash-3.2$ valgrind list2 foo bar
+==5076== Memcheck, a memory error detector
+==5076== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==5076== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==5076== Command: list2 foo bar
+==5076== 
+==5076== Invalid write of size 8
+==5076==    at 0x4005CD: main (list2.c:19)
+==5076==  Address 0x4c30048 is 0 bytes after a block of size 8 alloc'd
+==5076==    at 0x4A05E1C: malloc (vg_replace_malloc.c:195)
+==5076==    by 0x400589: main (list2.c:16)
+==5076== 
+==5076== Invalid read of size 8
+==5076==    at 0x400629: main (list2.c:22)
+==5076==  Address 0x4c30188 is 0 bytes after a block of size 8 alloc'd
+==5076==    at 0x4A05E1C: malloc (vg_replace_malloc.c:195)
+==5076==    by 0x400589: main (list2.c:16)
+==5076== 
+==5076== Invalid read of size 8
+==5076==    at 0x4005F1: main (list2.c:23)
+==5076==  Address 0x4c30188 is 0 bytes after a block of size 8 alloc'd
+==5076==    at 0x4A05E1C: malloc (vg_replace_malloc.c:195)
+==5076==    by 0x400589: main (list2.c:16)
+==5076== 
+0x4c30180->node {word=0x7ff00082d->[GREP_COLOR=1;32], link=0x4c30130}
+==5076== Invalid read of size 8
+==5076==    at 0x40061D: main (list2.c:22)
+==5076==  Address 0x4c30188 is 0 bytes after a block of size 8 alloc'd
+==5076==    at 0x4A05E1C: malloc (vg_replace_malloc.c:195)
+==5076==    by 0x400589: main (list2.c:16)
+==5076== 
+0x4c30130->node {word=(nil)->[(null)], link=0x4c300e0}
+0x4c300e0->node {word=0x7ff000829->[bar], link=0x4c30090}
+0x4c30090->node {word=0x7ff000825->[foo], link=0x4c30040}
+0x4c30040->node {word=0x7ff00081f->[list2], link=0x400650}
+==5076== Invalid read of size 1
+==5076==    at 0x4A06D82: strlen (mc_replace_strmem.c:275)
+==5076==    by 0x3BD5E46B68: vfprintf (in /lib64/libc-2.5.so)
+==5076==    by 0x3BD5E4D3F9: printf (in /lib64/libc-2.5.so)
+==5076==    by 0x400618: main (list2.c:23)
+==5076==  Address 0x6c894ce02464894c is not stack'd, malloc'd or (recently) free'd
+==5076== 
+==5076== 
+==5076== Process terminating with default action of signal 11 (SIGSEGV)
+==5076==  General Protection Fault
+==5076==    at 0x4A06D82: strlen (mc_replace_strmem.c:275)
+==5076==    by 0x3BD5E46B68: vfprintf (in /lib64/libc-2.5.so)
+==5076==    by 0x3BD5E4D3F9: printf (in /lib64/libc-2.5.so)
+==5076==    by 0x400618: main (list2.c:23)
+0x400650->node {word=0x6c894ce02464894c->[==5076== 
+==5076== HEAP SUMMARY:
+==5076==     in use at exit: 40 bytes in 5 blocks
+==5076==   total heap usage: 5 allocs, 0 frees, 40 bytes allocated
+==5076== 
+==5076== LEAK SUMMARY:
+==5076==    definitely lost: 32 bytes in 4 blocks
+==5076==    indirectly lost: 0 bytes in 0 blocks
+==5076==      possibly lost: 0 bytes in 0 blocks
+==5076==    still reachable: 8 bytes in 1 blocks
+==5076==         suppressed: 0 bytes in 0 blocks
+==5076== Rerun with --leak-check=full to see details of leaked memory
+==5076== 
+==5076== For counts of detected and suppressed errors, rerun with: -v
+==5076== ERROR SUMMARY: 21 errors from 5 contexts (suppressed: 4 from 4)
+Segmentation fault
+bash-3.2$ gdb list2
+GNU gdb (GDB) Red Hat Enterprise Linux (7.0.1-23.el5_5.2)
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /afs/cats.ucsc.edu/users/l/easimmon/private/cs12b/lab5/code/list2...done.
+(gdb) run foo bar
+Starting program: /afs/cats.ucsc.edu/users/l/easimmon/private/cs12b/lab5/code/list2 foo bar
+0x601090->node {word=0x7fffffffe851->[GREP_COLOR=1;32], link=0x601070}
+0x601070->node {word=(nil)->[(null)], link=0x601050}
+0x601050->node {word=0x7fffffffe84d->[bar], link=0x601030}
+0x601030->node {word=0x7fffffffe849->[foo], link=0x601010}
+0x601010->node {word=0x7fffffffe807->[/afs/cats.ucsc.edu/users/l/easimmon/private/cs12b/lab5/code/list2], link=0x400650}
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000003bd5e79a10 in strlen () from /lib64/libc.so.6
+(gdb) where
+#0  0x0000003bd5e79a10 in strlen () from /lib64/libc.so.6
+#1  0x0000003bd5e46b69 in vfprintf () from /lib64/libc.so.6
+#2  0x0000003bd5e4d3fa in printf () from /lib64/libc.so.6
+#3  0x0000000000400619 in main (argc=3, argv=0x7fffffffe598) at list2.c:23
+(gdb) list
+6	
+7	typedef struct node *node_ref;
+8	struct node {
+9	   char *word;
+10	   node_ref link;
+11	};
+12	
+13	int main (int argc, char **argv) {
+14	   node_ref head;
+15	   for (int argi = 0; argi < 5; ++argi) {
+(gdb) list list2:[K.c:23
+18	      node->word = argv[argi];
+19	      node->link = head;
+20	      head = node;
+21	   }
+22	   for (node_ref curr = head; curr->link != NULL; curr = curr->link) {
+23	      printf ("%p->node {word=%p->[%s], link=%p}\n",
+24	              curr, curr->word, curr->word, curr->link);
+25	   }
+26	   return 9;
+27	}
+(gdb) print head
+No symbol "head" in current context.
+(gdb) bt
+#0  0x0000003bd5e79a10 in strlen () from /lib64/libc.so.6
+#1  0x0000003bd5e46b69 in vfprintf () from /lib64/libc.so.6
+#2  0x0000003bd5e4d3fa in printf () from /lib64/libc.so.6
+#3  0x0000000000400619 in main (argc=3, argv=0x7fffffffe598) at list2.c:23
+(gdb) up
+#1  0x0000003bd5e46b69 in vfprintf () from /lib64/libc.so.6
+(gdb) up
+#2  0x0000003bd5e4d3fa in printf () from /lib64/libc.so.6
+(gdb) up
+#3  0x0000000000400619 in main (argc=3, argv=0x7fffffffe598) at list2.c:23
+23	      printf ("%p->node {word=%p->[%s], link=%p}\n",
+(gdb) print head
+$1 = (node_ref) 0x601090
+(gdb) print *head
+$2 = {word = 0x7fffffffe851 "GREP_COLOR=1;32", link = 0x601070}
+(gdb) print *head([K[K[K[K[K(head-<[K>word)
+$3 = 71 'G'
+(gdb) print head->link->link->link
+$4 = (node_ref) 0x601030
+(gdb) print head->link->link->link(gdb) print head->link->link->link)*head->link->link->link)(gdb) print *(head->link->link->link)(gdb) print *(
+$5 = {word = 0x7fffffffe849 "foo", link = 0x601010}
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 5135] will be killed.
+
+Quit anyway? (y or n) y
+bash-3.2$ exit
+exit
+
+Script done on Thu 09 Feb 2012 04:27:48 PM PST
