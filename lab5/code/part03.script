@@ -1,0 +1,41 @@
+Script started on Thu 09 Feb 2012 04:05:21 PM PST
+bash-3.2$ gdb uninit
+GNU gdb (GDB) Red Hat Enterprise Linux (7.0.1-23.el5_5.2)
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /afs/cats.ucsc.edu/users/l/easimmon/private/cs12b/lab5/code/uninit...done.
+(gdb) break main
+Breakpoint 1 at 0x4004d7: file uninit.c, line 8.
+(gdb) run
+Starting program: /afs/cats.ucsc.edu/users/l/easimmon/private/cs12b/lab5/code/uninit 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffe5a8) at uninit.c:8
+warning: Source file is more recent than executable.
+8	   printf ("%d\n", foo);
+(gdb) print foo
+$1 = 32767
+(gdb) step
+32767
+10	   printf ("%d\n", *pointer);
+(gdb) print pointer
+$2 = (int *) 0x0
+(gdb) step
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00000000004004ed in main (argc=1, argv=0x7fffffffe5a8) at uninit.c:10
+10	   printf ("%d\n", *pointer);
+(gdb) step
+
+Program terminated with signal SIGSEGV, Segmentation fault.
+The program no longer exists.
+(gdb) quit
+bash-3.2$ exit
+exit
+
+Script done on Thu 09 Feb 2012 04:07:14 PM PST
