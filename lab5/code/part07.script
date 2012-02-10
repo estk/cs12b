@@ -1,0 +1,47 @@
+Script started on Thu 09 Feb 2012 11:45:53 PM PST
+bash-3.2$ gdb list2
+GNU gdb (GDB) Red Hat Enterprise Linux (7.0.1-23.el5_5.2)
+Copyright (C) 2009 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /afs/cats.ucsc.edu/users/l/easimmon/private/cs12b/lab5/code/list2...done.
+(gdb) break man[Kin
+Breakpoint 1 at 0x400577: file list2.c, line 15.
+(gdb) runn[K foo bar
+Starting program: /afs/cats.ucsc.edu/users/l/easimmon/private/cs12b/lab5/code/list2 foo bar
+
+Breakpoint 1, main (argc=3, argv=0x7fffffffe598) at list2.c:15
+15	   for (int argi = 0; argi < 5; ++argi) {
+(gdb) print argc
+$1 = 3
+(gdb) grint[K[K[K[K[Kprint argv
+$2 = (char **) 0x7fffffffe598
+(gdb) print arg[0]
+No symbol "arg" in current context.
+(gdb) print arg[0]v[0]
+$3 = 0x7fffffffe808 "/afs/cats.ucsc.edu/users/l/easimmon/private/cs12b/lab5/code/list2"
+(gdb) print argv[0][1P]1]
+$4 = 0x7fffffffe84a "foo"
+(gdb) print argv[1][1P]2]
+$5 = 0x7fffffffe84e "bar"
+(gdb) print argv[2][1P]3]
+$6 = 0x0
+(gdb) print argv[3][1P]5]
+$7 = 0x7fffffffe862 "HOSTNAME=unix3.ic.ucsc.edu"
+(gdb) print argv[5][1P]6]
+$8 = 0x7fffffffe87d "SHELL=/bin/bash"
+(gdb) quit
+A debugging session is active.
+
+	Inferior 1 [process 2975] will be killed.
+
+Quit anyway? (y or n) y
+bash-3.2$ exit
+exit
+
+Script done on Thu 09 Feb 2012 11:47:35 PM PST
