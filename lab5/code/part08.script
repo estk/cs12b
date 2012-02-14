@@ -1,0 +1,33 @@
+Script started on Mon 13 Feb 2012 06:07:46 PM PST
+bash-3.2$ valgrind --leak-check=full list3 foo bar baz qux
+==25905== Memcheck, a memory error detector
+==25905== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==25905== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==25905== Command: list3 foo bar baz qux
+==25905== 
+0x4c30180->node {word=0x7ff000829->[qux], link=0x4c30130}
+0x4c30130->node {word=0x7ff000825->[baz], link=0x4c300e0}
+0x4c300e0->node {word=0x7ff000821->[bar], link=0x4c30090}
+0x4c30090->node {word=0x7ff00081d->[foo], link=0x4c30040}
+==25905== 
+==25905== HEAP SUMMARY:
+==25905==     in use at exit: 80 bytes in 5 blocks
+==25905==   total heap usage: 5 allocs, 0 frees, 80 bytes allocated
+==25905== 
+==25905== 80 (16 direct, 64 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==25905==    at 0x4A05E1C: malloc (vg_replace_malloc.c:195)
+==25905==    by 0x400591: main (list3.c:16)
+==25905== 
+==25905== LEAK SUMMARY:
+==25905==    definitely lost: 16 bytes in 1 blocks
+==25905==    indirectly lost: 64 bytes in 4 blocks
+==25905==      possibly lost: 0 bytes in 0 blocks
+==25905==    still reachable: 0 bytes in 0 blocks
+==25905==         suppressed: 0 bytes in 0 blocks
+==25905== 
+==25905== For counts of detected and suppressed errors, rerun with: -v
+==25905== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 4 from 4)
+bash-3.2$ exit
+exit
+
+Script done on Mon 13 Feb 2012 06:08:26 PM PST

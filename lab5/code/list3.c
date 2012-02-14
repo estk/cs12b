@@ -11,9 +11,9 @@ struct node {
 };
 
 int main (int argc, char **argv) {
-   node_ref head;
-   for (int argi = 0; argi < 5; ++argi) {
-      node_ref node = malloc (sizeof (node_ref));
+   node_ref head = NULL;
+   for (int argi = 0; argi < argc; ++argi) {
+      node_ref node = malloc (sizeof (struct node));
       assert (node != NULL);
       node->word = argv[argi];
       node->link = head;
