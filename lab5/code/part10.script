@@ -1,0 +1,43 @@
+Script started on Tue 14 Feb 2012 12:12:25 AM PST
+bash-3.2$ ./exit[K[K[K[K./environ 
+GREP_COLOR=1;32
+HOSTNAME=unix3.ic.ucsc.edu
+TERM=xterm-color
+SHELL=/bin/bash
+HISTSIZE=10000
+SSH_CLIENT=50.131.132.250 57066 22
+PERL5LIB=/usr/local/lib64/perl5:/usr/local/lib/perl5:/usr/local/lib64/perl5/site_perl:/usr/local/lib/perl5/site_perl
+MOIRASERVER=potmos.ucsc.edu
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+SSH_TTY=/dev/pts/36
+USER=easimmon
+LS_COLORS=no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=01;32:*.cmd=01;32:*.exe=01;32:*.com=01;32:*.btm=01;32:*.bat=01;32:*.sh=01;32:*.csh=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tz=01;31:*.rpm=01;31:*.cpio=01;31:*.jpg=01;35:*.gif=01;35:*.bmp=01;35:*.xbm=01;35:*.xpm=01;35:*.png=01;35:*.tif=01;35:
+ATISTREAMSDKSAMPLESROOT=/usr/local/ati-stream-sdk/ati-stream-sdk-v2.2-lnx64
+ATISTREAMSDKROOT=/usr/local/ati-stream-sdk/ati-stream-sdk-v2.2-lnx64
+PAGER=less
+LSCOLORS=Gxfxcxdxbxegedabagacad
+MAIL=/var/spool/mail/easimmon
+PATH=/usr/lib64/qt-3.3/bin:/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/usr/local/sunstudio/sunstudio12.1/bin:/afs/cats.ucsc.edu/users/l/easimmon/bin:.:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+INPUTRC=/etc/inputrc
+PWD=/afs/cats.ucsc.edu/users/l/easimmon/private/cs12b/lab5/code
+LANG=en_US.UTF-8
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+KRB5CCNAME=FILE:/tmp/krb5cc_27634_boUajx
+SHLVL=2
+HOME=/afs/cats.ucsc.edu/users/l/easimmon
+GREP_OPTIONS=--color=auto
+LOGNAME=easimmon
+QTLIB=/usr/lib64/qt-3.3/lib
+CVS_RSH=ssh
+LC_CTYPE=en_US.UTF-8
+SSH_CONNECTION=50.131.132.250 57066 128.114.108.152 22
+LESSOPEN=|/usr/bin/lesspipe.sh %s
+PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/share/pkgconfig:/usr/local/lib/pkgconfig
+G_BROKEN_FILENAMES=1
+KRBTKFILE=/tmp/tkt27634_X20cCE
+_=./environ
+bash-3.2$ exit
+exit
+
+Script done on Tue 14 Feb 2012 12:12:42 AM PST
