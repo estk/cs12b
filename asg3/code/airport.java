@@ -1,5 +1,3 @@
-// $Id: airport.java,v 1.1 2012-02-07 15:43:17-08 - - $
-
 //
 // Starter code for the airport utility.
 //
@@ -28,7 +26,6 @@ class airport {
       return jarpath.substring (lastslash + 1);
    }
 
-
 
    public static treemap load_database (String database_name) {
       treemap tree = new treemap ();
@@ -55,8 +52,26 @@ class airport {
    } 
 
    public static void main (String[] args) {
-      treemap tree = load_database (args[0]);
+      String database = null;
+      boolean debug = false;
+
+      if (args.length > 2) usage();
+      else if (args.length == 2) {
+        if ( args[0] != "-d" ) usage();
+        if ( args[1].charAt(0) == '-' ) usage();
+        debug = true;
+        database = args[1];
+      }
+      else if (args.length == 1) {
+         if ( args[0].charAt(0) == '-' ) usage();
+         database = args[0];
+      }
+      else usage();
+
+      treemap tree = load_database (database);
       Scanner stdin = new Scanner (in);
+
+      if (!debug) {
       while (stdin.hasNextLine()) {
          String airport = stdin.nextLine().toUpperCase().trim();
          String airport_name = tree.get (airport);
@@ -66,8 +81,14 @@ class airport {
             out.printf ("%s = %s%n", airport, airport_name);
          }
       }
+      }else {
       tree.debug_tree ();
       exit (exit_status);
+      }
    }
 
+   static void usage() {
+     out.println("airport [-d] database");
+     exit(0);
+   }
 }
