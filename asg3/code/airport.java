@@ -42,11 +42,13 @@ class airport {
                continue;
             }
             tree.put (keyvalue[0], keyvalue[1]);
+            out.println("just put: " + keyvalue[0] +" "+ keyvalue[1]);
          }
          database.close();
       }catch (IOException error) {
          exit_status = EXIT_FAILURE;
          err.printf ("%s: %s%n", JARNAME, error.getMessage());
+         exit(exit_status);
       }
       return tree;
    } 
@@ -57,7 +59,7 @@ class airport {
 
       if (args.length > 2) usage();
       else if (args.length == 2) {
-        if ( args[0] != "-d" ) usage();
+        if ( args[0].compareTo("-d") != 0 ) usage();
         if ( args[1].charAt(0) == '-' ) usage();
         debug = true;
         database = args[1];
@@ -67,6 +69,7 @@ class airport {
          database = args[0];
       }
       else usage();
+      out.println("arg analysis done");
 
       treemap tree = load_database (database);
       Scanner stdin = new Scanner (in);
@@ -89,6 +92,6 @@ class airport {
 
    static void usage() {
      out.println("airport [-d] database");
-     exit(0);
+     exit(1);
    }
 }
