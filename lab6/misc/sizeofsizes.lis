@@ -1,0 +1,15 @@
+argc = 1, argv = 0x7fff64640e98
+argv[0] = 0x7fff64642268 = "./sizeofsizes"
+   1 = sizeof (char)
+   2 = sizeof (short)
+   4 = sizeof (int)
+   8 = sizeof (long)
+   8 = sizeof (long long)
+   4 = sizeof (float)
+   8 = sizeof (double)
+  16 = sizeof (long double)
+   8 = sizeof (void *)
+  16 = sizeof (struct node)
+   8 = sizeof (struct node *)
+   8 = sizeof (size_t)
+   8 = sizeof (uintptr_t)

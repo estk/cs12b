@@ -1,0 +1,41 @@
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+log: scanf.log
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	Script  : /afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprog
+     2	limit c :    0 max core file size (KB)
+     3	limit f : 4194303 max output file size (KB)
+     4	limit t : 4294967295 max CPU time (sec)
+     5	stdin   : -
+     6	stdout  : scanf.out
+     7	stderr  : scanf.err
+     8	log     : scanf.log
+     9	listing : scanf.lis
+    10	Command : ./scanf
+    11	starting: pid 14519: 18:53:09.00
+    12	finished: pid 14519: 18:53:09.00, real 0.00, user 0.00, sys 0.00
+    13	pstatus: 0x0000 EXIT STATUS = 0
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stdout: scanf.out
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	err_buf_fmt = "%255s"
+     2	scanf: number = 33
+     3	scanf: number = 44
+     4	scanf: number = inf
+     5	scanf: number = 8.88888888888889e+53
+     6	scanf: bad number "This-is-not"
+     7	scanf: bad number "a-number"
+     8	scanf: number = 0.666666666666667
+     9	scanf: number = -6.02e+23
+    10	scanf: number = inf
+    11	scanf: number = -inf
+    12	scanf: number = nan
+    13	scanf: EOF
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stderr: scanf.err
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+

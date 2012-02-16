@@ -1,0 +1,345 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(19:00:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 270.82 736.5 Tm
+(sizeofsizes.c)Tj
+-127.425 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(// $Id: sizeofsizes.c,v 1.12 2012-02-09 19:00:37-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <assert.h>)]TJ
+T*[(4:)-600(#include <inttypes.h>)]TJ
+T*[(5:)-600(#include <stdio.h>)]TJ
+T*[(6:)-600(#include <stdlib.h>)]TJ
+(7:)'
+T*[(8:)-600(#define PRINTSIZE\(TYPE\) \\)]TJ
+T*[(9:)-600(        printf \("%4ld = sizeof \(%s\)\\n", sizeof \(TYPE\), #TYPE\);)]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(struct node {)]TJ
+T*[(12:)-600(   char *string;)]TJ
+T*[(13:)-600(   struct node *link;)]TJ
+T*[(14:)-600(};)]TJ
+(15:)'
+T*[(16:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(17:)-600(   printf \("argc = %d, argv = %p\\n", argc, argv\);)]TJ
+T*[(18:)-600(   printf \("argv[0] = %p = \\"%s\\"\\n", argv[0], argv[0]\);)]TJ
+T*[(19:)-600(   PRINTSIZE \(char\);)]TJ
+T*[(20:)-600(   PRINTSIZE \(short\);)]TJ
+T*[(21:)-600(   PRINTSIZE \(int\);)]TJ
+T*[(22:)-600(   PRINTSIZE \(long\);)]TJ
+T*[(23:)-600(   PRINTSIZE \(long long\);)]TJ
+T*[(24:)-600(   PRINTSIZE \(float\);)]TJ
+T*[(25:)-600(   PRINTSIZE \(double\);)]TJ
+T*[(26:)-600(   PRINTSIZE \(long double\);)]TJ
+T*[(27:)-600(   PRINTSIZE \(void *\);)]TJ
+T*[(28:)-600(   PRINTSIZE \(struct node\);)]TJ
+T*[(29:)-600(   PRINTSIZE \(struct node *\);)]TJ
+T*[(30:)-600(   PRINTSIZE \(size_t\);)]TJ
+T*[(31:)-600(   PRINTSIZE \(uintptr_t\);)]TJ
+T*[(32:)-600(   return EXIT_SUCCESS;)]TJ
+T*[(33:)-600(})]TJ
+(34:)'
+T*[(35:)-600(//TEST// ./sizeofsizes >sizeofsizes.lis)]TJ
+T*[(36:)-600(//TEST// mkpspdf sizeofsizes.ps sizeofsizes.c* sizeofsizes.lis)]TJ
+(37:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+2020
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(19:00:38)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 260.123 736.5 Tm
+(sizeofsizes.c.log)Tj
+-116.729 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting sizeofsizes.c)]TJ
+11 TL
+T*[(2:)-600(sizeofsizes.c: $Id: sizeofsizes.c,v 1.12 2012-02-09 19:00:37-08 - - $)]TJ
+T*[(3:)-600(gcc -g -O0 -Wall -Wextra -std=gnu99 sizeofsizes.c -o sizeofsizes -lm)]TJ
+T*[(4:)-600(lint -Xa -fd -m -u -x -errchk=%all sizeofsizes.c)]TJ
+(5:)'
+T*[(6:)-600(function returns value which is always ignored)]TJ
+T*[(7:)-600(    printf          )]TJ
+T*[(8:)-600(rm -f sizeofsizes.o)]TJ
+T*[(9:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished sizeofsizes.c)]TJ
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+1068
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(19:00:38)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 267.313 736.5 Tm
+(sizeofsizes.lis)Tj
+-123.918 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(argc = 1, argv = 0x7fff64640e98)]TJ
+11 TL
+T*[(2:)-600(argv[0] = 0x7fff64642268 = "./sizeofsizes")]TJ
+T*[(3:)-600(   1 = sizeof \(char\))]TJ
+T*[(4:)-600(   2 = sizeof \(short\))]TJ
+T*[(5:)-600(   4 = sizeof \(int\))]TJ
+T*[(6:)-600(   8 = sizeof \(long\))]TJ
+T*[(7:)-600(   8 = sizeof \(long long\))]TJ
+T*[(8:)-600(   4 = sizeof \(float\))]TJ
+T*[(9:)-600(   8 = sizeof \(double\))]TJ
+-6 -11 Td
+[(10:)-600(  16 = sizeof \(long double\))]TJ
+T*[(11:)-600(   8 = sizeof \(void *\))]TJ
+T*[(12:)-600(  16 = sizeof \(struct node\))]TJ
+T*[(13:)-600(   8 = sizeof \(struct node *\))]TJ
+T*[(14:)-600(   8 = sizeof \(size_t\))]TJ
+T*[(15:)-600(   8 = sizeof \(uintptr_t\))]TJ
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+1202
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+] /Count 3
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120209190038)
+/ModDate(D:20120209190038)>>endobj
+xref
+0 21
+0000000000 65535 f 
+0000004991 00000 n 
+0000005558 00000 n 
+0000004918 00000 n 
+0000004515 00000 n 
+0000000009 00000 n 
+0000002079 00000 n 
+0000005356 00000 n 
+0000005227 00000 n 
+0000005425 00000 n 
+0000005293 00000 n 
+0000005490 00000 n 
+0000005039 00000 n 
+0000004648 00000 n 
+0000002099 00000 n 
+0000003219 00000 n 
+0000005109 00000 n 
+0000004783 00000 n 
+0000003240 00000 n 
+0000004494 00000 n 
+0000005168 00000 n 
+trailer
+<< /Size 21 /Root 1 0 R /Info 2 0 R
+/ID [<5FEC1F139F293747D04A5709351A92CA><5FEC1F139F293747D04A5709351A92CA>]
+>>
+startxref
+5669
+%%EOF

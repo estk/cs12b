@@ -1,0 +1,87 @@
+$Id: SCORE,v 1.1 2011-04-26 18:40:34-07 - - $
+
+Copy all of the files from this directory into the student's
+submit directory.
+
+Student:
+
+For any point deduction, note it in the left margin and add a
+comment under it indicating why the loss of points.  Assign a
+point value for each between 0 and the max indicated in parens.
+
+DO NOT DEDUCT POINTS FOR THE FOLLOWING LINT MESSAGES:
+function returns value which is ... ignored
+
+run mk.build
+ruh mk.tests if mk.build succeeded
+
+*****************************************************************
+
+CODE = 15 points
+
+   Check each of the following and assign between 0 and 2 points
+   for each.  If the total is 16, record 15 instead.
+
+   (2) checksource did not complain
+
+   (2) lint did not complain (except for return value ignored msg)
+
+   (2) uses getopt to check for the -d option
+
+   (2) uses scanf to read numbers and checks results (nsort)
+
+   (2) uses fgets to read lines (lsort)
+
+   (2) uses strcmp to compare lines when inserting (lsort)
+
+   (2) assert not null after every malloc (both)
+
+   (2) uses free to release allocated space (both)
+
+code total=
+min 1, max 15
+
+*****************************************************************
+
+TESTING = 15 points
+
+   Each test is run with good.in, bad.in, -d good.in, and bcheck.
+   For each of the following items, assign 2 points for the results
+   of nsort and 2 points for results of lsort.
+
+   (4) Good tests, correct outout?
+       - nsort (2)
+       - lsort (2)
+
+   (4) All tests, err messages for bad tests to stderr.
+       All tests, exit status correct (0 = OK, 1 = bad).
+       - nsort (2)
+       - lsort (2)
+
+   (4) Debug -d tests, output in correct format?
+       - nsort (2)
+       - lsort (2)
+
+   (4) For bcheck runs (*.dbx), is 0 memory leak reported?
+       - nsort (2)
+       - lsort (2)
+
+   Out of the total of 16, deduct 5 points if any of the tests
+   reported a bus error, seg fault, or core dump.  Record a
+   final score for this segment of between 0 to 15 inclusive,
+   no negative numbers, and no 16.
+
+testing total=
+min 0, max 15
+
+*****************************************************************
+
+SUBTOTAL=
+min 1, max 30
+
+If pair programming, TOTALSCORE = SUBTOTAL - TOTAL2.
+If not, TOTALSCORE = SUBTOTAL.
+
+TOTALSCORE=
+min 1, max 30
+

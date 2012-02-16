@@ -1,0 +1,1022 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 38 24 574 768
+%%Title: Enscript Output
+%%For: Wesley Mackey,,,,
+%%Creator: GNU enscript 1.6.4
+%%CreationDate: Thu Feb  9 18:53:09 2012
+%%Orientation: Portrait
+%%Pages: (atend)
+%%DocumentMedia: Letter 612 792 0 () ()
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset Enscript-Prolog 1.6 4
+%
+% Procedures.
+%
+
+/_S {	% save current state
+  /_s save def
+} def
+/_R {	% restore from saved state
+  _s restore
+} def
+
+/S {	% showpage protecting gstate
+  gsave
+  showpage
+  grestore
+} bind def
+
+/MF {	% fontname newfontname -> -	make a new encoded font
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  % insert only valid encoding vectors
+  encoding_vector length 256 eq {
+    newfont /Encoding encoding_vector put
+  } if
+
+  newfontname newfont definefont pop
+} def
+
+/MF_PS { % fontname newfontname -> -	make a new font preserving its enc
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  newfontname newfont definefont pop
+} def
+
+/SF { % fontname width height -> -	set a new font
+  /height exch def
+  /width exch def
+
+  findfont
+  [width 0 0 height 0 0] makefont setfont
+} def
+
+/SUF { % fontname width height -> -	set a new user font
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF
+  /F-gs-user-font width height SF
+} def
+
+/SUF_PS { % fontname width height -> -	set a new user font preserving its enc
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF_PS
+  /F-gs-user-font width height SF
+} def
+
+/M {moveto} bind def
+/s {show} bind def
+
+/Box {	% x y w h -> -			define box path
+  /d_h exch def /d_w exch def /d_y exch def /d_x exch def
+  d_x d_y  moveto
+  d_w 0 rlineto
+  0 d_h rlineto
+  d_w neg 0 rlineto
+  closepath
+} def
+
+/bgs {	% x y height blskip gray str -> -	show string with bg color
+  /str exch def
+  /gray exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    gray setgray
+    fill
+  grestore
+  x y M str s
+} def
+
+/bgcs { % x y height blskip red green blue str -> -  show string with bg color
+  /str exch def
+  /blue exch def
+  /green exch def
+  /red exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    red green blue setrgbcolor
+    fill
+  grestore
+  x y M str s
+} def
+
+% Highlight bars.
+/highlight_bars {	% nlines lineheight output_y_margin gray -> -
+  gsave
+    setgray
+    /ymarg exch def
+    /lineheight exch def
+    /nlines exch def
+
+    % This 2 is just a magic number to sync highlight lines to text.
+    0 d_header_y ymarg sub 2 sub translate
+
+    /cw d_output_w cols div def
+    /nrows d_output_h ymarg 2 mul sub lineheight div cvi def
+
+    % for each column
+    0 1 cols 1 sub {
+      cw mul /xp exch def
+
+      % for each rows
+      0 1 nrows 1 sub {
+        /rn exch def
+        rn lineheight mul neg /yp exch def
+        rn nlines idiv 2 mod 0 eq {
+	  % Draw highlight bar.  4 is just a magic indentation.
+	  xp 4 add yp cw 8 sub lineheight neg Box fill
+	} if
+      } for
+    } for
+
+  grestore
+} def
+
+% Line highlight bar.
+/line_highlight {	% x y width height gray -> -
+  gsave
+    /gray exch def
+    Box gray setgray fill
+  grestore
+} def
+
+% Column separator lines.
+/column_lines {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h translate
+    /cw d_output_w cols div def
+    1 1 cols 1 sub {
+      cw mul 0 moveto
+      0 d_output_h rlineto stroke
+    } for
+  grestore
+} def
+
+% Column borders.
+/column_borders {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h moveto
+    0 d_output_h rlineto
+    d_output_w 0 rlineto
+    0 d_output_h neg rlineto
+    closepath stroke
+  grestore
+} def
+
+% Do the actual underlay drawing
+/draw_underlay {
+  ul_style 0 eq {
+    ul_str true charpath stroke
+  } {
+    ul_str show
+  } ifelse
+} def
+
+% Underlay
+/underlay {	% - -> -
+  gsave
+    0 d_page_h translate
+    d_page_h neg d_page_w atan rotate
+
+    ul_gray setgray
+    ul_font setfont
+    /dw d_page_h dup mul d_page_w dup mul add sqrt def
+    ul_str stringwidth pop dw exch sub 2 div ul_h_ptsize -2 div moveto
+    draw_underlay
+  grestore
+} def
+
+/user_underlay {	% - -> -
+  gsave
+    ul_x ul_y translate
+    ul_angle rotate
+    ul_gray setgray
+    ul_font setfont
+    0 0 ul_h_ptsize 2 div sub moveto
+    draw_underlay
+  grestore
+} def
+
+% Page prefeed
+/page_prefeed {		% bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} def
+
+% Wrapped line markers
+/wrapped_line_mark {	% x y charwith charheight type -> -
+  /type exch def
+  /h exch def
+  /w exch def
+  /y exch def
+  /x exch def
+
+  type 2 eq {
+    % Black boxes (like TeX does)
+    gsave
+      0 setlinewidth
+      x w 4 div add y M
+      0 h rlineto w 2 div 0 rlineto 0 h neg rlineto
+      closepath fill
+    grestore
+  } {
+    type 3 eq {
+      % Small arrows
+      gsave
+        .2 setlinewidth
+        x w 2 div add y h 2 div add M
+        w 4 div 0 rlineto
+        x w 4 div add y lineto stroke
+
+        x w 4 div add w 8 div add y h 4 div add M
+        x w 4 div add y lineto
+	w 4 div h 8 div rlineto stroke
+      grestore
+    } {
+      % do nothing
+    } ifelse
+  } ifelse
+} def
+
+% EPSF import.
+
+/BeginEPSF {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack
+  userdict begin
+  /showpage { } def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin
+  10 setmiterlimit [ ] 0 setdash newpath
+  /languagelevel where {
+    pop languagelevel
+    1 ne {
+      false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+/EndEPSF {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+%%EndResource
+%%BeginResource: procset Enscript-Encoding-88591 1.6 4
+/encoding_vector [
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclam       	/quotedbl     	/numbersign   	
+/dollar       	/percent      	/ampersand    	/quoteright   	
+/parenleft    	/parenright   	/asterisk     	/plus         	
+/comma        	/hyphen       	/period       	/slash        	
+/zero         	/one          	/two          	/three        	
+/four         	/five         	/six          	/seven        	
+/eight        	/nine         	/colon        	/semicolon    	
+/less         	/equal        	/greater      	/question     	
+/at           	/A            	/B            	/C            	
+/D            	/E            	/F            	/G            	
+/H            	/I            	/J            	/K            	
+/L            	/M            	/N            	/O            	
+/P            	/Q            	/R            	/S            	
+/T            	/U            	/V            	/W            	
+/X            	/Y            	/Z            	/bracketleft  	
+/backslash    	/bracketright 	/asciicircum  	/underscore   	
+/quoteleft    	/a            	/b            	/c            	
+/d            	/e            	/f            	/g            	
+/h            	/i            	/j            	/k            	
+/l            	/m            	/n            	/o            	
+/p            	/q            	/r            	/s            	
+/t            	/u            	/v            	/w            	
+/x            	/y            	/z            	/braceleft    	
+/bar          	/braceright   	/tilde        	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclamdown   	/cent         	/sterling     	
+/currency     	/yen          	/brokenbar    	/section      	
+/dieresis     	/copyright    	/ordfeminine  	/guillemotleft	
+/logicalnot   	/hyphen       	/registered   	/macron       	
+/degree       	/plusminus    	/twosuperior  	/threesuperior	
+/acute        	/mu           	/paragraph    	/bullet       	
+/cedilla      	/onesuperior  	/ordmasculine 	/guillemotright	
+/onequarter   	/onehalf      	/threequarters	/questiondown 	
+/Agrave       	/Aacute       	/Acircumflex  	/Atilde       	
+/Adieresis    	/Aring        	/AE           	/Ccedilla     	
+/Egrave       	/Eacute       	/Ecircumflex  	/Edieresis    	
+/Igrave       	/Iacute       	/Icircumflex  	/Idieresis    	
+/Eth          	/Ntilde       	/Ograve       	/Oacute       	
+/Ocircumflex  	/Otilde       	/Odieresis    	/multiply     	
+/Oslash       	/Ugrave       	/Uacute       	/Ucircumflex  	
+/Udieresis    	/Yacute       	/Thorn        	/germandbls   	
+/agrave       	/aacute       	/acircumflex  	/atilde       	
+/adieresis    	/aring        	/ae           	/ccedilla     	
+/egrave       	/eacute       	/ecircumflex  	/edieresis    	
+/igrave       	/iacute       	/icircumflex  	/idieresis    	
+/eth          	/ntilde       	/ograve       	/oacute       	
+/ocircumflex  	/otilde       	/odieresis    	/divide       	
+/oslash       	/ugrave       	/uacute       	/ucircumflex  	
+/udieresis    	/yacute       	/thorn        	/ydieresis    	
+] def
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Courier
+/HFpt_w 10 def
+/HFpt_h 10 def
+/Courier-Bold /HF-gs-font MF
+/HF /HF-gs-font findfont [HFpt_w 0 0 HFpt_h 0 0] makefont def
+/Courier /F-gs-font MF
+/F-gs-font 10 10 SF
+/#copies 1 def
+% Pagedevice definitions:
+gs_languagelevel 1 gt {
+  <<
+    /PageSize [612 792] 
+  >> setpagedevice
+} if
+%%BeginResource: procset Enscript-Header-enscript 1.6 4
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Times-Roman
+
+% Fonts.
+/Times-Bold /HeaderFont-Bold MF
+/HeaderDateF /HeaderFont-Bold findfont 12 scalefont def
+
+/Times-Roman /HeaderFont-Times MF
+/HeaderHDRF /HeaderFont-Times findfont 14 scalefont def
+
+/HeaderPageNumF /Helvetica-Bold findfont 28.8 scalefont def
+
+/do_header {	% print enscript header
+  gsave
+    d_header_x d_header_y translate
+
+    % light bar
+    0 0 d_header_w d_header_h 2 div Box
+    .95 setgray fill
+
+    % dark gray boxes
+    /dbw d_header_h 2 mul def	% dark box width
+    /dbc .7 def			% dark box color
+
+    % left dark box.
+    0 0 dbw d_header_h Box
+    dbc setgray fill
+
+    0 setgray 
+    HeaderDateF setfont
+    moddatestr dup stringwidth pop dbw exch sub 2 div 
+    d_header_h 2 div 2 add moveto show
+    modtimestr dup stringwidth pop dbw exch sub 2 div 
+    d_header_h 5 div moveto show
+
+    % right dark box
+    d_header_w dbw sub 0 dbw d_header_h Box
+    dbc setgray fill
+
+    HeaderPageNumF setfont
+    1 setgray
+    pagenumstr dup
+    stringwidth pop dbw exch sub 2 div d_header_w dbw sub add
+    d_header_h .2 mul moveto show
+
+    % filename
+    0 setgray 
+    HeaderHDRF setfont
+    d_header_w fname stringwidth pop sub 2 div d_header_h 8 div moveto
+    fname show
+
+    % user supplied header string.
+    user_header_p {
+      /h d_header_h 8 div 5 mul def
+
+      % Implement strict enscript compatibility.
+      user_header_center_str () eq user_header_right_str () eq and {
+        d_header_w user_header_left_str stringwidth pop sub 2 div 
+        h moveto user_header_left_str show
+      } {
+        dbw 5 add h moveto user_header_left_str show
+
+        d_header_w user_header_center_str stringwidth pop sub 2 div 
+        h moveto user_header_center_str show
+
+	d_header_w dbw sub 5 sub user_header_right_str stringwidth pop
+	sub h moveto user_header_right_str show
+      } ifelse
+    } if
+
+  grestore
+} def
+%%EndResource
+/d_page_w 536 def
+/d_page_h 744 def
+/d_header_x 0 def
+/d_header_y 708 def
+/d_header_w 536 def
+/d_header_h 36 def
+/d_footer_x 0 def
+/d_footer_y 0 def
+/d_footer_w 536 def
+/d_footer_h 0 def
+/d_output_w 536 def
+/d_output_h 708 def
+/cols 1 def
+%%EndSetup
+%%Page: (1) 1
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (numlist.c) def
+/fdir () def
+/ftail (numlist.c) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (02/09/12) def
+/modtimestr (18:53:08) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+30 695 M (1:) s
+48 695 M
+(// $Id: numlist.c,v 1.1 2012-02-09 18:53:08-08 - - $) s
+30 684 M (2:) s
+30 673 M (3:) s
+48 673 M
+(//) s
+30 662 M (4:) s
+48 662 M
+(// Demo of how to use malloc and free.) s
+30 651 M (5:) s
+48 651 M
+(//) s
+30 640 M (6:) s
+30 629 M (7:) s
+48 629 M
+(#include <assert.h>) s
+30 618 M (8:) s
+48 618 M
+(#include <libgen.h>) s
+30 607 M (9:) s
+48 607 M
+(#include <stdio.h>) s
+24 596 M (10:) s
+48 596 M
+(#include <stdlib.h>) s
+24 585 M (11:) s
+24 574 M (12:) s
+48 574 M
+(//) s
+24 563 M (13:) s
+48 563 M
+(// Declare the type of the handle, or pointer, to the struct.) s
+24 552 M (14:) s
+48 552 M
+(// In Java, the same name is used for both the handle and the) s
+24 541 M (15:) s
+48 541 M
+(// struct.) s
+24 530 M (16:) s
+48 530 M
+(//) s
+24 519 M (17:) s
+48 519 M
+(// Declare the type of the node.  This is much like Java, except) s
+24 508 M (18:) s
+48 508 M
+(// that the word `struct' is used.  C does not allow functions) s
+24 497 M (19:) s
+48 497 M
+(// to be declared inside structs, as does Java.) s
+24 486 M (20:) s
+48 486 M
+(//) s
+24 475 M (21:) s
+48 475 M
+(typedef struct node *node_ref;) s
+24 464 M (22:) s
+48 464 M
+(struct node {) s
+24 453 M (23:) s
+48 453 M
+(   double item;) s
+24 442 M (24:) s
+48 442 M
+(   node_ref link;) s
+24 431 M (25:) s
+48 431 M
+(};) s
+24 420 M (26:) s
+24 409 M (27:) s
+48 409 M
+(//) s
+24 398 M (28:) s
+48 398 M
+(// The main program allocates some nodes, pushes them onto a list,) s
+24 387 M (29:) s
+48 387 M
+(// prints them out, and then frees up the nodes.) s
+24 376 M (30:) s
+48 376 M
+(//) s
+24 365 M (31:) s
+48 365 M
+(int main \(int argc, char **argv\) {) s
+24 354 M (32:) s
+48 354 M
+(   char *progname = basename \(argv[0]\);) s
+24 343 M (33:) s
+24 332 M (34:) s
+48 332 M
+(   //) s
+24 321 M (35:) s
+48 321 M
+(   // Declare and set the head of the list to NULL.) s
+24 310 M (36:) s
+48 310 M
+(   //) s
+24 299 M (37:) s
+24 288 M (38:) s
+48 288 M
+(   node_ref head = NULL;) s
+24 277 M (39:) s
+24 266 M (40:) s
+48 266 M
+(   //) s
+24 255 M (41:) s
+48 255 M
+(   // Loop, pushing some random numbers onto the list.  Note that) s
+24 244 M (42:) s
+48 244 M
+(   // `->' in C means `.' in Java.  Malloc\(3c\) is used to allocate) s
+24 233 M (43:) s
+48 233 M
+(   // storage, like `new' in Java.  Always check with `assert' that) s
+24 222 M (44:) s
+48 222 M
+(   // malloc has actually returned the address of new memory.) s
+24 211 M (45:) s
+48 211 M
+(   // `sizeof' returns the number of bytes necessary for its ) s
+24 200 M (46:) s
+48 200 M
+(   // argument.) s
+24 189 M (47:) s
+48 189 M
+(   //) s
+24 178 M (48:) s
+48 178 M
+(   int max = argc < 2 ? 10 : atoi \(argv[1]\);) s
+24 167 M (49:) s
+48 167 M
+(   printf \("%s: looping %d times\\n", progname, max\);) s
+24 156 M (50:) s
+48 156 M
+(   for \(int count = 0; count < max; ++count\) {) s
+24 145 M (51:) s
+48 145 M
+(      node_ref new = malloc \(sizeof \(struct node\)\);) s
+24 134 M (52:) s
+48 134 M
+(      assert \(new != NULL\);) s
+24 123 M (53:) s
+48 123 M
+(      new->item = drand48\(\) * 1e6;) s
+24 112 M (54:) s
+48 112 M
+(      new->link = head;) s
+24 101 M (55:) s
+48 101 M
+(      head = new;) s
+24 90 M (56:) s
+48 90 M
+(   }) s
+_R
+S
+%%Page: (2) 2
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 2 def
+/fname (numlist.c) def
+/fdir () def
+/ftail (numlist.c) def
+% User defined strings:
+/pagenumstr (2) def
+/moddatestr (02/09/12) def
+/modtimestr (18:53:08) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+24 695 M (57:) s
+24 684 M (58:) s
+48 684 M
+(   //) s
+24 673 M (59:) s
+48 673 M
+(   // Loop down the list, printing out each entry in debug mode.) s
+24 662 M (60:) s
+48 662 M
+(   //) s
+24 651 M (61:) s
+48 651 M
+(   printf \("&head= %p\\n", \(void*\) &head\);) s
+24 640 M (62:) s
+48 640 M
+(   printf \("head= %p\\n", \(void*\) head\);) s
+24 629 M (63:) s
+48 629 M
+(   for \(node_ref curr = head; curr != NULL; curr = curr->link\) {) s
+24 618 M (64:) s
+48 618 M
+(      printf \("%p -> struct node {item= %.15g, link= %p}\\n",) s
+24 607 M (65:) s
+48 607 M
+(              \(void*\) curr, curr->item, \(void*\) curr->link\);) s
+24 596 M (66:) s
+48 596 M
+(   }) s
+24 585 M (67:) s
+48 585 M
+(   printf \("NULL= %p\\n", \(void*\) NULL\);) s
+24 574 M (68:) s
+24 563 M (69:) s
+48 563 M
+(   //) s
+24 552 M (70:) s
+48 552 M
+(   // Free up all of the nodes.) s
+24 541 M (71:) s
+48 541 M
+(   //) s
+24 530 M (72:) s
+48 530 M
+(   while \(head != NULL\) {) s
+24 519 M (73:) s
+48 519 M
+(      node_ref old = head;) s
+24 508 M (74:) s
+48 508 M
+(      head = head->link;) s
+24 497 M (75:) s
+48 497 M
+(      free \(old\);) s
+24 486 M (76:) s
+48 486 M
+(   }) s
+24 475 M (77:) s
+24 464 M (78:) s
+48 464 M
+(   //) s
+24 453 M (79:) s
+48 453 M
+(   // Deliberately cause some memory leaks and throw away result.) s
+24 442 M (80:) s
+48 442 M
+(   //) s
+24 431 M (81:) s
+48 431 M
+(   for \(int leaks = 0; leaks < 4; ++leaks\) malloc \(256\);) s
+24 420 M (82:) s
+48 420 M
+(   malloc \(4096\);) s
+24 409 M (83:) s
+24 398 M (84:) s
+48 398 M
+(   return EXIT_SUCCESS;) s
+24 387 M (85:) s
+48 387 M
+(}) s
+24 376 M (86:) s
+24 365 M (87:) s
+48 365 M
+(/*) s
+24 354 M (88:) s
+48 354 M
+(//TEST// valgrind --leak-check=full --log-file=numlist.lisval \\) s
+24 343 M (89:) s
+48 343 M
+(//TEST//./numlist >numlist.lisout 2>&1) s
+24 332 M (90:) s
+48 332 M
+(//TEST// mkpspdf numlist.ps numlist.c* numlist.lis*) s
+24 321 M (91:) s
+48 321 M
+(*/) s
+24 310 M (92:) s
+_R
+S
+%%Page: (1) 3
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (numlist.c.log) def
+/fdir () def
+/ftail (numlist.c.log) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (02/09/12) def
+/modtimestr (18:53:08) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+30 695 M (1:) s
+48 695 M
+(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting numlist.c) s
+30 684 M (2:) s
+48 684 M
+(numlist.c: $Id: numlist.c,v 1.1 2012-02-09 18:53:08-08 - - $) s
+30 673 M (3:) s
+48 673 M
+(gcc -g -O0 -Wall -Wextra -std=gnu99 numlist.c -o numlist -lm) s
+30 662 M (4:) s
+48 662 M
+(lint -Xa -fd -m -u -x -errchk=%all numlist.c) s
+30 651 M (5:) s
+30 640 M (6:) s
+48 640 M
+(function returns value which is always ignored) s
+30 629 M (7:) s
+48 629 M
+(    printf          ) s
+30 618 M (8:) s
+30 607 M (9:) s
+48 607 M
+(function returns value which is sometimes ignored) s
+24 596 M (10:) s
+48 596 M
+(    malloc          ) s
+24 585 M (11:) s
+48 585 M
+(rm -f numlist.o) s
+24 574 M (12:) s
+48 574 M
+(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished numlist.c) s
+_R
+S
+%%Page: (1) 4
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (numlist.lisout) def
+/fdir () def
+/ftail (numlist.lisout) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (02/09/12) def
+/modtimestr (18:53:09) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+30 695 M (1:) s
+48 695 M
+(numlist: looping 10 times) s
+30 684 M (2:) s
+48 684 M
+(&head= 0x7fefffda8) s
+30 673 M (3:) s
+48 673 M
+(head= 0x4c30310) s
+30 662 M (4:) s
+48 662 M
+(0x4c30310 -> struct node {item= 454433.423738244, link= 0x4c302c0}) s
+30 651 M (5:) s
+48 651 M
+(0x4c302c0 -> struct node {item= 526750.279762108, link= 0x4c30270}) s
+30 640 M (6:) s
+48 640 M
+(0x4c30270 -> struct node {item= 487217.223946828, link= 0x4c30220}) s
+30 629 M (7:) s
+48 629 M
+(0x4c30220 -> struct node {item= 92297.6476986754, link= 0x4c301d0}) s
+30 618 M (8:) s
+48 618 M
+(0x4c301d0 -> struct node {item= 91330.6121122943, link= 0x4c30180}) s
+30 607 M (9:) s
+48 607 M
+(0x4c30180 -> struct node {item= 364602.248390607, link= 0x4c30130}) s
+24 596 M (10:) s
+48 596 M
+(0x4c30130 -> struct node {item= 176642.642542916, link= 0x4c300e0}) s
+24 585 M (11:) s
+48 585 M
+(0x4c300e0 -> struct node {item= 41631.0015946131, link= 0x4c30090}) s
+24 574 M (12:) s
+48 574 M
+(0x4c30090 -> struct node {item= 985.394674650308, link= 0x4c30040}) s
+24 563 M (13:) s
+48 563 M
+(0x4c30040 -> struct node {item= 3.90798504668055e-08, link= \(nil\)}) s
+24 552 M (14:) s
+48 552 M
+(NULL= \(nil\)) s
+_R
+S
+%%Page: (1) 5
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (numlist.lisval) def
+/fdir () def
+/ftail (numlist.lisval) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (02/09/12) def
+/modtimestr (18:53:09) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+30 695 M (1:) s
+48 695 M
+(==14439== Memcheck, a memory error detector) s
+30 684 M (2:) s
+48 684 M
+(==14439== Copyright \(C\) 2002-2009, and GNU GPL'd, by Julian Seward et al.) s
+30 673 M (3:) s
+48 673 M
+(==14439== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info) s
+30 662 M (4:) s
+48 662 M
+(==14439== Command: ./numlist) s
+30 651 M (5:) s
+48 651 M
+(==14439== Parent PID: 14438) s
+30 640 M (6:) s
+48 640 M
+(==14439== ) s
+30 629 M (7:) s
+48 629 M
+(==14439== ) s
+30 618 M (8:) s
+48 618 M
+(==14439== HEAP SUMMARY:) s
+30 607 M (9:) s
+48 607 M
+(==14439==     in use at exit: 5,120 bytes in 5 blocks) s
+24 596 M (10:) s
+48 596 M
+(==14439==   total heap usage: 15 allocs, 10 frees, 5,280 bytes allocated) s
+24 585 M (11:) s
+48 585 M
+(==14439== ) s
+24 574 M (12:) s
+48 574 M
+(==14439== 1,024 bytes in 4 blocks are definitely lost in loss record 1 of 2) s
+24 563 M (13:) s
+48 563 M
+(==14439==    at 0x4A05E1C: malloc \(vg_replace_malloc.c:195\)) s
+24 552 M (14:) s
+48 552 M
+(==14439==    by 0x40082D: main \(numlist.c:81\)) s
+24 541 M (15:) s
+48 541 M
+(==14439== ) s
+24 530 M (16:) s
+48 530 M
+(==14439== 4,096 bytes in 1 blocks are definitely lost in loss record 2 of 2) s
+24 519 M (17:) s
+48 519 M
+(==14439==    at 0x4A05E1C: malloc \(vg_replace_malloc.c:195\)) s
+24 508 M (18:) s
+48 508 M
+(==14439==    by 0x400841: main \(numlist.c:82\)) s
+24 497 M (19:) s
+48 497 M
+(==14439== ) s
+24 486 M (20:) s
+48 486 M
+(==14439== LEAK SUMMARY:) s
+24 475 M (21:) s
+48 475 M
+(==14439==    definitely lost: 5,120 bytes in 5 blocks) s
+24 464 M (22:) s
+48 464 M
+(==14439==    indirectly lost: 0 bytes in 0 blocks) s
+24 453 M (23:) s
+48 453 M
+(==14439==      possibly lost: 0 bytes in 0 blocks) s
+24 442 M (24:) s
+48 442 M
+(==14439==    still reachable: 0 bytes in 0 blocks) s
+24 431 M (25:) s
+48 431 M
+(==14439==         suppressed: 0 bytes in 0 blocks) s
+24 420 M (26:) s
+48 420 M
+(==14439== ) s
+24 409 M (27:) s
+48 409 M
+(==14439== For counts of detected and suppressed errors, rerun with: -v) s
+24 398 M (28:) s
+48 398 M
+(==14439== ERROR SUMMARY: 2 errors from 2 contexts \(suppressed: 4 from 4\)) s
+_R
+S
+%%Trailer
+%%Pages: 5
+%%DocumentNeededResources: font Times-Roman Courier-Bold Courier 
+%%+ font Times-Bold 
+%%EOF

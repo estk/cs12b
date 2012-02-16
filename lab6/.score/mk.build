@@ -1,0 +1,12 @@
+#!/bin/sh -x
+# $Id: mk.build,v 1.1 2011-04-26 18:40:34-07 - - $
+#
+# Run checksource and lint then compile.
+# Make sure checksource is in your path.
+#
+lintopt="-Xa -fd -m -u -x -errchk=%all"
+#
+checksource *.c *[Mm]akefile >log.checksource 2>&1
+lint $lintopt nsort.c       >log.nsort.lint  2>&1
+lint $lintopt lsort.c       >log.lsort.lint  2>&1
+gmake                       >log.gmake       2>&1

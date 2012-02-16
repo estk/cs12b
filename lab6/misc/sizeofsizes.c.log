@@ -1,0 +1,9 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting sizeofsizes.c
+sizeofsizes.c: $Id: sizeofsizes.c,v 1.12 2012-02-09 19:00:37-08 - - $
+gcc -g -O0 -Wall -Wextra -std=gnu99 sizeofsizes.c -o sizeofsizes -lm
+lint -Xa -fd -m -u -x -errchk=%all sizeofsizes.c
+
+function returns value which is always ignored
+    printf          
+rm -f sizeofsizes.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished sizeofsizes.c

@@ -1,0 +1,9 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting prthexaddr.c
+prthexaddr.c: $Id: prthexaddr.c,v 1.4 2012-02-09 19:05:55-08 - - $
+gcc -g -O0 -Wall -Wextra -std=gnu99 prthexaddr.c -o prthexaddr -lm
+lint -Xa -fd -m -u -x -errchk=%all prthexaddr.c
+
+function returns value which is always ignored
+    printf              sprintf         
+rm -f prthexaddr.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished prthexaddr.c

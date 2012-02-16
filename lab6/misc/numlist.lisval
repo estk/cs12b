@@ -1,0 +1,28 @@
+==14439== Memcheck, a memory error detector
+==14439== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==14439== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==14439== Command: ./numlist
+==14439== Parent PID: 14438
+==14439== 
+==14439== 
+==14439== HEAP SUMMARY:
+==14439==     in use at exit: 5,120 bytes in 5 blocks
+==14439==   total heap usage: 15 allocs, 10 frees, 5,280 bytes allocated
+==14439== 
+==14439== 1,024 bytes in 4 blocks are definitely lost in loss record 1 of 2
+==14439==    at 0x4A05E1C: malloc (vg_replace_malloc.c:195)
+==14439==    by 0x40082D: main (numlist.c:81)
+==14439== 
+==14439== 4,096 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==14439==    at 0x4A05E1C: malloc (vg_replace_malloc.c:195)
+==14439==    by 0x400841: main (numlist.c:82)
+==14439== 
+==14439== LEAK SUMMARY:
+==14439==    definitely lost: 5,120 bytes in 5 blocks
+==14439==    indirectly lost: 0 bytes in 0 blocks
+==14439==      possibly lost: 0 bytes in 0 blocks
+==14439==    still reachable: 0 bytes in 0 blocks
+==14439==         suppressed: 0 bytes in 0 blocks
+==14439== 
+==14439== For counts of detected and suppressed errors, rerun with: -v
+==14439== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 4 from 4)

@@ -1,0 +1,14 @@
+numlist: looping 10 times
+&head= 0x7fefffda8
+head= 0x4c30310
+0x4c30310 -> struct node {item= 454433.423738244, link= 0x4c302c0}
+0x4c302c0 -> struct node {item= 526750.279762108, link= 0x4c30270}
+0x4c30270 -> struct node {item= 487217.223946828, link= 0x4c30220}
+0x4c30220 -> struct node {item= 92297.6476986754, link= 0x4c301d0}
+0x4c301d0 -> struct node {item= 91330.6121122943, link= 0x4c30180}
+0x4c30180 -> struct node {item= 364602.248390607, link= 0x4c30130}
+0x4c30130 -> struct node {item= 176642.642542916, link= 0x4c300e0}
+0x4c300e0 -> struct node {item= 41631.0015946131, link= 0x4c30090}
+0x4c30090 -> struct node {item= 985.394674650308, link= 0x4c30040}
+0x4c30040 -> struct node {item= 3.90798504668055e-08, link= (nil)}
+NULL= (nil)

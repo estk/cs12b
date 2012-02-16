@@ -1,0 +1,7 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting sortlist.java
+sortlist.java: $Id: sortlist.java,v 1.1 2012-02-09 18:54:08-08 - - $
+javac -Xlint sortlist.java
+jar cfm sortlist Manifest sortlist$list_t.class sortlist$node_t.class sortlist.class
+chmod +x sortlist
+rm -f sortlist$list_t.class sortlist$node_t.class sortlist.class
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished sortlist.java

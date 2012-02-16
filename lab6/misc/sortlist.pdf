@@ -1,0 +1,393 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(18:54:08)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 273.451 736.5 Tm
+(sortlist.java)Tj
+-130.056 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(// $Id: sortlist.java,v 1.1 2012-02-09 18:54:08-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(import java.util.Scanner;)]TJ
+T*[(4:)-600(import static java.lang.System.*;)]TJ
+(5:)'
+T*[(6:)-600(class sortlist {)]TJ
+(7:)'
+T*[(8:)-600(   static class list_t {)]TJ
+T*[(9:)-600(      node_t head;)]TJ
+-6 -11 Td
+[(10:)-600(   })]TJ
+T*[(11:)-600(   static class node_t {)]TJ
+T*[(12:)-600(      String item;)]TJ
+T*[(13:)-600(      node_t link;)]TJ
+T*[(14:)-600(   })]TJ
+(15:)'
+T*[(16:)-600(   static void insertascending \(list_t list, String newitem\) {)]TJ
+T*[(17:)-600(      node_t prev = null;)]TJ
+T*[(18:)-600(      node_t curr = list.head;)]TJ
+(19:)'
+T*[(20:)-600(      // Find the insertion position.)]TJ
+T*[(21:)-600(      while \(curr != null\) {)]TJ
+T*[(22:)-600(         if \(curr.item.compareTo \(newitem\) > 0\) break;)]TJ
+T*[(23:)-600(         prev = curr;)]TJ
+T*[(24:)-600(         curr = curr.link;)]TJ
+T*[(25:)-600(      })]TJ
+(26:)'
+T*[(27:)-600(      // Do the insertion.)]TJ
+T*[(28:)-600(      node_t temp = new node_t\(\);)]TJ
+T*[(29:)-600(      temp.item = newitem;)]TJ
+T*[(30:)-600(      temp.link = curr;)]TJ
+T*[(31:)-600(      if \(prev == null\) list.head = temp;)]TJ
+T*[(32:)-600(                   else prev.link = temp;)]TJ
+T*[(33:)-600(   })]TJ
+(34:)'
+T*[(35:)-600(   public static void main \(String[] args\) {)]TJ
+T*[(36:)-600(      Scanner stdin = new Scanner \(System.in\);)]TJ
+T*[(37:)-600(      list_t list = new list_t\(\);)]TJ
+(38:)'
+T*[(39:)-600(      while \(stdin.hasNextLine\(\)\) {)]TJ
+T*[(40:)-600(         String line = stdin.nextLine\(\);)]TJ
+T*[(41:)-600(         insertascending \(list, line\);)]TJ
+T*[(42:)-600(      })]TJ
+(43:)'
+T*[(44:)-600(      for \(node_t curr = list.head; curr != null; curr = curr.link\) {)]TJ
+T*[(45:)-600(         out.printf \("%s%n", curr.item\);)]TJ
+T*[(46:)-600(      })]TJ
+T*[(47:)-600(   })]TJ
+(48:)'
+T*[(49:)-600(})]TJ
+(50:)'
+T*[(51:)-600(/*)]TJ
+T*[(52:)-600(//TEST// \(echo "{{Note the ordering of special characters.}}" \\)]TJ
+T*[(53:)-600(//TEST// ;echo "testing the sort" \\)]TJ
+T*[(54:)-600(//TEST// ;echo "is the output sorted" \\)]TJ
+T*[(55:)-600(//TEST// ;echo "Output should be in lexicographic order." \\)]TJ
+T*[(56:)-600(//TEST// ;echo "from this program, is sorted" \\)]TJ
+T*[(57:)-600(//TEST// ;echo "a last line is given" \\)]TJ
+T*[(58:)-600(//TEST// ;echo "BUT A CAPITAL LINE COMES FIRST" \\)]TJ
+T*[(59:)-600(//TEST// ;echo "//Slashes//" \\)]TJ
+T*[(60:)-600(//TEST// \) | runprog -x sortlist.lis -0- ./sortlist)]TJ
+T*[(61:)-600(//TEST// mkpspdf sortlist.ps sortlist.j* sortlist.lis*)]TJ
+T*[(62:)-600(*/)]TJ
+(63:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+3135
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(18:54:09)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 262.755 736.5 Tm
+(sortlist.java.log)Tj
+-119.36 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting sortlist.java)]TJ
+11 TL
+T*[(2:)-600(sortlist.java: $Id: sortlist.java,v 1.1 2012-02-09 18:54:08-08 - - $)]TJ
+T*[(3:)-600(javac -Xlint sortlist.java)]TJ
+T*[(4:)-600(jar cfm sortlist Manifest sortlist$list_t.class sortlist$node_t.class sortlist.c)]TJ
+-25 -11 Td
+(lass)Tj
+25 -11 Td
+[(5:)-600(chmod +x sortlist)]TJ
+T*[(6:)-600(rm -f sortlist$list_t.class sortlist$node_t.class sortlist.class)]TJ
+T*[(7:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished sortlist.java)]TJ
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+1057
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(18:54:09)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 278.498 736.5 Tm
+(sortlist.lis)Tj
+-135.103 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+(1:)Tj
+11 TL
+T*[(2:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(3:)-600(log: sortlist.log)]TJ
+T*[(4:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(5:)'
+T*[(6:)-600(     1  Script  : /afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprog)]TJ
+T*[(7:)-600(     2  limit c :    0 max core file size \(KB\))]TJ
+T*[(8:)-600(     3  limit f : 4194303 max output file size \(KB\))]TJ
+T*[(9:)-600(     4  limit t : 4294967295 max CPU time \(sec\))]TJ
+-6 -11 Td
+[(10:)-600(     5  stdin   : -)]TJ
+T*[(11:)-600(     6  stdout  : sortlist.out)]TJ
+T*[(12:)-600(     7  stderr  : sortlist.err)]TJ
+T*[(13:)-600(     8  log     : sortlist.log)]TJ
+T*[(14:)-600(     9  listing : sortlist.lis)]TJ
+T*[(15:)-600(    10  Command : ./sortlist)]TJ
+T*[(16:)-600(    11  starting: pid 14747: 18:54:09.00)]TJ
+T*[(17:)-600(    12  finished: pid 14747: 18:54:09.00, real 0.00, user 0.04, sys 0.01)]TJ
+T*[(18:)-600(    13  pstatus: 0x0000 EXIT STATUS = 0)]TJ
+(19:)'
+T*[(20:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(21:)-600(stdout: sortlist.out)]TJ
+T*[(22:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(23:)'
+T*[(24:)-600(     1  //Slashes//)]TJ
+T*[(25:)-600(     2  BUT A CAPITAL LINE COMES FIRST)]TJ
+T*[(26:)-600(     3  Output should be in lexicographic order.)]TJ
+T*[(27:)-600(     4  a last line is given)]TJ
+T*[(28:)-600(     5  from this program, is sorted)]TJ
+T*[(29:)-600(     6  is the output sorted)]TJ
+T*[(30:)-600(     7  testing the sort)]TJ
+T*[(31:)-600(     8  {{Note the ordering of special characters.}})]TJ
+(32:)'
+T*[(33:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(34:)-600(stderr: sortlist.err)]TJ
+T*[(35:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(36:)'
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+2371
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+] /Count 3
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120209185409)
+/ModDate(D:20120209185409)>>endobj
+xref
+0 21
+0000000000 65535 f 
+0000007264 00000 n 
+0000007831 00000 n 
+0000007191 00000 n 
+0000006788 00000 n 
+0000000009 00000 n 
+0000003194 00000 n 
+0000007629 00000 n 
+0000007500 00000 n 
+0000007698 00000 n 
+0000007566 00000 n 
+0000007763 00000 n 
+0000007312 00000 n 
+0000006921 00000 n 
+0000003214 00000 n 
+0000004323 00000 n 
+0000007382 00000 n 
+0000007056 00000 n 
+0000004344 00000 n 
+0000006767 00000 n 
+0000007441 00000 n 
+trailer
+<< /Size 21 /Root 1 0 R /Info 2 0 R
+/ID [<D6DCEB26A5F7E1FEE5951B9F6DA43FA7><D6DCEB26A5F7E1FEE5951B9F6DA43FA7>]
+>>
+startxref
+7942
+%%EOF

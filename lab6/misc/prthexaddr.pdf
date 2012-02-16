@@ -1,0 +1,523 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(19:05:55)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 270.665 736.5 Tm
+(prthexaddr.c)Tj
+-127.27 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(// $Id: prthexaddr.c,v 1.4 2012-02-09 19:05:55-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <assert.h>)]TJ
+T*[(4:)-600(#include <errno.h>)]TJ
+T*[(5:)-600(#include <stdio.h>)]TJ
+T*[(6:)-600(#include <stdlib.h>)]TJ
+T*[(7:)-600(#include <string.h>)]TJ
+T*[(8:)-600(#include <sys/utsname.h>)]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(#define PRINT\(SYMBOL,DESCR\) { \\)]TJ
+T*[(11:)-600(        printf \("%16p: %s - %s\\n", \(void*\) SYMBOL, #SYMBOL, DESCR\); \\)]TJ
+T*[(12:)-600(        })]TJ
+(13:)'
+T*[(14:)-600(extern char _start;)]TJ
+T*[(15:)-600(extern char _etext;)]TJ
+T*[(16:)-600(extern char _edata;)]TJ
+T*[(17:)-600(extern char _end;)]TJ
+T*[(18:)-600(extern char **environ;)]TJ
+T*[(19:)-600(static double init_var[] = {)]TJ
+T*[(20:)-600(   3.141592653589793238462643383279502884197169399,)]TJ
+T*[(21:)-600(   2.718281828459045235360287471352662497757247093,)]TJ
+T*[(22:)-600(   0.301029995663981195213738894724493026768189881,)]TJ
+T*[(23:)-600(   1.414213562373095048801688724209698078569671875,)]TJ
+T*[(24:)-600(};)]TJ
+T*[(25:)-600(static int uninit_var1[1<<10];)]TJ
+T*[(26:)-600(static int uninit_var2[1<<10];)]TJ
+(27:)'
+T*[(28:)-600(char *fmt \(char *text, int value\) {)]TJ
+T*[(29:)-600(   char *buffer = malloc \(strlen \(text\) + 16\);)]TJ
+T*[(30:)-600(   sprintf \(buffer, "%s %d", text, value\);)]TJ
+T*[(31:)-600(   return buffer;)]TJ
+T*[(32:)-600(})]TJ
+(33:)'
+T*[(34:)-600(void stack \(int level\) {)]TJ
+T*[(35:)-600(   if \(level < 5\) stack \(level + 1\);)]TJ
+T*[(36:)-600(   char *message = fmt \("address of a stack variable at level", level\);)]TJ
+T*[(37:)-600(   PRINT \(&level, message\);)]TJ
+T*[(38:)-600(   free \(message\);)]TJ
+T*[(39:)-600(})]TJ
+(40:)'
+T*[(41:)-600(void *stack_bottom \(char **start\) {)]TJ
+T*[(42:)-600(   for \(; *start != NULL; ++start\) {})]TJ
+T*[(43:)-600(   --start;)]TJ
+T*[(44:)-600(   char *startstr = *start;)]TJ
+T*[(45:)-600(   while \(*startstr != '\\0'\) ++startstr;)]TJ
+T*[(46:)-600(   return startstr;)]TJ
+T*[(47:)-600(})]TJ
+(48:)'
+T*[(49:)-600(void print_uname \(void\) {)]TJ
+T*[(50:)-600(   struct utsname name;)]TJ
+T*[(51:)-600(   int rc = uname \(&name\);)]TJ
+T*[(52:)-600(   if \(rc < 0\) {)]TJ
+T*[(53:)-600(      printf \("uname: %s\\n", strerror \(errno\)\);)]TJ
+T*[(54:)-600(      return;)]TJ
+T*[(55:)-600(   })]TJ
+T*[(56:)-600(   printf \("sysname  = \\"%s\\"\\n", name.sysname \);)]TJ
+T*[(57:)-600(   printf \("nodename = \\"%s\\"\\n", name.nodename\);)]TJ
+T*[(58:)-600(   printf \("release  = \\"%s\\"\\n", name.release \);)]TJ
+T*[(59:)-600(   printf \("version  = \\"%s\\"\\n", name.version \);)]TJ
+T*[(60:)-600(   printf \("machine  = \\"%s\\"\\n", name.machine \);)]TJ
+T*[(61:)-600(})]TJ
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+3185
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(19:05:55)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 270.665 736.5 Tm
+(prthexaddr.c)Tj
+-127.27 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-81.3949 -35.5 Td
+(62:)Tj
+11 TL
+T*[(63:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(64:)-600(   print_uname \(\);)]TJ
+T*[(65:)-600(   int main_local;)]TJ
+T*[(66:)-600(   printf \("\\n"\);)]TJ
+T*[(67:)-600(   PRINT \(NULL, "null pointer"\);)]TJ
+(68:)'
+T*[(69:)-600(   printf \("\\nAddresses of some local variables:\\n"\);)]TJ
+T*[(70:)-600(   stack \(1\);)]TJ
+T*[(71:)-600(   PRINT \(&main_local, "address of a local variable in main"\);)]TJ
+T*[(72:)-600(   PRINT \(&argc, "address of argc"\);)]TJ
+T*[(73:)-600(   PRINT \(&argv, "address of argv"\);)]TJ
+T*[(74:)-600(   PRINT \(argv, "address of arg vector"\);)]TJ
+T*[(75:)-600(   PRINT \(environ, "address of environ vector"\);)]TJ
+T*[(76:)-600(   for \(int argi = 0; argi < argc; ++argi\) {)]TJ
+T*[(77:)-600(      printf \("%16p: argv[%2d] = \\"%s\\"\\n",)]TJ
+T*[(78:)-600(              argv[argi], argi, argv[argi]\);)]TJ
+T*[(79:)-600(   })]TJ
+T*[(80:)-600(   PRINT \(stack_bottom \(environ\), "byte at bottom of stack"\);)]TJ
+(81:)'
+T*[(82:)-600(   printf \("\\nAddresses of some static variables:\\n"\);)]TJ
+T*[(83:)-600(   PRINT \(printf, "\(text\) address of the printf\(\) function"\);)]TJ
+T*[(84:)-600(   PRINT \(&_start, "start of program text"\);)]TJ
+T*[(85:)-600(   PRINT \(main, "\(text\) address of the main\(\) function"\);)]TJ
+T*[(86:)-600(   PRINT \(&_etext, "end of program text"\);)]TJ
+T*[(87:)-600(   PRINT \(&init_var, "address of an init static variable"\);)]TJ
+T*[(88:)-600(   PRINT \(&_edata, "end of init data segment"\);)]TJ
+T*[(89:)-600(   PRINT \(&uninit_var1, "address of an uninit static variable1"\);)]TJ
+T*[(90:)-600(   PRINT \(&uninit_var2, "address of an uninit static variable2"\);)]TJ
+T*[(91:)-600(   PRINT \(&_end, "end of uninit data segment"\);)]TJ
+(92:)'
+T*[(93:)-600(   printf \("\\nAddresses of some heap variables:\\n"\);)]TJ
+T*[(94:)-600(   for \(int heap_count = 0; heap_count < 10; ++heap_count\) {)]TJ
+T*[(95:)-600(      void *heap_variable = calloc \(1000, sizeof \(int\)\);)]TJ
+T*[(96:)-600(      assert \(heap_variable != NULL\);)]TJ
+T*[(97:)-600(      char *message = fmt \("heap variable ", heap_count\);)]TJ
+T*[(98:)-600(      PRINT \(heap_variable, message\);)]TJ
+T*[(99:)-600(      free \(message\);)]TJ
+-6 -11 Td
+[(100:)-600(   })]TJ
+(101:)'
+T*[(102:)-600(   return EXIT_SUCCESS;)]TJ
+T*[(103:)-600(})]TJ
+(104:)'
+T*[(105:)-600(//TEST// ./prthexaddr hello world >prthexaddr.list)]TJ
+T*[(106:)-600(//TEST// mkpspdf prthexaddr.ps prthexaddr.c* prthexaddr.lis*)]TJ
+(107:)'
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+2987
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(19:05:55)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 259.969 736.5 Tm
+(prthexaddr.c.log)Tj
+-116.574 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting prthexaddr.c)]TJ
+11 TL
+T*[(2:)-600(prthexaddr.c: $Id: prthexaddr.c,v 1.4 2012-02-09 19:05:55-08 - - $)]TJ
+T*[(3:)-600(gcc -g -O0 -Wall -Wextra -std=gnu99 prthexaddr.c -o prthexaddr -lm)]TJ
+T*[(4:)-600(lint -Xa -fd -m -u -x -errchk=%all prthexaddr.c)]TJ
+(5:)'
+T*[(6:)-600(function returns value which is always ignored)]TJ
+T*[(7:)-600(    printf              sprintf         )]TJ
+T*[(8:)-600(rm -f prthexaddr.o)]TJ
+T*[(9:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished prthexaddr.c)]TJ
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+1078
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(19:05:55)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 265.212 736.5 Tm
+(prthexaddr.list)Tj
+-121.817 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(sysname  = "Linux")]TJ
+11 TL
+T*[(2:)-600(nodename = "unix3.ic.ucsc.edu")]TJ
+T*[(3:)-600(release  = "2.6.18-194.26.1.el5")]TJ
+T*[(4:)-600(version  = "#1 SMP Tue Nov 9 12:54:20 EST 2010")]TJ
+T*[(5:)-600(machine  = "x86_64")]TJ
+(6:)'
+T*[(7:)-600(           \(nil\): NULL - null pointer)]TJ
+(8:)'
+T*[(9:)-600(Addresses of some local variables:)]TJ
+-6 -11 Td
+[(10:)-600(  0x7fffc4aeef8c: &level - address of a stack variable at level 5)]TJ
+T*[(11:)-600(  0x7fffc4aeefbc: &level - address of a stack variable at level 4)]TJ
+T*[(12:)-600(  0x7fffc4aeefec: &level - address of a stack variable at level 3)]TJ
+T*[(13:)-600(  0x7fffc4aef01c: &level - address of a stack variable at level 2)]TJ
+T*[(14:)-600(  0x7fffc4aef04c: &level - address of a stack variable at level 1)]TJ
+T*[(15:)-600(  0x7fffc4aef084: &main_local - address of a local variable in main)]TJ
+T*[(16:)-600(  0x7fffc4aef07c: &argc - address of argc)]TJ
+T*[(17:)-600(  0x7fffc4aef070: &argv - address of argv)]TJ
+T*[(18:)-600(  0x7fffc4aef188: argv - address of arg vector)]TJ
+T*[(19:)-600(  0x7fffc4aef1a8: environ - address of environ vector)]TJ
+T*[(20:)-600(  0x7fffc4af025f: argv[ 0] = "./prthexaddr")]TJ
+T*[(21:)-600(  0x7fffc4af026c: argv[ 1] = "hello")]TJ
+T*[(22:)-600(  0x7fffc4af0272: argv[ 2] = "world")]TJ
+T*[(23:)-600(  0x7fffc4af0fea: stack_bottom \(environ\) - byte at bottom of stack)]TJ
+(24:)'
+T*[(25:)-600(Addresses of some static variables:)]TJ
+T*[(26:)-600(        0x4006a0: printf - \(text\) address of the printf\(\) function)]TJ
+T*[(27:)-600(        0x400760: &_start - start of program text)]TJ
+T*[(28:)-600(        0x4009fe: main - \(text\) address of the main\(\) function)]TJ
+T*[(29:)-600(        0x400df6: &_etext - end of program text)]TJ
+T*[(30:)-600(        0x6015a0: &init_var - address of an init static variable)]TJ
+T*[(31:)-600(        0x6015c0: &_edata - end of init data segment)]TJ
+T*[(32:)-600(        0x6015e0: &uninit_var1 - address of an uninit static variable1)]TJ
+T*[(33:)-600(        0x6025e0: &uninit_var2 - address of an uninit static variable2)]TJ
+T*[(34:)-600(        0x6035e0: &_end - end of uninit data segment)]TJ
+(35:)'
+T*[(36:)-600(Addresses of some heap variables:)]TJ
+T*[(37:)-600(      0x159ce010: heap_variable - heap variable  0)]TJ
+T*[(38:)-600(      0x159cefc0: heap_variable - heap variable  1)]TJ
+T*[(39:)-600(      0x159cff70: heap_variable - heap variable  2)]TJ
+T*[(40:)-600(      0x159d0f20: heap_variable - heap variable  3)]TJ
+T*[(41:)-600(      0x159d1ed0: heap_variable - heap variable  4)]TJ
+T*[(42:)-600(      0x159d2e80: heap_variable - heap variable  5)]TJ
+T*[(43:)-600(      0x159d3e30: heap_variable - heap variable  6)]TJ
+T*[(44:)-600(      0x159d4de0: heap_variable - heap variable  7)]TJ
+T*[(45:)-600(      0x159d5d90: heap_variable - heap variable  8)]TJ
+T*[(46:)-600(      0x159d6d40: heap_variable - heap variable  9)]TJ
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+3400
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+] /Count 4
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120209190555)
+/ModDate(D:20120209190555)>>endobj
+xref
+0 25
+0000000000 65535 f 
+0000011566 00000 n 
+0000012192 00000 n 
+0000011486 00000 n 
+0000010948 00000 n 
+0000000009 00000 n 
+0000003244 00000 n 
+0000011990 00000 n 
+0000011861 00000 n 
+0000012059 00000 n 
+0000011927 00000 n 
+0000012124 00000 n 
+0000011614 00000 n 
+0000011081 00000 n 
+0000003264 00000 n 
+0000006303 00000 n 
+0000011684 00000 n 
+0000011216 00000 n 
+0000006324 00000 n 
+0000007454 00000 n 
+0000011743 00000 n 
+0000011351 00000 n 
+0000007475 00000 n 
+0000010927 00000 n 
+0000011802 00000 n 
+trailer
+<< /Size 25 /Root 1 0 R /Info 2 0 R
+/ID [<9F900A5835A22B60E8A7822AAAF47182><9F900A5835A22B60E8A7822AAAF47182>]
+>>
+startxref
+12303
+%%EOF

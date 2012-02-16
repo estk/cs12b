@@ -1,0 +1,1040 @@
+%!PS-Adobe-3.0
+%%BoundingBox: 38 24 574 768
+%%Title: Enscript Output
+%%For: Wesley Mackey,,,,
+%%Creator: GNU enscript 1.6.4
+%%CreationDate: Thu Feb  9 19:05:55 2012
+%%Orientation: Portrait
+%%Pages: (atend)
+%%DocumentMedia: Letter 612 792 0 () ()
+%%DocumentNeededResources: (atend)
+%%EndComments
+%%BeginProlog
+%%BeginResource: procset Enscript-Prolog 1.6 4
+%
+% Procedures.
+%
+
+/_S {	% save current state
+  /_s save def
+} def
+/_R {	% restore from saved state
+  _s restore
+} def
+
+/S {	% showpage protecting gstate
+  gsave
+  showpage
+  grestore
+} bind def
+
+/MF {	% fontname newfontname -> -	make a new encoded font
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  % insert only valid encoding vectors
+  encoding_vector length 256 eq {
+    newfont /Encoding encoding_vector put
+  } if
+
+  newfontname newfont definefont pop
+} def
+
+/MF_PS { % fontname newfontname -> -	make a new font preserving its enc
+  /newfontname exch def
+  /fontname exch def
+
+  /fontdict fontname findfont def
+  /newfont fontdict maxlength dict def
+
+  fontdict {
+    exch
+    dup /FID eq {
+      % skip FID pair
+      pop pop
+    } {
+      % copy to the new font dictionary
+      exch newfont 3 1 roll put
+    } ifelse
+  } forall
+
+  newfont /FontName newfontname put
+
+  newfontname newfont definefont pop
+} def
+
+/SF { % fontname width height -> -	set a new font
+  /height exch def
+  /width exch def
+
+  findfont
+  [width 0 0 height 0 0] makefont setfont
+} def
+
+/SUF { % fontname width height -> -	set a new user font
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF
+  /F-gs-user-font width height SF
+} def
+
+/SUF_PS { % fontname width height -> -	set a new user font preserving its enc
+  /height exch def
+  /width exch def
+
+  /F-gs-user-font MF_PS
+  /F-gs-user-font width height SF
+} def
+
+/M {moveto} bind def
+/s {show} bind def
+
+/Box {	% x y w h -> -			define box path
+  /d_h exch def /d_w exch def /d_y exch def /d_x exch def
+  d_x d_y  moveto
+  d_w 0 rlineto
+  0 d_h rlineto
+  d_w neg 0 rlineto
+  closepath
+} def
+
+/bgs {	% x y height blskip gray str -> -	show string with bg color
+  /str exch def
+  /gray exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    gray setgray
+    fill
+  grestore
+  x y M str s
+} def
+
+/bgcs { % x y height blskip red green blue str -> -  show string with bg color
+  /str exch def
+  /blue exch def
+  /green exch def
+  /red exch def
+  /blskip exch def
+  /height exch def
+  /y exch def
+  /x exch def
+
+  gsave
+    x y blskip sub str stringwidth pop height Box
+    red green blue setrgbcolor
+    fill
+  grestore
+  x y M str s
+} def
+
+% Highlight bars.
+/highlight_bars {	% nlines lineheight output_y_margin gray -> -
+  gsave
+    setgray
+    /ymarg exch def
+    /lineheight exch def
+    /nlines exch def
+
+    % This 2 is just a magic number to sync highlight lines to text.
+    0 d_header_y ymarg sub 2 sub translate
+
+    /cw d_output_w cols div def
+    /nrows d_output_h ymarg 2 mul sub lineheight div cvi def
+
+    % for each column
+    0 1 cols 1 sub {
+      cw mul /xp exch def
+
+      % for each rows
+      0 1 nrows 1 sub {
+        /rn exch def
+        rn lineheight mul neg /yp exch def
+        rn nlines idiv 2 mod 0 eq {
+	  % Draw highlight bar.  4 is just a magic indentation.
+	  xp 4 add yp cw 8 sub lineheight neg Box fill
+	} if
+      } for
+    } for
+
+  grestore
+} def
+
+% Line highlight bar.
+/line_highlight {	% x y width height gray -> -
+  gsave
+    /gray exch def
+    Box gray setgray fill
+  grestore
+} def
+
+% Column separator lines.
+/column_lines {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h translate
+    /cw d_output_w cols div def
+    1 1 cols 1 sub {
+      cw mul 0 moveto
+      0 d_output_h rlineto stroke
+    } for
+  grestore
+} def
+
+% Column borders.
+/column_borders {
+  gsave
+    .1 setlinewidth
+    0 d_footer_h moveto
+    0 d_output_h rlineto
+    d_output_w 0 rlineto
+    0 d_output_h neg rlineto
+    closepath stroke
+  grestore
+} def
+
+% Do the actual underlay drawing
+/draw_underlay {
+  ul_style 0 eq {
+    ul_str true charpath stroke
+  } {
+    ul_str show
+  } ifelse
+} def
+
+% Underlay
+/underlay {	% - -> -
+  gsave
+    0 d_page_h translate
+    d_page_h neg d_page_w atan rotate
+
+    ul_gray setgray
+    ul_font setfont
+    /dw d_page_h dup mul d_page_w dup mul add sqrt def
+    ul_str stringwidth pop dw exch sub 2 div ul_h_ptsize -2 div moveto
+    draw_underlay
+  grestore
+} def
+
+/user_underlay {	% - -> -
+  gsave
+    ul_x ul_y translate
+    ul_angle rotate
+    ul_gray setgray
+    ul_font setfont
+    0 0 ul_h_ptsize 2 div sub moveto
+    draw_underlay
+  grestore
+} def
+
+% Page prefeed
+/page_prefeed {		% bool -> -
+  statusdict /prefeed known {
+    statusdict exch /prefeed exch put
+  } {
+    pop
+  } ifelse
+} def
+
+% Wrapped line markers
+/wrapped_line_mark {	% x y charwith charheight type -> -
+  /type exch def
+  /h exch def
+  /w exch def
+  /y exch def
+  /x exch def
+
+  type 2 eq {
+    % Black boxes (like TeX does)
+    gsave
+      0 setlinewidth
+      x w 4 div add y M
+      0 h rlineto w 2 div 0 rlineto 0 h neg rlineto
+      closepath fill
+    grestore
+  } {
+    type 3 eq {
+      % Small arrows
+      gsave
+        .2 setlinewidth
+        x w 2 div add y h 2 div add M
+        w 4 div 0 rlineto
+        x w 4 div add y lineto stroke
+
+        x w 4 div add w 8 div add y h 4 div add M
+        x w 4 div add y lineto
+	w 4 div h 8 div rlineto stroke
+      grestore
+    } {
+      % do nothing
+    } ifelse
+  } ifelse
+} def
+
+% EPSF import.
+
+/BeginEPSF {
+  /b4_Inc_state save def    		% Save state for cleanup
+  /dict_count countdictstack def	% Count objects on dict stack
+  /op_count count 1 sub def		% Count objects on operand stack
+  userdict begin
+  /showpage { } def
+  0 setgray 0 setlinecap
+  1 setlinewidth 0 setlinejoin
+  10 setmiterlimit [ ] 0 setdash newpath
+  /languagelevel where {
+    pop languagelevel
+    1 ne {
+      false setstrokeadjust false setoverprint
+    } if
+  } if
+} bind def
+
+/EndEPSF {
+  count op_count sub { pos } repeat	% Clean up stacks
+  countdictstack dict_count sub { end } repeat
+  b4_Inc_state restore
+} bind def
+
+% Check PostScript language level.
+/languagelevel where {
+  pop /gs_languagelevel languagelevel def
+} {
+  /gs_languagelevel 1 def
+} ifelse
+%%EndResource
+%%BeginResource: procset Enscript-Encoding-88591 1.6 4
+/encoding_vector [
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclam       	/quotedbl     	/numbersign   	
+/dollar       	/percent      	/ampersand    	/quoteright   	
+/parenleft    	/parenright   	/asterisk     	/plus         	
+/comma        	/hyphen       	/period       	/slash        	
+/zero         	/one          	/two          	/three        	
+/four         	/five         	/six          	/seven        	
+/eight        	/nine         	/colon        	/semicolon    	
+/less         	/equal        	/greater      	/question     	
+/at           	/A            	/B            	/C            	
+/D            	/E            	/F            	/G            	
+/H            	/I            	/J            	/K            	
+/L            	/M            	/N            	/O            	
+/P            	/Q            	/R            	/S            	
+/T            	/U            	/V            	/W            	
+/X            	/Y            	/Z            	/bracketleft  	
+/backslash    	/bracketright 	/asciicircum  	/underscore   	
+/quoteleft    	/a            	/b            	/c            	
+/d            	/e            	/f            	/g            	
+/h            	/i            	/j            	/k            	
+/l            	/m            	/n            	/o            	
+/p            	/q            	/r            	/s            	
+/t            	/u            	/v            	/w            	
+/x            	/y            	/z            	/braceleft    	
+/bar          	/braceright   	/tilde        	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/.notdef      	/.notdef      	/.notdef      	/.notdef      	
+/space        	/exclamdown   	/cent         	/sterling     	
+/currency     	/yen          	/brokenbar    	/section      	
+/dieresis     	/copyright    	/ordfeminine  	/guillemotleft	
+/logicalnot   	/hyphen       	/registered   	/macron       	
+/degree       	/plusminus    	/twosuperior  	/threesuperior	
+/acute        	/mu           	/paragraph    	/bullet       	
+/cedilla      	/onesuperior  	/ordmasculine 	/guillemotright	
+/onequarter   	/onehalf      	/threequarters	/questiondown 	
+/Agrave       	/Aacute       	/Acircumflex  	/Atilde       	
+/Adieresis    	/Aring        	/AE           	/Ccedilla     	
+/Egrave       	/Eacute       	/Ecircumflex  	/Edieresis    	
+/Igrave       	/Iacute       	/Icircumflex  	/Idieresis    	
+/Eth          	/Ntilde       	/Ograve       	/Oacute       	
+/Ocircumflex  	/Otilde       	/Odieresis    	/multiply     	
+/Oslash       	/Ugrave       	/Uacute       	/Ucircumflex  	
+/Udieresis    	/Yacute       	/Thorn        	/germandbls   	
+/agrave       	/aacute       	/acircumflex  	/atilde       	
+/adieresis    	/aring        	/ae           	/ccedilla     	
+/egrave       	/eacute       	/ecircumflex  	/edieresis    	
+/igrave       	/iacute       	/icircumflex  	/idieresis    	
+/eth          	/ntilde       	/ograve       	/oacute       	
+/ocircumflex  	/otilde       	/odieresis    	/divide       	
+/oslash       	/ugrave       	/uacute       	/ucircumflex  	
+/udieresis    	/yacute       	/thorn        	/ydieresis    	
+] def
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font Courier
+/HFpt_w 10 def
+/HFpt_h 10 def
+/Courier-Bold /HF-gs-font MF
+/HF /HF-gs-font findfont [HFpt_w 0 0 HFpt_h 0 0] makefont def
+/Courier /F-gs-font MF
+/F-gs-font 10 10 SF
+/#copies 1 def
+% Pagedevice definitions:
+gs_languagelevel 1 gt {
+  <<
+    /PageSize [612 792] 
+  >> setpagedevice
+} if
+%%BeginResource: procset Enscript-Header-enscript 1.6 4
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Times-Roman
+
+% Fonts.
+/Times-Bold /HeaderFont-Bold MF
+/HeaderDateF /HeaderFont-Bold findfont 12 scalefont def
+
+/Times-Roman /HeaderFont-Times MF
+/HeaderHDRF /HeaderFont-Times findfont 14 scalefont def
+
+/HeaderPageNumF /Helvetica-Bold findfont 28.8 scalefont def
+
+/do_header {	% print enscript header
+  gsave
+    d_header_x d_header_y translate
+
+    % light bar
+    0 0 d_header_w d_header_h 2 div Box
+    .95 setgray fill
+
+    % dark gray boxes
+    /dbw d_header_h 2 mul def	% dark box width
+    /dbc .7 def			% dark box color
+
+    % left dark box.
+    0 0 dbw d_header_h Box
+    dbc setgray fill
+
+    0 setgray 
+    HeaderDateF setfont
+    moddatestr dup stringwidth pop dbw exch sub 2 div 
+    d_header_h 2 div 2 add moveto show
+    modtimestr dup stringwidth pop dbw exch sub 2 div 
+    d_header_h 5 div moveto show
+
+    % right dark box
+    d_header_w dbw sub 0 dbw d_header_h Box
+    dbc setgray fill
+
+    HeaderPageNumF setfont
+    1 setgray
+    pagenumstr dup
+    stringwidth pop dbw exch sub 2 div d_header_w dbw sub add
+    d_header_h .2 mul moveto show
+
+    % filename
+    0 setgray 
+    HeaderHDRF setfont
+    d_header_w fname stringwidth pop sub 2 div d_header_h 8 div moveto
+    fname show
+
+    % user supplied header string.
+    user_header_p {
+      /h d_header_h 8 div 5 mul def
+
+      % Implement strict enscript compatibility.
+      user_header_center_str () eq user_header_right_str () eq and {
+        d_header_w user_header_left_str stringwidth pop sub 2 div 
+        h moveto user_header_left_str show
+      } {
+        dbw 5 add h moveto user_header_left_str show
+
+        d_header_w user_header_center_str stringwidth pop sub 2 div 
+        h moveto user_header_center_str show
+
+	d_header_w dbw sub 5 sub user_header_right_str stringwidth pop
+	sub h moveto user_header_right_str show
+      } ifelse
+    } if
+
+  grestore
+} def
+%%EndResource
+/d_page_w 536 def
+/d_page_h 744 def
+/d_header_x 0 def
+/d_header_y 708 def
+/d_header_w 536 def
+/d_header_h 36 def
+/d_footer_x 0 def
+/d_footer_y 0 def
+/d_footer_w 536 def
+/d_footer_h 0 def
+/d_output_w 536 def
+/d_output_h 708 def
+/cols 1 def
+%%EndSetup
+%%Page: (1) 1
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (prthexaddr.c) def
+/fdir () def
+/ftail (prthexaddr.c) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (02/09/12) def
+/modtimestr (19:05:55) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+30 695 M (1:) s
+48 695 M
+(// $Id: prthexaddr.c,v 1.4 2012-02-09 19:05:55-08 - - $) s
+30 684 M (2:) s
+30 673 M (3:) s
+48 673 M
+(#include <assert.h>) s
+30 662 M (4:) s
+48 662 M
+(#include <errno.h>) s
+30 651 M (5:) s
+48 651 M
+(#include <stdio.h>) s
+30 640 M (6:) s
+48 640 M
+(#include <stdlib.h>) s
+30 629 M (7:) s
+48 629 M
+(#include <string.h>) s
+30 618 M (8:) s
+48 618 M
+(#include <sys/utsname.h>) s
+30 607 M (9:) s
+24 596 M (10:) s
+48 596 M
+(#define PRINT\(SYMBOL,DESCR\) { \\) s
+24 585 M (11:) s
+48 585 M
+(        printf \("%16p: %s - %s\\n", \(void*\) SYMBOL, #SYMBOL, DESCR\); \\) s
+24 574 M (12:) s
+48 574 M
+(        }) s
+24 563 M (13:) s
+24 552 M (14:) s
+48 552 M
+(extern char _start;) s
+24 541 M (15:) s
+48 541 M
+(extern char _etext;) s
+24 530 M (16:) s
+48 530 M
+(extern char _edata;) s
+24 519 M (17:) s
+48 519 M
+(extern char _end;) s
+24 508 M (18:) s
+48 508 M
+(extern char **environ;) s
+24 497 M (19:) s
+48 497 M
+(static double init_var[] = {) s
+24 486 M (20:) s
+48 486 M
+(   3.141592653589793238462643383279502884197169399,) s
+24 475 M (21:) s
+48 475 M
+(   2.718281828459045235360287471352662497757247093,) s
+24 464 M (22:) s
+48 464 M
+(   0.301029995663981195213738894724493026768189881,) s
+24 453 M (23:) s
+48 453 M
+(   1.414213562373095048801688724209698078569671875,) s
+24 442 M (24:) s
+48 442 M
+(};) s
+24 431 M (25:) s
+48 431 M
+(static int uninit_var1[1<<10];) s
+24 420 M (26:) s
+48 420 M
+(static int uninit_var2[1<<10];) s
+24 409 M (27:) s
+24 398 M (28:) s
+48 398 M
+(char *fmt \(char *text, int value\) {) s
+24 387 M (29:) s
+48 387 M
+(   char *buffer = malloc \(strlen \(text\) + 16\);) s
+24 376 M (30:) s
+48 376 M
+(   sprintf \(buffer, "%s %d", text, value\);) s
+24 365 M (31:) s
+48 365 M
+(   return buffer;) s
+24 354 M (32:) s
+48 354 M
+(}) s
+24 343 M (33:) s
+24 332 M (34:) s
+48 332 M
+(void stack \(int level\) {) s
+24 321 M (35:) s
+48 321 M
+(   if \(level < 5\) stack \(level + 1\);) s
+24 310 M (36:) s
+48 310 M
+(   char *message = fmt \("address of a stack variable at level", level\);) s
+24 299 M (37:) s
+48 299 M
+(   PRINT \(&level, message\);) s
+24 288 M (38:) s
+48 288 M
+(   free \(message\);) s
+24 277 M (39:) s
+48 277 M
+(}) s
+24 266 M (40:) s
+24 255 M (41:) s
+48 255 M
+(void *stack_bottom \(char **start\) {) s
+24 244 M (42:) s
+48 244 M
+(   for \(; *start != NULL; ++start\) {}) s
+24 233 M (43:) s
+48 233 M
+(   --start;) s
+24 222 M (44:) s
+48 222 M
+(   char *startstr = *start;) s
+24 211 M (45:) s
+48 211 M
+(   while \(*startstr != '\\0'\) ++startstr;) s
+24 200 M (46:) s
+48 200 M
+(   return startstr;) s
+24 189 M (47:) s
+48 189 M
+(}) s
+24 178 M (48:) s
+24 167 M (49:) s
+48 167 M
+(void print_uname \(void\) {) s
+24 156 M (50:) s
+48 156 M
+(   struct utsname name;) s
+24 145 M (51:) s
+48 145 M
+(   int rc = uname \(&name\);) s
+24 134 M (52:) s
+48 134 M
+(   if \(rc < 0\) {) s
+24 123 M (53:) s
+48 123 M
+(      printf \("uname: %s\\n", strerror \(errno\)\);) s
+24 112 M (54:) s
+48 112 M
+(      return;) s
+24 101 M (55:) s
+48 101 M
+(   }) s
+24 90 M (56:) s
+48 90 M
+(   printf \("sysname  = \\"%s\\"\\n", name.sysname \);) s
+24 79 M (57:) s
+48 79 M
+(   printf \("nodename = \\"%s\\"\\n", name.nodename\);) s
+24 68 M (58:) s
+48 68 M
+(   printf \("release  = \\"%s\\"\\n", name.release \);) s
+24 57 M (59:) s
+48 57 M
+(   printf \("version  = \\"%s\\"\\n", name.version \);) s
+24 46 M (60:) s
+48 46 M
+(   printf \("machine  = \\"%s\\"\\n", name.machine \);) s
+24 35 M (61:) s
+48 35 M
+(}) s
+_R
+S
+%%Page: (2) 2
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 2 def
+/fname (prthexaddr.c) def
+/fdir () def
+/ftail (prthexaddr.c) def
+% User defined strings:
+/pagenumstr (2) def
+/moddatestr (02/09/12) def
+/modtimestr (19:05:55) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+24 695 M (62:) s
+24 684 M (63:) s
+48 684 M
+(int main \(int argc, char **argv\) {) s
+24 673 M (64:) s
+48 673 M
+(   print_uname \(\);) s
+24 662 M (65:) s
+48 662 M
+(   int main_local;) s
+24 651 M (66:) s
+48 651 M
+(   printf \("\\n"\);) s
+24 640 M (67:) s
+48 640 M
+(   PRINT \(NULL, "null pointer"\);) s
+24 629 M (68:) s
+24 618 M (69:) s
+48 618 M
+(   printf \("\\nAddresses of some local variables:\\n"\);) s
+24 607 M (70:) s
+48 607 M
+(   stack \(1\);) s
+24 596 M (71:) s
+48 596 M
+(   PRINT \(&main_local, "address of a local variable in main"\);) s
+24 585 M (72:) s
+48 585 M
+(   PRINT \(&argc, "address of argc"\);) s
+24 574 M (73:) s
+48 574 M
+(   PRINT \(&argv, "address of argv"\);) s
+24 563 M (74:) s
+48 563 M
+(   PRINT \(argv, "address of arg vector"\);) s
+24 552 M (75:) s
+48 552 M
+(   PRINT \(environ, "address of environ vector"\);) s
+24 541 M (76:) s
+48 541 M
+(   for \(int argi = 0; argi < argc; ++argi\) {) s
+24 530 M (77:) s
+48 530 M
+(      printf \("%16p: argv[%2d] = \\"%s\\"\\n",) s
+24 519 M (78:) s
+48 519 M
+(              argv[argi], argi, argv[argi]\);) s
+24 508 M (79:) s
+48 508 M
+(   }) s
+24 497 M (80:) s
+48 497 M
+(   PRINT \(stack_bottom \(environ\), "byte at bottom of stack"\);) s
+24 486 M (81:) s
+24 475 M (82:) s
+48 475 M
+(   printf \("\\nAddresses of some static variables:\\n"\);) s
+24 464 M (83:) s
+48 464 M
+(   PRINT \(printf, "\(text\) address of the printf\(\) function"\);) s
+24 453 M (84:) s
+48 453 M
+(   PRINT \(&_start, "start of program text"\);) s
+24 442 M (85:) s
+48 442 M
+(   PRINT \(main, "\(text\) address of the main\(\) function"\);) s
+24 431 M (86:) s
+48 431 M
+(   PRINT \(&_etext, "end of program text"\);) s
+24 420 M (87:) s
+48 420 M
+(   PRINT \(&init_var, "address of an init static variable"\);) s
+24 409 M (88:) s
+48 409 M
+(   PRINT \(&_edata, "end of init data segment"\);) s
+24 398 M (89:) s
+48 398 M
+(   PRINT \(&uninit_var1, "address of an uninit static variable1"\);) s
+24 387 M (90:) s
+48 387 M
+(   PRINT \(&uninit_var2, "address of an uninit static variable2"\);) s
+24 376 M (91:) s
+48 376 M
+(   PRINT \(&_end, "end of uninit data segment"\);) s
+24 365 M (92:) s
+24 354 M (93:) s
+48 354 M
+(   printf \("\\nAddresses of some heap variables:\\n"\);) s
+24 343 M (94:) s
+48 343 M
+(   for \(int heap_count = 0; heap_count < 10; ++heap_count\) {) s
+24 332 M (95:) s
+48 332 M
+(      void *heap_variable = calloc \(1000, sizeof \(int\)\);) s
+24 321 M (96:) s
+48 321 M
+(      assert \(heap_variable != NULL\);) s
+24 310 M (97:) s
+48 310 M
+(      char *message = fmt \("heap variable ", heap_count\);) s
+24 299 M (98:) s
+48 299 M
+(      PRINT \(heap_variable, message\);) s
+24 288 M (99:) s
+48 288 M
+(      free \(message\);) s
+18 277 M (100:) s
+48 277 M
+(   }) s
+18 266 M (101:) s
+18 255 M (102:) s
+48 255 M
+(   return EXIT_SUCCESS;) s
+18 244 M (103:) s
+48 244 M
+(}) s
+18 233 M (104:) s
+18 222 M (105:) s
+48 222 M
+(//TEST// ./prthexaddr hello world >prthexaddr.list) s
+18 211 M (106:) s
+48 211 M
+(//TEST// mkpspdf prthexaddr.ps prthexaddr.c* prthexaddr.lis*) s
+18 200 M (107:) s
+_R
+S
+%%Page: (1) 3
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (prthexaddr.c.log) def
+/fdir () def
+/ftail (prthexaddr.c.log) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (02/09/12) def
+/modtimestr (19:05:55) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+30 695 M (1:) s
+48 695 M
+(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting prthexaddr.c) s
+30 684 M (2:) s
+48 684 M
+(prthexaddr.c: $Id: prthexaddr.c,v 1.4 2012-02-09 19:05:55-08 - - $) s
+30 673 M (3:) s
+48 673 M
+(gcc -g -O0 -Wall -Wextra -std=gnu99 prthexaddr.c -o prthexaddr -lm) s
+30 662 M (4:) s
+48 662 M
+(lint -Xa -fd -m -u -x -errchk=%all prthexaddr.c) s
+30 651 M (5:) s
+30 640 M (6:) s
+48 640 M
+(function returns value which is always ignored) s
+30 629 M (7:) s
+48 629 M
+(    printf              sprintf         ) s
+30 618 M (8:) s
+48 618 M
+(rm -f prthexaddr.o) s
+30 607 M (9:) s
+48 607 M
+(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished prthexaddr.c) s
+_R
+S
+%%Page: (1) 4
+%%BeginPageSetup
+_S
+38 24 translate
+/pagenum 1 def
+/fname (prthexaddr.list) def
+/fdir () def
+/ftail (prthexaddr.list) def
+% User defined strings:
+/pagenumstr (1) def
+/moddatestr (02/09/12) def
+/modtimestr (19:05:55) def
+/user_header_p true def
+/user_header_left_str ($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/) def
+/user_header_center_str () def
+/user_header_right_str () def
+/user_footer_p false def
+%%EndPageSetup
+column_borders
+do_header
+30 695 M (1:) s
+48 695 M
+(sysname  = "Linux") s
+30 684 M (2:) s
+48 684 M
+(nodename = "unix3.ic.ucsc.edu") s
+30 673 M (3:) s
+48 673 M
+(release  = "2.6.18-194.26.1.el5") s
+30 662 M (4:) s
+48 662 M
+(version  = "#1 SMP Tue Nov 9 12:54:20 EST 2010") s
+30 651 M (5:) s
+48 651 M
+(machine  = "x86_64") s
+30 640 M (6:) s
+30 629 M (7:) s
+48 629 M
+(           \(nil\): NULL - null pointer) s
+30 618 M (8:) s
+30 607 M (9:) s
+48 607 M
+(Addresses of some local variables:) s
+24 596 M (10:) s
+48 596 M
+(  0x7fffc4aeef8c: &level - address of a stack variable at level 5) s
+24 585 M (11:) s
+48 585 M
+(  0x7fffc4aeefbc: &level - address of a stack variable at level 4) s
+24 574 M (12:) s
+48 574 M
+(  0x7fffc4aeefec: &level - address of a stack variable at level 3) s
+24 563 M (13:) s
+48 563 M
+(  0x7fffc4aef01c: &level - address of a stack variable at level 2) s
+24 552 M (14:) s
+48 552 M
+(  0x7fffc4aef04c: &level - address of a stack variable at level 1) s
+24 541 M (15:) s
+48 541 M
+(  0x7fffc4aef084: &main_local - address of a local variable in main) s
+24 530 M (16:) s
+48 530 M
+(  0x7fffc4aef07c: &argc - address of argc) s
+24 519 M (17:) s
+48 519 M
+(  0x7fffc4aef070: &argv - address of argv) s
+24 508 M (18:) s
+48 508 M
+(  0x7fffc4aef188: argv - address of arg vector) s
+24 497 M (19:) s
+48 497 M
+(  0x7fffc4aef1a8: environ - address of environ vector) s
+24 486 M (20:) s
+48 486 M
+(  0x7fffc4af025f: argv[ 0] = "./prthexaddr") s
+24 475 M (21:) s
+48 475 M
+(  0x7fffc4af026c: argv[ 1] = "hello") s
+24 464 M (22:) s
+48 464 M
+(  0x7fffc4af0272: argv[ 2] = "world") s
+24 453 M (23:) s
+48 453 M
+(  0x7fffc4af0fea: stack_bottom \(environ\) - byte at bottom of stack) s
+24 442 M (24:) s
+24 431 M (25:) s
+48 431 M
+(Addresses of some static variables:) s
+24 420 M (26:) s
+48 420 M
+(        0x4006a0: printf - \(text\) address of the printf\(\) function) s
+24 409 M (27:) s
+48 409 M
+(        0x400760: &_start - start of program text) s
+24 398 M (28:) s
+48 398 M
+(        0x4009fe: main - \(text\) address of the main\(\) function) s
+24 387 M (29:) s
+48 387 M
+(        0x400df6: &_etext - end of program text) s
+24 376 M (30:) s
+48 376 M
+(        0x6015a0: &init_var - address of an init static variable) s
+24 365 M (31:) s
+48 365 M
+(        0x6015c0: &_edata - end of init data segment) s
+24 354 M (32:) s
+48 354 M
+(        0x6015e0: &uninit_var1 - address of an uninit static variable1) s
+24 343 M (33:) s
+48 343 M
+(        0x6025e0: &uninit_var2 - address of an uninit static variable2) s
+24 332 M (34:) s
+48 332 M
+(        0x6035e0: &_end - end of uninit data segment) s
+24 321 M (35:) s
+24 310 M (36:) s
+48 310 M
+(Addresses of some heap variables:) s
+24 299 M (37:) s
+48 299 M
+(      0x159ce010: heap_variable - heap variable  0) s
+24 288 M (38:) s
+48 288 M
+(      0x159cefc0: heap_variable - heap variable  1) s
+24 277 M (39:) s
+48 277 M
+(      0x159cff70: heap_variable - heap variable  2) s
+24 266 M (40:) s
+48 266 M
+(      0x159d0f20: heap_variable - heap variable  3) s
+24 255 M (41:) s
+48 255 M
+(      0x159d1ed0: heap_variable - heap variable  4) s
+24 244 M (42:) s
+48 244 M
+(      0x159d2e80: heap_variable - heap variable  5) s
+24 233 M (43:) s
+48 233 M
+(      0x159d3e30: heap_variable - heap variable  6) s
+24 222 M (44:) s
+48 222 M
+(      0x159d4de0: heap_variable - heap variable  7) s
+24 211 M (45:) s
+48 211 M
+(      0x159d5d90: heap_variable - heap variable  8) s
+24 200 M (46:) s
+48 200 M
+(      0x159d6d40: heap_variable - heap variable  9) s
+_R
+S
+%%Trailer
+%%Pages: 4
+%%DocumentNeededResources: font Times-Roman Courier-Bold Courier 
+%%+ font Times-Bold 
+%%EOF

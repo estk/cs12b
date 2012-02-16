@@ -1,0 +1,16 @@
+./strlist: head= 0x4c302d0
+strlist: 0x4c302d0-> node {
+    string= 0x4c30320->"Last Line.",
+    link= 0x4c30230}
+strlist: 0x4c30230-> node {
+    string= 0x4c30280->"fit the buffer.",
+    link= 0x4c30180}
+strlist: 0x4c30180-> node {
+    string= 0x4c301d0->"the previous line has length 0.",
+    link= 0x4c300e0}
+strlist: 0x4c300e0-> node {
+    string= 0x4c30130->"",
+    link= 0x4c30040}
+strlist: 0x4c30040-> node {
+    string= 0x4c30090->"this is line 1",
+    link= (nil)}

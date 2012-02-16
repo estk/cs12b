@@ -1,0 +1,10 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting strlist.c
+strlist.c: $Id: strlist.c,v 1.3 2012-02-15 20:45:26-08 - - $
+gcc -g -O0 -Wall -Wextra -std=gnu99 strlist.c -o strlist -lm
+strlist.c:23: warning: unused parameter 'argc'
+lint -Xa -fd -m -u -x -errchk=%all strlist.c
+
+function returns value which is always ignored
+    fprintf             printf          
+rm -f strlist.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished strlist.c

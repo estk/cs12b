@@ -1,0 +1,584 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(18:53:08)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.136 736.5 Tm
+(numlist.c)Tj
+-136.741 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(// $Id: numlist.c,v 1.1 2012-02-09 18:53:08-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(//)]TJ
+T*[(4:)-600(// Demo of how to use malloc and free.)]TJ
+T*[(5:)-600(//)]TJ
+(6:)'
+T*[(7:)-600(#include <assert.h>)]TJ
+T*[(8:)-600(#include <libgen.h>)]TJ
+T*[(9:)-600(#include <stdio.h>)]TJ
+-6 -11 Td
+[(10:)-600(#include <stdlib.h>)]TJ
+(11:)'
+T*[(12:)-600(//)]TJ
+T*[(13:)-600(// Declare the type of the handle, or pointer, to the struct.)]TJ
+T*[(14:)-600(// In Java, the same name is used for both the handle and the)]TJ
+T*[(15:)-600(// struct.)]TJ
+T*[(16:)-600(//)]TJ
+T*[(17:)-600(// Declare the type of the node.  This is much like Java, except)]TJ
+T*[(18:)-600(// that the word `struct' is used.  C does not allow functions)]TJ
+T*[(19:)-600(// to be declared inside structs, as does Java.)]TJ
+T*[(20:)-600(//)]TJ
+T*[(21:)-600(typedef struct node *node_ref;)]TJ
+T*[(22:)-600(struct node {)]TJ
+T*[(23:)-600(   double item;)]TJ
+T*[(24:)-600(   node_ref link;)]TJ
+T*[(25:)-600(};)]TJ
+(26:)'
+T*[(27:)-600(//)]TJ
+T*[(28:)-600(// The main program allocates some nodes, pushes them onto a list,)]TJ
+T*[(29:)-600(// prints them out, and then frees up the nodes.)]TJ
+T*[(30:)-600(//)]TJ
+T*[(31:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(32:)-600(   char *progname = basename \(argv[0]\);)]TJ
+(33:)'
+T*[(34:)-600(   //)]TJ
+T*[(35:)-600(   // Declare and set the head of the list to NULL.)]TJ
+T*[(36:)-600(   //)]TJ
+(37:)'
+T*[(38:)-600(   node_ref head = NULL;)]TJ
+(39:)'
+T*[(40:)-600(   //)]TJ
+T*[(41:)-600(   // Loop, pushing some random numbers onto the list.  Note that)]TJ
+T*[(42:)-600(   // `->' in C means `.' in Java.  Malloc\(3c\) is used to allocate)]TJ
+T*[(43:)-600(   // storage, like `new' in Java.  Always check with `assert' that)]TJ
+T*[(44:)-600(   // malloc has actually returned the address of new memory.)]TJ
+T*[(45:)-600(   // `sizeof' returns the number of bytes necessary for its )]TJ
+T*[(46:)-600(   // argument.)]TJ
+T*[(47:)-600(   //)]TJ
+T*[(48:)-600(   int max = argc < 2 ? 10 : atoi \(argv[1]\);)]TJ
+T*[(49:)-600(   printf \("%s: looping %d times\\n", progname, max\);)]TJ
+T*[(50:)-600(   for \(int count = 0; count < max; ++count\) {)]TJ
+T*[(51:)-600(      node_ref new = malloc \(sizeof \(struct node\)\);)]TJ
+T*[(52:)-600(      assert \(new != NULL\);)]TJ
+T*[(53:)-600(      new->item = drand48\(\) * 1e6;)]TJ
+T*[(54:)-600(      new->link = head;)]TJ
+T*[(55:)-600(      head = new;)]TJ
+T*[(56:)-600(   })]TJ
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+2959
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(18:53:08)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.136 736.5 Tm
+(numlist.c)Tj
+-136.741 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-81.3949 -35.5 Td
+(57:)Tj
+11 TL
+T*[(58:)-600(   //)]TJ
+T*[(59:)-600(   // Loop down the list, printing out each entry in debug mode.)]TJ
+T*[(60:)-600(   //)]TJ
+T*[(61:)-600(   printf \("&head= %p\\n", \(void*\) &head\);)]TJ
+T*[(62:)-600(   printf \("head= %p\\n", \(void*\) head\);)]TJ
+T*[(63:)-600(   for \(node_ref curr = head; curr != NULL; curr = curr->link\) {)]TJ
+T*[(64:)-600(      printf \("%p -> struct node {item= %.15g, link= %p}\\n",)]TJ
+T*[(65:)-600(              \(void*\) curr, curr->item, \(void*\) curr->link\);)]TJ
+T*[(66:)-600(   })]TJ
+T*[(67:)-600(   printf \("NULL= %p\\n", \(void*\) NULL\);)]TJ
+(68:)'
+T*[(69:)-600(   //)]TJ
+T*[(70:)-600(   // Free up all of the nodes.)]TJ
+T*[(71:)-600(   //)]TJ
+T*[(72:)-600(   while \(head != NULL\) {)]TJ
+T*[(73:)-600(      node_ref old = head;)]TJ
+T*[(74:)-600(      head = head->link;)]TJ
+T*[(75:)-600(      free \(old\);)]TJ
+T*[(76:)-600(   })]TJ
+(77:)'
+T*[(78:)-600(   //)]TJ
+T*[(79:)-600(   // Deliberately cause some memory leaks and throw away result.)]TJ
+T*[(80:)-600(   //)]TJ
+T*[(81:)-600(   for \(int leaks = 0; leaks < 4; ++leaks\) malloc \(256\);)]TJ
+T*[(82:)-600(   malloc \(4096\);)]TJ
+(83:)'
+T*[(84:)-600(   return EXIT_SUCCESS;)]TJ
+T*[(85:)-600(})]TJ
+(86:)'
+T*[(87:)-600(/*)]TJ
+T*[(88:)-600(//TEST// valgrind --leak-check=full --log-file=numlist.lisval \\)]TJ
+T*[(89:)-600(//TEST//./numlist >numlist.lisout 2>&1)]TJ
+T*[(90:)-600(//TEST// mkpspdf numlist.ps numlist.c* numlist.lis*)]TJ
+T*[(91:)-600(*/)]TJ
+(92:)'
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+1994
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(18:53:08)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 269.44 736.5 Tm
+(numlist.c.log)Tj
+-126.045 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting numlist.c)]TJ
+11 TL
+T*[(2:)-600(numlist.c: $Id: numlist.c,v 1.1 2012-02-09 18:53:08-08 - - $)]TJ
+T*[(3:)-600(gcc -g -O0 -Wall -Wextra -std=gnu99 numlist.c -o numlist -lm)]TJ
+T*[(4:)-600(lint -Xa -fd -m -u -x -errchk=%all numlist.c)]TJ
+(5:)'
+T*[(6:)-600(function returns value which is always ignored)]TJ
+T*[(7:)-600(    printf          )]TJ
+(8:)'
+T*[(9:)-600(function returns value which is sometimes ignored)]TJ
+-6 -11 Td
+[(10:)-600(    malloc          )]TJ
+T*[(11:)-600(rm -f numlist.o)]TJ
+T*[(12:)-600(@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished numlist.c)]TJ
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+1150
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(18:53:09)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 267.683 736.5 Tm
+(numlist.lisout)Tj
+-124.288 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(numlist: looping 10 times)]TJ
+11 TL
+T*[(2:)-600(&head= 0x7fefffda8)]TJ
+T*[(3:)-600(head= 0x4c30310)]TJ
+T*[(4:)-600(0x4c30310 -> struct node {item= 454433.423738244, link= 0x4c302c0})]TJ
+T*[(5:)-600(0x4c302c0 -> struct node {item= 526750.279762108, link= 0x4c30270})]TJ
+T*[(6:)-600(0x4c30270 -> struct node {item= 487217.223946828, link= 0x4c30220})]TJ
+T*[(7:)-600(0x4c30220 -> struct node {item= 92297.6476986754, link= 0x4c301d0})]TJ
+T*[(8:)-600(0x4c301d0 -> struct node {item= 91330.6121122943, link= 0x4c30180})]TJ
+T*[(9:)-600(0x4c30180 -> struct node {item= 364602.248390607, link= 0x4c30130})]TJ
+-6 -11 Td
+[(10:)-600(0x4c30130 -> struct node {item= 176642.642542916, link= 0x4c300e0})]TJ
+T*[(11:)-600(0x4c300e0 -> struct node {item= 41631.0015946131, link= 0x4c30090})]TJ
+T*[(12:)-600(0x4c30090 -> struct node {item= 985.394674650308, link= 0x4c30040})]TJ
+T*[(13:)-600(0x4c30040 -> struct node {item= 3.90798504668055e-08, link= \(nil\)})]TJ
+T*[(14:)-600(NULL= \(nil\))]TJ
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+1517
+endobj
+26 0 obj
+<</Length 27 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/09/12)Tj
+-0.659766 -12.8004 Td
+(18:53:09)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 268.075 736.5 Tm
+(numlist.lisval)Tj
+-124.68 18 Td
+($cmps012b-wm/Labs-cmps012m/lab6c-malloc-free/misc/)Tj
+/R10 10 Tf
+-75.3949 -35.5 Td
+[(1:)-600(==14439== Memcheck, a memory error detector)]TJ
+11 TL
+T*[(2:)-600(==14439== Copyright \(C\) 2002-2009, and GNU GPL'd, by Julian Seward et al.)]TJ
+T*[(3:)-600(==14439== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info)]TJ
+T*[(4:)-600(==14439== Command: ./numlist)]TJ
+T*[(5:)-600(==14439== Parent PID: 14438)]TJ
+T*[(6:)-600(==14439== )]TJ
+T*[(7:)-600(==14439== )]TJ
+T*[(8:)-600(==14439== HEAP SUMMARY:)]TJ
+T*[(9:)-600(==14439==     in use at exit: 5,120 bytes in 5 blocks)]TJ
+-6 -11 Td
+[(10:)-600(==14439==   total heap usage: 15 allocs, 10 frees, 5,280 bytes allocated)]TJ
+T*[(11:)-600(==14439== )]TJ
+T*[(12:)-600(==14439== 1,024 bytes in 4 blocks are definitely lost in loss record 1 of 2)]TJ
+T*[(13:)-600(==14439==    at 0x4A05E1C: malloc \(vg_replace_malloc.c:195\))]TJ
+T*[(14:)-600(==14439==    by 0x40082D: main \(numlist.c:81\))]TJ
+T*[(15:)-600(==14439== )]TJ
+T*[(16:)-600(==14439== 4,096 bytes in 1 blocks are definitely lost in loss record 2 of 2)]TJ
+T*[(17:)-600(==14439==    at 0x4A05E1C: malloc \(vg_replace_malloc.c:195\))]TJ
+T*[(18:)-600(==14439==    by 0x400841: main \(numlist.c:82\))]TJ
+T*[(19:)-600(==14439== )]TJ
+T*[(20:)-600(==14439== LEAK SUMMARY:)]TJ
+T*[(21:)-600(==14439==    definitely lost: 5,120 bytes in 5 blocks)]TJ
+T*[(22:)-600(==14439==    indirectly lost: 0 bytes in 0 blocks)]TJ
+T*[(23:)-600(==14439==      possibly lost: 0 bytes in 0 blocks)]TJ
+T*[(24:)-600(==14439==    still reachable: 0 bytes in 0 blocks)]TJ
+T*[(25:)-600(==14439==         suppressed: 0 bytes in 0 blocks)]TJ
+T*[(26:)-600(==14439== )]TJ
+T*[(27:)-600(==14439== For counts of detected and suppressed errors, rerun with: -v)]TJ
+T*[(28:)-600(==14439== ERROR SUMMARY: 2 errors from 2 contexts \(suppressed: 4 from 4\))]TJ
+ET
+Q
+Q
+endstream
+endobj
+27 0 obj
+2273
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+25 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 28 0 R
+>>
+/Contents 26 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+25 0 R
+] /Count 5
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+28 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120209185309)
+/ModDate(D:20120209185309)>>endobj
+xref
+0 29
+0000000000 65535 f 
+0000011024 00000 n 
+0000011709 00000 n 
+0000010937 00000 n 
+0000010264 00000 n 
+0000000009 00000 n 
+0000003018 00000 n 
+0000011507 00000 n 
+0000011378 00000 n 
+0000011576 00000 n 
+0000011444 00000 n 
+0000011641 00000 n 
+0000011072 00000 n 
+0000010397 00000 n 
+0000003038 00000 n 
+0000005084 00000 n 
+0000011142 00000 n 
+0000010532 00000 n 
+0000005105 00000 n 
+0000006307 00000 n 
+0000011201 00000 n 
+0000010667 00000 n 
+0000006328 00000 n 
+0000007897 00000 n 
+0000011260 00000 n 
+0000010802 00000 n 
+0000007918 00000 n 
+0000010243 00000 n 
+0000011319 00000 n 
+trailer
+<< /Size 29 /Root 1 0 R /Info 2 0 R
+/ID [<4A8721D4F9AFDA5BEF7F9CD07E1F3DEC><4A8721D4F9AFDA5BEF7F9CD07E1F3DEC>]
+>>
+startxref
+11820
+%%EOF

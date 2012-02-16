@@ -1,0 +1,13 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting scanf.c
+scanf.c: $Id: scanf.c,v 1.1 2012-02-09 18:53:09-08 - - $
+gcc -g -O0 -Wall -Wextra -std=gnu99 scanf.c -o scanf -lm
+scanf.c:11: warning: unused parameter 'argc'
+lint -Xa -fd -m -u -x -errchk=%all scanf.c
+
+argument unused in function
+    (11) argc in main
+
+function returns value which is always ignored
+    printf              sprintf         
+rm -f scanf.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished scanf.c

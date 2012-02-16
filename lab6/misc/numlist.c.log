@@ -1,0 +1,12 @@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: starting numlist.c
+numlist.c: $Id: numlist.c,v 1.1 2012-02-09 18:53:08-08 - - $
+gcc -g -O0 -Wall -Wextra -std=gnu99 numlist.c -o numlist -lm
+lint -Xa -fd -m -u -x -errchk=%all numlist.c
+
+function returns value which is always ignored
+    printf          
+
+function returns value which is sometimes ignored
+    malloc          
+rm -f numlist.o
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ mkc: finished numlist.c

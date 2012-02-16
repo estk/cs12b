@@ -1,0 +1,12 @@
+#!/bin/sh
+# $Id: mk.tests,v 1.1 2011-04-26 18:40:34-07 - - $
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+export PATH
+runprog=runprogram.perl
+for sort in nsort lsort
+do
+   $runprog -otest.$sort.good   -0data.$sort.good.in    $sort
+   $runprog -otest.$sort.bad    -0data.$sort.bad.in     $sort
+   $runprog -otest.$sort.debug  -0data.$sort.good.in    $sort -d
+   $runprog -otest.$sort.bcheck -0data.$sort.good.in -B $sort
+done
