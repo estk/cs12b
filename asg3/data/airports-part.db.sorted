@@ -1,0 +1,13 @@
+# $Id: airports-part.db.sorted,v 1.1 2012-02-07 15:47:04-08 - - $
+# Shorter list of airport codes for debugging.
+BUR:Burbank/Glendale/Pasadena
+LAS:Las Vegas McCarran International
+LAX:Los Angeles International
+ONT:Ontario (CA) International
+RNO:Reno Cannon International
+SAN:San Diego International/Lindbergh Field
+SBA:Santa Barbara Municipal
+SFO:San Francisco International
+SJC:San Jose (CA) International
+SMF:Sacramento Metro
+SNA:Santa Ana/Orange County/John Wayne

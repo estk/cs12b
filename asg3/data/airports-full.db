@@ -1,0 +1,150 @@
+# $Id: airports-full.db.sorted,v 1.1 2012-02-07 15:47:04-08 - - $
+# List of airport codes.
+# Long list of airport codes.
+JNU:Juneau International
+DAY:Dayton James M. Cox International
+BOS:Boston Logan International
+BDL:Hartford/Springfield Bradley International
+AIY:Atlantic City International
+ABQ:Albuquerque International
+ABE:Allentown-Bethlehem-Easton International
+AGC:Pittsburgh/Allegheny County
+ATL:Atlanta William B. Hartsfield International
+ANC:Anchorage International
+AUS:Austin Robert Mueller Municipal
+AVL:Asheville (NC) Regional
+BIL:Billings Logan International
+BGR:Bangor International
+BFI:Seattle Kings County International/Boeing Field
+BHM:Birmingham Municipal
+BKL:Cleveland Lakefront
+BIS:Bismarck Municipal
+BNA:Nashville Metro
+BOI:Boise Air Terminal/Gowen Field
+CHS:Charleston (SC) International
+BUR:Burbank/Glendale/Pasadena
+BTV:Burlington International
+BTR:Baton Rouge
+BUF:Buffalo International
+CAE:Columbia (SC) Metropolitan
+BWI:Baltimore-Washington International
+CAK:Akron/Canton Regional
+CGX:Chicago Merrill C. Meigs Field
+CRM:Charleston (WV) Yeager
+CLT:Charlotte/Douglas International
+CLE:Cleveland-Hopkins International
+CMH:Columbus (OH) International
+CPR:Casper/Natrone County International
+CVG:Cincinnati International
+CRP:Corpus Christi International
+CYS:Cheyenne
+DAL:Dallas Love Field
+GRR:Grand Rapids/Kent County International
+EYW:Key West International
+DFW:Dallas-Ft. Worth International
+DEN:Denver Stapleton International
+DCA:Washington National
+DET:Detroit City
+DTW:Detroit Metropolitan/Wayne County
+DSM:Des Moines International
+ELP:El Paso International
+EWR:Newark International
+FLL:Ft. Lauderdale-Hollywood International
+FAR:Fargo Hector International
+FAI:Fairbanks International
+FAT:Fresno Air Terminal
+FSD:Sioux Falls Regional
+FOE:Topeka Forbes Field
+FWA:Ft. Wayne Allen County
+GEG:Spokane International
+IAH:Houston Intercontinental
+HOU:Houston William P. Hobby
+HNL:Honolulu International
+GSO:Greensboro-High Pt.-Winston Salem Regional
+HOT:Hot Springs Memorial Field
+HUF:Terre Haute Hulman Regional
+HPN:White Plains/Westchester County
+HVN:New Haven Tweed
+IAD:Washington Dulles
+ITH:Ithaca Tompkins County
+ILG:Wilmington/New Castle County
+ICT:Wichita Mid-Continent
+IND:Indianapolis International
+INT:Winston-Salem Smith Reynolds
+JAN:Jackson Municipal/Thompson Field
+ITO:Hilo General Lyman Field
+JAX:Jacksonville (FL) International
+JFK:New York John F. Kennedy International
+PDX:Portland (OR) International
+MIA:Miami International
+LNK:Lincoln Municipal
+LAX:Los Angeles International
+LAN:Lansing Capital City
+KOA:Kailua-Kona Keahole (HI)
+LAS:Las Vegas McCarran International
+LGB:Long Beach Daugherty Field
+LGA:New York La Guardia
+LIH:Lihue (HI)
+LIT:Little Rock Regional
+MDT:Harrisburg International
+MCI:Kansas City International
+MBS:Saginaw Tri-City
+MCO:Orlando International
+MEM:Memphis International
+MDW:Chicago Midway
+MGM:Montgomery Municipal/Dannelly Field
+MHT:Manchester
+OAJ:Jacksonville (NC) Albert J. Ellis
+MOB:Mobile Municipal/Bates Field
+MKE:Milwaukee General Mitchell International
+MKC:Kansas City Downtown
+MLI:Moline Quad City
+MSO:Missoula County
+MSN:Madison (WI) Dane County Regional
+MSP:Minneapolis-St. Paul International
+MSY:New Orleans International
+OMA:Omaha Eppley Airfield
+OGG:Kahului (HI)
+OAK:Oakland International
+OKC:Oklahoma City Will Rogers World
+OLM:Olympia (WA)
+ORD:Chicago-O'Hare International
+ONT:Ontario (CA) International
+ORF:Norfolk International
+PBI:Palm Beach International
+SDF:Louisville Standiford Field
+RDU:Raleigh-Durham
+PIE:St. Petersburg/Clearwater
+PHL:Philadelphia International
+PHF:Newport News Patrick Henry International
+PHX:Phoenix Sky Harbor International
+PSP:Palm Springs Municipal
+PIT:Pittsburgh International
+PVD:Providence Theodore Francis Green State
+PWM:Portland (ME) International Jetport
+RSW:Ft. Meyers Southwest Florida Regional
+RNO:Reno Cannon International
+RIC:Richmond International/Byrd Field
+ROC:Rochester International
+SAT:San Antonio International
+SAN:San Diego International/Lindbergh Field
+SAV:Savannah International
+SBA:Santa Barbara Municipal
+STL:St. Louis/Lambert International
+SJC:San Jose (CA) International
+SFO:San Francisco International
+SEA:Seattle-Tacoma International
+SGF:Springfield (MO) Regional
+SMF:Sacramento Metro
+SLC:Salt Lake City International
+SNA:Santa Ana/Orange County/John Wayne
+SPS:Wichita Falls
+TUL:Tulsa International
+SYR:Syracuse Hancock International
+SUX:Sioux City International
+TOL:Toledo Express
+TPA:Tampa International
+TYS:Knoxville McGhee Tyson
+TUS:Tucson International
+UCA:Utica/Oneida County
+YVR:Vancouver International

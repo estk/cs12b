@@ -1,0 +1,15 @@
+#!/bin/sh
+# $Id: mk.test,v 1.2 2012-02-07 15:45:42-08 - - $
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+export PATH
+RUN=runprogram.perl
+PROG=./airport
+
+$RUN -odebug-arg0 -0/dev/null $PROG
+$RUN -odebug-errs -0/dev/null $PROG nosuch.db other/errors
+$RUN -odebug-full -0/dev/null $PROG -d airports-full.db
+$RUN -odebug-part -0/dev/null $PROG -d airports-part.db
+$RUN -otest0-full -0test0.in  $PROG airports-full.db
+$RUN -otest0-part -0test0.in  $PROG airports-part.db
+$RUN -otest1-full -0test1.in  $PROG airports-full.db
+$RUN -otest1-part -0test1.in  $PROG airports-part.db

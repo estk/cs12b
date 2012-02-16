@@ -1,0 +1,99 @@
+$Id: SCORE,v 1.2 2010-01-28 21:12:20-08 - - $
+
+First, copy all files from the grading directory into the
+student's directory.  For each point deduction, give a reason.
+Numbers in parens are the max points for each check.
+
+*****************************************************************
+
+SOURCE CODE /30 points
+
+    Note:  minimum 1 point for this section, no matter what.
+
+    (3)  checksource (look in file check.log):
+         3 pts if 0 to  5 complaints; 2 pts if 6 to 15 complaints;
+         1 pt if 16 to 30 complaints; 0 pts if 31 or more complaints.
+          
+    (3)  Reasonable indentation and use of meaningful variable names
+         No one-letter identifiers.
+
+    (3)  Added code to airport.java to scan for -d option
+
+    (3)  Command line args analysis and print err msgs if options
+         not correct.
+
+    If they used java.util.TreeMap, assign 0 for all of the following
+    six items.
+
+    (3)  Code to dump tree indebug format
+
+    (3)  Used auxlib to print error messages.
+
+    (3)  Implemented get in their treemap to perform binary search
+
+    (3)  Implemented put in their treemap to insert if not found.
+
+    (3)  Code for both get and put uses binary search, not linear.
+
+    (3)  For insert, if duplicate key, no new node created.
+         Value field changed, but node stays the same.
+
+total points source code=
+min 1, max 30.
+
+*****************************************************************
+
+PROGRAM TESTING /30 points
+
+    mk.test runs the program runprogram.perl and generates output
+    files.  check on the various different tests
+    runprogram.perl generates files *.err for stderr, *.out for
+    stdout and *.log containing the exit status
+
+    Note:  0 points for this section if the program did not compile.
+
+    (3)  gmake worked and built the jar file (see gmake.log)
+         If, not build the jar yourself.  Jar file must be called
+         airport.
+
+    (3)  exit status was 0 normally and non-zero when a file could not
+         be accessed
+
+    (3)  Error messages were printed for nonexistent files.
+
+    (3)  none of the test runs crashed on any kind of exception
+         with traceback printed
+
+    (3)  Inorder traversal with -d option produced sorted output.
+         The input db files were cooked so that some balancing
+         happened.  Balancing is not part of the assignment.
+
+    (3)  Inorder traversal depth numbers are reasonably correct.
+
+    (3)  Test -otest0-part
+
+    (3)  Test -otest1-part
+
+    (3)  Test -otest0-full
+
+    (3)  Test -otest1-full
+
+subtotal testing=
+
+If they used java.util.TreeMap, DIVIDE SUBTOTAL TESTING BY 2,
+giving total points testing.  If they did not use it, transfer
+total points testing = subtotal testing.
+
+total points testing=
+min 0, max 30
+
+*****************************************************************
+
+SUBTOTAL=
+min 1, max 60
+
+If pair programming, TOTALSCORE = SUBTOTAL - TOTAL1.
+If not, TOTALSCORE = SUBTOTAL.
+
+TOTALSCORE=
+min 1, max 60
