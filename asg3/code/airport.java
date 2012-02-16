@@ -42,7 +42,7 @@ class airport {
                continue;
             }
             tree.put (keyvalue[0], keyvalue[1]);
-            out.println("just put: " + keyvalue[0] +" "+ keyvalue[1]);
+            //out.println("just put: " + keyvalue[0] +" "+ keyvalue[1]);
          }
          database.close();
       }catch (IOException error) {
@@ -69,7 +69,7 @@ class airport {
          database = args[0];
       }
       else usage();
-      out.println("arg analysis done");
+      //out.println("arg analysis done");
 
       treemap tree = load_database (database);
       Scanner stdin = new Scanner (in);

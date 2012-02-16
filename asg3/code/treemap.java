@@ -19,21 +19,22 @@ class treemap {
 
    public String get (String key) {
       tree res = find(root, key);
-      out.println("got: " + res.key + res.value);
+      //out.println("got: " + res.key + res.value);
       if (res == null) return null;
       return res.value;
    }
 
    private tree find (tree curr, String key) {
       if (curr == null) return null;
-      out.println("looking at: " + curr.value);
+      //out.println("looking at: " + curr.value);
 
       if (key.compareTo(curr.key) < 0) {
         return find (curr.left, key);
       } else if (key.compareTo(curr.key) > 0) {
         return find (curr.right, key);
       }
-      out.println("returning: " + curr.key); return curr;
+      //out.println("returning: " + curr.key);
+      return curr;
    }
 
    public String put (String key, String value) {
@@ -54,7 +55,7 @@ class treemap {
           tree tmp = new tree();
           tmp.key = key; tmp.value = value;
           curr.left = tmp;
-          out.println(curr.key+ ".left" +"->"+ tmp.key);
+          //out.println(curr.key+ ".left" +"->"+ tmp.key);
           return curr.value;
         } else {
         return put_recur (curr.left, key, value);
@@ -64,7 +65,7 @@ class treemap {
           tree tmp = new tree();
           tmp.key = key; tmp.value = value;
           curr.right = tmp;
-          out.println(curr.key+ "right" +"->"+ tmp.key);
+          //out.println(curr.key+ "right" +"->"+ tmp.key);
           return curr.value;
         } else {
         return put_recur (curr.right, key, value);
@@ -87,7 +88,7 @@ class treemap {
    }
 
    public void debug_tree () {
-      out.println("in debug fun");
+      //out.println("in debug fun");
       inorder(root, 0);
    }
 
