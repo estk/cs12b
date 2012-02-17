@@ -1,4 +1,6 @@
-// $Id: lsort.c,v 1.1 2011-04-29 19:46:42-07 - - $
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
 
 int main (int argc, char **argv) {
 }
