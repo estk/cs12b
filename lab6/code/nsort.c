@@ -71,7 +71,7 @@ void print_list(node_ref list) {
     else
       printf("%24.15g\n", list->item);
 
-    node_ref tmp = list;
+    /*node_ref tmp = list;*/
     list = list->link;
     /*printf("freeing in printl");*/
     /*free (tmp);*/
@@ -80,6 +80,7 @@ void print_list(node_ref list) {
 
 int main (int argc, char **argv) {
   char ch;
+  node_ref head;
 
   if (argc > 2)  usage();
   else if (argc == 2) {
@@ -89,15 +90,15 @@ int main (int argc, char **argv) {
   }
 
   if (!exit_status) {
-    node_ref numlist = getNums();
-    print_list(numlist);
+    head = getNums();
+    print_list(head);
 
     // free
-    while (numlist != NULL) {
+    while (head != NULL) {
       printf("freeing");
-      node_ref tmp = numlist->link;
-      free (numlist);
-      numlist = tmp;
+      node_ref tmp = head->link;
+      free (head);
+      head = tmp;
     }
   }
 
