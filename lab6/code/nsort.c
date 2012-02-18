@@ -4,6 +4,7 @@
 #include <unistd.h>
 
 int exit_status = 0;
+int debug = 0;
 
 typedef struct node *node_ref;
 struct node {
@@ -18,7 +19,6 @@ void usage () {
 }
 
 node_ref insert(node_ref head, double num) {
-  /*printf("inserting: %g\n\n", num);*/
   node_ref prev = NULL;
   node_ref curr = head;
 
@@ -27,16 +27,11 @@ node_ref insert(node_ref head, double num) {
     prev = curr;
     curr = curr->link;
   }
-  /*printf("prev=%p\n", prev);*/
-  /*printf("curr=%p\n", curr);*/
 
   node_ref new = malloc (sizeof (struct node));
   assert (new != NULL);
   new->item = num;
   new->link = curr;
-
-  /*printf("new->value: %g\n",new->item);*/
-  /*printf("new->link: %p\n", new->link);*/
 
   if (prev == NULL) head = new;
   else {
@@ -49,14 +44,12 @@ node_ref getNums() {
   node_ref list = NULL;
 
   while (1) {
-    /*printf("list= %p", list);*/
     double num;
     int scancount = scanf("%lg", &num);
 
     if (scancount == EOF) {
       printf("done\n"); break;
     } else if (scancount == 1) {
-      /*printf("inserting %g\n", num);*/
       list = insert(list, num);
     } else {
       printf("bad number\n");
@@ -68,14 +61,25 @@ node_ref getNums() {
 
 void print_list(node_ref list) {
   while (list != NULL) {
-    printf("%24.15g\n", list->item);
+    if (debug) {
+      printf ("&list= %p\n", (void*) &list);
+      printf ("list= %p\n", (void*) list);
+      printf ("%p -> struct node {item= %.15g, link= %p}\n",
+          (void*) list, list->item, (void*) list->link);
+      printf ("NULL= %p\n", (void*) NULL);
+    }
+    else
+      printf("%24.15g\n", list->item);
+
+    node_ref tmp = list;
     list = list->link;
+    /*printf("freeing in printl");*/
+    /*free (tmp);*/
   }
 }
 
 int main (int argc, char **argv) {
   char ch;
-  int debug = 0;
 
   if (argc > 2)  usage();
   else if (argc == 2) {
@@ -87,10 +91,10 @@ int main (int argc, char **argv) {
   if (!exit_status) {
     node_ref numlist = getNums();
     print_list(numlist);
-    /*printf("%g",numlist->item);*/
-    /*printf("%g",numlist->link->item);*/
-    /*printf("%g",numlist->link->link->item);*/
+
+    // free
     while (numlist != NULL) {
+      printf("freeing");
       node_ref tmp = numlist->link;
       free (numlist);
       numlist = tmp;
