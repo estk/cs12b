@@ -13,8 +13,8 @@ struct node {
 };
 
 void usage () {
-  printf("nsort [−d]\n");
-  printf("    −d Output is printed in debug format.\n");
+  printf("nsort [-d]");
+  printf("    -d : print output in debug format");
   exit_status = 1;
 }
 

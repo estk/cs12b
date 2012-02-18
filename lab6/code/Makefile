@@ -1,5 +1,3 @@
-# $Id: Makefile,v 1.5 2011-10-26 19:15:04-07 - - $
-
 GCC      = gcc -g -O0 -Wall -Wextra -std=gnu99
 LINT     = lint -Xa -fd -m -u -x -errchk=%all
 
