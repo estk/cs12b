@@ -12,7 +12,7 @@ struct node {
   node_ref link;
 };
 
-void usage () {
+void usage (void) {
   printf("nsort [-d]");
   printf("    -d : print output in debug format");
   exit_status = 1;
@@ -40,10 +40,10 @@ node_ref insert(node_ref head, double num) {
   return head;
 }
 
-node_ref getNums() {
+node_ref getNums(void) {
   node_ref list = NULL;
 
-  while (1) {
+  for (;;) {
     double num;
     int scancount = scanf("%lg", &num);
 
@@ -79,7 +79,7 @@ void print_list(node_ref list) {
 }
 
 int main (int argc, char **argv) {
-  char ch;
+  int ch;
   node_ref head;
 
   if (argc > 2)  usage();
@@ -95,7 +95,6 @@ int main (int argc, char **argv) {
 
     // free
     while (head != NULL) {
-      printf("freeing");
       node_ref tmp = head->link;
       free (head);
       head = tmp;

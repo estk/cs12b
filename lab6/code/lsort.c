@@ -16,7 +16,7 @@ struct node {
   node_ref link;
 };
 
-void usage () {
+void usage (void) {
   printf("nsort [-d]");
   printf("    -d : print output in debug format");
   exit_status = 1;
@@ -45,7 +45,7 @@ node_ref insert(node_ref head, cstring str) {
   return head;
 }
 
-node_ref getChars() {
+node_ref getChars(void) {
   node_ref head = NULL;
   char buffer[256];
 
@@ -60,6 +60,7 @@ node_ref getChars() {
     }else {
       fprintf (stderr, "%s: %d: unterminated line: %s\n",
           progname, linenr, buffer);
+			exit_status = 1;
     };
 
     head = insert(head, buffer);
@@ -91,7 +92,7 @@ void print_list(node_ref head) {
 }
 
 int main (int argc, char **argv) {
-  char ch;
+  int ch;
   progname = basename (argv[0]);
 
   if (argc > 2)  usage();
