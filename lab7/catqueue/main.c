@@ -67,6 +67,7 @@ int main (int argc, char **argv) {
    while (! isempty_queue (queue)) {
       printf ("%s\n", remove_queue (queue));
    }
+   free_queue(queue);
 
    return exit_status;
 }

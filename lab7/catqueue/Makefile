@@ -25,14 +25,10 @@ ${EXECBIN} : ${OBJECTS}
 	${GCC} -o $@ ${OBJECTS}
 
 %.o : %.c
-	cid + $<
 	${GCC} -c $<
 
 lint : ${CSOURCE}
 	${LINT} ${CSOURCE}
-
-ci : ${SOURCES}
-	cid + ${SOURCES} test*.data
 
 lis : ${SOURCES} test
 	mkpspdf ${LISTING} ${LISTSRC} ${OUTPUT}
@@ -58,7 +54,7 @@ ${DEPSFILE} :
 
 
 again :
-	gmake spotless deps ci lint all lis
+	gmake spotless deps lint all lis
 
 ifeq "${NEEDINCL}" ""
 include ${DEPSFILE}

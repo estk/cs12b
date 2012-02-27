@@ -27,8 +27,9 @@ struct queue {
 };
 
 queue_ref new_queue (void) {
-   STUBPRINTF ("return NULL\n");
-   return NULL;
+   queue_ref tmp = malloc (sizeof (struct queue));
+   tmp->tag = queue_tag;
+   return tmp;
 }
 
 void free_queue (queue_ref queue) {
@@ -40,14 +41,29 @@ void free_queue (queue_ref queue) {
 
 void insert_queue (queue_ref queue, queue_item_t item) {
    assert (is_queue (queue));
-   STUBPRINTF ("item =\n\t\"%s\"\n", item);
+   queuenode_ref tmp = malloc (sizeof (struct queue));
+   tmp->tag = queuenode_tag;
+   tmp->item = item;
+
+   if (queue->rear != NULL) {
+     queue->rear->link = tmp;
+     queue->rear = tmp;
+   }else {
+     queue->front = tmp;
+     queue->rear = tmp;
+   }
 }
 
 queue_item_t remove_queue (queue_ref queue) {
    assert (is_queue (queue));
    assert (! isempty_queue (queue));
-   STUBPRINTF ("return NULL\n");
-   return NULL;
+   queuenode_ref newfront = queue->front->link;
+   queue_item_t res = queue->front->item;
+   free (queue->front->item);
+   free (queue->front);
+   queue->front = newfront;
+
+   return res;
 }
 
 bool isempty_queue (queue_ref queue) {
