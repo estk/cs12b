@@ -1,0 +1,39 @@
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+log: output1.log
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	Script  : /afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprogram.perl
+     2	limit c :    0 max core file size (KB)
+     3	limit f : 4194303 max output file size (KB)
+     4	limit t : 4294967295 max CPU time (sec)
+     5	stdin   : test1.data
+     6	stdout  : output1.out
+     7	stderr  : output1.err
+     8	log     : output1.log
+     9	listing : output1.lis
+    10	Command : catqueue
+    11	starting: pid 10788: 19:23:35.00
+    12	finished: pid 10788: 19:23:35.00, real 0.00, user 0.00, sys 0.00
+    13	pstatus: 0x0006 TERMINATED 6: Aborted
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stdin: test1.data
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	$Id: test1.data,v 1.1 2012-02-14 20:32:33-08 - - $
+     2	Test data 1 line 1.
+     3	Test data 1 line 2.
+     4	Test data 1 line 3.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stdout: output1.out
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stderr: output1.err
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	return NULL
+     2	catqueue: queue.c:42: insert_queue: Assertion `is_queue (queue)' failed.

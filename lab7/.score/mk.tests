@@ -1,0 +1,8 @@
+#!/bin/sh
+# $Id: mk.tests,v 1.1 2012-02-14 19:07:24-08 - - $
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+export PATH
+runprogram.perl -0data-1 -otest1 catqueue
+runprogram.perl          -otest2 catqueue data-*
+runprogram.perl          -otest3 catqueue foo bar baz /dev/null
+valgrind --leak-check=full catqueue data-aeneid >test4.out 2>test4.err

@@ -1,0 +1,18 @@
+==28300== Memcheck, a memory error detector
+==28300== Copyright (C) 2002-2009, and GNU GPL'd, by Julian Seward et al.
+==28300== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info
+==28300== Command: intx
+==28300== 
+intx: starting: Wed Feb 15 20:47:05.694541  PST 2012
+box = 0x4c30d70
+box value is 1024
+intx: finished: Wed Feb 15 20:47:05.771954  PST 2012
+==28300== 
+==28300== HEAP SUMMARY:
+==28300==     in use at exit: 0 bytes in 0 blocks
+==28300==   total heap usage: 17 allocs, 17 frees, 2,603 bytes allocated
+==28300== 
+==28300== All heap blocks were freed -- no leaks are possible
+==28300== 
+==28300== For counts of detected and suppressed errors, rerun with: -v
+==28300== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 4 from 4)

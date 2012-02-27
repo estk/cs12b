@@ -1,0 +1,37 @@
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+log: testa.log
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	Script  : /afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprogram.perl
+     2	limit c :    0 max core file size (KB)
+     3	limit f : 4194303 max output file size (KB)
+     4	limit t : 4294967295 max CPU time (sec)
+     5	stdin   : /dev/null
+     6	stdout  : testa.out
+     7	stderr  : testa.err
+     8	log     : testa.log
+     9	listing : testa.lis
+    10	Command : intx
+    11	starting: pid 28293: 20:47:05.00
+    12	finished: pid 28293: 20:47:05.00, real 0.00, user 0.00, sys 0.00
+    13	pstatus: 0x0000 EXIT STATUS = 0
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stdin: /dev/null
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stdout: testa.out
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+     1	intx: starting: Wed Feb 15 20:47:05.451253  PST 2012
+     2	box = 0x1bc610d0
+     3	box value is 1024
+     4	intx: finished: Wed Feb 15 20:47:05.451419  PST 2012
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+stderr: testa.err
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+

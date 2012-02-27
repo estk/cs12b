@@ -1,0 +1,66 @@
+$Id: SCORE,v 1.1 2012-02-14 19:07:24-08 - - $
+
+Copy all files from this directory into the student's directory.
+
+Student name:
+
+For any point deduction, note it in the left margin and add a
+comment under it indicating why the loss of points.  Assign a
+point value for each between 0 and the max indicated in parens.
+
+DO NOT DEDUCT POINTS FOR THE FOLLOWING LINT MESSAGES:
+function returns value which is ... ignored
+
+run mk.build
+ruh mk.tests if mk.build succeeded
+
+*****************************************************************
+
+CODE = 15 points
+
+   Check each of the following and assign between 0 and 2 points
+   for each.
+
+   (2) checksource did not complain
+
+   (2) lint did not complain (except for msg about ret val ignored)
+
+   (2) main modified to call free_queue
+
+   (3) insert_queue properly implemented
+
+   (3) remove_queue properly implemented
+
+   (3) new_queue properly implemented
+
+code total=
+min 1, max 15
+
+*****************************************************************
+
+TESTING = 15 points
+
+   (2) error log empty for good tests and exit status 0?
+
+   (2) error messages to stderr and exit status non-0 for bad tests?
+
+   (3) output is correct?
+
+   (4) the valgrind test shows no memory leak
+   
+   (4) none of the tests caused a seg fault bus error or core dump
+
+testing total=
+min 0, max 15
+
+*****************************************************************
+
+SUBTOTAL=
+min 1, max 30
+
+If pair programming, TOTALSCORE = SUBTOTAL - TOTAL2.
+If not, TOTALSCORE = SUBTOTAL.
+
+TOTALSCORE=
+min 1, max 30
+

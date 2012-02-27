@@ -1,0 +1,1147 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:23:35)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 284.034 736.5 Tm
+(queue.h)Tj
+-155.018 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/catqueue/)Tj
+/R10 10 Tf
+-61.0168 -35.5 Td
+[(1:)-600(/* $Id: queue.h,v 1.2 2012-02-14 20:43:22-08 - - $ */)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#ifndef __QUEUE_H__)]TJ
+T*[(4:)-600(#define __QUEUE_H__)]TJ
+(5:)'
+T*[(6:)-600(#include <stdbool.h>)]TJ
+(7:)'
+T*[(8:)-600(typedef struct queue *queue_ref;)]TJ
+T*[(9:)-600(typedef char *queue_item_t;)]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(queue_ref new_queue \(void\);)]TJ
+(12:)'
+T*[(13:)-600(void free_queue \(queue_ref\);)]TJ
+(14:)'
+T*[(15:)-600(void insert_queue \(queue_ref, queue_item_t\);)]TJ
+(16:)'
+T*[(17:)-600(queue_item_t remove_queue \(queue_ref\);)]TJ
+(18:)'
+T*[(19:)-600(bool isempty_queue \(queue_ref\);)]TJ
+(20:)'
+T*[(21:)-600(bool is_queue \(queue_ref\);)]TJ
+(22:)'
+T*[(23:)-600(#endif)]TJ
+(24:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+1230
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:23:35)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 287.143 736.5 Tm
+(main.c)Tj
+-158.126 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/catqueue/)Tj
+/R10 10 Tf
+-61.0168 -35.5 Td
+[(1:)-600(/* $Id: main.c,v 1.6 2012-02-22 19:23:35-08 - - $ */)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <assert.h>)]TJ
+T*[(4:)-600(#include <errno.h>)]TJ
+T*[(5:)-600(#include <libgen.h>)]TJ
+T*[(6:)-600(#include <stdio.h>)]TJ
+T*[(7:)-600(#include <stdlib.h>)]TJ
+T*[(8:)-600(#include <string.h>)]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(#include "queue.h")]TJ
+(11:)'
+T*[(12:)-600(char *execname = NULL;)]TJ
+T*[(13:)-600(int exit_status = EXIT_SUCCESS;)]TJ
+(14:)'
+T*[(15:)-600(void putinqueue \(queue_ref queue, FILE *input, char *filename\) {)]TJ
+T*[(16:)-600(   char buffer[1024];)]TJ
+T*[(17:)-600(   for \(int linenr = 1; ; ++linenr\) {)]TJ
+T*[(18:)-600(      char *linepos = fgets \(buffer, sizeof buffer, input\);)]TJ
+T*[(19:)-600(      if \(linepos == NULL\) break;)]TJ
+T*[(20:)-600(      linepos = strchr \(buffer, '\\n'\);)]TJ
+T*[(21:)-600(      if \(linepos == NULL\) {)]TJ
+T*[(22:)-600(         fflush \(NULL\);)]TJ
+T*[(23:)-600(         fprintf \(stderr, "%s: %s[%d]: unterminated line\\n",)]TJ
+T*[(24:)-600(                  execname, filename, linenr\);)]TJ
+T*[(25:)-600(         fflush \(NULL\);)]TJ
+T*[(26:)-600(         exit_status = EXIT_FAILURE;)]TJ
+T*[(27:)-600(      }else {)]TJ
+T*[(28:)-600(         *linepos = '\\0';)]TJ
+T*[(29:)-600(      })]TJ
+T*[(30:)-600(      linepos = strdup \(buffer\);)]TJ
+T*[(31:)-600(      assert \(linepos != NULL\);)]TJ
+T*[(32:)-600(      insert_queue \(queue, linepos\);)]TJ
+T*[(33:)-600(   })]TJ
+T*[(34:)-600(})]TJ
+(35:)'
+T*[(36:)-600(void putfileinqueue \(queue_ref queue, char *filename\) {)]TJ
+T*[(37:)-600(   FILE *input = fopen \(filename, "r"\);)]TJ
+T*[(38:)-600(   if \(input == NULL\) {)]TJ
+T*[(39:)-600(      fflush \(NULL\);)]TJ
+T*[(40:)-600(      fprintf \(stderr, "%s: %s: %s\\n",)]TJ
+T*[(41:)-600(               execname, filename, strerror \(errno\)\);)]TJ
+T*[(42:)-600(      fflush \(NULL\);)]TJ
+T*[(43:)-600(      exit_status = EXIT_FAILURE;)]TJ
+T*[(44:)-600(   }else {)]TJ
+T*[(45:)-600(      putinqueue \(queue, input, filename\);)]TJ
+T*[(46:)-600(      fclose \(input\);)]TJ
+T*[(47:)-600(   })]TJ
+T*[(48:)-600(})]TJ
+(49:)'
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+2602
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:23:35)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 287.143 736.5 Tm
+(main.c)Tj
+-158.126 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/catqueue/)Tj
+/R10 10 Tf
+-67.0168 -35.5 Td
+(50:)Tj
+11 TL
+T*[(51:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(52:)-600(   execname = basename \(argv[0]\);)]TJ
+T*[(53:)-600(   queue_ref queue = new_queue\(\);)]TJ
+(54:)'
+T*[(55:)-600(   if \(argc < 2\) {)]TJ
+T*[(56:)-600(      putinqueue \(queue, stdin, "-"\);)]TJ
+T*[(57:)-600(   }else {)]TJ
+T*[(58:)-600(      for \(int argi = 1; argi < argc; ++argi\) {)]TJ
+T*[(59:)-600(         if \(strcmp \(argv[argi], "-"\) == 0\) {)]TJ
+T*[(60:)-600(            putinqueue \(queue, stdin, "-"\);)]TJ
+T*[(61:)-600(         }else {)]TJ
+T*[(62:)-600(            putfileinqueue \(queue, argv[argi]\);)]TJ
+T*[(63:)-600(         })]TJ
+T*[(64:)-600(      })]TJ
+T*[(65:)-600(   })]TJ
+(66:)'
+T*[(67:)-600(   while \(! isempty_queue \(queue\)\) {)]TJ
+T*[(68:)-600(      printf \("%s\\n", remove_queue \(queue\)\);)]TJ
+T*[(69:)-600(   })]TJ
+(70:)'
+T*[(71:)-600(   return exit_status;)]TJ
+T*[(72:)-600(})]TJ
+(73:)'
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+1430
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:23:35)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 284.426 736.5 Tm
+(queue.c)Tj
+-155.409 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/catqueue/)Tj
+/R10 10 Tf
+-61.0168 -35.5 Td
+[(1:)-600(/* $Id: queue.c,v 1.2 2012-02-21 14:57:52-08 - - $ */)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <assert.h>)]TJ
+T*[(4:)-600(#include <stdio.h>)]TJ
+T*[(5:)-600(#include <stdlib.h>)]TJ
+T*[(6:)-600(#include <string.h>)]TJ
+(7:)'
+T*[(8:)-600(#include "queue.h")]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(#define STUBPRINTF\(...\) fprintf \(stderr, __VA_ARGS__\);)]TJ
+(11:)'
+T*[(12:)-600(static char *queue_tag = "struct queue";)]TJ
+T*[(13:)-600(static char *queuenode_tag = "struct queuenode";)]TJ
+(14:)'
+T*[(15:)-600(typedef struct queuenode *queuenode_ref;)]TJ
+(16:)'
+T*[(17:)-600(struct queuenode {)]TJ
+T*[(18:)-600(   char *tag;)]TJ
+T*[(19:)-600(   queue_item_t item;)]TJ
+T*[(20:)-600(   queuenode_ref link;)]TJ
+T*[(21:)-600(};)]TJ
+(22:)'
+T*[(23:)-600(struct queue {)]TJ
+T*[(24:)-600(   char *tag;)]TJ
+T*[(25:)-600(   queuenode_ref front;)]TJ
+T*[(26:)-600(   queuenode_ref rear;)]TJ
+T*[(27:)-600(};)]TJ
+(28:)'
+T*[(29:)-600(queue_ref new_queue \(void\) {)]TJ
+T*[(30:)-600(   STUBPRINTF \("return NULL\\n"\);)]TJ
+T*[(31:)-600(   return NULL;)]TJ
+T*[(32:)-600(})]TJ
+(33:)'
+T*[(34:)-600(void free_queue \(queue_ref queue\) {)]TJ
+T*[(35:)-600(   assert \(is_queue \(queue\)\);)]TJ
+T*[(36:)-600(   assert \(isempty_queue \(queue\)\);)]TJ
+T*[(37:)-600(   memset \(queue, 0, sizeof \(struct queue\)\);)]TJ
+T*[(38:)-600(   free \(queue\);)]TJ
+T*[(39:)-600(})]TJ
+(40:)'
+T*[(41:)-600(void insert_queue \(queue_ref queue, queue_item_t item\) {)]TJ
+T*[(42:)-600(   assert \(is_queue \(queue\)\);)]TJ
+T*[(43:)-600(   STUBPRINTF \("item =\\n\\t\\"%s\\"\\n", item\);)]TJ
+T*[(44:)-600(})]TJ
+(45:)'
+T*[(46:)-600(queue_item_t remove_queue \(queue_ref queue\) {)]TJ
+T*[(47:)-600(   assert \(is_queue \(queue\)\);)]TJ
+T*[(48:)-600(   assert \(! isempty_queue \(queue\)\);)]TJ
+T*[(49:)-600(   STUBPRINTF \("return NULL\\n"\);)]TJ
+T*[(50:)-600(   return NULL;)]TJ
+T*[(51:)-600(})]TJ
+(52:)'
+T*[(53:)-600(bool isempty_queue \(queue_ref queue\) {)]TJ
+T*[(54:)-600(   assert \(is_queue \(queue\)\);)]TJ
+T*[(55:)-600(   // LINTED \(assignment of 32-bit integer to 8-bit integer\))]TJ
+T*[(56:)-600(   return queue->front == NULL;)]TJ
+T*[(57:)-600(})]TJ
+(58:)'
+T*[(59:)-600(bool is_queue \(queue_ref queue\) {)]TJ
+T*[(60:)-600(   // LINTED \(assignment of 32-bit integer to 8-bit integer\))]TJ
+T*[(61:)-600(   return queue != NULL && queue->tag == queue_tag;)]TJ
+T*[(62:)-600(})]TJ
+(63:)'
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+2877
+endobj
+26 0 obj
+<</Length 27 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:23:35)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.773 736.5 Tm
+(Makefile)Tj
+-151.756 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/catqueue/)Tj
+/R10 10 Tf
+-61.0168 -35.5 Td
+[(1:)-600(# $Id: Makefile,v 1.3 2012-02-14 20:43:22-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(MKFILE    = Makefile)]TJ
+T*[(4:)-600(DEPSFILE  = ${MKFILE}.deps)]TJ
+T*[(5:)-600(NOINCLUDE = ci clean spotless)]TJ
+T*[(6:)-600(NEEDINCL  = ${filter ${NOINCLUDE}, ${MAKECMDGOALS}})]TJ
+(7:)'
+T*[(8:)-600(GCC       = gcc -g -O0 -Wall -Wextra -std=gnu99)]TJ
+T*[(9:)-600(MKDEPS    = gcc -MM)]TJ
+-6 -11 Td
+[(10:)-600(LINT      = lint -Xa -fd -m -u -x -errchk=%all)]TJ
+T*[(11:)-600(GRIND     = valgrind --leak-check=full)]TJ
+(12:)'
+T*[(13:)-600(CSOURCE   = main.c queue.c)]TJ
+T*[(14:)-600(CHEADER   =        queue.h)]TJ
+T*[(15:)-600(OBJECTS   = ${CSOURCE:.c=.o})]TJ
+T*[(16:)-600(EXECBIN   = catqueue)]TJ
+T*[(17:)-600(SOURCES   = ${CHEADER} ${CSOURCE} ${MKFILE})]TJ
+T*[(18:)-600(LISTSRC   = ${SOURCES} ${DEPSFILE})]TJ
+T*[(19:)-600(LISTING   = Listing.catqueue.ps)]TJ
+T*[(20:)-600(OUTPUT    = output*.lis)]TJ
+(21:)'
+T*[(22:)-600(all : ${EXECBIN})]TJ
+(23:)'
+T*[(24:)-600(${EXECBIN} : ${OBJECTS})]TJ
+T*[(25:)-600(        ${GCC} -o $@ ${OBJECTS})]TJ
+(26:)'
+T*[(27:)-600(%.o : %.c)]TJ
+T*[(28:)-600(        cid + $<)]TJ
+T*[(29:)-600(        ${GCC} -c $<)]TJ
+(30:)'
+T*[(31:)-600(lint : ${CSOURCE})]TJ
+T*[(32:)-600(        ${LINT} ${CSOURCE})]TJ
+(33:)'
+T*[(34:)-600(ci : ${SOURCES})]TJ
+T*[(35:)-600(        cid + ${SOURCES} test*.data)]TJ
+(36:)'
+T*[(37:)-600(lis : ${SOURCES} test)]TJ
+T*[(38:)-600(        mkpspdf ${LISTING} ${LISTSRC} ${OUTPUT})]TJ
+(39:)'
+T*[(40:)-600(clean :)]TJ
+T*[(41:)-600(        - rm ${OBJECTS} ${DEPSFILE} core ${OUTPUT})]TJ
+(42:)'
+T*[(43:)-600(spotless : clean)]TJ
+T*[(44:)-600(        - rm ${EXECBIN})]TJ
+(45:)'
+T*[(46:)-600(test : ${EXECBIN})]TJ
+T*[(47:)-600(        - runprogram.perl -x output1.lis -0test1.data ${EXECBIN})]TJ
+T*[(48:)-600(        - runprogram.perl -x output2.lis ${EXECBIN} test*.data)]TJ
+T*[(49:)-600(        - ${GRIND} ${EXECBIN} <test1.data >output3.lis 2>&1)]TJ
+(50:)'
+T*[(51:)-600(deps : ${CSOURCE} ${CHEADER})]TJ
+T*[(52:)-600(        @ echo "# ${DEPSFILE} created `date`" >${DEPSFILE})]TJ
+T*[(53:)-600(        ${MKDEPS} ${CSOURCE} | sort | uniq >>${DEPSFILE})]TJ
+(54:)'
+T*[(55:)-600(${DEPSFILE} :)]TJ
+T*[(56:)-600(        @ touch ${DEPSFILE})]TJ
+T*[(57:)-600(        ${MAKE} --no-print-directory deps)]TJ
+(58:)'
+(59:)'
+T*[(60:)-600(again :)]TJ
+T*[(61:)-600(        gmake spotless deps ci lint all lis)]TJ
+(62:)'
+T*[(63:)-600(ifeq "${NEEDINCL}" "")]TJ
+T*[(64:)-600(include ${DEPSFILE})]TJ
+ET
+Q
+Q
+endstream
+endobj
+27 0 obj
+2940
+endobj
+30 0 obj
+<</Length 31 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:23:35)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.773 736.5 Tm
+(Makefile)Tj
+-151.756 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/catqueue/)Tj
+/R10 10 Tf
+-67.0168 -35.5 Td
+[(65:)-600(endif)]TJ
+11 TL
+(66:)'
+ET
+Q
+Q
+endstream
+endobj
+31 0 obj
+562
+endobj
+34 0 obj
+<</Length 35 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:23:35)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 266.192 736.5 Tm
+(Makefile.deps)Tj
+-137.175 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/catqueue/)Tj
+/R10 10 Tf
+-61.0168 -35.5 Td
+[(1:)-600(# Makefile.deps created Wed Feb 22 19:23:35 PST 2012)]TJ
+11 TL
+T*[(2:)-600(main.o: main.c queue.h)]TJ
+T*[(3:)-600(queue.o: queue.c queue.h)]TJ
+ET
+Q
+Q
+endstream
+endobj
+35 0 obj
+686
+endobj
+38 0 obj
+<</Length 39 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:23:35)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 276.243 736.5 Tm
+(output1.lis)Tj
+-147.227 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/catqueue/)Tj
+/R10 10 Tf
+-61.0168 -35.5 Td
+(1:)Tj
+11 TL
+T*[(2:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(3:)-600(log: output1.log)]TJ
+T*[(4:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(5:)'
+T*[(6:)-600(     1  Script  : /afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprogram.perl)]TJ
+T*[(7:)-600(     2  limit c :    0 max core file size \(KB\))]TJ
+T*[(8:)-600(     3  limit f : 4194303 max output file size \(KB\))]TJ
+T*[(9:)-600(     4  limit t : 4294967295 max CPU time \(sec\))]TJ
+-6 -11 Td
+[(10:)-600(     5  stdin   : test1.data)]TJ
+T*[(11:)-600(     6  stdout  : output1.out)]TJ
+T*[(12:)-600(     7  stderr  : output1.err)]TJ
+T*[(13:)-600(     8  log     : output1.log)]TJ
+T*[(14:)-600(     9  listing : output1.lis)]TJ
+T*[(15:)-600(    10  Command : catqueue)]TJ
+T*[(16:)-600(    11  starting: pid 10788: 19:23:35.00)]TJ
+T*[(17:)-600(    12  finished: pid 10788: 19:23:35.00, real 0.00, user 0.00, sys 0.00)]TJ
+T*[(18:)-600(    13  pstatus: 0x0006 TERMINATED 6: Aborted)]TJ
+(19:)'
+T*[(20:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(21:)-600(stdin: test1.data)]TJ
+T*[(22:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(23:)'
+T*[(24:)-600(     1  $Id: test1.data,v 1.1 2012-02-14 20:32:33-08 - - $)]TJ
+T*[(25:)-600(     2  Test data 1 line 1.)]TJ
+T*[(26:)-600(     3  Test data 1 line 2.)]TJ
+T*[(27:)-600(     4  Test data 1 line 3.)]TJ
+(28:)'
+T*[(29:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(30:)-600(stdout: output1.out)]TJ
+T*[(31:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(32:)'
+(33:)'
+T*[(34:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(35:)-600(stderr: output1.err)]TJ
+T*[(36:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(37:)'
+T*[(38:)-600(     1  return NULL)]TJ
+T*[(39:)-600(     2  catqueue: queue.c:42: insert_queue: Assertion `is_queue \(queue\)' failed.)]TJ
+ET
+Q
+Q
+endstream
+endobj
+39 0 obj
+2535
+endobj
+42 0 obj
+<</Length 43 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:23:35)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 276.243 736.5 Tm
+(output2.lis)Tj
+-147.227 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/catqueue/)Tj
+/R10 10 Tf
+-61.0168 -35.5 Td
+(1:)Tj
+11 TL
+T*[(2:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(3:)-600(log: output2.log)]TJ
+T*[(4:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(5:)'
+T*[(6:)-600(     1  Script  : /afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprogram.perl)]TJ
+T*[(7:)-600(     2  limit c :    0 max core file size \(KB\))]TJ
+T*[(8:)-600(     3  limit f : 4194303 max output file size \(KB\))]TJ
+T*[(9:)-600(     4  limit t : 4294967295 max CPU time \(sec\))]TJ
+-6 -11 Td
+[(10:)-600(     5  stdin   : /dev/null)]TJ
+T*[(11:)-600(     6  stdout  : output2.out)]TJ
+T*[(12:)-600(     7  stderr  : output2.err)]TJ
+T*[(13:)-600(     8  log     : output2.log)]TJ
+T*[(14:)-600(     9  listing : output2.lis)]TJ
+T*[(15:)-600(    10  Command : catqueue test1.data test2.data test3.data)]TJ
+T*[(16:)-600(    11  starting: pid 10795: 19:23:35.00)]TJ
+T*[(17:)-600(    12  finished: pid 10795: 19:23:35.00, real 0.00, user 0.00, sys 0.00)]TJ
+T*[(18:)-600(    13  pstatus: 0x0006 TERMINATED 6: Aborted)]TJ
+(19:)'
+T*[(20:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(21:)-600(stdin: /dev/null)]TJ
+T*[(22:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(23:)'
+(24:)'
+T*[(25:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(26:)-600(stdout: output2.out)]TJ
+T*[(27:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(28:)'
+(29:)'
+T*[(30:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(31:)-600(stderr: output2.err)]TJ
+T*[(32:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(33:)'
+T*[(34:)-600(     1  return NULL)]TJ
+T*[(35:)-600(     2  catqueue: queue.c:42: insert_queue: Assertion `is_queue \(queue\)' failed.)]TJ
+ET
+Q
+Q
+endstream
+endobj
+43 0 obj
+2355
+endobj
+46 0 obj
+<</Length 47 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:23:36)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 276.243 736.5 Tm
+(output3.lis)Tj
+-147.227 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/catqueue/)Tj
+/R10 10 Tf
+-61.0168 -35.5 Td
+[(1:)-600(==10802== Memcheck, a memory error detector)]TJ
+11 TL
+T*[(2:)-600(==10802== Copyright \(C\) 2002-2009, and GNU GPL'd, by Julian Seward et al.)]TJ
+T*[(3:)-600(==10802== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info)]TJ
+T*[(4:)-600(==10802== Command: catqueue)]TJ
+T*[(5:)-600(==10802== )]TJ
+T*[(6:)-600(return NULL)]TJ
+T*[(7:)-600(catqueue: queue.c:42: insert_queue: Assertion `is_queue \(queue\)' failed.)]TJ
+T*[(8:)-600(==10802== )]TJ
+T*[(9:)-600(==10802== HEAP SUMMARY:)]TJ
+-6 -11 Td
+[(10:)-600(==10802==     in use at exit: 51 bytes in 1 blocks)]TJ
+T*[(11:)-600(==10802==   total heap usage: 3 allocs, 2 frees, 225 bytes allocated)]TJ
+T*[(12:)-600(==10802== )]TJ
+T*[(13:)-600(==10802== LEAK SUMMARY:)]TJ
+T*[(14:)-600(==10802==    definitely lost: 0 bytes in 0 blocks)]TJ
+T*[(15:)-600(==10802==    indirectly lost: 0 bytes in 0 blocks)]TJ
+T*[(16:)-600(==10802==      possibly lost: 0 bytes in 0 blocks)]TJ
+T*[(17:)-600(==10802==    still reachable: 51 bytes in 1 blocks)]TJ
+T*[(18:)-600(==10802==         suppressed: 0 bytes in 0 blocks)]TJ
+T*[(19:)-600(==10802== Reachable blocks \(those to which a pointer was found\) are not shown.)]TJ
+T*[(20:)-600(==10802== To see them, rerun with: --leak-check=full --show-reachable=yes)]TJ
+T*[(21:)-600(==10802== )]TJ
+T*[(22:)-600(==10802== For counts of detected and suppressed errors, rerun with: -v)]TJ
+T*[(23:)-600(==10802== ERROR SUMMARY: 0 errors from 0 contexts \(suppressed: 4 from 4\))]TJ
+ET
+Q
+Q
+endstream
+endobj
+47 0 obj
+2000
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+25 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 28 0 R
+>>
+/Contents 26 0 R
+>>
+endobj
+29 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 32 0 R
+>>
+/Contents 30 0 R
+>>
+endobj
+33 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 36 0 R
+>>
+/Contents 34 0 R
+>>
+endobj
+37 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 40 0 R
+>>
+/Contents 38 0 R
+>>
+endobj
+41 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 44 0 R
+>>
+/Contents 42 0 R
+>>
+endobj
+45 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 48 0 R
+>>
+/Contents 46 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+25 0 R
+29 0 R
+33 0 R
+37 0 R
+41 0 R
+45 0 R
+] /Count 10
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+28 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+32 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+36 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+40 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+44 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+48 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120222192336)
+/ModDate(D:20120222192336)>>endobj
+xref
+0 49
+0000000000 65535 f 
+0000021422 00000 n 
+0000022402 00000 n 
+0000021299 00000 n 
+0000019951 00000 n 
+0000000009 00000 n 
+0000001289 00000 n 
+0000022200 00000 n 
+0000022071 00000 n 
+0000022269 00000 n 
+0000022137 00000 n 
+0000022334 00000 n 
+0000021470 00000 n 
+0000020084 00000 n 
+0000001309 00000 n 
+0000003963 00000 n 
+0000021540 00000 n 
+0000020219 00000 n 
+0000003984 00000 n 
+0000005466 00000 n 
+0000021599 00000 n 
+0000020354 00000 n 
+0000005487 00000 n 
+0000008416 00000 n 
+0000021658 00000 n 
+0000020489 00000 n 
+0000008437 00000 n 
+0000011429 00000 n 
+0000021717 00000 n 
+0000020624 00000 n 
+0000011450 00000 n 
+0000012064 00000 n 
+0000021776 00000 n 
+0000020759 00000 n 
+0000012084 00000 n 
+0000012822 00000 n 
+0000021835 00000 n 
+0000020894 00000 n 
+0000012842 00000 n 
+0000015429 00000 n 
+0000021894 00000 n 
+0000021029 00000 n 
+0000015450 00000 n 
+0000017857 00000 n 
+0000021953 00000 n 
+0000021164 00000 n 
+0000017878 00000 n 
+0000019930 00000 n 
+0000022012 00000 n 
+trailer
+<< /Size 49 /Root 1 0 R /Info 2 0 R
+/ID [<5519740770BDEFAD0A16164342A31848><5519740770BDEFAD0A16164342A31848>]
+>>
+startxref
+22513
+%%EOF

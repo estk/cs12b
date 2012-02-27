@@ -1,0 +1,1088 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/15/12)Tj
+-0.659766 -12.8004 Td
+(20:47:04)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 289.858 736.5 Tm
+(intx.h)Tj
+-146.855 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/intx/)Tj
+/R10 10 Tf
+-75.0023 -35.5 Td
+[(1:)-600(/* $Id: intx.h,v 1.4 2012-02-15 20:47:04-08 - - $ */)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#ifndef __INTX_H__)]TJ
+T*[(4:)-600(#define __INTX_H__)]TJ
+(5:)'
+T*[(6:)-600(#include <stdbool.h>)]TJ
+(7:)'
+T*[(8:)-600(/*)]TJ
+T*[(9:)-600(* NAME)]TJ
+-6 -11 Td
+[(10:)-600(*    intx ADT)]TJ
+T*[(11:)-600(*)]TJ
+T*[(12:)-600(* DESCRIPTION)]TJ
+T*[(13:)-600(*    A simple ADT that permits the holding of an integer in a box)]TJ
+T*[(14:)-600(*    similar to the way Java uses an `Integer' to box an `int'.)]TJ
+T*[(15:)-600(*/)]TJ
+(16:)'
+T*[(17:)-600(typedef struct intx *intx_ref;)]TJ
+T*[(18:)-600(   /*)]TJ
+T*[(19:)-600(   * The handle pointing at the `intx' box.)]TJ
+T*[(20:)-600(   */)]TJ
+(21:)'
+T*[(22:)-600(intx_ref new_intx \(void\);)]TJ
+T*[(23:)-600(   /*)]TJ
+T*[(24:)-600(   * Constructor: create a new `intx' box initialized to 0.)]TJ
+T*[(25:)-600(   * Postcond:    new intx box is returned.)]TJ
+T*[(26:)-600(   */)]TJ
+(27:)'
+T*[(28:)-600(intx_ref new1_intx \(int initvalue\);)]TJ
+T*[(29:)-600(   /*)]TJ
+T*[(30:)-600(   * Constructor: create a new `intx' box initialized by caller.)]TJ
+T*[(31:)-600(   * Postcond:    new intx box is returned.)]TJ
+T*[(32:)-600(   */)]TJ
+(33:)'
+T*[(34:)-600(void free_intx \(intx_ref this\);)]TJ
+T*[(35:)-600(   /*)]TJ
+T*[(36:)-600(   * Destructor: destroys an allocated box)]TJ
+T*[(37:)-600(   * Precond:    box created by new_intx/1.)]TJ
+T*[(38:)-600(   * Postcond:   this pointer is dangling.)]TJ
+T*[(39:)-600(   */)]TJ
+(40:)'
+T*[(41:)-600(int get_intx \(intx_ref this\);)]TJ
+T*[(42:)-600(   /*)]TJ
+T*[(43:)-600(   * Accessor:   retrieves the integer from the box.)]TJ
+T*[(44:)-600(   * Precond:    valid handle to an intx.)]TJ
+T*[(45:)-600(   * Postcond:   returns the value in the box.)]TJ
+T*[(46:)-600(   */)]TJ
+(47:)'
+T*[(48:)-600(void put_intx \(intx_ref this, int newvalue\);)]TJ
+T*[(49:)-600(   /*)]TJ
+T*[(50:)-600(   * Mutator:    replaces the integer in the box with a new one.)]TJ
+T*[(51:)-600(   * Precond:    valid handle to an intx.)]TJ
+T*[(52:)-600(   * Postcond:   old value is lost, new value is kept)]TJ
+T*[(53:)-600(   */)]TJ
+(54:)'
+T*[(55:)-600(bool is_intx \(intx_ref this\);)]TJ
+T*[(56:)-600(   /*)]TJ
+T*[(57:)-600(   * Accessor:   check to see if this is really an intx.)]TJ
+T*[(58:)-600(   */)]TJ
+(59:)'
+T*[(60:)-600(#endif)]TJ
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+2804
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/15/12)Tj
+-0.659766 -12.8004 Td
+(20:47:04)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 289.858 736.5 Tm
+(intx.h)Tj
+-146.855 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/intx/)Tj
+/R10 10 Tf
+-81.0023 -35.5 Td
+(61:)Tj
+11 TL
+T*[(62:)-600(/*)]TJ
+T*[(63:)-600(*****************************************************************)]TJ
+(64:)'
+T*[(65:)-600(Notes:)]TJ
+(66:)'
+T*[(67:)-600(File guards protect the file from multiple inclusion.)]TJ
+(68:)'
+T*[(69:)-600(A header file specifies only the prototypes for functions,)]TJ
+T*[(70:)-600(similar to the way an interface does in Java.  Everything in the)]TJ
+T*[(71:)-600(header file is `public'.)]TJ
+(72:)'
+T*[(73:)-600(As a standard, the handle type is defined as a pointer to a)]TJ
+T*[(74:)-600(structure whose fields are secret.)]TJ
+(75:)'
+T*[(76:)-600(Note that all function names are global and can not be)]TJ
+T*[(77:)-600(overloaded.  So we name a function as in Java and suffix it with)]TJ
+T*[(78:)-600(the last name of the `module' that it belongs to.  Note that in)]TJ
+T*[(79:)-600(the standard C library, there are often common prefixes, such as)]TJ
+T*[(80:)-600(`f-' for file-oriented functions, `str-' for string functions,)]TJ
+T*[(81:)-600(etc.)]TJ
+(82:)'
+T*[(83:)-600(*****************************************************************)]TJ
+T*[(84:)-600(*/)]TJ
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+1627
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/15/12)Tj
+-0.659766 -12.8004 Td
+(20:47:04)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 287.143 736.5 Tm
+(main.c)Tj
+-144.14 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/intx/)Tj
+/R10 10 Tf
+-75.0023 -35.5 Td
+[(1:)-600(/* $Id: main.c,v 1.4 2012-02-14 20:49:59-08 - - $ */)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(/*)]TJ
+T*[(4:)-600(* Silly main program which just creates an intx box, puts a)]TJ
+T*[(5:)-600(* number in it, gets it back out, and deletes the box.)]TJ
+T*[(6:)-600(* Run with bcheck to verify no memory leaks.)]TJ
+T*[(7:)-600(*/)]TJ
+(8:)'
+T*[(9:)-600(#include <errno.h>)]TJ
+-6 -11 Td
+[(10:)-600(#include <libgen.h>)]TJ
+T*[(11:)-600(#include <stdio.h>)]TJ
+T*[(12:)-600(#include <stdlib.h>)]TJ
+T*[(13:)-600(#include <string.h>)]TJ
+T*[(14:)-600(#include <sys/time.h>)]TJ
+T*[(15:)-600(#include <time.h>)]TJ
+(16:)'
+T*[(17:)-600(#include "intx.h")]TJ
+(18:)'
+T*[(19:)-600(char *execname = NULL;)]TJ
+(20:)'
+T*[(21:)-600(void say_when \(char *when\) {)]TJ
+T*[(22:)-600(   struct timeval timeval;)]TJ
+T*[(23:)-600(   int retcode = gettimeofday \(&timeval, NULL\);)]TJ
+T*[(24:)-600(   if \(retcode != 0\) {)]TJ
+T*[(25:)-600(      fprintf \(stderr, "%s: gettimeofday: %s\\n",)]TJ
+T*[(26:)-600(               execname, strerror \(errno\)\);)]TJ
+T*[(27:)-600(   })]TJ
+T*[(28:)-600(   struct tm *tm_buffer = localtime \(&timeval.tv_sec\);)]TJ
+T*[(29:)-600(   char buffer1[64];)]TJ
+T*[(30:)-600(   char buffer2[64];)]TJ
+T*[(31:)-600(   strftime \(buffer1, sizeof buffer1, "%a %b %e %T", tm_buffer\);)]TJ
+T*[(32:)-600(   strftime \(buffer2, sizeof buffer2, " %Z %Y", tm_buffer\);)]TJ
+T*[(33:)-600(   printf \("%s: %s: %s.%06ld %s\\n", execname, when,)]TJ
+T*[(34:)-600(           buffer1, timeval.tv_usec, buffer2\);)]TJ
+T*[(35:)-600(})]TJ
+(36:)'
+T*[(37:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(38:)-600(   argc = argc; // Avoid:16: warning: unused parameter 'argc')]TJ
+T*[(39:)-600(   execname = basename \(argv[0]\);)]TJ
+T*[(40:)-600(   say_when \("starting"\);)]TJ
+(41:)'
+T*[(42:)-600(   /* Declare the box and initialize it.  */)]TJ
+T*[(43:)-600(   intx_ref box = new_intx\(\);)]TJ
+T*[(44:)-600(   printf \("box = %p\\n", box\);)]TJ
+(45:)'
+T*[(46:)-600(   /* Perform a couple of operations on it.  */)]TJ
+T*[(47:)-600(   put_intx \(box, 1024\);)]TJ
+T*[(48:)-600(   printf \("box value is %d\\n", get_intx \(box\)\);)]TJ
+(49:)'
+T*[(50:)-600(   /* Free up the box and set the handle to NULL to avoid a dangle. */)]TJ
+T*[(51:)-600(   free_intx \(box\);)]TJ
+T*[(52:)-600(   box = NULL;)]TJ
+(53:)'
+T*[(54:)-600(   /* OK! */)]TJ
+T*[(55:)-600(   say_when \("finished"\);)]TJ
+T*[(56:)-600(   return EXIT_SUCCESS;)]TJ
+T*[(57:)-600(})]TJ
+(58:)'
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+2944
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/15/12)Tj
+-0.659766 -12.8004 Td
+(20:47:05)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 290.25 736.5 Tm
+(intx.c)Tj
+-147.248 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/intx/)Tj
+/R10 10 Tf
+-75.0023 -35.5 Td
+[(1:)-600(/* $Id: intx.c,v 1.3 2012-02-15 20:47:04-08 - - $ */)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <assert.h>)]TJ
+T*[(4:)-600(#include <stdio.h>)]TJ
+T*[(5:)-600(#include <stdlib.h>)]TJ
+T*[(6:)-600(#include <string.h>)]TJ
+(7:)'
+T*[(8:)-600(#include "intx.h")]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(static char *intx_tag = "struct intx";)]TJ
+(11:)'
+T*[(12:)-600(struct intx {)]TJ
+T*[(13:)-600(   char *tag;)]TJ
+T*[(14:)-600(   int value;)]TJ
+T*[(15:)-600(};)]TJ
+(16:)'
+T*[(17:)-600(intx_ref new_intx \(void\) {)]TJ
+T*[(18:)-600(   return new1_intx \(0\);)]TJ
+T*[(19:)-600(})]TJ
+(20:)'
+T*[(21:)-600(intx_ref new1_intx \(int initvalue\) {)]TJ
+T*[(22:)-600(   intx_ref new = malloc \(sizeof \(struct intx\)\);)]TJ
+T*[(23:)-600(   assert \(new != NULL\);)]TJ
+T*[(24:)-600(   new->tag = intx_tag;)]TJ
+T*[(25:)-600(   new->value = initvalue;)]TJ
+T*[(26:)-600(   return new;)]TJ
+T*[(27:)-600(})]TJ
+(28:)'
+T*[(29:)-600(void free_intx \(intx_ref this\) {)]TJ
+T*[(30:)-600(   assert \(is_intx \(this\)\);)]TJ
+T*[(31:)-600(   memset\(this, 0, sizeof \(struct intx\)\);)]TJ
+T*[(32:)-600(   free \(this\);)]TJ
+T*[(33:)-600(})]TJ
+(34:)'
+T*[(35:)-600(int get_intx \(intx_ref this\) {)]TJ
+T*[(36:)-600(   assert \(is_intx \(this\)\);)]TJ
+T*[(37:)-600(   return this->value;)]TJ
+T*[(38:)-600(})]TJ
+(39:)'
+T*[(40:)-600(void put_intx \(intx_ref this, int newvalue\) {)]TJ
+T*[(41:)-600(   assert \(is_intx \(this\)\);)]TJ
+T*[(42:)-600(   this->value = newvalue;)]TJ
+T*[(43:)-600(})]TJ
+(44:)'
+T*[(45:)-600(bool is_intx \(intx_ref this\) {)]TJ
+T*[(46:)-600(   // LINTED \(warning: assignment of 32-bit integer to 8-bit integer\))]TJ
+T*[(47:)-600(   return this != NULL && this->tag == intx_tag;)]TJ
+T*[(48:)-600(})]TJ
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+2207
+endobj
+26 0 obj
+<</Length 27 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/15/12)Tj
+-0.659766 -12.8004 Td
+(20:47:05)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 290.25 736.5 Tm
+(intx.c)Tj
+-147.248 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/intx/)Tj
+/R10 10 Tf
+-81.0023 -35.5 Td
+(49:)Tj
+11 TL
+T*[(50:)-600(/*)]TJ
+T*[(51:)-600(*****************************************************************)]TJ
+(52:)'
+T*[(53:)-600(Notes that would normally not be put in the file:)]TJ
+(54:)'
+T*[(55:)-600(A `.c' file always includes its own header.)]TJ
+(56:)'
+T*[(57:)-600(The `struct' definition itself is specified in the)]TJ
+T*[(58:)-600(implementation file.  Everything declared in the implementation)]TJ
+T*[(59:)-600(file is `private'.  Never put field definitions in a header)]TJ
+T*[(60:)-600(file.)]TJ
+(61:)'
+T*[(62:)-600(A tag string is defined so that each structure can be identified)]TJ
+T*[(63:)-600(at runtime similar to the way that `System.identityHashCode' in)]TJ
+T*[(64:)-600(Java can identify the type of the object.  It is also cleared)]TJ
+T*[(65:)-600(out when freed to permit checking of dangling pointers.)]TJ
+(66:)'
+T*[(67:)-600(The tag is static so it can't be accessed outside of this file.)]TJ
+T*[(68:)-600(Static variables work as in Java if one considers the `.c' file)]TJ
+T*[(69:)-600(to be a class.)]TJ
+(70:)'
+T*[(71:)-600(The function memset\(3\) is used before free\(3C\) in order to avoid)]TJ
+T*[(72:)-600(having pointers into the object remain live and also to prevent)]TJ
+T*[(73:)-600(a dangling pointer from verifying true for `is_intx'.  It also)]TJ
+T*[(74:)-600(can be used for checking up on types when using `void*' for)]TJ
+T*[(75:)-600(`Object'.)]TJ
+(76:)'
+T*[(77:)-600(All functions assert is_intx as a precondition if appropriate.)]TJ
+(78:)'
+T*[(79:)-600(*****************************************************************)]TJ
+T*[(80:)-600(*/)]TJ
+ET
+Q
+Q
+endstream
+endobj
+27 0 obj
+2114
+endobj
+30 0 obj
+<</Length 31 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/15/12)Tj
+-0.659766 -12.8004 Td
+(20:47:05)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.773 736.5 Tm
+(Makefile)Tj
+-137.77 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/intx/)Tj
+/R10 10 Tf
+-75.0023 -35.5 Td
+[(1:)-600(# $Id: Makefile,v 1.4 2012-02-14 20:44:24-08 - - $)]TJ
+11 TL
+T*[(2:)-600(MKFILE    = Makefile)]TJ
+T*[(3:)-600(DEPSFILE  = ${MKFILE}.deps)]TJ
+T*[(4:)-600(NOINCLUDE = ci clean spotless)]TJ
+T*[(5:)-600(NEEDINCL  = ${filter ${NOINCLUDE}, ${MAKECMDGOALS}})]TJ
+(6:)'
+T*[(7:)-600(GCC      = gcc -g -O0 -Wall -Wextra -std=gnu99)]TJ
+T*[(8:)-600(MKDEPS   = gcc -MM)]TJ
+T*[(9:)-600(LINT     = lint -Xa -fd -m -u -x -errchk=%all)]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(CHEADER   =        intx.h)]TJ
+T*[(12:)-600(CSOURCE   = main.c intx.c)]TJ
+T*[(13:)-600(OBJECTS   = ${CSOURCE:.c=.o})]TJ
+T*[(14:)-600(EXECBIN   = intx)]TJ
+T*[(15:)-600(SOURCES   = ${CHEADER} ${CSOURCE} ${MKFILE})]TJ
+T*[(16:)-600(LISTSRC   = ${SOURCES} ${DEPSFILE})]TJ
+T*[(17:)-600(LISTING   = Listing.intx.ps)]TJ
+(18:)'
+T*[(19:)-600(all : ${EXECBIN})]TJ
+(20:)'
+T*[(21:)-600(${EXECBIN} : ${OBJECTS})]TJ
+T*[(22:)-600(        ${GCC} -o $@ ${OBJECTS})]TJ
+(23:)'
+T*[(24:)-600(%.o : %.c)]TJ
+T*[(25:)-600(        ${GCC} -c $<)]TJ
+(26:)'
+T*[(27:)-600(lint : ${CSOURCE})]TJ
+T*[(28:)-600(        ${LINT} ${CSOURCE})]TJ
+T*[(29:)-600(        checksource ${CSOURCE})]TJ
+(30:)'
+T*[(31:)-600(ci : ${SOURCES})]TJ
+T*[(32:)-600(        cid + ${SOURCES})]TJ
+(33:)'
+T*[(34:)-600(ident : ${SOURCES})]TJ
+T*[(35:)-600(        ident ${SOURCES})]TJ
+(36:)'
+T*[(37:)-600(lis : ${SOURCES} test)]TJ
+T*[(38:)-600(        mkpspdf ${LISTING} ${LISTSRC} test*.lis)]TJ
+(39:)'
+T*[(40:)-600(clean :)]TJ
+T*[(41:)-600(        - rm ${OBJECTS} ${DEPSFILE} core test*.lis)]TJ
+(42:)'
+T*[(43:)-600(spotless : clean)]TJ
+T*[(44:)-600(        - rm ${EXECBIN})]TJ
+(45:)'
+T*[(46:)-600(test : ${EXECBIN})]TJ
+T*[(47:)-600(        runprogram.perl -x testa.lis ${EXECBIN})]TJ
+T*[(48:)-600(        valgrind --leak-check=full ${EXECBIN} >testb.lis 2>&1)]TJ
+(49:)'
+T*[(50:)-600(deps : ${CSOURCE} ${CHEADER})]TJ
+T*[(51:)-600(        @ echo "# ${DEPSFILE} created `date`" >${DEPSFILE})]TJ
+T*[(52:)-600(        ${MKDEPS} ${CSOURCE} >>${DEPSFILE})]TJ
+(53:)'
+T*[(54:)-600(${DEPSFILE} :)]TJ
+T*[(55:)-600(        @ touch ${DEPSFILE})]TJ
+T*[(56:)-600(        ${MAKE} --no-print-directory deps)]TJ
+(57:)'
+T*[(58:)-600(again :)]TJ
+T*[(59:)-600(        gmake spotless deps ci lint all lis)]TJ
+(60:)'
+T*[(61:)-600(ifeq \("${NEEDINCL}",""\))]TJ
+T*[(62:)-600(include ${DEPSFILE})]TJ
+T*[(63:)-600(endif)]TJ
+(64:)'
+ET
+Q
+Q
+endstream
+endobj
+31 0 obj
+2827
+endobj
+34 0 obj
+<</Length 35 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/15/12)Tj
+-0.659766 -12.8004 Td
+(20:47:04)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 266.192 736.5 Tm
+(Makefile.deps)Tj
+-123.19 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/intx/)Tj
+/R10 10 Tf
+-75.0023 -35.5 Td
+[(1:)-600(# Makefile.deps created Wed Feb 15 20:47:04 PST 2012)]TJ
+11 TL
+T*[(2:)-600(main.o: main.c intx.h)]TJ
+T*[(3:)-600(intx.o: intx.c intx.h)]TJ
+ET
+Q
+Q
+endstream
+endobj
+35 0 obj
+677
+endobj
+38 0 obj
+<</Length 39 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/15/12)Tj
+-0.659766 -12.8004 Td
+(20:47:05)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 284.805 736.5 Tm
+(testa.lis)Tj
+-141.803 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/intx/)Tj
+/R10 10 Tf
+-75.0023 -35.5 Td
+(1:)Tj
+11 TL
+T*[(2:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(3:)-600(log: testa.log)]TJ
+T*[(4:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(5:)'
+T*[(6:)-600(     1  Script  : /afs/cats.ucsc.edu/courses/cmps012b-wm/bin/runprogram.perl)]TJ
+T*[(7:)-600(     2  limit c :    0 max core file size \(KB\))]TJ
+T*[(8:)-600(     3  limit f : 4194303 max output file size \(KB\))]TJ
+T*[(9:)-600(     4  limit t : 4294967295 max CPU time \(sec\))]TJ
+-6 -11 Td
+[(10:)-600(     5  stdin   : /dev/null)]TJ
+T*[(11:)-600(     6  stdout  : testa.out)]TJ
+T*[(12:)-600(     7  stderr  : testa.err)]TJ
+T*[(13:)-600(     8  log     : testa.log)]TJ
+T*[(14:)-600(     9  listing : testa.lis)]TJ
+T*[(15:)-600(    10  Command : intx)]TJ
+T*[(16:)-600(    11  starting: pid 28293: 20:47:05.00)]TJ
+T*[(17:)-600(    12  finished: pid 28293: 20:47:05.00, real 0.00, user 0.00, sys 0.00)]TJ
+T*[(18:)-600(    13  pstatus: 0x0000 EXIT STATUS = 0)]TJ
+(19:)'
+T*[(20:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(21:)-600(stdin: /dev/null)]TJ
+T*[(22:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(23:)'
+(24:)'
+T*[(25:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(26:)-600(stdout: testa.out)]TJ
+T*[(27:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(28:)'
+T*[(29:)-600(     1  intx: starting: Wed Feb 15 20:47:05.451253  PST 2012)]TJ
+T*[(30:)-600(     2  box = 0x1bc610d0)]TJ
+T*[(31:)-600(     3  box value is 1024)]TJ
+T*[(32:)-600(     4  intx: finished: Wed Feb 15 20:47:05.451419  PST 2012)]TJ
+(33:)'
+T*[(34:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+T*[(35:)-600(stderr: testa.err)]TJ
+T*[(36:)-600(:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::)]TJ
+(37:)'
+ET
+Q
+Q
+endstream
+endobj
+39 0 obj
+2396
+endobj
+42 0 obj
+<</Length 43 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/15/12)Tj
+-0.659766 -12.8004 Td
+(20:47:05)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 284.413 736.5 Tm
+(testb.lis)Tj
+-141.41 18 Td
+($cmps012b-wm/Labs-cmps012m/lab7c-headers-adts/intx/)Tj
+/R10 10 Tf
+-75.0023 -35.5 Td
+[(1:)-600(==28300== Memcheck, a memory error detector)]TJ
+11 TL
+T*[(2:)-600(==28300== Copyright \(C\) 2002-2009, and GNU GPL'd, by Julian Seward et al.)]TJ
+T*[(3:)-600(==28300== Using Valgrind-3.5.0 and LibVEX; rerun with -h for copyright info)]TJ
+T*[(4:)-600(==28300== Command: intx)]TJ
+T*[(5:)-600(==28300== )]TJ
+T*[(6:)-600(intx: starting: Wed Feb 15 20:47:05.694541  PST 2012)]TJ
+T*[(7:)-600(box = 0x4c30d70)]TJ
+T*[(8:)-600(box value is 1024)]TJ
+T*[(9:)-600(intx: finished: Wed Feb 15 20:47:05.771954  PST 2012)]TJ
+-6 -11 Td
+[(10:)-600(==28300== )]TJ
+T*[(11:)-600(==28300== HEAP SUMMARY:)]TJ
+T*[(12:)-600(==28300==     in use at exit: 0 bytes in 0 blocks)]TJ
+T*[(13:)-600(==28300==   total heap usage: 17 allocs, 17 frees, 2,603 bytes allocated)]TJ
+T*[(14:)-600(==28300== )]TJ
+T*[(15:)-600(==28300== All heap blocks were freed -- no leaks are possible)]TJ
+T*[(16:)-600(==28300== )]TJ
+T*[(17:)-600(==28300== For counts of detected and suppressed errors, rerun with: -v)]TJ
+T*[(18:)-600(==28300== ERROR SUMMARY: 0 errors from 0 contexts \(suppressed: 4 from 4\))]TJ
+ET
+Q
+Q
+endstream
+endobj
+43 0 obj
+1592
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+25 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 28 0 R
+>>
+/Contents 26 0 R
+>>
+endobj
+29 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 32 0 R
+>>
+/Contents 30 0 R
+>>
+endobj
+33 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 36 0 R
+>>
+/Contents 34 0 R
+>>
+endobj
+37 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 40 0 R
+>>
+/Contents 38 0 R
+>>
+endobj
+41 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 44 0 R
+>>
+/Contents 42 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+25 0 R
+29 0 R
+33 0 R
+37 0 R
+41 0 R
+] /Count 9
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+28 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+32 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+36 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+40 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+44 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120215204705)
+/ModDate(D:20120215204705)>>endobj
+xref
+0 45
+0000000000 65535 f 
+0000021178 00000 n 
+0000022099 00000 n 
+0000021063 00000 n 
+0000019850 00000 n 
+0000000009 00000 n 
+0000002863 00000 n 
+0000021897 00000 n 
+0000021768 00000 n 
+0000021966 00000 n 
+0000021834 00000 n 
+0000022031 00000 n 
+0000021226 00000 n 
+0000019983 00000 n 
+0000002883 00000 n 
+0000004562 00000 n 
+0000021296 00000 n 
+0000020118 00000 n 
+0000004583 00000 n 
+0000007579 00000 n 
+0000021355 00000 n 
+0000020253 00000 n 
+0000007600 00000 n 
+0000009859 00000 n 
+0000021414 00000 n 
+0000020388 00000 n 
+0000009880 00000 n 
+0000012046 00000 n 
+0000021473 00000 n 
+0000020523 00000 n 
+0000012067 00000 n 
+0000014946 00000 n 
+0000021532 00000 n 
+0000020658 00000 n 
+0000014967 00000 n 
+0000015696 00000 n 
+0000021591 00000 n 
+0000020793 00000 n 
+0000015716 00000 n 
+0000018164 00000 n 
+0000021650 00000 n 
+0000020928 00000 n 
+0000018185 00000 n 
+0000019829 00000 n 
+0000021709 00000 n 
+trailer
+<< /Size 45 /Root 1 0 R /Info 2 0 R
+/ID [<198C5ABD7F21AA14C510908ED5060FD1><198C5ABD7F21AA14C510908ED5060FD1>]
+>>
+startxref
+22210
+%%EOF
