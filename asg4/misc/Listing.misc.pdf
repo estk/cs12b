@@ -1,0 +1,703 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:35:40)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 282.48 736.5 Tm
+(hashfn.c)Tj
+-135.523 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/misc/)Tj
+/R10 10 Tf
+-78.9574 -35.5 Td
+[(1:)-600(// $Id: hashfn.c,v 1.2 2012-02-22 19:35:40-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(//)]TJ
+T*[(4:)-600(// This program is not part of your project.  It exists just to )]TJ
+T*[(5:)-600(// illustrate how to obtain and print hash values.  Each element)]TJ
+T*[(6:)-600(// of argv is hashed and printed along with its hashcode.)]TJ
+T*[(7:)-600(//)]TJ
+(8:)'
+T*[(9:)-600(#include <stdio.h>)]TJ
+-6 -11 Td
+[(10:)-600(#include <stdlib.h>)]TJ
+(11:)'
+T*[(12:)-600(#include "../code/strhash.h")]TJ
+(13:)'
+T*[(14:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(15:)-600(   for \(int argi = 0; argi < argc; ++argi\) {)]TJ
+T*[(16:)-600(      char *str = argv[argi];)]TJ
+T*[(17:)-600(      hashcode_t hashcode = strhash \(str\);)]TJ
+T*[(18:)-600(      printf \("%10u = strhash \(\\"%s\\"\)\\n", hashcode, str\);)]TJ
+T*[(19:)-600(   })]TJ
+T*[(20:)-600(   printf \("%10u = 0xFFFFFFFFu\\n", 0xFFFFFFFFu\);)]TJ
+T*[(21:)-600(   return EXIT_SUCCESS;)]TJ
+T*[(22:)-600(})]TJ
+(23:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+1492
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:50:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 260.235 736.5 Tm
+(../code/strhash.h)Tj
+-113.278 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/misc/)Tj
+/R10 10 Tf
+-78.9574 -35.5 Td
+[(1:)-600(// $Id: strhash.h,v 1.1 2012-02-21 20:36:10-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(//)]TJ
+T*[(4:)-600(// NAME)]TJ
+T*[(5:)-600(//    strhash - return an unsigned 32-bit hash code for a string)]TJ
+T*[(6:)-600(//)]TJ
+T*[(7:)-600(// SYNOPSIS)]TJ
+T*[(8:)-600(//    hashcode_t strhash \(char *string\);)]TJ
+T*[(9:)-600(//)]TJ
+-6 -11 Td
+[(10:)-600(// DESCRIPTION)]TJ
+T*[(11:)-600(//    Uses Horner's method to compute the hash code of a string)]TJ
+T*[(12:)-600(//    as is done by java.lang.String.hashCode:)]TJ
+T*[(13:)-600(//    .  s[0]*31^\(n-1\) + s[1]*31^\(n-2\) + ... + s[n-1])]TJ
+T*[(14:)-600(//    Using strength reduction, the multiplication is replaced by)]TJ
+T*[(15:)-600(//    a shift.  However, instead of returning a signed number,)]TJ
+T*[(16:)-600(//    this function returns an unsigned number.)]TJ
+T*[(17:)-600(//)]TJ
+T*[(18:)-600(// REFERENCE)]TJ
+T*[(19:)-600(//    http://java.sun.com/j2se/1.4.1/docs/api/java/lang/)]TJ
+T*[(20:)-600(//    String.html#hashCode\(\))]TJ
+T*[(21:)-600(// )]TJ
+T*[(22:)-600(//)]TJ
+(23:)'
+T*[(24:)-600(#ifndef __STRHASH_H__)]TJ
+T*[(25:)-600(#define __STRHASH_H__)]TJ
+(26:)'
+T*[(27:)-600(#include <inttypes.h>)]TJ
+(28:)'
+T*[(29:)-600(typedef uint32_t hashcode_t;)]TJ
+(30:)'
+T*[(31:)-600(hashcode_t strhash \(char *string\);)]TJ
+(32:)'
+T*[(33:)-600(#endif)]TJ
+(34:)'
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+1844
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:50:19)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 260.627 736.5 Tm
+(../code/strhash.c)Tj
+-113.67 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/misc/)Tj
+/R10 10 Tf
+-78.9574 -35.5 Td
+[(1:)-600(// $Id: strhash.c,v 1.1 2012-02-21 20:36:10-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <assert.h>)]TJ
+T*[(4:)-600(#include <stdio.h>)]TJ
+T*[(5:)-600(#include <sys/types.h>)]TJ
+(6:)'
+T*[(7:)-600(#include "strhash.h")]TJ
+(8:)'
+T*[(9:)-600(hashcode_t strhash \(char *string\) {)]TJ
+-6 -11 Td
+[(10:)-600(   assert \(string != NULL\);)]TJ
+T*[(11:)-600(   hashcode_t hashcode = 0;)]TJ
+T*[(12:)-600(   for \(int index = 0; string[index] != '\\0'; ++index\) {)]TJ
+T*[(13:)-600(      hashcode = hashcode * 31 + \(unsigned char\) string[index];)]TJ
+T*[(14:)-600(   })]TJ
+T*[(15:)-600(   return hashcode;)]TJ
+T*[(16:)-600(})]TJ
+(17:)'
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+1168
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/21/12)Tj
+-0.659766 -12.8004 Td
+(19:53:04)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.773 736.5 Tm
+(Makefile)Tj
+-133.815 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/misc/)Tj
+/R10 10 Tf
+-78.9574 -35.5 Td
+[(1:)-600(# $Id: Makefile,v 1.2 2012-02-21 19:53:04-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(GCC       = gcc -g -O0 -Wall -Wextra -std=gnu99)]TJ
+T*[(4:)-600(LINT      = lint -Xa -fd -m -u -x -errchk=%all)]TJ
+(5:)'
+T*[(6:)-600(EXECBIN   = hashfn)]TJ
+T*[(7:)-600(HASHSRC   = hashfn.c ../code/strhash.c)]TJ
+T*[(8:)-600(LISFILES  = hashfn.c ../code/strhash.h ../code/strhash.c \\)]TJ
+T*[(9:)-600(            Makefile pspell.perl)]TJ
+-6 -11 Td
+[(10:)-600(LISTING   = Listing.misc.ps)]TJ
+T*[(11:)-600(HASHOUT   = hashfn.out)]TJ
+(12:)'
+T*[(13:)-600(TESTDATA  = 0 9 A Z a z foo bar baz qux \\)]TJ
+T*[(14:)-600(            quux quuux quuuux quuuuux quuuuuux quuuuuuux quuuuuuuux)]TJ
+(15:)'
+T*[(16:)-600(all : ${EXECBIN})]TJ
+(17:)'
+T*[(18:)-600(% : %.c)]TJ
+T*[(19:)-600(        - cid + $<)]TJ
+T*[(20:)-600(        - checksource $<)]TJ
+T*[(21:)-600(        ${GCC} -o $@ ${HASHSRC})]TJ
+(22:)'
+T*[(23:)-600(lint : ${HASHSRC})]TJ
+T*[(24:)-600(        - ${LINT} ${HASHSRC})]TJ
+(25:)'
+T*[(26:)-600(ci : ${LISFILES})]TJ
+T*[(27:)-600(        - checksource ${LISFILES})]TJ
+T*[(28:)-600(        - cid + ${LISFILES})]TJ
+(29:)'
+T*[(30:)-600(lis : ${LISFILES} ${HASHOUT})]TJ
+T*[(31:)-600(        mkpspdf ${LISTING} ${LISFILES} ${HASHOUT})]TJ
+(32:)'
+T*[(33:)-600(${HASHOUT} : hashfn)]TJ
+T*[(34:)-600(        hashfn ${TESTDATA} * >${HASHOUT})]TJ
+(35:)'
+T*[(36:)-600(spotless :)]TJ
+T*[(37:)-600(        - rm ${EXECBIN} ${HASHOUT})]TJ
+(38:)'
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+1934
+endobj
+26 0 obj
+<</Length 27 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/21/12)Tj
+-0.659766 -12.8004 Td
+(19:53:04)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 276.566 736.5 Tm
+(pspell.perl)Tj
+-129.608 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/misc/)Tj
+/R10 10 Tf
+-78.9574 -35.5 Td
+[(1:)-600(#!/usr/bin/perl)]TJ
+11 TL
+T*[(2:)-600(# $Id: pspell.perl,v 1.1 2012-02-21 19:50:45-08 - - $)]TJ
+T*[(3:)-600(use strict;)]TJ
+T*[(4:)-600(use warnings;)]TJ
+T*[(5:)-600(use Getopt::Std;)]TJ
+(6:)'
+T*[(7:)-600($0 =~ s|^\(.*/\)?\([^/]+\)/*$|$2|;)]TJ
+T*[(8:)-600(my $exit_status = 0;)]TJ
+T*[(9:)-600(sub note\(@\) {print STDERR "$0: @_"})]TJ
+-6 -11 Td
+[(10:)-600($SIG{__WARN__} = sub {note @_; $exit_status = 2};)]TJ
+T*[(11:)-600($SIG{__DIE__} = sub {warn @_; exit};)]TJ
+T*[(12:)-600(END {exit $exit_status})]TJ
+(13:)'
+T*[(14:)-600(my %options;)]TJ
+T*[(15:)-600(getopts "nd:", \\%options;)]TJ
+(16:)'
+T*[(17:)-600(my %dictionary;)]TJ
+T*[(18:)-600(sub load_dictionary\($\) {)]TJ
+T*[(19:)-600(   my \($dictname\) = @_;)]TJ
+T*[(20:)-600(   open my $dict, "<$dictname" or do {warn "$dictname: $!\\n"; return};)]TJ
+T*[(21:)-600(   map {chomp; $dictionary{$_} = 1} <$dict>;)]TJ
+T*[(22:)-600(   close $dict;)]TJ
+T*[(23:)-600(})]TJ
+T*[(24:)-600(load_dictionary "/usr/share/dict/words" unless $options{'n'};)]TJ
+T*[(25:)-600(load_dictionary $options{'d'} if defined $options{'d'};)]TJ
+T*[(26:)-600(die "dictionary is empty\\n" unless %dictionary;)]TJ
+(27:)'
+T*[(28:)-600(my $numpat = qr{\([[:digit:]]+\([-:.][[:digit:]]+\)*\)};)]TJ
+T*[(29:)-600(my $wordpat = qr{\([[:alnum:]]+\([-&'.][[:alnum:]]+\)*\)};)]TJ
+T*[(30:)-600(for my $filename \(@ARGV ? @ARGV : "-"\) {)]TJ
+T*[(31:)-600(   open my $file, "<$filename" or do {warn "$filename: $!\\n"; next};)]TJ
+T*[(32:)-600(   while \(defined \(my $line = <$file>\)\) {)]TJ
+T*[(33:)-600(      while \($line =~ s{^.*?\($wordpat\)}{}\) {)]TJ
+T*[(34:)-600(         my $word = $1;)]TJ
+T*[(35:)-600(         next if $word =~ m{$numpat})]TJ
+T*[(36:)-600(              || $dictionary{$word} || $dictionary{lc $word};)]TJ
+T*[(37:)-600(         $exit_status ||= 1;)]TJ
+T*[(38:)-600(         print "$filename: $.: $word\\n";)]TJ
+T*[(39:)-600(      })]TJ
+T*[(40:)-600(   })]TJ
+T*[(41:)-600(   close $file;)]TJ
+T*[(42:)-600(})]TJ
+(43:)'
+ET
+Q
+Q
+endstream
+endobj
+27 0 obj
+2488
+endobj
+30 0 obj
+<</Length 31 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/22/12)Tj
+-0.659766 -12.8004 Td
+(19:35:40)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 276.643 736.5 Tm
+(hashfn.out)Tj
+-129.685 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/misc/)Tj
+/R10 10 Tf
+-78.9574 -35.5 Td
+[(1:)-600(3070542422 = strhash \("hashfn"\))]TJ
+11 TL
+T*[(2:)-600(        48 = strhash \("0"\))]TJ
+T*[(3:)-600(        57 = strhash \("9"\))]TJ
+T*[(4:)-600(        65 = strhash \("A"\))]TJ
+T*[(5:)-600(        90 = strhash \("Z"\))]TJ
+T*[(6:)-600(        97 = strhash \("a"\))]TJ
+T*[(7:)-600(       122 = strhash \("z"\))]TJ
+T*[(8:)-600(    101574 = strhash \("foo"\))]TJ
+T*[(9:)-600(     97299 = strhash \("bar"\))]TJ
+-6 -11 Td
+[(10:)-600(     97307 = strhash \("baz"\))]TJ
+T*[(11:)-600(    112340 = strhash \("qux"\))]TJ
+T*[(12:)-600(   3482567 = strhash \("quux"\))]TJ
+T*[(13:)-600( 107959604 = strhash \("quuux"\))]TJ
+T*[(14:)-600(3346747751 = strhash \("quuuux"\))]TJ
+T*[(15:)-600( 669965204 = strhash \("quuuuux"\))]TJ
+T*[(16:)-600(3589052167 = strhash \("quuuuuux"\))]TJ
+T*[(17:)-600(3886434804 = strhash \("quuuuuuux"\))]TJ
+T*[(18:)-600( 220394663 = strhash \("quuuuuuuux"\))]TJ
+T*[(19:)-600( 593262906 = strhash \("Listing.misc.pdf"\))]TJ
+T*[(20:)-600(2374442171 = strhash \("Listing.misc.ps"\))]TJ
+T*[(21:)-600( 105691274 = strhash \("Makefile"\))]TJ
+T*[(22:)-600(     80962 = strhash \("RCS"\))]TJ
+T*[(23:)-600(3070542422 = strhash \("hashfn"\))]TJ
+T*[(24:)-600( 148736715 = strhash \("hashfn.c"\))]TJ
+T*[(25:)-600(1202077622 = strhash \("hashfn.out"\))]TJ
+T*[(26:)-600(3338426469 = strhash \("pspell.perl"\))]TJ
+T*[(27:)-600(4294967295 = 0xFFFFFFFFu)]TJ
+ET
+Q
+Q
+endstream
+endobj
+31 0 obj
+1890
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+25 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 28 0 R
+>>
+/Contents 26 0 R
+>>
+endobj
+29 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 32 0 R
+>>
+/Contents 30 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+25 0 R
+29 0 R
+] /Count 6
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+28 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+32 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Encoding 33 0 R/Subtype/Type1>>
+endobj
+33 0 obj
+<</Type/Encoding/Differences[
+126/tilde]>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120223192311)
+/ModDate(D:20120223192311)>>endobj
+xref
+0 34
+0000000000 65535 f 
+0000012162 00000 n 
+0000012981 00000 n 
+0000012068 00000 n 
+0000011260 00000 n 
+0000000009 00000 n 
+0000001551 00000 n 
+0000012779 00000 n 
+0000012575 00000 n 
+0000012848 00000 n 
+0000012641 00000 n 
+0000012913 00000 n 
+0000012210 00000 n 
+0000011393 00000 n 
+0000001571 00000 n 
+0000003467 00000 n 
+0000012280 00000 n 
+0000011528 00000 n 
+0000003488 00000 n 
+0000004708 00000 n 
+0000012339 00000 n 
+0000011663 00000 n 
+0000004729 00000 n 
+0000006715 00000 n 
+0000012398 00000 n 
+0000011798 00000 n 
+0000006736 00000 n 
+0000009276 00000 n 
+0000012457 00000 n 
+0000011933 00000 n 
+0000009297 00000 n 
+0000011239 00000 n 
+0000012516 00000 n 
+0000012720 00000 n 
+trailer
+<< /Size 34 /Root 1 0 R /Info 2 0 R
+/ID [<D3184B224704FEA3481030088FF66074><D3184B224704FEA3481030088FF66074>]
+>>
+startxref
+13092
+%%EOF

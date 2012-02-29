@@ -1,0 +1,6 @@
+#!/bin/sh
+# $Id: mk.build,v 1.1 2011-11-04 20:17:27-07 - - $
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+checksource Makefile *.[hc] 2>&1 | tee check.log
+gmake lint 2>&1 | tee lint.log
+gmake 2>&1 | tee gmake.log

@@ -1,0 +1,12 @@
+#!/bin/sh -x
+# $Id: mk.tests,v 1.1 2011-11-04 20:17:27-07 - - $
+PATH=$PATH:/afs/cats.ucsc.edu/courses/cmps012b-wm/bin
+RUN=runprogram.perl
+GRIND="valgrind --leak-check=full"
+$RUN -otest1 -0/dev/null spellchk test[12]*.in
+$RUN -otest2 -0/dev/null spellchk test*.in
+$RUN -otest3 -0/dev/null spellchk -d user.dict test*.in
+$RUN -otest4 -0/dev/null spellchk /foo /bar/baz quuux
+$RUN -otest5 -0/dev/null spellchk -n test[12]*.in
+$RUN -otest6 -0/dev/null spellchk -xx -n -d user.dict
+$RUN -otest7 -0/dev/null $GRIND spellchk -n -d user.dict test3.in

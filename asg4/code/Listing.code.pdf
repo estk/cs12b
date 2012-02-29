@@ -1,0 +1,1539 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 281.311 736.5 Tm
+(debugf.h)Tj
+-134.347 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(// $Id: debugf.h,v 1.3 2012-02-22 19:50:19-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#ifndef __DEBUGF_H__)]TJ
+T*[(4:)-600(#define __DEBUGF_H__)]TJ
+(5:)'
+T*[(6:)-600(//)]TJ
+T*[(7:)-600(// DESCRIPTION)]TJ
+T*[(8:)-600(//    Debugging library containing miscellaneous useful things.)]TJ
+T*[(9:)-600(//)]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(//)]TJ
+T*[(12:)-600(// Tell debugf what program is running.)]TJ
+T*[(13:)-600(//)]TJ
+T*[(14:)-600(void set_execname \(char *name\);)]TJ
+(15:)'
+T*[(16:)-600(//)]TJ
+T*[(17:)-600(// Support for stub messages.)]TJ
+T*[(18:)-600(//)]TJ
+T*[(19:)-600(#define STUBPRINTF\(...\) \\)]TJ
+T*[(20:)-600(        __stubprintf \(__FILE__, __LINE__, __func__, __VA_ARGS__\))]TJ
+T*[(21:)-600(void __stubprintf \(char *file, int line, const char *func,)]TJ
+T*[(22:)-600(                   char *format, ...\);)]TJ
+(23:)'
+T*[(24:)-600(//)]TJ
+T*[(25:)-600(// Debugging utility.)]TJ
+T*[(26:)-600(//)]TJ
+(27:)'
+T*[(28:)-600(void set_debugflags \(char *flags\);)]TJ
+T*[(29:)-600(   //)]TJ
+T*[(30:)-600(   // Sets a string of debug flags to be used by DEBUGF statements.)]TJ
+T*[(31:)-600(   // Uses the address of the string, and does not copy it, so it)]TJ
+T*[(32:)-600(   // must not be dangling.  If a particular debug flag has been set,)]TJ
+T*[(33:)-600(   // messages are printed.  The format is identical to printf format.)]TJ
+T*[(34:)-600(   // The flag "@" turns on all flags.)]TJ
+T*[(35:)-600(   //)]TJ
+(36:)'
+T*[(37:)-600(#ifdef NDEBUG)]TJ
+T*[(38:)-600(#define DEBUGF\(FLAG,...\) // DEBUG \(FLAG, __VA_ARGS__\))]TJ
+T*[(39:)-600(#else)]TJ
+T*[(40:)-600(#define DEBUGF\(FLAG,...\) \\)]TJ
+T*[(41:)-600(        __debugprintf \(FLAG, __FILE__, __LINE__, __VA_ARGS__\))]TJ
+T*[(42:)-600(void __debugprintf \(char flag, char *file, int line,)]TJ
+T*[(43:)-600(                    char *format, ...\);)]TJ
+T*[(44:)-600(#endif)]TJ
+(45:)'
+T*[(46:)-600(#endif)]TJ
+(47:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+2405
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.143 736.5 Tm
+(hashset.h)Tj
+-133.179 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(// $Id: hashset.h,v 1.2 2012-02-21 20:37:06-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#ifndef __HASHSET_H__)]TJ
+T*[(4:)-600(#define __HASHSET_H__)]TJ
+(5:)'
+T*[(6:)-600(#include <stdbool.h>)]TJ
+(7:)'
+T*[(8:)-600(typedef struct hashset *hashset_ref;)]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(//)]TJ
+T*[(11:)-600(// Create a new hashset with a default number of elements.)]TJ
+T*[(12:)-600(//)]TJ
+T*[(13:)-600(hashset_ref new_hashset \(void\);)]TJ
+(14:)'
+T*[(15:)-600(//)]TJ
+T*[(16:)-600(// Frees the hashset, and the words it points at.)]TJ
+T*[(17:)-600(//)]TJ
+T*[(18:)-600(void free_hashset \(hashset_ref\);)]TJ
+(19:)'
+T*[(20:)-600(//)]TJ
+T*[(21:)-600(// Inserts a new string into the hashset.)]TJ
+T*[(22:)-600(//)]TJ
+T*[(23:)-600(void put_hashset \(hashset_ref, char*\);)]TJ
+(24:)'
+T*[(25:)-600(//)]TJ
+T*[(26:)-600(// Looks up the string in the hashset and returns true if found,)]TJ
+T*[(27:)-600(// false if not found.)]TJ
+T*[(28:)-600(//)]TJ
+T*[(29:)-600(bool has_hashset \(hashset_ref, char*\);)]TJ
+(30:)'
+T*[(31:)-600(#endif)]TJ
+(32:)'
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+1557
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.843 736.5 Tm
+(strhash.h)Tj
+-133.879 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(// $Id: strhash.h,v 1.1 2012-02-21 20:36:10-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(//)]TJ
+T*[(4:)-600(// NAME)]TJ
+T*[(5:)-600(//    strhash - return an unsigned 32-bit hash code for a string)]TJ
+T*[(6:)-600(//)]TJ
+T*[(7:)-600(// SYNOPSIS)]TJ
+T*[(8:)-600(//    hashcode_t strhash \(char *string\);)]TJ
+T*[(9:)-600(//)]TJ
+-6 -11 Td
+[(10:)-600(// DESCRIPTION)]TJ
+T*[(11:)-600(//    Uses Horner's method to compute the hash code of a string)]TJ
+T*[(12:)-600(//    as is done by java.lang.String.hashCode:)]TJ
+T*[(13:)-600(//    .  s[0]*31^\(n-1\) + s[1]*31^\(n-2\) + ... + s[n-1])]TJ
+T*[(14:)-600(//    Using strength reduction, the multiplication is replaced by)]TJ
+T*[(15:)-600(//    a shift.  However, instead of returning a signed number,)]TJ
+T*[(16:)-600(//    this function returns an unsigned number.)]TJ
+T*[(17:)-600(//)]TJ
+T*[(18:)-600(// REFERENCE)]TJ
+T*[(19:)-600(//    http://java.sun.com/j2se/1.4.1/docs/api/java/lang/)]TJ
+T*[(20:)-600(//    String.html#hashCode\(\))]TJ
+T*[(21:)-600(// )]TJ
+T*[(22:)-600(//)]TJ
+(23:)'
+T*[(24:)-600(#ifndef __STRHASH_H__)]TJ
+T*[(25:)-600(#define __STRHASH_H__)]TJ
+(26:)'
+T*[(27:)-600(#include <inttypes.h>)]TJ
+(28:)'
+T*[(29:)-600(typedef uint32_t hashcode_t;)]TJ
+(30:)'
+T*[(31:)-600(hashcode_t strhash \(char *string\);)]TJ
+(32:)'
+T*[(33:)-600(#endif)]TJ
+(34:)'
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+1836
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 276.18 736.5 Tm
+(yyextern.h)Tj
+-129.216 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(// $Id: yyextern.h,v 1.1 2012-02-21 20:36:10-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#ifndef __YYEXTERN_H__)]TJ
+T*[(4:)-600(#define __YYEXTERN_H__)]TJ
+(5:)'
+T*[(6:)-600(//)]TJ
+T*[(7:)-600(// DESCRIPTION)]TJ
+T*[(8:)-600(//    Definitions of external names used by flex-generated code.)]TJ
+T*[(9:)-600(//)]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(#include <stdio.h>)]TJ
+(12:)'
+T*[(13:)-600(extern FILE *yyin;            // File currently being read)]TJ
+(14:)'
+T*[(15:)-600(extern char *yytext;          // Pointer to the string that was found)]TJ
+(16:)'
+T*[(17:)-600(extern int yy_flex_debug;     // yylex's verbose tracing flag)]TJ
+(18:)'
+T*[(19:)-600(extern int yylex \(void\);      // Read next word from opened file yyin)]TJ
+(20:)'
+T*[(21:)-600(extern int yylineno;          // Line number within the current file)]TJ
+(22:)'
+T*[(23:)-600(extern void yycleanup \(void\); // Cleans up flex's buffers when done)]TJ
+(24:)'
+T*[(25:)-600(#endif)]TJ
+(26:)'
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+1476
+endobj
+26 0 obj
+<</Length 27 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 281.704 736.5 Tm
+(debugf.c)Tj
+-134.739 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(// $Id: debugf.c,v 1.4 2012-02-22 19:50:19-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <errno.h>)]TJ
+T*[(4:)-600(#include <stdarg.h>)]TJ
+T*[(5:)-600(#include <stdbool.h>)]TJ
+T*[(6:)-600(#include <stdio.h>)]TJ
+T*[(7:)-600(#include <stdlib.h>)]TJ
+T*[(8:)-600(#include <string.h>)]TJ
+T*[(9:)-600(#include <unistd.h>)]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(#include "debugf.h")]TJ
+(12:)'
+T*[(13:)-600(static char *debugflags = "";)]TJ
+T*[(14:)-600(static bool alldebugflags = false;)]TJ
+T*[(15:)-600(static char *execname = NULL;)]TJ
+(16:)'
+T*[(17:)-600(void set_execname \(char *name\) {)]TJ
+T*[(18:)-600(   execname = name;)]TJ
+T*[(19:)-600(})]TJ
+(20:)'
+T*[(21:)-600(void print_execname \(FILE *out\) {)]TJ
+T*[(22:)-600(   if \(execname != NULL\) fprintf \(out, "%s: ", execname\);)]TJ
+T*[(23:)-600(})]TJ
+(24:)'
+T*[(25:)-600(void __stubprintf \(char *filename, int line, const char *func,)]TJ
+T*[(26:)-600(                   char *format, ...\) {)]TJ
+T*[(27:)-600(   va_list args;)]TJ
+T*[(28:)-600(   fflush \(NULL\);)]TJ
+T*[(29:)-600(   print_execname \(stdout\);)]TJ
+T*[(30:)-600(   fprintf \(stdout, "STUB: %s[%d] %s:\\n", filename, line, func\);)]TJ
+T*[(31:)-600(   va_start \(args, format\);)]TJ
+T*[(32:)-600(   vfprintf \(stdout, format, args\);)]TJ
+T*[(33:)-600(   va_end \(args\);)]TJ
+T*[(34:)-600(   fflush \(NULL\);)]TJ
+T*[(35:)-600(})]TJ
+(36:)'
+T*[(37:)-600(void set_debugflags \(char *flags\) {)]TJ
+T*[(38:)-600(   debugflags = flags;)]TJ
+T*[(39:)-600(   if \(strchr \(debugflags, '@'\) != NULL\) alldebugflags = true;)]TJ
+T*[(40:)-600(   DEBUGF \('a', "Debugflags = \\"%s\\"\\n", debugflags\);)]TJ
+T*[(41:)-600(})]TJ
+(42:)'
+T*[(43:)-600(void __debugprintf \(char flag, char *file, int line,)]TJ
+T*[(44:)-600(                    char *format, ...\) {)]TJ
+T*[(45:)-600(   va_list args;)]TJ
+T*[(46:)-600(   if \(alldebugflags || strchr \(debugflags, flag\) != NULL\) {)]TJ
+T*[(47:)-600(      fflush \(NULL\);)]TJ
+T*[(48:)-600(      print_execname \(stderr\);)]TJ
+T*[(49:)-600(      fprintf \(stderr, "DEBUGF\(%c\): %s[%d]:\\n",)]TJ
+T*[(50:)-600(                flag, file, line\);)]TJ
+T*[(51:)-600(      va_start \(args, format\);)]TJ
+T*[(52:)-600(      vfprintf \(stderr, format, args\);)]TJ
+T*[(53:)-600(      va_end \(args\);)]TJ
+T*[(54:)-600(      fflush \(NULL\);)]TJ
+T*[(55:)-600(   })]TJ
+T*[(56:)-600(})]TJ
+(57:)'
+ET
+Q
+Q
+endstream
+endobj
+27 0 obj
+2859
+endobj
+30 0 obj
+<</Length 31 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.535 736.5 Tm
+(hashset.c)Tj
+-133.571 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(// $Id: hashset.c,v 1.1 2012-02-21 20:36:10-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <assert.h>)]TJ
+T*[(4:)-600(#include <stdio.h>)]TJ
+T*[(5:)-600(#include <stdlib.h>)]TJ
+T*[(6:)-600(#include <string.h>)]TJ
+(7:)'
+T*[(8:)-600(#include "debugf.h")]TJ
+T*[(9:)-600(#include "hashset.h")]TJ
+-6 -11 Td
+[(10:)-600(#include "strhash.h")]TJ
+(11:)'
+T*[(12:)-600(#define HASH_NEW_SIZE 15)]TJ
+(13:)'
+T*[(14:)-600(struct hashset {)]TJ
+T*[(15:)-600(   size_t length;)]TJ
+T*[(16:)-600(   int load;)]TJ
+T*[(17:)-600(   char **array;)]TJ
+T*[(18:)-600(};)]TJ
+(19:)'
+T*[(20:)-600(hashset_ref new_hashset \(void\) {)]TJ
+T*[(21:)-600(   hashset_ref new = malloc \(sizeof \(struct hashset\)\);)]TJ
+T*[(22:)-600(   assert \(new != NULL\);)]TJ
+T*[(23:)-600(   new->length = HASH_NEW_SIZE;)]TJ
+T*[(24:)-600(   new->load = 0;)]TJ
+T*[(25:)-600(   new->array = malloc \(new->length * sizeof \(char*\)\);)]TJ
+T*[(26:)-600(   for \(size_t index = 0; index < new->length; ++index\) {)]TJ
+T*[(27:)-600(      new->array[index] = NULL;)]TJ
+T*[(28:)-600(   })]TJ
+T*[(29:)-600(   assert \(new->array != NULL\);)]TJ
+T*[(30:)-600(   DEBUGF \('h', "%p -> struct hashset {length = %d, array=%p}\\n",)]TJ
+T*[(31:)-600(                new, new->length, new->array\);)]TJ
+T*[(32:)-600(   return new;)]TJ
+T*[(33:)-600(})]TJ
+(34:)'
+T*[(35:)-600(void free_hashset \(hashset_ref hashset\) {)]TJ
+T*[(36:)-600(   DEBUGF \('h', "free \(%p\), free \(%p\)\\n", hashset->array, hashset\);)]TJ
+T*[(37:)-600(   memset \(hashset->array, 0, hashset->length * sizeof \(char*\)\);)]TJ
+T*[(38:)-600(   free \(hashset->array\);)]TJ
+T*[(39:)-600(   memset \(hashset, 0, sizeof \(struct hashset\)\);)]TJ
+T*[(40:)-600(   free \(hashset\);)]TJ
+T*[(41:)-600(})]TJ
+(42:)'
+T*[(43:)-600(void put_hashset \(hashset_ref hashset, char *item\) {)]TJ
+T*[(44:)-600(   STUBPRINTF \("hashset=%p, item=%s\\n", hashset, item\);)]TJ
+T*[(45:)-600(})]TJ
+(46:)'
+T*[(47:)-600(bool has_hashset \(hashset_ref hashset, char *item\) {)]TJ
+T*[(48:)-600(   STUBPRINTF \("hashset=%p, item=%s\\n", hashset, item\);)]TJ
+T*[(49:)-600(   return true;)]TJ
+T*[(50:)-600(})]TJ
+(51:)'
+ET
+Q
+Q
+endstream
+endobj
+31 0 obj
+2625
+endobj
+34 0 obj
+<</Length 35 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 281.235 736.5 Tm
+(strhash.c)Tj
+-134.271 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(// $Id: strhash.c,v 1.1 2012-02-21 20:36:10-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <assert.h>)]TJ
+T*[(4:)-600(#include <stdio.h>)]TJ
+T*[(5:)-600(#include <sys/types.h>)]TJ
+(6:)'
+T*[(7:)-600(#include "strhash.h")]TJ
+(8:)'
+T*[(9:)-600(hashcode_t strhash \(char *string\) {)]TJ
+-6 -11 Td
+[(10:)-600(   assert \(string != NULL\);)]TJ
+T*[(11:)-600(   hashcode_t hashcode = 0;)]TJ
+T*[(12:)-600(   for \(int index = 0; string[index] != '\\0'; ++index\) {)]TJ
+T*[(13:)-600(      hashcode = hashcode * 31 + \(unsigned char\) string[index];)]TJ
+T*[(14:)-600(   })]TJ
+T*[(15:)-600(   return hashcode;)]TJ
+T*[(16:)-600(})]TJ
+(17:)'
+ET
+Q
+Q
+endstream
+endobj
+35 0 obj
+1161
+endobj
+38 0 obj
+<</Length 39 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 277.812 736.5 Tm
+(spellchk.c)Tj
+-130.848 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(// $Id: spellchk.c,v 1.2 2012-02-22 19:50:19-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <errno.h>)]TJ
+T*[(4:)-600(#include <libgen.h>)]TJ
+T*[(5:)-600(#include <stdio.h>)]TJ
+T*[(6:)-600(#include <stdlib.h>)]TJ
+T*[(7:)-600(#include <string.h>)]TJ
+T*[(8:)-600(#include <unistd.h>)]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(#include "debugf.h")]TJ
+T*[(11:)-600(#include "hashset.h")]TJ
+T*[(12:)-600(#include "yyextern.h")]TJ
+(13:)'
+T*[(14:)-600(#define STDIN_NAME       "-")]TJ
+T*[(15:)-600(#define DEFAULT_DICTNAME "/usr/share/dict/words")]TJ
+T*[(16:)-600(#define DEFAULT_DICT_POS 0)]TJ
+T*[(17:)-600(#define EXTRA_DICT_POS   1)]TJ
+T*[(18:)-600(#define NUMBER_DICTS     2)]TJ
+(19:)'
+T*[(20:)-600(char *execname = NULL;)]TJ
+T*[(21:)-600(int exit_status = EXIT_SUCCESS;)]TJ
+(22:)'
+T*[(23:)-600(void print_error \(char *object, char *message\) {)]TJ
+T*[(24:)-600(   fflush \(NULL\);)]TJ
+T*[(25:)-600(   fprintf \(stderr, "%s: %s: %s\\n", execname, object, message\);)]TJ
+T*[(26:)-600(   fflush \(NULL\);)]TJ
+T*[(27:)-600(   exit_status = EXIT_FAILURE;)]TJ
+T*[(28:)-600(})]TJ
+(29:)'
+T*[(30:)-600(FILE *open_infile \(char *filename\) {)]TJ
+T*[(31:)-600(   FILE *file = fopen \(filename, "r"\);)]TJ
+T*[(32:)-600(   if \(file == NULL\) print_error \(filename, strerror \(errno\)\);)]TJ
+T*[(33:)-600(   DEBUGF \('m', "filename = \\"%s\\", file = 0x%p\\n", filename, file\);)]TJ
+T*[(34:)-600(   return file;)]TJ
+T*[(35:)-600(})]TJ
+(36:)'
+T*[(37:)-600(void spellcheck \(char *filename, hashset_ref hashset\) {)]TJ
+T*[(38:)-600(   yylineno = 1;)]TJ
+T*[(39:)-600(   DEBUGF \('m', "filename = \\"%s\\", hashset = 0x%p\\n",)]TJ
+T*[(40:)-600(                filename, hashset\);)]TJ
+T*[(41:)-600(   for \(;;\) {)]TJ
+T*[(42:)-600(      int token = yylex \(\);)]TJ
+T*[(43:)-600(      if \(token == 0\) break;)]TJ
+T*[(44:)-600(      DEBUGF \('m', "line %d, yytext = \\"%s\\"\\n", yylineno, yytext\);)]TJ
+T*[(45:)-600(      STUBPRINTF \("%s: %d: %s\\n", filename, yylineno, yytext\);)]TJ
+T*[(46:)-600(   })]TJ
+T*[(47:)-600(})]TJ
+(48:)'
+T*[(49:)-600(void load_dictionary \(char *dictionary_name, hashset_ref hashset\) {)]TJ
+T*[(50:)-600(   if \(dictionary_name == NULL\) return;)]TJ
+T*[(51:)-600(   DEBUGF \('m', "dictionary_name = \\"%s\\", hashset = %p\\n",)]TJ
+T*[(52:)-600(           dictionary_name, hashset\);)]TJ
+T*[(53:)-600(   STUBPRINTF \("Open dictionary, load it, close it\\n"\);)]TJ
+T*[(54:)-600(})]TJ
+(55:)'
+T*[(56:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(57:)-600(   execname = basename \(argv[0]\);)]TJ
+T*[(58:)-600(   set_execname \(execname\);)]TJ
+T*[(59:)-600(   char *default_dictionary = DEFAULT_DICTNAME;)]TJ
+T*[(60:)-600(   char *user_dictionary = NULL;)]TJ
+T*[(61:)-600(   hashset_ref hashset = new_hashset \(\);)]TJ
+T*[(62:)-600(   yy_flex_debug = false;)]TJ
+(63:)'
+T*[(64:)-600(   // Scan the arguments and set flags.)]TJ
+ET
+Q
+Q
+endstream
+endobj
+39 0 obj
+3360
+endobj
+42 0 obj
+<</Length 43 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 277.812 736.5 Tm
+(spellchk.c)Tj
+-130.848 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-84.9641 -35.5 Td
+[(65:)-600(   opterr = false;)]TJ
+11 TL
+T*[(66:)-600(   for \(;;\) {)]TJ
+T*[(67:)-600(      int option = getopt \(argc, argv, "nxyd:@:"\);)]TJ
+T*[(68:)-600(      if \(option == EOF\) break;)]TJ
+T*[(69:)-600(      switch \(option\) {)]TJ
+T*[(70:)-600(         char optopt_string[16]; // used in default:)]TJ
+T*[(71:)-600(         case 'd': user_dictionary = optarg;)]TJ
+T*[(72:)-600(                   break;)]TJ
+T*[(73:)-600(         case 'n': default_dictionary = NULL;)]TJ
+T*[(74:)-600(                   break;)]TJ
+T*[(75:)-600(         case 'x': STUBPRINTF \("-x\\n"\);)]TJ
+T*[(76:)-600(                   break;)]TJ
+T*[(77:)-600(         case 'y': yy_flex_debug = true;)]TJ
+T*[(78:)-600(                   break;)]TJ
+T*[(79:)-600(         case '@': set_debugflags \(optarg\);)]TJ
+T*[(80:)-600(                   if \(strpbrk \(optarg, "@y"\)\) yy_flex_debug = true;)]TJ
+T*[(81:)-600(                   break;)]TJ
+T*[(82:)-600(         default : sprintf \(optopt_string, "-%c", optopt\);)]TJ
+T*[(83:)-600(                   print_error \(optopt_string, "invalid option"\);)]TJ
+T*[(84:)-600(                   break;)]TJ
+T*[(85:)-600(      })]TJ
+T*[(86:)-600(   })]TJ
+(87:)'
+T*[(88:)-600(   // Load the dictionaries into the hash table.)]TJ
+T*[(89:)-600(   load_dictionary \(default_dictionary, hashset\);)]TJ
+T*[(90:)-600(   load_dictionary \(user_dictionary, hashset\);)]TJ
+(91:)'
+T*[(92:)-600(   // Read and do spell checking on each of the files.)]TJ
+T*[(93:)-600(   if \(optind >= argc\) {)]TJ
+T*[(94:)-600(      yyin = stdin;)]TJ
+T*[(95:)-600(      spellcheck \(STDIN_NAME, hashset\);)]TJ
+T*[(96:)-600(   }else {)]TJ
+T*[(97:)-600(      int fileix = optind;)]TJ
+T*[(98:)-600(      for \(; fileix < argc; ++fileix\) {)]TJ
+T*[(99:)-600(         DEBUGF \('m', "argv[%d] = \\"%s\\"\\n", fileix, argv[fileix]\);)]TJ
+-6 -11 Td
+[(100:)-600(         char *filename = argv[fileix];)]TJ
+T*[(101:)-600(         if \(strcmp \(filename, STDIN_NAME\) == 0\) {)]TJ
+T*[(102:)-600(            yyin = stdin;)]TJ
+T*[(103:)-600(            spellcheck \(STDIN_NAME, hashset\);)]TJ
+T*[(104:)-600(         }else {)]TJ
+T*[(105:)-600(            yyin = open_infile \(filename\);)]TJ
+T*[(106:)-600(            if \(yyin == NULL\) continue;)]TJ
+T*[(107:)-600(            spellcheck \(filename, hashset\);)]TJ
+T*[(108:)-600(            fclose \(yyin\);)]TJ
+T*[(109:)-600(         })]TJ
+T*[(110:)-600(      })]TJ
+T*[(111:)-600(   })]TJ
+T*[(112:)-600(   )]TJ
+T*[(113:)-600(   yycleanup \(\);)]TJ
+T*[(114:)-600(   return exit_status;)]TJ
+T*[(115:)-600(})]TJ
+(116:)'
+ET
+Q
+Q
+endstream
+endobj
+43 0 obj
+3068
+endobj
+46 0 obj
+<</Length 47 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.85 736.5 Tm
+(scanner.l)Tj
+-133.886 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(%{)]TJ
+11 TL
+T*[(2:)-600(// $Id: scanner.l,v 1.1 2012-02-21 20:36:10-08 - - $)]TJ
+(3:)'
+T*[(4:)-600(#include <stdlib.h>)]TJ
+(5:)'
+T*[(6:)-600(#include "yyextern.h")]TJ
+(7:)'
+T*[(8:)-600(%})]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(%option 8bit)]TJ
+T*[(11:)-600(%option debug)]TJ
+T*[(12:)-600(%option ecs)]TJ
+T*[(13:)-600(%option interactive)]TJ
+T*[(14:)-600(%option nodefault)]TJ
+T*[(15:)-600(%option noyywrap)]TJ
+T*[(16:)-600(%option yylineno)]TJ
+(17:)'
+T*[(18:)-600(NUMBER  \([[:digit:]]+\([-:.][[:digit:]]+\)*\))]TJ
+T*[(19:)-600(WORD    \([[:alnum:]]+\([-&'.][[:alnum:]]+\)*\))]TJ
+T*[(20:)-600(OTHER   \(.|\\n\))]TJ
+(21:)'
+T*[(22:)-600(%%)]TJ
+(23:)'
+T*[(24:)-600({NUMBER}        { })]TJ
+T*[(25:)-600({WORD}          { return 1;  })]TJ
+T*[(26:)-600({OTHER}         { })]TJ
+(27:)'
+T*[(28:)-600(%%)]TJ
+(29:)'
+T*[(30:)-600(void yycleanup \(void\) {)]TJ
+T*[(31:)-600(   yy_delete_buffer \(YY_CURRENT_BUFFER\);)]TJ
+T*[(32:)-600(})]TJ
+(33:)'
+ET
+Q
+Q
+endstream
+endobj
+47 0 obj
+1460
+endobj
+50 0 obj
+<</Length 51 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.773 736.5 Tm
+(Makefile)Tj
+-133.809 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(# $Id: Makefile,v 1.1 2012-02-21 20:36:10-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(MKFILE    = Makefile)]TJ
+T*[(4:)-600(DEPSFILE  = ${MKFILE}.deps)]TJ
+T*[(5:)-600(NOINCLUDE = ci clean spotless)]TJ
+T*[(6:)-600(NEEDINCL  = ${filter ${NOINCLUDE}, ${MAKECMDGOALS}})]TJ
+T*[(7:)-600(GMAKE     = gmake --no-print-directory)]TJ
+(8:)'
+T*[(9:)-600(GCC       = gcc -g -O0 -Wall -Wextra -std=gnu99)]TJ
+-6 -11 Td
+[(10:)-600(MKDEPS    = gcc -MM)]TJ
+T*[(11:)-600(LINT      = lint -Xa -fd -m -u -x -errchk=%all)]TJ
+(12:)'
+T*[(13:)-600(CSOURCE   = debugf.c hashset.c strhash.c spellchk.c)]TJ
+T*[(14:)-600(CHEADER   = debugf.h hashset.h strhash.h yyextern.h)]TJ
+T*[(15:)-600(OBJECTS   = ${CSOURCE:.c=.o} scanner.o)]TJ
+T*[(16:)-600(EXECBIN   = spellchk)]TJ
+T*[(17:)-600(SUBMITS   = ${CHEADER} ${CSOURCE} scanner.l ${MKFILE})]TJ
+T*[(18:)-600(SOURCES   = ${SUBMITS})]TJ
+T*[(19:)-600(LISTING   = Listing.code.ps)]TJ
+T*[(20:)-600(PROJECT   = cmps012b-wm.f11 asg4)]TJ
+(21:)'
+T*[(22:)-600(all : ${EXECBIN})]TJ
+(23:)'
+T*[(24:)-600(${EXECBIN} : ${OBJECTS})]TJ
+T*[(25:)-600(        ${GCC} -o $@ ${OBJECTS})]TJ
+(26:)'
+T*[(27:)-600(scanner.o : scanner.l)]TJ
+T*[(28:)-600(        flex -oscanner.c scanner.l)]TJ
+T*[(29:)-600(        gcc -g -O0 -std=gnu99 -c scanner.c)]TJ
+(30:)'
+T*[(31:)-600(%.o : %.c)]TJ
+T*[(32:)-600(        ${GCC} -c $<)]TJ
+(33:)'
+T*[(34:)-600(lint : ${CSOURCE})]TJ
+T*[(35:)-600(        ${LINT} ${CSOURCE})]TJ
+T*[(36:)-600(        checksource ${SUBMITS})]TJ
+(37:)'
+T*[(38:)-600(ci : ${SOURCES})]TJ
+T*[(39:)-600(        cid + ${SOURCES})]TJ
+T*[(40:)-600(        checksource ${SUBMITS})]TJ
+(41:)'
+T*[(42:)-600(lis : ${SOURCES} ${DEPSFILE})]TJ
+T*[(43:)-600(        mkpspdf ${LISTING} ${SOURCES} ${DEPSFILE})]TJ
+(44:)'
+T*[(45:)-600(clean :)]TJ
+T*[(46:)-600(        - rm ${OBJECTS} ${DEPSFILE} core scanner.c ${EXECBIN}.errs)]TJ
+(47:)'
+T*[(48:)-600(spotless : clean)]TJ
+T*[(49:)-600(        - rm ${EXECBIN})]TJ
+(50:)'
+T*[(51:)-600(submit : ${SUBMITS})]TJ
+T*[(52:)-600(        submit ${PROJECT} ${SUBMITS})]TJ
+(53:)'
+T*[(54:)-600(deps : ${CSOURCE} ${CHEADER})]TJ
+T*[(55:)-600(        @ echo "# ${DEPSFILE} created `date`" >${DEPSFILE})]TJ
+T*[(56:)-600(        ${MKDEPS} ${CSOURCE} >>${DEPSFILE})]TJ
+(57:)'
+T*[(58:)-600(${DEPSFILE} :)]TJ
+T*[(59:)-600(        @ touch ${DEPSFILE})]TJ
+T*[(60:)-600(        ${GMAKE} deps)]TJ
+(61:)'
+T*[(62:)-600(again :)]TJ
+T*[(63:)-600(        ${GMAKE} spotless deps ci lint all lis)]TJ
+(64:)'
+ET
+Q
+Q
+endstream
+endobj
+51 0 obj
+2935
+endobj
+54 0 obj
+<</Length 55 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.773 736.5 Tm
+(Makefile)Tj
+-133.809 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-84.9641 -35.5 Td
+[(65:)-600(ifeq "${NEEDINCL}" "")]TJ
+11 TL
+T*[(66:)-600(include ${DEPSFILE})]TJ
+T*[(67:)-600(endif)]TJ
+(68:)'
+ET
+Q
+Q
+endstream
+endobj
+55 0 obj
+633
+endobj
+58 0 obj
+<</Length 59 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/23/12)Tj
+-0.659766 -12.8004 Td
+(19:23:27)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 266.192 736.5 Tm
+(Makefile.deps)Tj
+-119.228 18 Td
+($cmps012b-wm/Assignments/asg4c-spellchk-hash/code/)Tj
+/R10 10 Tf
+-78.9641 -35.5 Td
+[(1:)-600(# Makefile.deps created Thu Feb 23 19:23:27 PST 2012)]TJ
+11 TL
+T*[(2:)-600(debugf.o: debugf.c debugf.h)]TJ
+T*[(3:)-600(hashset.o: hashset.c debugf.h hashset.h strhash.h)]TJ
+T*[(4:)-600(strhash.o: strhash.c strhash.h)]TJ
+T*[(5:)-600(spellchk.o: spellchk.c debugf.h hashset.h yyextern.h)]TJ
+ET
+Q
+Q
+endstream
+endobj
+59 0 obj
+827
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+25 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 28 0 R
+>>
+/Contents 26 0 R
+>>
+endobj
+29 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 32 0 R
+>>
+/Contents 30 0 R
+>>
+endobj
+33 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 36 0 R
+>>
+/Contents 34 0 R
+>>
+endobj
+37 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 40 0 R
+>>
+/Contents 38 0 R
+>>
+endobj
+41 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 44 0 R
+>>
+/Contents 42 0 R
+>>
+endobj
+45 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 48 0 R
+>>
+/Contents 46 0 R
+>>
+endobj
+49 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 52 0 R
+>>
+/Contents 50 0 R
+>>
+endobj
+53 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 56 0 R
+>>
+/Contents 54 0 R
+>>
+endobj
+57 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 60 0 R
+>>
+/Contents 58 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+25 0 R
+29 0 R
+33 0 R
+37 0 R
+41 0 R
+45 0 R
+49 0 R
+53 0 R
+57 0 R
+] /Count 13
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+28 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+32 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+36 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+40 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+44 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+48 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+52 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+56 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+60 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120223192328)
+/ModDate(D:20120223192328)>>endobj
+xref
+0 61
+0000000000 65535 f 
+0000029052 00000 n 
+0000030209 00000 n 
+0000028908 00000 n 
+0000027155 00000 n 
+0000000009 00000 n 
+0000002464 00000 n 
+0000030007 00000 n 
+0000029878 00000 n 
+0000030076 00000 n 
+0000029944 00000 n 
+0000030141 00000 n 
+0000029100 00000 n 
+0000027288 00000 n 
+0000002484 00000 n 
+0000004093 00000 n 
+0000029170 00000 n 
+0000027423 00000 n 
+0000004114 00000 n 
+0000006002 00000 n 
+0000029229 00000 n 
+0000027558 00000 n 
+0000006023 00000 n 
+0000007551 00000 n 
+0000029288 00000 n 
+0000027693 00000 n 
+0000007572 00000 n 
+0000010483 00000 n 
+0000029347 00000 n 
+0000027828 00000 n 
+0000010504 00000 n 
+0000013181 00000 n 
+0000029406 00000 n 
+0000027963 00000 n 
+0000013202 00000 n 
+0000014415 00000 n 
+0000029465 00000 n 
+0000028098 00000 n 
+0000014436 00000 n 
+0000017848 00000 n 
+0000029524 00000 n 
+0000028233 00000 n 
+0000017869 00000 n 
+0000020989 00000 n 
+0000029583 00000 n 
+0000028368 00000 n 
+0000021010 00000 n 
+0000022522 00000 n 
+0000029642 00000 n 
+0000028503 00000 n 
+0000022543 00000 n 
+0000025530 00000 n 
+0000029701 00000 n 
+0000028638 00000 n 
+0000025551 00000 n 
+0000026236 00000 n 
+0000029760 00000 n 
+0000028773 00000 n 
+0000026256 00000 n 
+0000027135 00000 n 
+0000029819 00000 n 
+trailer
+<< /Size 61 /Root 1 0 R /Info 2 0 R
+/ID [<DB9D50CA78814E47D0CABEC2724D38E6><DB9D50CA78814E47D0CABEC2724D38E6>]
+>>
+startxref
+30320
+%%EOF
