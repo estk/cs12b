@@ -32,6 +32,10 @@ hashset_ref new_hashset (void) {
    return new;
 }
 
+void double_hashset(hashset_ref hashset) {
+   printf("hello from the doubling of %p", hashset);
+}
+
 void free_hashset (hashset_ref hashset) {
    DEBUGF ('h', "free (%p), free (%p)\n", hashset->array, hashset);
    memset (hashset->array, 0, hashset->length * sizeof (char*));
@@ -41,11 +45,32 @@ void free_hashset (hashset_ref hashset) {
 }
 
 void put_hashset (hashset_ref hashset, char *item) {
-   STUBPRINTF ("hashset=%p, item=%s\n", hashset, item);
+   // need to double?
+   if ((4 * hashset->load + 1) > (int)hashset->length) double_hashset(hashset);
+   
+   hashcode_t starting_index = strhash (item) % hashset->length;
+   hashcode_t i;
+   for (i = starting_index ; i < hashset->length ; i++) {
+      if (hashset->array[i] == NULL) { hashset->array[i] = item; return; }
+      if (strcmp (item, hashset->array[i]) == 0) return;
+   }
+   for (i = 0 ; i < starting_index ; i++) {
+      if (hashset->array[i] == NULL) { hashset->array[i] = item; return; }
+      if (strcmp (item, hashset->array[i]) == 0) return;
+   }
 }
 
 bool has_hashset (hashset_ref hashset, char *item) {
-   STUBPRINTF ("hashset=%p, item=%s\n", hashset, item);
-   return true;
+   hashcode_t starting_index = strhash (item) % hashset->length;
+   hashcode_t i;
+   for (i=starting_index ; i < hashset->length ; i++) {
+      if (hashset->array[i] == NULL) return false;
+      if (strcmp (item, hashset->array[i]) == 0) return true;
+   }
+   for (i=0 ; i < starting_index ; i++) {
+      if (hashset->array[i] == NULL) return false;
+      if (strcmp (item, hashset->array[i]) == 0) return true;
+   }
+   return false;
 }
 

@@ -42,6 +42,8 @@ void spellcheck (char *filename, hashset_ref hashset) {
    for (;;) {
       int token = yylex ();
       if (token == 0) break;
+      
+      has_hashset ( hashset, yytext);
       DEBUGF ('m', "line %d, yytext = \"%s\"\n", yylineno, yytext);
       STUBPRINTF ("%s: %d: %s\n", filename, yylineno, yytext);
    }
