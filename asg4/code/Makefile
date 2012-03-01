@@ -4,7 +4,7 @@ MKFILE    = Makefile
 DEPSFILE  = ${MKFILE}.deps
 NOINCLUDE = ci clean spotless
 NEEDINCL  = ${filter ${NOINCLUDE}, ${MAKECMDGOALS}}
-GMAKE     = gmake --no-print-directory
+GMAKE     = make --no-print-directory
 
 GCC       = gcc -g -O0 -Wall -Wextra -std=gnu99
 MKDEPS    = gcc -MM
@@ -35,10 +35,6 @@ lint : ${CSOURCE}
 	${LINT} ${CSOURCE}
 	checksource ${SUBMITS}
 
-ci : ${SOURCES}
-	cid + ${SOURCES}
-	checksource ${SUBMITS}
-
 lis : ${SOURCES} ${DEPSFILE}
 	mkpspdf ${LISTING} ${SOURCES} ${DEPSFILE}
 
@@ -60,7 +56,7 @@ ${DEPSFILE} :
 	${GMAKE} deps
 
 again :
-	${GMAKE} spotless deps ci lint all lis
+	${GMAKE} spotless deps lint all lis
 
 ifeq "${NEEDINCL}" ""
 include ${DEPSFILE}

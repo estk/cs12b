@@ -18,6 +18,7 @@
 #define NUMBER_DICTS     2
 
 char *execname = NULL;
+hashset_ref hashset = NULL;
 int exit_status = EXIT_SUCCESS;
 
 void print_error (char *object, char *message) {
@@ -50,6 +51,28 @@ void load_dictionary (char *dictionary_name, hashset_ref hashset) {
    if (dictionary_name == NULL) return;
    DEBUGF ('m', "dictionary_name = \"%s\", hashset = %p\n",
            dictionary_name, hashset);
+
+   FILE *file = fopen (dictionary_name, "r");
+
+   char buffer[256];
+   int linenr;
+   for (linenr = 1; ; ++linenr) {
+       char *gotline = fgets (buffer, sizeof buffer, file);
+       if (gotline == NULL) { printf("done loading dict\n"); break; }
+
+       char *nlpos = strchr (buffer, '\n');
+       if (nlpos != NULL) {
+           *nlpos = '\0';
+       }else {
+           fprintf (stderr, "%d: unterminated line: %s\n",
+               linenr, buffer);
+           exit_status = 2;
+       };
+
+       put_hashset(hashset, gotline);
+  }
+   
+   fclose(file);
    STUBPRINTF ("Open dictionary, load it, close it\n");
 }
 
