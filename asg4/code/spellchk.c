@@ -71,7 +71,7 @@ void load_dictionary (char *dictionary_name, hashset_ref hashset) {
    int linenr;
    for (linenr = 1; ; ++linenr) {
        char *gotline = fgets (buffer, sizeof buffer, file);
-       if (gotline == NULL) { printf("done loading dict\n"); break; }
+       if (gotline == NULL) break;
 
        char *nlpos = strchr (buffer, '\n');
        if (nlpos != NULL) {
@@ -100,7 +100,7 @@ int main (int argc, char **argv) {
    // Scan the arguments and set flags.
    opterr = false;
    for (;;) {
-      int option = getopt (argc, argv, "nx:yd:@:");
+      int option = getopt (argc, argv, "nyx::d:@:");
       if (option == EOF) break;
       switch (option) {
          char optopt_string[16]; // used in default:
