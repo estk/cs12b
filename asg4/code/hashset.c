@@ -36,9 +36,13 @@ void double_hashset(hashset_ref hashset) {
    size_t old_length = hashset->length;
    char **old_ary = hashset->array;
    size_t new_length = old_length * 2 + 1;
-   hashset->array = malloc (sizeof (char[new_length]));
+   hashset->array = malloc (new_length * sizeof (char*));
    hashset->length = new_length;
    hashset->load = 0;
+
+   for (size_t index = 0; index < hashset->length; ++index) {
+      hashset->array[index] = NULL;
+   }
    
    for (size_t i=0 ; i < old_length ; i++) {
       char *item = old_ary[i];
@@ -60,7 +64,7 @@ void free_hashset (hashset_ref hashset) {
 void put_hashset (hashset_ref hashset, char *item) {
    assert (item != NULL);
    // need to double?
-   // if ((4 * hashset->load + 1) > (int)hashset->length) double_hashset(hashset);
+   if ((4 * hashset->load + 1) > (int)hashset->length) double_hashset(hashset);
    
    hashcode_t starting_index = strhash (item) % hashset->length;
    hashcode_t i;
@@ -70,7 +74,6 @@ void put_hashset (hashset_ref hashset, char *item) {
          hashset->load++;
          return;
       }
-      printf("item : %s, aryItem : %s, i = %d\n", item, hashset->array[i], i);
       if (strcmp (item, hashset->array[i]) == 0) return;
    }
    for (i = 0 ; i < starting_index ; i++) {
@@ -79,23 +82,31 @@ void put_hashset (hashset_ref hashset, char *item) {
          hashset->load++;
          return;
       }
-      printf("item : %s, aryItem : %s, i = %d\n", item, hashset->array[i], i);
       if (strcmp (item, hashset->array[i]) == 0) return;
    }
-   printf("exiting put of %s", item);
 }
 
 bool has_hashset (hashset_ref hashset, char *item) {
    hashcode_t starting_index = strhash (item) % hashset->length;
    hashcode_t i;
    for (i=starting_index ; i < hashset->length ; i++) {
-      if (hashset->array[i] == NULL) return false;
-      if (strcmp (item, hashset->array[i]) == 0) return true;
+      if (hashset->array[i] != NULL)
+         if (strcmp (item, hashset->array[i]) == 0) return true;
    }
    for (i=0 ; i < starting_index ; i++) {
-      if (hashset->array[i] == NULL) return false;
-      if (strcmp (item, hashset->array[i]) == 0) return true;
+      if (hashset->array[i] != NULL)
+         if (strcmp (item, hashset->array[i]) == 0) return true;
    }
    return false;
+}
+
+void print_hashset(hashset_ref hashset) {
+   for (size_t i = 0 ; i < hashset->length; i++) {
+      if (hashset->array[i] == NULL) {
+         printf("%d : NULL\n", (int) i);
+         continue;
+      }
+      printf ("%d : %s\n", (int) i, hashset->array[i]);
+   }
 }
 

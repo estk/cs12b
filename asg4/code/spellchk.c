@@ -43,7 +43,9 @@ void spellcheck (char *filename, hashset_ref hashset) {
       int token = yylex ();
       if (token == 0) break;
       
-      if (has_hashset (hashset, yytext)) printf("%s is a word", yytext);
+      if (has_hashset (hashset, yytext)) printf("%s is a word\n", yytext);
+      else printf ("not a word\n");
+
       DEBUGF ('m', "line %d, yytext = \"%s\"\n", yylineno, yytext);
       STUBPRINTF ("%s: %d: %s\n", filename, yylineno, yytext);
    }
@@ -70,12 +72,15 @@ void load_dictionary (char *dictionary_name, hashset_ref hashset) {
                linenr, buffer);
            exit_status = 2;
        };
+       char *word = strdup (buffer);
 
-       put_hashset(hashset, gotline);
+       put_hashset(hashset, word);
   }
    
    fclose(file);
 }
+
+
 
 int main (int argc, char **argv) {
    execname = basename (argv[0]);
@@ -113,6 +118,7 @@ int main (int argc, char **argv) {
    load_dictionary (default_dictionary, hashset);
    load_dictionary (user_dictionary, hashset);
 
+   print_hashset(hashset);
    // Read and do spell checking on each of the files.
    if (optind >= argc) {
       yyin = stdin;
