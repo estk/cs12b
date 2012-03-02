@@ -44,7 +44,6 @@ void spellcheck (char *filename, hashset_ref hashset) {
       if (token == 0) break;
       
       if (has_hashset (hashset, yytext)) printf("%s is a word", yytext);
-      
       DEBUGF ('m', "line %d, yytext = \"%s\"\n", yylineno, yytext);
       STUBPRINTF ("%s: %d: %s\n", filename, yylineno, yytext);
    }

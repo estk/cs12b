@@ -33,10 +33,12 @@ hashset_ref new_hashset (void) {
 }
 
 void double_hashset(hashset_ref hashset) {
-   size_t new_length = hashset->length * 2 + 1;
    size_t old_length = hashset->length;
    char **old_ary = hashset->array;
+   size_t new_length = old_length * 2 + 1;
    hashset->array = malloc (sizeof (char[new_length]));
+   hashset->length = new_length;
+   hashset->load = 0;
    
    for (size_t i=0 ; i < old_length ; i++) {
       char *item = old_ary[i];
