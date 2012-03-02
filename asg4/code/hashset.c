@@ -33,7 +33,16 @@ hashset_ref new_hashset (void) {
 }
 
 void double_hashset(hashset_ref hashset) {
-   printf("hello from the doubling of %p", hashset);
+   size_t new_length = hashset->length * 2 + 1;
+   size_t old_length = hashset->length;
+   char **old_ary = hashset->array;
+   hashset->array = malloc (sizeof (char[new_length]));
+   
+   for (size_t i=0 ; i < old_length ; i++) {
+      char *item = old_ary[i];
+      put_hashset (hashset, item);
+   }
+   printf("done doubleing ary\n");
 }
 
 void free_hashset (hashset_ref hashset) {
