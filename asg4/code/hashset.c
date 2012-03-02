@@ -60,11 +60,19 @@ void put_hashset (hashset_ref hashset, char *item) {
    hashcode_t starting_index = strhash (item) % hashset->length;
    hashcode_t i;
    for (i = starting_index ; i < hashset->length ; i++) {
-      if (hashset->array[i] == NULL) { hashset->array[i] = item; return; }
+      if (hashset->array[i] == NULL) { 
+         hashset->array[i] = item;
+         hashset->load++;
+         return;
+      }
       if (strcmp (item, hashset->array[i]) == 0) return;
    }
    for (i = 0 ; i < starting_index ; i++) {
-      if (hashset->array[i] == NULL) { hashset->array[i] = item; return; }
+      if (hashset->array[i] == NULL) { 
+         hashset->array[i] = item;
+         hashset->load++;
+         return;
+      }
       if (strcmp (item, hashset->array[i]) == 0) return;
    }
 }
