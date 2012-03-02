@@ -70,7 +70,7 @@ void put_hashset (hashset_ref hashset, char *item) {
          hashset->load++;
          return;
       }
-      printf("item : %s, aryItem : %s\n", item, hashset->array[i]);
+      printf("item : %s, aryItem : %s, i = %d\n", item, hashset->array[i], i);
       if (strcmp (item, hashset->array[i]) == 0) return;
    }
    for (i = 0 ; i < starting_index ; i++) {
@@ -79,7 +79,7 @@ void put_hashset (hashset_ref hashset, char *item) {
          hashset->load++;
          return;
       }
-      printf("item : %s, aryItem : %s\n", item, hashset->array[i]);
+      printf("item : %s, aryItem : %s, i = %d\n", item, hashset->array[i], i);
       if (strcmp (item, hashset->array[i]) == 0) return;
    }
    printf("exiting put of %s", item);
