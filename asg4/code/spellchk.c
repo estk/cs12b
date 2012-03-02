@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <ctype.h>
 
 #include "debugf.h"
 #include "hashset.h"
@@ -43,11 +44,15 @@ void spellcheck (char *filename, hashset_ref hashset) {
       int token = yylex ();
       if (token == 0) break;
       
-      if (has_hashset (hashset, yytext)) printf("%s is a word\n", yytext);
-      else printf ("not a word\n");
-
+      if (!has_hashset (hashset, yytext)) {
+         // convert yytext to lowercase
+         char *lower = strdup(yytext);
+         for (int i=0 ; lower[i] != '\0' ; i++) lower[i] = tolower(lower[i]);
+         if (!has_hashset (hashset, lower))
+            printf ("%s is misspelled.\n", yytext);
+         free (lower);
+      }
       DEBUGF ('m', "line %d, yytext = \"%s\"\n", yylineno, yytext);
-      STUBPRINTF ("%s: %d: %s\n", filename, yylineno, yytext);
    }
 }
 

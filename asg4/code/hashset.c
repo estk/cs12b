@@ -54,6 +54,10 @@ void double_hashset(hashset_ref hashset) {
 }
 
 void free_hashset (hashset_ref hashset) {
+   for (size_t index = 0; index < hashset->length; ++index) {
+      free (hashset->array[index]);
+   }
+
    DEBUGF ('h', "free (%p), free (%p)\n", hashset->array, hashset);
    memset (hashset->array, 0, hashset->length * sizeof (char*));
    free (hashset->array);
