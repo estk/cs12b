@@ -60,7 +60,7 @@ void free_hashset (hashset_ref hashset) {
 void put_hashset (hashset_ref hashset, char *item) {
    assert (item != NULL);
    // need to double?
-   if ((4 * hashset->load + 1) > (int)hashset->length) double_hashset(hashset);
+   // if ((4 * hashset->load + 1) > (int)hashset->length) double_hashset(hashset);
    
    hashcode_t starting_index = strhash (item) % hashset->length;
    hashcode_t i;
