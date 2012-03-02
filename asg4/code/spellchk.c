@@ -51,6 +51,7 @@ void spellcheck (char *filename, hashset_ref hashset) {
          char *lower = strdup(yytext);
          
          for (int i=0 ; lower[i] != '\0' ; i++)
+            // LINTED
             lower[i] = tolower(lower[i]);
          
          if (!has_hashset (hashset, lower)) {

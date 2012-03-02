@@ -75,7 +75,7 @@ void put_hashset (hashset_ref hashset, char *item) {
    //LINTED
    hashcode_t starting_index = strhash (item) % hashset->length;
    hashcode_t i;
-   for (i = starting_index ; i < hashset->length ; i++) {
+   for (i = starting_index ; i < (size_t)hashset->length ; i++) {
       if (hashset->array[i] == NULL) { 
          hashset->array[i] = item;
          hashset->load++;
@@ -93,10 +93,11 @@ void put_hashset (hashset_ref hashset, char *item) {
    }
 }
 
-// LINTED
 bool has_hashset (hashset_ref hashset, char *item) {
+   // LINTED
    hashcode_t starting_index = strhash (item) % hashset->length;
    hashcode_t i;
+   // LINTED
    for (i=starting_index ; i < (hashcode_t)hashset->length ; i++) {
       if (hashset->array[i] != NULL)
          if (strcmp (item, hashset->array[i]) == 0) return true;
@@ -127,7 +128,8 @@ int count_clusters(hashset_ref hashset, int n) {
 void print_hashset_clusters(hashset_ref hashset) {
    
    printf("%10d words in the hashset\n", hashset->load);
-   printf("%10d length of the hash array\n", (int) hashset->length);
+   // LINTED
+   printf("%10d length of the hash array\n", (int)hashset->length);
    printf("%10d clusters of size 1\n", count_clusters (hashset, 1));
    printf("%10d clusters of size 2\n", count_clusters (hashset, 2));
    printf("%10d clusters of size 3\n", count_clusters (hashset, 3));
@@ -139,7 +141,8 @@ void print_hashset(hashset_ref hashset) {
       char * item = hashset->array[i];
       if (item != NULL)
          printf ("array[%10d] = %12u \"%s\"\n",
-            (int) i, strhash(item), item);
+         // LINTED
+            (int)i, strhash(item), item);
    }
    DEBUGF('m',"load = %d\n", hashset->load);
    DEBUGF('m', "length = %d\n", hashset->length);
