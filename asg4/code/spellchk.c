@@ -49,7 +49,10 @@ void spellcheck (char *filename, hashset_ref hashset) {
       if (!has_hashset (hashset, yytext)) {
          // convert yytext to lowercase
          char *lower = strdup(yytext);
-         for (int i=0 ; lower[i] != '\0' ; i++) lower[i] = tolower(lower[i]);
+         
+         for (int i=0 ; lower[i] != '\0' ; i++)
+            lower[i] = tolower(lower[i]);
+         
          if (!has_hashset (hashset, lower)) {
             if (exit_status < 1) exit_status = 1;
             printf ("%s is misspelled.\n", yytext);

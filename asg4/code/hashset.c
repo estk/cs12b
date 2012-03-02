@@ -68,8 +68,11 @@ void free_hashset (hashset_ref hashset) {
 void put_hashset (hashset_ref hashset, char *item) {
    assert (item != NULL);
    // need to double?
-   if ((4 * hashset->load + 1) > (int)hashset->length) double_hashset(hashset);
+   // LINTED
+   if ((4 * (size_t)hashset->load + 1) > hashset->length)
+      double_hashset(hashset);
    
+   //LINTED
    hashcode_t starting_index = strhash (item) % hashset->length;
    hashcode_t i;
    for (i = starting_index ; i < hashset->length ; i++) {
@@ -90,10 +93,11 @@ void put_hashset (hashset_ref hashset, char *item) {
    }
 }
 
+// LINTED
 bool has_hashset (hashset_ref hashset, char *item) {
    hashcode_t starting_index = strhash (item) % hashset->length;
    hashcode_t i;
-   for (i=starting_index ; i < hashset->length ; i++) {
+   for (i=starting_index ; i < (hashcode_t)hashset->length ; i++) {
       if (hashset->array[i] != NULL)
          if (strcmp (item, hashset->array[i]) == 0) return true;
    }
@@ -108,7 +112,7 @@ int count_clusters(hashset_ref hashset, int n) {
    int count = 0;
    int since_null = 0;
    char **ary = hashset->array;
-   for (int i=0 ; i < (int) hashset->length ; i++) {
+   for (size_t i=0 ; i < hashset->length ; i++) {
       if (ary[i] == NULL) {
          if (since_null == n) count++;
          since_null = 0;
@@ -134,7 +138,8 @@ void print_hashset(hashset_ref hashset) {
    for (size_t i = 0 ; i < hashset->length; i++) {
       char * item = hashset->array[i];
       if (item != NULL)
-         printf ("array[%10d] = %12u \"%s\"\n", (int) i, strhash(item), item);
+         printf ("array[%10d] = %12u \"%s\"\n",
+            (int) i, strhash(item), item);
    }
    DEBUGF('m',"load = %d\n", hashset->load);
    DEBUGF('m', "length = %d\n", hashset->length);
