@@ -20,6 +20,8 @@
 
 char *execname = NULL;
 hashset_ref hashset = NULL;
+bool show_clusters = false;
+bool show_hashset = false;
 int exit_status = EXIT_SUCCESS;
 
 void print_error (char *object, char *message) {
@@ -98,7 +100,7 @@ int main (int argc, char **argv) {
    // Scan the arguments and set flags.
    opterr = false;
    for (;;) {
-      int option = getopt (argc, argv, "nxyd:@:");
+      int option = getopt (argc, argv, "nx:yd:@:");
       if (option == EOF) break;
       switch (option) {
          char optopt_string[16]; // used in default:
@@ -106,7 +108,8 @@ int main (int argc, char **argv) {
                    break;
          case 'n': default_dictionary = NULL;
                    break;
-         case 'x': STUBPRINTF ("-x\n");
+         case 'x': show_clusters = true;
+                   if (strpbrk (optarg, "xx")) show_hashset = true;
                    break;
          case 'y': yy_flex_debug = true;
                    break;
@@ -123,7 +126,9 @@ int main (int argc, char **argv) {
    load_dictionary (default_dictionary, hashset);
    load_dictionary (user_dictionary, hashset);
 
-   print_hashset(hashset);
+   if (show_clusters) print_hashset_clusters(hashset);
+   if (show_hashset) print_hashset(hashset);
+
    // Read and do spell checking on each of the files.
    if (optind >= argc) {
       yyin = stdin;

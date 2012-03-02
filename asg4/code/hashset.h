@@ -28,6 +28,8 @@ void put_hashset (hashset_ref, char*);
 //
 bool has_hashset (hashset_ref, char*);
 
+void print_hashset_clusters(hashset_ref);
+
 void print_hashset (hashset_ref);
 
 #endif

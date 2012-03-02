@@ -49,7 +49,7 @@ void double_hashset(hashset_ref hashset) {
       if (item != NULL) 
          put_hashset (hashset, item);
    }
-   printf("done doubleing ary\n");
+   DEBUGF('h', "done doubleing ary\n");
    free(old_ary);
 }
 
@@ -104,13 +104,17 @@ bool has_hashset (hashset_ref hashset, char *item) {
    return false;
 }
 
+void print_hashset_clusters(hashset_ref hashset) {
+   STUBPRINTF("hello from print_hashset_clusters\n");
+}
+
 void print_hashset(hashset_ref hashset) {
    for (size_t i = 0 ; i < hashset->length; i++) {
-      if (hashset->array[i] == NULL) {
-         printf("%d : NULL\n", (int) i);
-         continue;
-      }
-      printf ("%d : %s\n", (int) i, hashset->array[i]);
+      char * item = hashset->array[i];
+      if (item != NULL)
+         printf ("array[%10d] = %12u \"%s\"\n", (int) i, strhash(item), item);
    }
+   DEBUGF('m',"load = %d\n", hashset->load);
+   DEBUGF('m', "length = %d\n", hashset->length);
 }
 
