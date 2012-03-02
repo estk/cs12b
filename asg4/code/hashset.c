@@ -46,6 +46,7 @@ void double_hashset(hashset_ref hashset) {
          put_hashset (hashset, item);
    }
    printf("done doubleing ary\n");
+   free(old_ary);
 }
 
 void free_hashset (hashset_ref hashset) {
@@ -69,7 +70,7 @@ void put_hashset (hashset_ref hashset, char *item) {
          hashset->load++;
          return;
       }
-      printf("item : %s, aryItem : %s", item, hashset->array[i]);
+      printf("item : %s, aryItem : %s\n", item, hashset->array[i]);
       if (strcmp (item, hashset->array[i]) == 0) return;
    }
    for (i = 0 ; i < starting_index ; i++) {
@@ -78,9 +79,10 @@ void put_hashset (hashset_ref hashset, char *item) {
          hashset->load++;
          return;
       }
-      printf("item : %s, aryItem : %s", item, hashset->array[i]);
+      printf("item : %s, aryItem : %s\n", item, hashset->array[i]);
       if (strcmp (item, hashset->array[i]) == 0) return;
    }
+   printf("exiting put of %s", item);
 }
 
 bool has_hashset (hashset_ref hashset, char *item) {
