@@ -50,8 +50,10 @@ void spellcheck (char *filename, hashset_ref hashset) {
          // convert yytext to lowercase
          char *lower = strdup(yytext);
          for (int i=0 ; lower[i] != '\0' ; i++) lower[i] = tolower(lower[i]);
-         if (!has_hashset (hashset, lower))
+         if (!has_hashset (hashset, lower)) {
+            exit_status = 1;
             printf ("%s is misspelled.\n", yytext);
+         }
          free (lower);
       }
       DEBUGF ('m', "line %d, yytext = \"%s\"\n", yylineno, yytext);
@@ -75,9 +77,7 @@ void load_dictionary (char *dictionary_name, hashset_ref hashset) {
        if (nlpos != NULL) {
            *nlpos = '\0';
        }else {
-           fprintf (stderr, "%d: unterminated line: %s\n",
-               linenr, buffer);
-           exit_status = 2;
+           print_error(buffer, "unterminated line\n");
        };
        char *word = strdup (buffer);
 

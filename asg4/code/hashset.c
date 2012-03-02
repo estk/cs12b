@@ -105,7 +105,14 @@ bool has_hashset (hashset_ref hashset, char *item) {
 }
 
 void print_hashset_clusters(hashset_ref hashset) {
-   STUBPRINTF("hello from print_hashset_clusters\n");
+   int clus1, clus2, clus3, clus7;
+   clus1 = clus2 = clus3 = clus7 = 0;
+   printf("%10d words in the hashset\n", hashset->load);
+   printf("%10d length of the hash array\n", (int) hashset->length);
+   printf("%10d clusters of size 1\n", clus1);
+   printf("%10d clusters of size 2\n", clus2);
+   printf("%10d clusters of size 3\n", clus3);
+   printf("%10d clusters of size 7\n", clus7);
 }
 
 void print_hashset(hashset_ref hashset) {
