@@ -28,7 +28,7 @@ void print_error (char *object, char *message) {
    fflush (NULL);
    fprintf (stderr, "%s: %s: %s\n", execname, object, message);
    fflush (NULL);
-   exit_status = EXIT_FAILURE;
+   exit_status = 2;
 }
 
 FILE *open_infile (char *filename) {
@@ -51,7 +51,7 @@ void spellcheck (char *filename, hashset_ref hashset) {
          char *lower = strdup(yytext);
          for (int i=0 ; lower[i] != '\0' ; i++) lower[i] = tolower(lower[i]);
          if (!has_hashset (hashset, lower)) {
-            exit_status = 1;
+            if (exit_status < 1) exit_status = 1;
             printf ("%s is misspelled.\n", yytext);
          }
          free (lower);
@@ -100,7 +100,7 @@ int main (int argc, char **argv) {
    // Scan the arguments and set flags.
    opterr = false;
    for (;;) {
-      int option = getopt (argc, argv, "nyx::d:@:");
+      int option = getopt (argc, argv, "nyxd:@:");
       if (option == EOF) break;
       switch (option) {
          char optopt_string[16]; // used in default:
@@ -108,8 +108,8 @@ int main (int argc, char **argv) {
                    break;
          case 'n': default_dictionary = NULL;
                    break;
-         case 'x': show_clusters = true;
-                   if (strpbrk (optarg, "xx")) show_hashset = true;
+         case 'x': if (show_clusters) show_hashset = true;
+                   show_clusters = true;
                    break;
          case 'y': yy_flex_debug = true;
                    break;
