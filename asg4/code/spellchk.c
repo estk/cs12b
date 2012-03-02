@@ -75,7 +75,6 @@ void load_dictionary (char *dictionary_name, hashset_ref hashset) {
   }
    
    fclose(file);
-   STUBPRINTF ("Open dictionary, load it, close it\n");
 }
 
 int main (int argc, char **argv) {

@@ -42,7 +42,8 @@ void double_hashset(hashset_ref hashset) {
    
    for (size_t i=0 ; i < old_length ; i++) {
       char *item = old_ary[i];
-      put_hashset (hashset, item);
+      if (item != NULL) 
+         put_hashset (hashset, item);
    }
    printf("done doubleing ary\n");
 }
@@ -56,6 +57,7 @@ void free_hashset (hashset_ref hashset) {
 }
 
 void put_hashset (hashset_ref hashset, char *item) {
+   assert (item != NULL);
    // need to double?
    if ((4 * hashset->load + 1) > (int)hashset->length) double_hashset(hashset);
    
