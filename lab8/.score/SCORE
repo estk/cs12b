@@ -1,0 +1,91 @@
+$Id: SCORE,v 1.1 2012-02-28 17:02:06-08 - - $
+
+Copy all files from this directory into the student's directory.
+
+Student name:
+
+For any point deduction, note it in the left margin and add a
+comment under it indicating why the loss of points.  Assign a
+point value for each between 0 and the max indicated in parens.
+
+DO NOT DEDUCT POINTS FOR THE FOLLOWING LINT MESSAGES:
+function returns value which is ... ignored
+
+run mk.build
+ruh mk.tests if mk.build succeeded
+
+*****************************************************************
+
+CODE = 15 points
+
+   Check each of the following and assign between 0 and 2 points
+   for each.
+
+   (2) checksource did not complain
+
+   (2) lint did not complain (except for msg about ret val ignored)
+
+   (2) use of lstat system call and print error if failed
+
+   (2) prints out required fields from struct stat
+
+   (2) uses strftime correctly to format date/time, and checks
+       for 180 days in past/future
+
+   (2) localtime to extract fields from time_t
+
+   (2) readlink to print out a symlink, ignore failure 
+
+   (2) submitted Makefile which builds l9stat binary
+
+Max score for this section is 15, not 16.
+Do not record more than 15.
+
+code total=
+min 1, max 15
+
+*****************************************************************
+
+TESTING = 15 points
+
+If the Makefile did not build l9stat, score 0 for this section
+and skip any further grading.
+
+   (2) *.status files correct, 0 for OK, 1 if errors were printed
+
+   (2) Error messages printed properly, as in
+       l9stat: foo: No such file or directory
+
+   (2) file mode values correct and printed as 6 octal digits
+
+   (2) file sizes correct
+
+   (2) dates correct with Month day time for <= 180 days
+
+   (2) dates correct with Month day year for > 180 days
+
+   (2) symlinks printed correctly, if they are symlinks
+
+   (2) valgrind step showed no memory leaks
+
+Max score for this section is 15, not 16.
+Do not record more than 15.
+
+Segmentation fault:  if any of the tests produced a segmentation
+fault or bus error or other crash, max score for this section is
+6 points.
+
+testing total=
+min 0, max 15
+
+*****************************************************************
+
+SUBTOTAL=
+min 1, max 30
+
+If pair programming, TOTALSCORE = SUBTOTAL - TOTAL2.
+If not, TOTALSCORE = SUBTOTAL.
+
+TOTALSCORE=
+min 1, max 30
+

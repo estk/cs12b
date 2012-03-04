@@ -1,0 +1,23 @@
+100600     11418 Feb 28 17:30 Listing.pdf
+100600     23690 Feb 28 17:30 Listing.ps
+040700      2048 Feb 28 17:31 RCS
+100700       586 Feb 28 17:31 l9stat.perl
+100700       146 Feb 28 17:31 mklis
+100700     12453 Feb 28 17:27 mkstampfiles
+100600      1419 Feb 28 17:27 mkstampfiles.c
+100600         0 Feb 28 17:31 output.lis
+100700     10927 Feb 28 17:27 showlink
+100600      1496 Feb 28 17:27 showlink.c
+120755        11 Feb 28 17:25 this-is-a-symlink -> l9stat.perl
+100600        58 Dec 31  1969 timestamp.0000000000000000
+100600        58 Aug 12  2011 timestamp.000000004E45D2EA
+100600        58 Aug 12  2011 timestamp.000000004E45D323
+100600        58 Feb 28 17:27 timestamp.000000004F4D7EEA
+100600        58 Feb 28 17:28 timestamp.000000004F4D7F23
+100600        58 Sep 15  2012 timestamp.0000000050552AEA
+100600        58 Sep 15  2012 timestamp.0000000050552B23
+100600        58 Jan 18  2038 timestamp.000000007FFFFFFF
+100600        58 Dec 13  1901 timestamp.FFFFFFFF80000000
+040700      4096 Feb 28 17:31 .
+040700      2048 Feb 28 16:59 ..
+040700      2048 Feb 28 16:16 ../..

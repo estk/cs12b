@@ -1,0 +1,496 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+110.69 Tw
+(READLINK\(2\) Linux)Tj
+201.99 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual READLINK\(2\))Tj
+-0.219 Tc
+/R8 10.95 Tf
+-270.27 -36 Td
+(NA)Tj
+0 Tc
+15.5922 0 Td
+(ME)Tj
+/R7 10 Tf
+20.4078 -12 Td
+0 Tw
+[(readlink \255 read v)25.0159(alue of a symbolic link)]TJ
+/R8 10.95 Tf
+-36 -16.8 Td
+(SYNOPSIS)Tj
+/R8 10 Tf
+36 -12 Td
+(#include <unistd.h>)Tj
+24 TL
+T*[(ssize_t r)17.9919(eadlink\(const char *)]TJ
+/R9 10 Tf
+122.45 0 Td
+(path)Tj
+2.5 Tc
+/R8 10 Tf
+18.0594 0 Td
+(,c)Tj
+0 Tc
+9.43984 0 Td
+(har *)Tj
+-0.2 Tc
+/R9 10 Tf
+22.5 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+2.5 Tc
+/R8 10 Tf
+4.73945 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+(ize_t)Tj
+-0.2 Tc
+/R9 10 Tf
+22.4898 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(fsiz)Tj
+/R8 10 Tf
+13.7496 0 Td
+(\);)Tj
+/R8 10.95 Tf
+-277.918 -16.8 Td
+(DESCRIPTION)Tj
+-0.18 Tc
+/R8 10 Tf
+36 -12 Td
+(re)Tj
+0 Tc
+8.69961 0 Td
+(adlink)Tj
+/R7 10 Tf
+27.2398 0 Td
+1.106 Tw
+(\(\) places the contents of the symbolic link)Tj
+/R9 10 Tf
+180.077 0 Td
+(path)Tj
+/R7 10 Tf
+21.6645 0 Td
+1.105 Tw
+(in the b)Tj
+32.0098 0 Td
+[(uf)25.0317(fer)]TJ
+-0.2 Tc
+/R9 10 Tf
+22.8941 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+3.605 Tc
+/R7 10 Tf
+4.73945 0 Td
+(,w)Tj
+0 Tc
+13.325 0 Td
+(hich has size)Tj
+-0.2 Tc
+/R9 10 Tf
+56.9145 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(fsiz)Tj
+/R7 10 Tf
+13.7496 0 Td
+(.)Tj
+-0.18 Tc
+/R8 10 Tf
+8.60469 0 Td
+(re)Tj
+0 Tc
+8.69961 0 Td
+(ad-)Tj
+-418.217 -12 Td
+(link)Tj
+/R7 10 Tf
+16.6797 0 Td
+0.406 Tw
+(\(\) does not append a null byte to)Tj
+-0.2 Tc
+/R9 10 Tf
+134.898 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+5.406 Tc
+/R7 10 Tf
+4.73945 0 Td
+(.I)Tj
+2.906 Tc
+11.1961 0 Td
+(tw)Tj
+0 Tc
+12.9059 0 Td
+0.407 Tw
+(ill truncate the contents \(to a length of)Tj
+-0.2 Tc
+/R9 10 Tf
+158.345 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(fsiz)Tj
+/R7 10 Tf
+16.6566 0 Td
+(characters\), in)Tj
+-375.021 -12 Td
+0 Tw
+[(case the b)20.0317(uf)25.0317(fer is too small to hold all of the contents.)]TJ
+/R8 10.95 Tf
+-36 -16.7996 Td
+[(RETURN V)134.973(ALUE)]TJ
+/R7 10 Tf
+36 -12 Td
+0.106 Tw
+(The call returns the count of characters placed in the b)Tj
+218.46 0 Td
+(uf)Tj
+8.07969 0 Td
+0.105 Tw
+(fer if it succeeds, or a \2551 if an error occurs, placing)Tj
+-226.539 -12 Td
+0 Tw
+(the error code in)Tj
+/R9 10 Tf
+68.6398 0 Td
+(errno)Tj
+/R7 10 Tf
+22.3996 0 Td
+(.)Tj
+/R8 10.95 Tf
+-127.039 -16.8004 Td
+[(ERR)30.0694(ORS)]TJ
+/R8 10 Tf
+36 -12 Td
+[(EA)55.0159(CCES)]TJ
+/R7 10 Tf
+36 -12 Td
+[(Search permission is denied for a component of the path pre\214x.)-500(\(See also)]TJ
+/R8 10 Tf
+297.889 0 Td
+[(path_r)17.9834(esolution)]TJ
+/R7 10 Tf
+67.05 0 Td
+(\(2\).\))Tj
+/R8 10 Tf
+-400.939 -16.8 Td
+(EF)Tj
+-0.5 Tc
+11.8801 0 Td
+(AU)Tj
+-0.92 Tc
+13.9398 0 Td
+(LT)Tj
+-0.2 Tc
+/R9 10 Tf
+10.1801 -12 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+-0.15 Tc
+/R7 10 Tf
+7.23945 0 Td
+(ex)Tj
+0 Tc
+9.28984 0 Td
+(tends outside the process')Tj
+2.5 Tc
+102.6 0 Td
+(sa)Tj
+0 Tc
+10.8297 0 Td
+(llocated address space.)Tj
+/R8 10 Tf
+-175.759 -16.7996 Td
+[(EINV)135.007(AL)]TJ
+-0.2 Tc
+/R9 10 Tf
+36 -12 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(fsiz)Tj
+/R7 10 Tf
+16.2496 0 Td
+(is not positi)Tj
+-0.15 Tc
+46.4297 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(.)Tj
+/R8 10 Tf
+-117.769 -16.8004 Td
+[(EINV)135.007(AL)]TJ
+/R7 10 Tf
+36 -12 Td
+(The named \214le is not a symbolic link.)Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(EIO)Tj
+/R7 10 Tf
+35.9695 0 Td
+(An I/O error occurred while reading from the \214le system.)Tj
+/R8 10 Tf
+-35.9695 -16.8004 Td
+(ELOOP)Tj
+-0.8 Tc
+/R7 10 Tf
+36 -12 Td
+(To)Tj
+2.5 Tc
+10.3098 0 Td
+(om)Tj
+0 Tc
+15.2797 0 Td
+(an)Tj
+2.5 Tc
+9.28984 0 Td
+(ys)Tj
+0 Tc
+11.3898 0 Td
+(ymbolic links were encountered in translating the pathname.)Tj
+/R8 10 Tf
+-82.2691 -16.8 Td
+[(EN)20.0159(AMET)17.9846(OOLONG)]TJ
+2.5 Tc
+/R7 10 Tf
+36 -12 Td
+(Ap)Tj
+0 Tc
+14.7199 0 Td
+[(athname, or a component of a pathname, w)10.0098(as too long.)]TJ
+/R8 10 Tf
+-50.7199 -16.7996 Td
+(ENOENT)Tj
+/R7 10 Tf
+36 -12 Td
+[(The named \214le does not e)15.0171(xist.)]TJ
+/R8 10 Tf
+-36 -16.8004 Td
+(ENOMEM)Tj
+/R7 10 Tf
+36 -12 Td
+[(Insuf)25.0232(\214cient k)10(ernel memory w)10.0244(as a)]TJ
+-0.25 Tc
+133.389 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(ilable.)Tj
+/R8 10 Tf
+-178.579 -16.8 Td
+[(ENO)40.0073(TDIR)]TJ
+2.5 Tc
+/R7 10 Tf
+36 -12 Td
+(Ac)Tj
+0 Tc
+14.1598 0 Td
+[(omponent of the path pre\214x is not a directory)64.9707(.)]TJ
+/R8 10.95 Tf
+-86.1598 -16.8 Td
+[(CONFORMING T)17.9873(O)]TJ
+/R7 10 Tf
+36 -12 Td
+(4.4BSD \(the)Tj
+-0.18 Tc
+/R8 10 Tf
+52.4098 0 Td
+(re)Tj
+0 Tc
+8.69961 0 Td
+(adlink)Tj
+/R7 10 Tf
+27.2398 0 Td
+(\(\) function call appeared in 4.2BSD\), POSIX.1-2001.)Tj
+/R8 10.95 Tf
+-124.349 -16.8 Td
+[(HIST)17.9889(OR)34.9846(Y)]TJ
+/R7 10 Tf
+36 -12 Td
+2.028 Tw
+(In v)Tj
+17.668 0 Td
+2.029 Tw
+(ersions of glibc up to and including glibc 2.4, the return type of)Tj
+-0.18 Tc
+/R8 10 Tf
+282.517 0 Td
+(re)Tj
+0 Tc
+8.69961 0 Td
+(adlink)Tj
+/R7 10 Tf
+27.2398 0 Td
+[(\(\) w)10(as declared as)]TJ
+/R9 10 Tf
+82.5355 0 Td
+(int)Tj
+/R7 10 Tf
+11.2395 0 Td
+(.)Tj
+-429.899 -12 Td
+(No)Tj
+-0.1 Tc
+11.9699 0 Td
+(wa)Tj
+0 Tc
+11.5598 0 Td
+0 Tw
+(days, the return type is declared as)Tj
+/R9 10 Tf
+140.85 0 Td
+(ssize_t)Tj
+2.5 Tc
+/R7 10 Tf
+27.3496 0 Td
+[(,a)250.015(s\()]TJ
+0 Tc
+19.1598 0 Td
+[(ne)25.0146(wly\) required in POSIX.1-2001.)]TJ
+/R8 10.95 Tf
+-246.889 -16.7996 Td
+(SEE ALSO)Tj
+/R8 10 Tf
+36 -12 Td
+(lstat)Tj
+/R7 10 Tf
+18.3297 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+[(path_r)17.9846(esolution)]TJ
+/R7 10 Tf
+67.05 0 Td
+(\(2\),)Tj
+-0.18 Tc
+/R8 10 Tf
+16.6598 0 Td
+(re)Tj
+0 Tc
+8.69961 0 Td
+(adlinkat)Tj
+/R7 10 Tf
+35.5699 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(stat)Tj
+/R7 10 Tf
+15.55 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(symlink)Tj
+/R7 10 Tf
+33.9 0 Td
+(\(2\))Tj
+-281.738 -139.2 Td
+(Linux 2.0.30)Tj
+210.67 0 Td
+203.17 Tw
+(1997-08-21 1)Tj
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+5596
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 10 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+] /Count 1
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+10 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Encoding 11 0 R/Subtype/Type1>>
+endobj
+11 0 obj
+<</Type/Encoding/Differences[
+140/fi
+173/minus]>>
+endobj
+9 0 obj
+<</BaseFont/Times-Italic/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120228173254)
+/ModDate(D:20120228173254)>>endobj
+xref
+0 12
+0000000000 65535 f 
+0000005867 00000 n 
+0000006243 00000 n 
+0000005808 00000 n 
+0000005675 00000 n 
+0000000009 00000 n 
+0000005655 00000 n 
+0000006028 00000 n 
+0000005963 00000 n 
+0000006176 00000 n 
+0000005915 00000 n 
+0000006110 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R /Info 2 0 R
+/ID [<A6F0A46CF413A5287D40CD1FBD2A6A0C><A6F0A46CF413A5287D40CD1FBD2A6A0C>]
+>>
+startxref
+6354
+%%EOF

@@ -1,0 +1,506 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/28/12)Tj
+-0.659766 -12.8004 Td
+(17:27:57)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 263.42 736.5 Tm
+(mkstampfiles.c)Tj
+-132.871 18 Td
+($cmps012b-wm/Labs-cmps012m/lab8s-unixprog-stat/testdata/)Tj
+/R10 10 Tf
+-62.5496 -35.5 Td
+[(1:)-600(// $Id: mkstampfiles.c,v 1.1 2012-02-28 17:27:55-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(//)]TJ
+T*[(4:)-600(// Open several files and write into them.  Then use utime\(2\))]TJ
+T*[(5:)-600(// to force a time stamp onto them.)]TJ
+(6:)'
+T*[(7:)-600(#include <errno.h>)]TJ
+T*[(8:)-600(#include <libgen.h>)]TJ
+T*[(9:)-600(#include <stdio.h>)]TJ
+-6 -11 Td
+[(10:)-600(#include <stdlib.h>)]TJ
+T*[(11:)-600(#include <string.h>)]TJ
+T*[(12:)-600(#include <sys/types.h>)]TJ
+T*[(13:)-600(#include <time.h>)]TJ
+T*[(14:)-600(#include <utime.h>)]TJ
+(15:)'
+T*[(16:)-600(char *execname = NULL;)]TJ
+T*[(17:)-600(int exit_status = EXIT_SUCCESS;)]TJ
+(18:)'
+T*[(19:)-600(void maketimefile \(time_t when\) {)]TJ
+T*[(20:)-600(   char filename[64];)]TJ
+T*[(21:)-600(   sprintf \(filename, "timestamp.%016lX", when\);)]TJ
+T*[(22:)-600(   FILE *file = fopen \(filename, "w"\);)]TJ
+T*[(23:)-600(   if \(file == NULL\) {)]TJ
+T*[(24:)-600(      fprintf \(stderr, "%s: %s: %s\\n",)]TJ
+T*[(25:)-600(               execname, filename, strerror \(errno\)\);)]TJ
+T*[(26:)-600(      exit_status = EXIT_FAILURE;)]TJ
+T*[(27:)-600(      return;)]TJ
+T*[(28:)-600(   })]TJ
+T*[(29:)-600(   printf \("fopen \(%s\): OK\\n", filename\);)]TJ
+T*[(30:)-600(   char buffer[64];)]TJ
+T*[(31:)-600(   strftime \(buffer, sizeof buffer, "%c %Z", localtime \(&when\)\);)]TJ
+T*[(32:)-600(   fprintf \(file, "%s\\n", buffer\);)]TJ
+T*[(33:)-600(   strftime \(buffer, sizeof buffer, "%c %Z", gmtime \(&when\)\);)]TJ
+T*[(34:)-600(   fprintf \(file, "%s\\n", buffer\);)]TJ
+T*[(35:)-600(   fclose \(file\);)]TJ
+T*[(36:)-600(   struct utimbuf utimbuf;)]TJ
+T*[(37:)-600(   utimbuf.actime = when;)]TJ
+T*[(38:)-600(   utimbuf.modtime = when;)]TJ
+T*[(39:)-600(   utime \(filename, &utimbuf\);)]TJ
+T*[(40:)-600(})]TJ
+(41:)'
+T*[(42:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(43:)-600(   execname = basename \(argv[0]\);)]TJ
+T*[(44:)-600(   time_t now = time \(NULL\);)]TJ
+T*[(45:)-600(   const time_t DAYS = 24 * 60 * 60;)]TJ
+T*[(46:)-600(   maketimefile \(-0x80000000L\);)]TJ
+T*[(47:)-600(   maketimefile \(0\);)]TJ
+T*[(48:)-600(   maketimefile \(now - 200 * DAYS\);)]TJ
+T*[(49:)-600(   maketimefile \(now\);)]TJ
+T*[(50:)-600(   maketimefile \(now + 200 * DAYS\);)]TJ
+T*[(51:)-600(   maketimefile \(0x7FFFFFFF\);)]TJ
+T*[(52:)-600(   return exit_status;)]TJ
+T*[(53:)-600(})]TJ
+(54:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+2868
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/28/12)Tj
+-0.659766 -12.8004 Td
+(17:27:57)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 275.473 736.5 Tm
+(showlink.c)Tj
+-144.924 18 Td
+($cmps012b-wm/Labs-cmps012m/lab8s-unixprog-stat/testdata/)Tj
+/R10 10 Tf
+-62.5496 -35.5 Td
+[(1:)-600(// $Id: showlink.c,v 1.1 2012-02-28 17:27:55-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(//)]TJ
+T*[(4:)-600(// Example of how to display a symbolic link.  This program is *NOT*)]TJ
+T*[(5:)-600(// called readlink, because one such already exists on Linux.)]TJ
+T*[(6:)-600(// Print a symlink or an error message.  PATH_MAX is the max length)]TJ
+T*[(7:)-600(// of a pathname.)]TJ
+T*[(8:)-600(//)]TJ
+T*[(9:)-600(// From man -s 2 readlink:)]TJ
+-6 -11 Td
+[(10:)-600(//)]TJ
+T*[(11:)-600(//    DESCRIPTION)]TJ
+T*[(12:)-600(//        readlink\(\) places the contents of the symbolic link  path)]TJ
+T*[(13:)-600(//        in  the  buffer  buf,  which has size bufsiz.  readlink\(\))]TJ
+T*[(14:)-600(//        does not append a null byte to buf.  It will truncate the)]TJ
+T*[(15:)-600(//        contents  \(to a length of bufsiz characters\), in case the)]TJ
+T*[(16:)-600(//        buffer is too small to hold all of the contents.)]TJ
+T*[(17:)-600(//)]TJ
+T*[(18:)-600(// This looks like a bizarre design bug.)]TJ
+T*[(19:)-600(//)]TJ
+(20:)'
+T*[(21:)-600(#include <errno.h>)]TJ
+T*[(22:)-600(#include <libgen.h>)]TJ
+T*[(23:)-600(#include <limits.h>)]TJ
+T*[(24:)-600(#include <stdio.h>)]TJ
+T*[(25:)-600(#include <stdlib.h>)]TJ
+T*[(26:)-600(#include <string.h>)]TJ
+T*[(27:)-600(#include <unistd.h>)]TJ
+(28:)'
+T*[(29:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(30:)-600(   int exit_status = EXIT_SUCCESS;)]TJ
+T*[(31:)-600(   for \(int argi = 1; argi < argc; ++argi\) {)]TJ
+T*[(32:)-600(      char *pathname = argv[argi];)]TJ
+T*[(33:)-600(      char linkname[PATH_MAX + 1];)]TJ
+T*[(34:)-600(      ssize_t retval = readlink \(pathname, linkname, sizeof linkname\);)]TJ
+T*[(35:)-600(      if \(retval >= 0\) {)]TJ
+T*[(36:)-600(         linkname[retval < PATH_MAX + 1 ? retval : PATH_MAX] = '\\0';)]TJ
+T*[(37:)-600(         printf \("%s -> \\"%s\\"\\n", pathname, linkname\);)]TJ
+T*[(38:)-600(      }else {)]TJ
+T*[(39:)-600(         exit_status = EXIT_FAILURE;)]TJ
+T*[(40:)-600(         fflush \(NULL\);)]TJ
+T*[(41:)-600(         fprintf \(stderr, "%s: %s: %s\\n",)]TJ
+T*[(42:)-600(                  basename \(argv[0]\), pathname, strerror \(errno\)\);)]TJ
+T*[(43:)-600(         fflush \(NULL\);)]TJ
+T*[(44:)-600(      })]TJ
+T*[(45:)-600(   })]TJ
+T*[(46:)-600(   return exit_status;)]TJ
+T*[(47:)-600(})]TJ
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+2827
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/28/12)Tj
+-0.659766 -12.8004 Td
+(17:31:32)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 278.12 736.5 Tm
+(l9stat.perl)Tj
+-147.57 18 Td
+($cmps012b-wm/Labs-cmps012m/lab8s-unixprog-stat/testdata/)Tj
+/R10 10 Tf
+-62.5496 -35.5 Td
+[(1:)-600(#!/usr/bin/perl)]TJ
+11 TL
+T*[(2:)-600(# $Id: l9stat.perl,v 1.2 2012-02-28 17:31:32-08 - - $)]TJ
+T*[(3:)-600(use POSIX qw\(strftime\);)]TJ
+T*[(4:)-600($0 =~ s|.*/||;)]TJ
+T*[(5:)-600($days180 = 180 * 24 * 3600;)]TJ
+T*[(6:)-600(for $file \(@ARGV ? @ARGV : "."\) {)]TJ
+T*[(7:)-600(   \($_, $_, $mode, $_, $_, $_, $_, $size, $_, $mtime, $_, $_, $_\))]TJ
+T*[(8:)-600(         = lstat $file;)]TJ
+T*[(9:)-600(   print STDERR "$0: $file: $!\\n" and next unless defined $size;)]TJ
+-6 -11 Td
+[(10:)-600(   $fmt = $mtime < $^T - $days180 || $^T + $days180 < $mtime)]TJ
+T*[(11:)-600(        ? "%b %e  %Y" : "%b %e %R";)]TJ
+T*[(12:)-600(   printf "%06o %9d %s %s%s\\n",)]TJ
+T*[(13:)-600(          $mode, $size, \(strftime $fmt, localtime $mtime\), $file,)]TJ
+T*[(14:)-600(          defined \($link = readlink $file\) ? " -> $link" : "";)]TJ
+T*[(15:)-600(})]TJ
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+1386
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(02/28/12)Tj
+-0.659766 -12.8004 Td
+(17:31:34)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 279.743 736.5 Tm
+(output.lis)Tj
+-149.194 18 Td
+($cmps012b-wm/Labs-cmps012m/lab8s-unixprog-stat/testdata/)Tj
+/R10 10 Tf
+-62.5496 -35.5 Td
+[(1:)-600(100600     11418 Feb 28 17:30 Listing.pdf)]TJ
+11 TL
+T*[(2:)-600(100600     23690 Feb 28 17:30 Listing.ps)]TJ
+T*[(3:)-600(040700      2048 Feb 28 17:31 RCS)]TJ
+T*[(4:)-600(100700       586 Feb 28 17:31 l9stat.perl)]TJ
+T*[(5:)-600(100700       146 Feb 28 17:31 mklis)]TJ
+T*[(6:)-600(100700     12453 Feb 28 17:27 mkstampfiles)]TJ
+T*[(7:)-600(100600      1419 Feb 28 17:27 mkstampfiles.c)]TJ
+T*[(8:)-600(100600         0 Feb 28 17:31 output.lis)]TJ
+T*[(9:)-600(100700     10927 Feb 28 17:27 showlink)]TJ
+-6 -11 Td
+[(10:)-600(100600      1496 Feb 28 17:27 showlink.c)]TJ
+T*[(11:)-600(120755        11 Feb 28 17:25 this-is-a-symlink -> l9stat.perl)]TJ
+T*[(12:)-600(100600        58 Dec 31  1969 timestamp.0000000000000000)]TJ
+T*[(13:)-600(100600        58 Aug 12  2011 timestamp.000000004E45D2EA)]TJ
+T*[(14:)-600(100600        58 Aug 12  2011 timestamp.000000004E45D323)]TJ
+T*[(15:)-600(100600        58 Feb 28 17:27 timestamp.000000004F4D7EEA)]TJ
+T*[(16:)-600(100600        58 Feb 28 17:28 timestamp.000000004F4D7F23)]TJ
+T*[(17:)-600(100600        58 Sep 15  2012 timestamp.0000000050552AEA)]TJ
+T*[(18:)-600(100600        58 Sep 15  2012 timestamp.0000000050552B23)]TJ
+T*[(19:)-600(100600        58 Jan 18  2038 timestamp.000000007FFFFFFF)]TJ
+T*[(20:)-600(100600        58 Dec 13  1901 timestamp.FFFFFFFF80000000)]TJ
+T*[(21:)-600(040700      4096 Feb 28 17:31 .)]TJ
+T*[(22:)-600(040700      2048 Feb 28 16:59 ..)]TJ
+T*[(23:)-600(040700      2048 Feb 28 16:16 ../..)]TJ
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+2006
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+] /Count 4
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Encoding 25 0 R/Subtype/Type1>>
+endobj
+25 0 obj
+<</Type/Encoding/Differences[
+126/tilde]>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120228173134)
+/ModDate(D:20120228173134)>>endobj
+xref
+0 26
+0000000000 65535 f 
+0000010003 00000 n 
+0000010704 00000 n 
+0000009923 00000 n 
+0000009385 00000 n 
+0000000009 00000 n 
+0000002927 00000 n 
+0000010502 00000 n 
+0000010298 00000 n 
+0000010571 00000 n 
+0000010364 00000 n 
+0000010636 00000 n 
+0000010051 00000 n 
+0000009518 00000 n 
+0000002947 00000 n 
+0000005826 00000 n 
+0000010121 00000 n 
+0000009653 00000 n 
+0000005847 00000 n 
+0000007285 00000 n 
+0000010180 00000 n 
+0000009788 00000 n 
+0000007306 00000 n 
+0000009364 00000 n 
+0000010239 00000 n 
+0000010443 00000 n 
+trailer
+<< /Size 26 /Root 1 0 R /Info 2 0 R
+/ID [<45D0EB07631B8B5EA69A4ED6383D53F3><45D0EB07631B8B5EA69A4ED6383D53F3>]
+>>
+startxref
+10815
+%%EOF

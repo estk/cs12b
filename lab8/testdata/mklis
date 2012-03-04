@@ -1,0 +1,5 @@
+#!/bin/sh -x
+# $Id: mklis,v 1.2 2012-02-28 17:30:48-08 - - $
+cid $0
+l9stat.perl * . .. ../.. >output.lis
+mkpspdf Listing.ps *.c *.perl output.lis

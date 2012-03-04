@@ -1,0 +1,698 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+(STRERR)Tj
+37.2398 0 Td
+110.51 Tw
+(OR\(3\) Linux)Tj
+164.9 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual STRERR)Tj
+171.91 0 Td
+(OR\(3\))Tj
+-0.219 Tc
+/R8 10.95 Tf
+-442.329 -36 Td
+(NA)Tj
+0 Tc
+15.5922 0 Td
+(ME)Tj
+/R7 10 Tf
+20.4078 -12 Td
+(strerror)Tj
+2.5 Tc
+29.4699 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+0 Tw
+(trerror_r \255 return string describing error number)Tj
+/R8 10.95 Tf
+-74.3598 -16.8 Td
+(SYNOPSIS)Tj
+/R8 10 Tf
+36 -12 Td
+[(#include <string)15.0085(.h>)]TJ
+24 TL
+T*[(char *str)17.9688(err)17.9761(or\(int)]TJ
+/R9 10 Tf
+78.6902 0 Td
+(errnum)Tj
+/R8 10 Tf
+29.7598 0 Td
+(\);)Tj
+-108.45 -24 Td
+[(char *str)17.9688(err)17.9761(or_r\(int)]TJ
+/R9 10 Tf
+88.1301 0 Td
+(errnum)Tj
+2.5 Tc
+/R8 10 Tf
+29.7598 0 Td
+(,c)Tj
+0 Tc
+9.43984 0 Td
+(har *)Tj
+-0.2 Tc
+/R9 10 Tf
+22.5 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+2.5 Tc
+/R8 10 Tf
+4.73945 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+(ize_t)Tj
+-0.2 Tc
+/R9 10 Tf
+22.4898 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+<8D656E>Tj
+/R8 10 Tf
+14.6797 0 Td
+(\);)Tj
+/R7 10 Tf
+-160.229 -12 Td
+(/* GNU-speci\214c strerror_r\(\) */)Tj
+/R8 10 Tf
+-60 -24 Td
+(#de\214ne _XOPEN_SOURCE 600)Tj
+12 TL
+T*[(#include <string)15.0085(.h>)]TJ
+24 TL
+T*[(int str)18(err)17.9761(or_r\(int)]TJ
+/R9 10 Tf
+75.3598 0 Td
+(errnum)Tj
+2.5 Tc
+/R8 10 Tf
+29.7598 0 Td
+(,c)Tj
+0 Tc
+9.43984 0 Td
+(har *)Tj
+-0.2 Tc
+/R9 10 Tf
+22.5 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+2.5 Tc
+/R8 10 Tf
+4.73945 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+(ize_t)Tj
+-0.2 Tc
+/R9 10 Tf
+22.4898 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+<8D656E>Tj
+/R8 10 Tf
+14.6797 0 Td
+(\);)Tj
+/R7 10 Tf
+-147.458 -12 Td
+(/* XSI-compliant strerror_r\(\) */)Tj
+/R8 10.95 Tf
+-96 -16.8004 Td
+(DESCRIPTION)Tj
+/R7 10 Tf
+36 -12 Td
+(The)Tj
+/R8 10 Tf
+18.5957 0 Td
+[(str)17.9919(err)17.9761(or)]TJ
+/R7 10 Tf
+34.0602 0 Td
+0.546 Tw
+(\(\) function returns a string describing the error code passed in the ar)Tj
+278.852 0 Td
+(gument)Tj
+/R9 10 Tf
+33.0457 0 Td
+(errnum)Tj
+3.046 Tc
+/R7 10 Tf
+29.4398 0 Td
+(,p)Tj
+0 Tc
+10.5461 0 Td
+(ossibly)Tj
+-404.539 -12 Td
+0.885 Tw
+[(using the LC_MESSA)40.0085(GES part of the current locale to select the appropriate language.)]TJ
+365.706 0 Td
+0.886 Tw
+(This string must)Tj
+-365.706 -12 Td
+0.172 Tw
+[(not be modi\214ed by the application, b)20.0122(ut may be modi\214ed by a subsequent call to)]TJ
+/R8 10 Tf
+322.918 0 Td
+[(perr)17.998(or)]TJ
+/R7 10 Tf
+28.1398 0 Td
+0.171 Tw
+(\(\) or)Tj
+/R8 10 Tf
+20.4414 0 Td
+[(str)17.9932(err)17.9785(or)]TJ
+/R7 10 Tf
+34.0602 0 Td
+2.671 Tw
+(\(\). No)Tj
+-405.56 -12 Td
+0 Tw
+(library function will modify this string.)Tj
+(The)'
+/R8 10 Tf
+18.509 0 Td
+[(str)17.9919(err)17.9761(or_r)]TJ
+/R7 10 Tf
+43.5 0 Td
+0.459 Tw
+(\(\) function is similar to)Tj
+/R8 10 Tf
+97.1246 0 Td
+[(str)17.9932(err)17.9761(or)]TJ
+/R7 10 Tf
+34.0602 0 Td
+[(\(\), b)20.0244(ut is thread safe.)]TJ
+89.4055 0 Td
+0.46 Tw
+(This function is a)Tj
+-0.25 Tc
+70.9 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(ilable in tw)Tj
+2.96 Tc
+45.8199 0 Td
+(ov)Tj
+0 Tc
+12.8102 0 Td
+[(er)20.0293(-)]TJ
+-421.319 -12 Td
+0.975 Tw
+[(sions: an XSI-compliant v)15.0317(ersion speci\214ed in POSIX.1-2001, and a GNU-speci\214c v)15.0146(ersion \(a)]TJ
+-0.25 Tc
+376.664 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(ilable since)Tj
+-385.854 -12 Td
+1.18 Tw
+[(glibc 2.0\).)-617.946(If _XOPEN_SOURCE is de\214ned with the v)]TJ
+230.439 0 Td
+1.181 Tw
+[(alue 600, then the XSI-compliant v)15.0342(ersion is pro-)]TJ
+-230.439 -12 Td
+0 Tw
+[(vided, otherwise the GNU-speci\214c v)15.0073(ersion is pro)15.0244(vided.)]TJ
+0.012 Tw
+(The XSI-compliant)'
+/R8 10 Tf
+79.9734 0 Td
+[(str)17.9919(err)17.9761(or_r)]TJ
+/R7 10 Tf
+43.5 0 Td
+[(\(\) is preferred for portable applications.)-501.155(It returns the error string in the user)]TJ
+306.436 0 Td
+(-)Tj
+-429.909 -12 Td
+0 Tw
+[(supplied b)20.0159(uf)25.0317(fer)]TJ
+-0.2 Tc
+/R9 10 Tf
+62.9793 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+/R7 10 Tf
+7.23945 0 Td
+(of length)Tj
+-0.2 Tc
+/R9 10 Tf
+38.3297 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+<8D656E>Tj
+/R7 10 Tf
+14.6797 0 Td
+(.)Tj
+-142.828 -24 Td
+1.368 Tw
+(The GNU-speci\214c)Tj
+/R8 10 Tf
+78.8258 0 Td
+[(str)17.9919(err)17.9761(or_r)]TJ
+/R7 10 Tf
+43.5 0 Td
+[(\(\) returns a pointer to a string containing the error message.)-636.797(This may be)]TJ
+-122.326 -12 Td
+0.417 Tw
+(either a pointer to a string that the function stores in)Tj
+-0.2 Tc
+/R9 10 Tf
+214.725 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+2.916 Tc
+/R7 10 Tf
+4.73945 0 Td
+[(,o)291.599(rap)]TJ
+0 Tc
+29.1281 0 Td
+0.416 Tw
+(ointer to some \(immutable\) static string \(in)Tj
+-258.393 -12 Td
+0.661 Tw
+(which case)Tj
+-0.2 Tc
+/R9 10 Tf
+47.9719 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+/R7 10 Tf
+7.90039 0 Td
+[(is unused\).)-566.057(If the function stores a string in)]TJ
+-0.2 Tc
+/R9 10 Tf
+182.498 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+3.161 Tc
+/R7 10 Tf
+4.73945 0 Td
+(,t)Tj
+0 Tc
+8.44102 0 Td
+(hen at most)Tj
+-0.2 Tc
+/R9 10 Tf
+50.5926 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+<8D656E>Tj
+/R7 10 Tf
+17.8406 0 Td
+(bytes are stored \(the)Tj
+-349.384 -12 Td
+0 Tw
+(string may be truncated if)Tj
+-0.2 Tc
+/R9 10 Tf
+105.48 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+<8D656E>Tj
+/R7 10 Tf
+17.1797 0 Td
+(is too small\) and the string al)Tj
+-0.1 Tc
+116.12 0 Td
+(wa)Tj
+0 Tc
+11.5598 0 Td
+(ys includes a terminating null byte.)Tj
+/R8 10.95 Tf
+-296.139 -28.7996 Td
+[(RETURN V)134.973(ALUE)]TJ
+/R7 10 Tf
+36 -12 Td
+(The)Tj
+/R8 10 Tf
+18.7867 0 Td
+[(str)17.9919(err)17.9761(or)]TJ
+/R7 10 Tf
+34.0602 0 Td
+0.737 Tw
+(\(\) and)Tj
+/R8 10 Tf
+27.5734 0 Td
+[(str)17.9919(err)17.9761(or_r)]TJ
+/R7 10 Tf
+43.5 0 Td
+(\(\) functions return the appropriate error description string, or an "Unkno)Tj
+296.96 0 Td
+(wn)Tj
+-420.88 -12 Td
+0 Tw
+[(error nnn" message if the error number is unkno)25.0171(wn.)]TJ
+0.631 Tw
+(The XSI-compliant)'
+/R8 10 Tf
+81.2117 0 Td
+[(str)17.9919(err)17.9761(or_r)]TJ
+/R7 10 Tf
+43.5 0 Td
+(\(\) function returns 0 on success; on error)Tj
+3.131 Tc
+167.027 0 Td
+[<2CAD>313.091(1i)313.105(sr)]TJ
+0 Tc
+32.643 0 Td
+(eturned and)Tj
+/R9 10 Tf
+50.9914 0 Td
+(errno)Tj
+/R7 10 Tf
+25.5316 0 Td
+0.632 Tw
+(is set to)Tj
+-400.905 -12 Td
+0 Tw
+[(indicate the error)55.0159(.)]TJ
+/R8 10.95 Tf
+-36 -28.8 Td
+[(ERR)30.0694(ORS)]TJ
+/R8 10 Tf
+36 -12 Td
+[(EINV)135.007(AL)]TJ
+/R7 10 Tf
+36 -12 Td
+[(The v)25(alue of)]TJ
+/R9 10 Tf
+52.9797 0 Td
+(errnum)Tj
+/R7 10 Tf
+32.2598 0 Td
+[(is not a v)25.0146(alid error number)55.0073(.)]TJ
+/R8 10 Tf
+-121.239 -16.8 Td
+(ERANGE)Tj
+/R7 10 Tf
+36 -12 Td
+[(Insuf)25.0232(\214cient storage w)10.0244(as supplied to contain the error description string.)]TJ
+/R8 10.95 Tf
+-72 -28.7996 Td
+[(CONFORMING T)17.9873(O)]TJ
+/R7 10 Tf
+36 -12 Td
+(POSIX.1-2001.)Tj
+(The GNU-speci\214c)'
+/R8 10 Tf
+76.0898 0 Td
+[(str)17.9919(err)17.9761(or_r)]TJ
+/R7 10 Tf
+43.5 0 Td
+[(\(\) function is a non-standard e)15.0244(xtension.)]TJ
+55.0801 -55.2004 Td
+203.17 Tw
+(2005-12-13 1)Tj
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+6656
+endobj
+12 0 obj
+<</Length 13 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+(STRERR)Tj
+37.2398 0 Td
+110.51 Tw
+(OR\(3\) Linux)Tj
+164.9 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual STRERR)Tj
+171.91 0 Td
+(OR\(3\))Tj
+-406.329 -36 Td
+1.314 Tw
+(POSIX.1-2001 permits)Tj
+/R8 10 Tf
+97.3773 0 Td
+[(str)17.9932(err)17.9761(or)]TJ
+/R7 10 Tf
+34.0602 0 Td
+1.313 Tw
+(\(\) to set)Tj
+/R9 10 Tf
+37.1785 0 Td
+(errno)Tj
+/R7 10 Tf
+26.2129 0 Td
+(if the call encounters an error)Tj
+3.813 Tc
+124.065 0 Td
+(,b)Tj
+0 Tc
+11.1129 0 Td
+(ut does not specify what)Tj
+-0.25 Tc
+-330.007 -12 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+0.064 Tw
+(lue should be returned as the function result in the e)Tj
+-0.15 Tc
+207.91 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+0.065 Tw
+(nt of an error)Tj
+5.065 Tc
+52.4547 0 Td
+(.O)Tj
+2.565 Tc
+14.7852 0 Td
+(ns)Tj
+0 Tc
+11.4551 0 Td
+(ome systems,)Tj
+/R8 10 Tf
+56.5195 0 Td
+[(str)17.9932(err)17.9785(or)]TJ
+/R7 10 Tf
+34.0602 0 Td
+(\(\) returns)Tj
+-395.664 -12 Td
+0.25 Tw
+(NULL if the error number is unkno)Tj
+143.33 0 Td
+2.749 Tw
+(wn. On)Tj
+34.9375 0 Td
+0.249 Tw
+(other systems,)Tj
+/R8 10 Tf
+60.3277 0 Td
+[(str)17.9932(err)17.9761(or)]TJ
+/R7 10 Tf
+34.0602 0 Td
+(\(\) returns a string something lik)Tj
+2.749 Tc
+127.855 0 Td
+(e")Tj
+0 Tc
+11.2691 0 Td
+(Error)Tj
+-411.779 -12 Td
+0 Tw
+(nnn occurred" and sets)Tj
+/R9 10 Tf
+93.9098 0 Td
+(errno)Tj
+/R7 10 Tf
+24.8996 0 Td
+(to)Tj
+/R8 10 Tf
+10.2797 0 Td
+[(EINV)135.007(AL)]TJ
+/R7 10 Tf
+39.9797 0 Td
+[(if the error number is unkno)25.0073(wn.)]TJ
+/R8 10.95 Tf
+-205.069 -28.8 Td
+(SEE ALSO)Tj
+/R8 10 Tf
+36 -12 Td
+(err)Tj
+/R7 10 Tf
+13.3199 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+[(err)15.0073(no)]TJ
+/R7 10 Tf
+23.7297 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+[(err)17.9761(or)]TJ
+/R7 10 Tf
+22.5801 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+[(perr)18(or)]TJ
+/R7 10 Tf
+28.1398 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(strsignal)Tj
+/R7 10 Tf
+36.6699 0 Td
+(\(3\))Tj
+-16.4086 -607.2 Td
+203.17 Tw
+(2005-12-13 2)Tj
+ET
+Q
+Q
+endstream
+endobj
+13 0 obj
+1943
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 10 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+11 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 14 0 R
+>>
+/Contents 12 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+11 0 R
+] /Count 2
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+10 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+14 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Encoding 15 0 R/Subtype/Type1>>
+endobj
+15 0 obj
+<</Type/Encoding/Differences[
+140/fi]>>
+endobj
+7 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Encoding 16 0 R/Subtype/Type1>>
+endobj
+16 0 obj
+<</Type/Encoding/Differences[
+140/fi
+173/minus]>>
+endobj
+9 0 obj
+<</BaseFont/Times-Italic/Type/Font
+/Encoding 17 0 R/Subtype/Type1>>
+endobj
+17 0 obj
+<</Type/Encoding/Differences[
+141/fl]>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120228173255)
+/ModDate(D:20120228173255)>>endobj
+xref
+0 18
+0000000000 65535 f 
+0000009085 00000 n 
+0000009653 00000 n 
+0000009019 00000 n 
+0000008751 00000 n 
+0000000009 00000 n 
+0000006715 00000 n 
+0000009366 00000 n 
+0000009229 00000 n 
+0000009514 00000 n 
+0000009133 00000 n 
+0000008884 00000 n 
+0000006735 00000 n 
+0000008730 00000 n 
+0000009181 00000 n 
+0000009310 00000 n 
+0000009448 00000 n 
+0000009597 00000 n 
+trailer
+<< /Size 18 /Root 1 0 R /Info 2 0 R
+/ID [<82F81EF17712423A72582223553B51F2><82F81EF17712423A72582223553B51F2>]
+>>
+startxref
+9764
+%%EOF

@@ -1,0 +1,720 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+(ST)Tj
+-1.11 Tc
+10.7402 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+163.41 Tw
+[(\(1\) User)-249.976(Commands ST)]TJ
+-1.11 Tc
+421.27 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+(\(1\))Tj
+-0.219 Tc
+/R8 10.95 Tf
+-456.449 -36 Td
+(NA)Tj
+0 Tc
+15.5922 0 Td
+(ME)Tj
+/R7 10 Tf
+20.4078 -12 Td
+0 Tw
+(stat \255 display \214le or \214le system status)Tj
+/R8 10.95 Tf
+-36 -16.8 Td
+(SYNOPSIS)Tj
+/R8 10 Tf
+36 -12 Td
+(stat)Tj
+/R7 10 Tf
+18.05 0 Td
+([)Tj
+/R9 10 Tf
+3.32969 0 Td
+(OPTION)Tj
+/R7 10 Tf
+35.9898 0 Td
+(])Tj
+/R9 10 Tf
+5.82969 0 Td
+(FILE)Tj
+/R7 10 Tf
+21.1 0 Td
+(...)Tj
+/R8 10.95 Tf
+-120.299 -16.8 Td
+(DESCRIPTION)Tj
+/R7 10 Tf
+36 -12 Td
+(Display \214le or \214le system status.)Tj
+/R8 10 Tf
+16.7996 TL
+<AD4C>'
+/R7 10 Tf
+12.3398 0 Td
+(,)Tj
+/R8 10 Tf
+5 0 Td
+[<ADAD646572>17.9846(efer)17.9688(ence)]TJ
+/R7 10 Tf
+18.6602 -12 Td
+(follo)Tj
+2.5 Tc
+18.6398 0 Td
+(wl)Tj
+0 Tc
+12.5 0 Td
+(inks)Tj
+/R8 10 Tf
+-67.1398 -16.8 Td
+<AD5A>Tj
+/R7 10 Tf
+12.3699 0 Td
+(,)Tj
+/R8 10 Tf
+5 0 Td
+(\255\255context)Tj
+/R7 10 Tf
+18.6301 -12 Td
+[(print the security conte)15(xt information if a)]TJ
+-0.25 Tc
+164.96 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(ilable)Tj
+/R8 10 Tf
+-210.15 -16.8004 Td
+<AD66>Tj
+/R7 10 Tf
+9.02969 0 Td
+(,)Tj
+/R8 10 Tf
+5 0 Td
+<ADAD8C6C65AD73797374656D>Tj
+/R7 10 Tf
+21.9703 -12 Td
+(display \214le system status instead of \214le status)Tj
+/R8 10 Tf
+-36 -16.7996 Td
+2.5 Tw
+<AD6320ADAD66>Tj
+29.6199 0 Td
+(ormat)Tj
+/R7 10 Tf
+26.1 0 Td
+(=)Tj
+/R9 10 Tf
+5.63984 0 Td
+[(FORMA)37.0239(T)]TJ
+/R7 10 Tf
+-25.3598 -12 Td
+0 Tw
+(use the speci\214ed FORMA)Tj
+2.5 Tc
+102.94 0 Td
+(Ti)Tj
+0 Tc
+11.3898 0 Td
+[(nstead of the def)10.0073(ault; output a ne)25.0073(wline after each use of FORMA)111.011(T)]TJ
+/R8 10 Tf
+-150.33 -16.8004 Td
+(\255\255printf)Tj
+/R7 10 Tf
+36.4 0 Td
+(=)Tj
+/R9 10 Tf
+5.63984 0 Td
+[(FORMA)37.0239(T)]TJ
+/R7 10 Tf
+-6.03984 -12 Td
+[(lik)10.0232(e)]TJ
+/R8 10 Tf
+17.5926 0 Td
+[<ADAD66>25.0317(ormat)]TJ
+2.693 Tc
+/R7 10 Tf
+40.5797 0 Td
+(,b)Tj
+0 Tc
+9.99297 0 Td
+0.192 Tw
+(ut interpret backslash escapes, and do not output a mandatory trailing ne)Tj
+291.702 0 Td
+2.692 Tw
+(wline. If)Tj
+-359.867 -12 Td
+0 Tw
+[(you w)10.0073(ant a ne)25(wline, include \\n in FORMA)]TJ
+-0.74 Tc
+169.53 0 Td
+(T.)Tj
+0 Tc
+/R8 10 Tf
+-205.53 -16.7996 Td
+<AD74>Tj
+/R7 10 Tf
+9.02969 0 Td
+(,)Tj
+/R8 10 Tf
+5 0 Td
+(\255\255terse)Tj
+/R7 10 Tf
+21.9703 -12 Td
+(print the information in terse form)Tj
+/R8 10 Tf
+-36 -16.8004 Td
+<ADAD68656C70>Tj
+/R7 10 Tf
+36 0 Td
+[(display this help and e)15.0171(xit)]TJ
+/R8 10 Tf
+-36 -16.8 Td
+[<ADAD76>10(ersion)]TJ
+/R7 10 Tf
+36 -12 Td
+[(output v)15.0232(ersion information and e)15.0244(xit)]TJ
+-36 -16.7996 Td
+[(The v)25(alid format sequences for \214les \(without)]TJ
+/R8 10 Tf
+182.44 0 Td
+<ADAD8C6C65AD73797374656D>Tj
+/R7 10 Tf
+58.7598 0 Td
+(\):)Tj
+-241.2 -16.8004 Td
+20.73 Tw
+(%a Access)Tj
+66.8199 0 Td
+0 Tw
+(rights in octal)Tj
+-66.8199 -16.7996 Td
+17.95 Tw
+(%A Access)Tj
+66.8199 0 Td
+0 Tw
+(rights in human readable form)Tj
+-66.8199 -16.8004 Td
+20.17 Tw
+(%b Number)Tj
+71.3797 0 Td
+0 Tw
+(of blocks allocated \(see %B\))Tj
+-71.3797 -16.8 Td
+18.5 Tw
+(%B The)Tj
+54 0 Td
+0 Tw
+(size in bytes of each block reported by %b)Tj
+-54 -16.7996 Td
+20.17 Tw
+(%d De)Tj
+47.3699 0 Td
+0 Tw
+(vice number in decimal)Tj
+-47.3699 -16.8004 Td
+17.95 Tw
+(%D De)Tj
+47.3297 0 Td
+0 Tw
+[(vice number in he)15.0171(x)]TJ
+-47.3297 -16.8 Td
+21.84 Tw
+(%f Ra)Tj
+2.5 Tc
+46.9098 0 Td
+(wm)Tj
+0 Tc
+17.5 0 Td
+0 Tw
+[(ode in he)15.0244(x)]TJ
+-64.4098 -16.8 Td
+19.61 Tw
+(%F File)Tj
+54.0598 0 Td
+(type)Tj
+-54.0598 -16.8 Td
+20.17 Tw
+(%g Group)Tj
+64.1598 0 Td
+0 Tw
+[(ID of o)25(wner)]TJ
+-64.1598 -16.7996 Td
+17.95 Tw
+(%G Group)Tj
+64.1598 0 Td
+0 Tw
+[(name of o)25.0146(wner)]TJ
+-64.1598 -16.8 Td
+20.17 Tw
+(%h Number)Tj
+71.3797 0 Td
+0 Tw
+(of hard links)Tj
+-71.3797 -16.8004 Td
+22.39 Tw
+(%i Inode)Tj
+61.2297 0 Td
+(number)Tj
+-61.2297 -16.8 Td
+20.17 Tw
+(%n File)Tj
+54.0598 0 Td
+(name)Tj
+-54.0598 -16.8 Td
+17.95 Tw
+(%N Quoted)Tj
+67.9398 0 Td
+0 Tw
+(\214le name with dereference if symbolic link)Tj
+-67.9398 -16.7996 Td
+20.17 Tw
+(%o I/O)Tj
+51.7898 0 Td
+0 Tw
+(block size)Tj
+-51.7898 -16.8 Td
+21.28 Tw
+(%s T)Tj
+41.3098 0 Td
+0 Tw
+(otal size, in bytes)Tj
+-41.3098 -16.8004 Td
+22.39 Tw
+(%t Major)Tj
+62.9898 0 Td
+0 Tw
+[(de)25.0159(vice type in he)15(x)]TJ
+-62.9898 -16.8 Td
+19.06 Tw
+(%T Minor)Tj
+63.55 0 Td
+0 Tw
+[(de)25.0159(vice type in he)15(x)]TJ
+-99.55 -64.8 Td
+(stat 5.97)Tj
+204.7 0 Td
+(February 2010)Tj
+258.52 0 Td
+(1)Tj
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+4397
+endobj
+12 0 obj
+<</Length 13 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+(ST)Tj
+-1.11 Tc
+10.7402 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+163.41 Tw
+[(\(1\) User)-249.976(Commands ST)]TJ
+-1.11 Tc
+421.27 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+(\(1\))Tj
+-420.449 -36 Td
+20.17 Tw
+(%u User)Tj
+57.4898 0 Td
+0 Tw
+[(ID of o)25(wner)]TJ
+-57.4898 -16.8 Td
+17.95 Tw
+(%U User)Tj
+57.4898 0 Td
+0 Tw
+[(name of o)25.0146(wner)]TJ
+-57.4898 -16.7996 Td
+20.17 Tw
+(%x T)Tj
+41.7602 0 Td
+0 Tw
+(ime of last access)Tj
+-41.7602 -16.8 Td
+17.95 Tw
+(%X T)Tj
+41.7602 0 Td
+0 Tw
+(ime of last access as seconds since Epoch)Tj
+-41.7602 -16.8 Td
+20.17 Tw
+(%y T)Tj
+41.7602 0 Td
+0 Tw
+(ime of last modi\214cation)Tj
+-41.7602 -16.8004 Td
+17.95 Tw
+(%Y T)Tj
+41.7602 0 Td
+0 Tw
+(ime of last modi\214cation as seconds since Epoch)Tj
+-41.7602 -16.8 Td
+20.73 Tw
+(%z T)Tj
+41.7602 0 Td
+0 Tw
+(ime of last change)Tj
+-41.7602 -16.8 Td
+19.06 Tw
+(%Z T)Tj
+41.7602 0 Td
+0 Tw
+(ime of last change as seconds since Epoch)Tj
+-1.11 Tc
+-41.7602 -16.7996 Td
+(Va)Tj
+0 Tc
+10.5496 0 Td
+(lid format sequences for \214le systems:)Tj
+-10.5496 -16.8 Td
+20.73 Tw
+(%a Free)Tj
+56.3797 0 Td
+0 Tw
+(blocks a)Tj
+-0.25 Tc
+32.85 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(ilable to non\255superuser)Tj
+-98.4195 -16.8004 Td
+20.17 Tw
+(%b T)Tj
+41.3098 0 Td
+0 Tw
+(otal data blocks in \214le system)Tj
+-41.3098 -16.7996 Td
+20.73 Tw
+(%c T)Tj
+41.3098 0 Td
+0 Tw
+(otal \214le nodes in \214le system)Tj
+-41.3098 -16.8004 Td
+20.17 Tw
+(%d Free)Tj
+56.3797 0 Td
+0 Tw
+(\214le nodes in \214le system)Tj
+-56.3797 -16.7996 Td
+21.84 Tw
+(%f Free)Tj
+56.3797 0 Td
+0 Tw
+(blocks in \214le system)Tj
+-56.3797 -16.8004 Td
+18.5 Tw
+(%C Security)Tj
+71.9398 0 Td
+0 Tw
+[(conte)15.0232(xt in SELinux)]TJ
+-71.9398 -16.8 Td
+22.39 Tw
+(%i File)Tj
+54.0598 0 Td
+0 Tw
+[(System ID in he)15.0171(x)]TJ
+-54.0598 -16.7996 Td
+22.39 Tw
+(%l Maximum)Tj
+80.1098 0 Td
+0 Tw
+(length of \214lenames)Tj
+-80.1098 -16.8004 Td
+20.17 Tw
+(%n File)Tj
+54.0598 0 Td
+(name)Tj
+-54.0598 -16.7996 Td
+21.28 Tw
+(%s Block)Tj
+62.3398 0 Td
+0 Tw
+[(size \(for f)10.0317(aster transfers\))]TJ
+-62.3398 -16.8004 Td
+19.61 Tw
+(%S Fundamental)Tj
+90.7199 0 Td
+0 Tw
+(block size \(for block counts\))Tj
+-90.7199 -16.8 Td
+22.39 Tw
+(%t T)Tj
+41.3098 0 Td
+0 Tw
+[(ype in he)15.0232(x)]TJ
+-41.3098 -16.7996 Td
+19.06 Tw
+(%T T)Tj
+41.3098 0 Td
+0 Tw
+(ype in human readable form)Tj
+-41.3098 -16.8004 Td
+(NO)Tj
+14.0398 0 Td
+0.835 Tw
+(TE: your shell may ha)Tj
+-0.15 Tc
+92.1297 0 Td
+1.135 Tw
+(ve i)Tj
+0 Tc
+15.4047 0 Td
+0.835 Tw
+(ts o)Tj
+14.7547 0 Td
+0.836 Tw
+[(wn v)15.0146(ersion of stat, which usually supersedes the v)15.0049(ersion described here.)]TJ
+-136.329 -12 Td
+0 Tw
+(Please refer to your shell')Tj
+2.5 Tc
+102.49 0 Td
+(sd)Tj
+0 Tc
+11.3898 0 Td
+(ocumentation for details about the options it supports.)Tj
+-0.548 Tc
+/R8 10.95 Tf
+-149.88 -16.7996 Td
+(AU)Tj
+0 Tc
+15.2633 0 Td
+(THOR)Tj
+/R7 10 Tf
+20.7367 -12 Td
+[(Written by Michael Mesk)10.0317(es.)]TJ
+/R8 10.95 Tf
+-36 -16.8004 Td
+[(REPOR)40.0034(TING B)10.0254(UGS)]TJ
+/R7 10 Tf
+36 -12 Td
+[(Report b)20.0317(ugs to <b)20.0232(ug\255coreutils@gnu.or)17.9858(g>.)]TJ
+/R8 10.95 Tf
+-36 -16.8 Td
+(COPYRIGHT)Tj
+/R7 10 Tf
+36 -12 Td
+[(Cop)10.0073(yright \251 2006 Free Softw)10.0073(are F)15.0317(oundation, Inc.)]TJ
+12 TL
+0.102 Tw
+(This is free softw)'
+70.0258 0 Td
+2.601 Tw
+(are. Y)Tj
+26.0406 0 Td
+0.101 Tw
+[(ou may redistrib)20.0122(ute copies of it under the terms of the GNU General Public License)]TJ
+-96.0664 -12 Td
+[(<http://www)64.9609(.gnu.or)]TJ
+78.8105 0 Td
+2.5 Tw
+(g/licenses/gpl.html>. There)Tj
+114.91 0 Td
+0 Tw
+[(is NO W)120(ARRANTY)]TJ
+2.5 Tc
+81.2898 0 Td
+[(,t)250.032(ot)]TJ
+0 Tc
+18.0594 0 Td
+[(he e)15.0293(xtent permitted by la)]TJ
+-0.65 Tc
+99.2395 0 Td
+(w.)Tj
+0 Tc
+/R8 10.95 Tf
+-428.309 -16.7996 Td
+(SEE ALSO)Tj
+/R7 10 Tf
+36 -12 Td
+0.269 Tw
+(The full documentation for)Tj
+/R8 10 Tf
+111.725 0 Td
+(stat)Tj
+/R7 10 Tf
+18.3188 0 Td
+(is maintained as a T)Tj
+-0.15 Tc
+80.366 0 Td
+(ex)Tj
+0 Tc
+9.28984 0 Td
+(info manual.)Tj
+56.0887 0 Td
+0.27 Tw
+(If the)Tj
+/R8 10 Tf
+24.3797 0 Td
+[(inf)25.0098(o)]TJ
+/R7 10 Tf
+19.1898 0 Td
+(and)Tj
+/R8 10 Tf
+17.2098 0 Td
+(stat)Tj
+/R7 10 Tf
+18.3199 0 Td
+(programs are prop-)Tj
+-354.888 -12 Td
+0 Tw
+(erly installed at your site, the command)Tj
+/R8 10 Tf
+36 -16.8 Td
+(inf)Tj
+2.5 Tc
+11.4199 0 Td
+(os)Tj
+0 Tc
+11.3898 0 Td
+(tat)Tj
+/R7 10 Tf
+-58.8098 -16.8004 Td
+(should gi)Tj
+-0.15 Tc
+36.7 0 Td
+0.3 Tw
+(ve y)Tj
+0 Tc
+16.7898 0 Td
+0 Tw
+(ou access to the complete manual.)Tj
+-89.4898 -117.6 Td
+(stat 5.97)Tj
+204.7 0 Td
+(February 2010)Tj
+258.52 0 Td
+(2)Tj
+ET
+Q
+Q
+endstream
+endobj
+13 0 obj
+4447
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 10 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+11 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 14 0 R
+>>
+/Contents 12 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+11 0 R
+] /Count 2
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+10 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+14 0 obj
+<</R8
+8 0 R/R7
+7 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Encoding 15 0 R/Subtype/Type1>>
+endobj
+15 0 obj
+<</Type/Encoding/Differences[
+140/fi
+173/minus]>>
+endobj
+7 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Encoding 16 0 R/Subtype/Type1>>
+endobj
+16 0 obj
+<</Type/Encoding/Differences[
+140/fi
+169/copyright
+173/minus]>>
+endobj
+9 0 obj
+<</BaseFont/Times-Italic/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120228173254)
+/ModDate(D:20120228173254)>>endobj
+xref
+0 17
+0000000000 65535 f 
+0000009330 00000 n 
+0000009841 00000 n 
+0000009264 00000 n 
+0000008996 00000 n 
+0000000009 00000 n 
+0000004456 00000 n 
+0000009612 00000 n 
+0000009465 00000 n 
+0000009774 00000 n 
+0000009378 00000 n 
+0000009129 00000 n 
+0000004476 00000 n 
+0000008975 00000 n 
+0000009426 00000 n 
+0000009546 00000 n 
+0000009694 00000 n 
+trailer
+<< /Size 17 /Root 1 0 R /Info 2 0 R
+/ID [<CE0DC5343523C331192694ACA83FA04F><CE0DC5343523C331192694ACA83FA04F>]
+>>
+startxref
+9952
+%%EOF

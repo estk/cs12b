@@ -1,0 +1,316 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+137.35 Tw
+(TIME\(2\) Linux)Tj
+202.24 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual TIME\(2\))Tj
+-0.219 Tc
+/R8 10.95 Tf
+-270.52 -36 Td
+(NA)Tj
+0 Tc
+15.5922 0 Td
+(ME)Tj
+/R7 10 Tf
+20.4078 -12 Td
+0 Tw
+(time \255 get time in seconds)Tj
+/R8 10.95 Tf
+-36 -16.8 Td
+(SYNOPSIS)Tj
+/R8 10 Tf
+36 -12 Td
+(#include <time.h>)Tj
+24 TL
+(time_t time\(time_t *)'
+/R9 10 Tf
+86.7594 0 Td
+(t)Tj
+/R8 10 Tf
+3.45938 0 Td
+(\);)Tj
+/R8 10.95 Tf
+-126.219 -16.8 Td
+(DESCRIPTION)Tj
+/R8 10 Tf
+36 -12 Td
+(time)Tj
+/R7 10 Tf
+18.8797 0 Td
+(\(\) returns the time since the Epoch \(00:00:00 UTC, January 1, 1970\), measured in seconds.)Tj
+-18.8797 -24 Td
+(If)Tj
+/R9 10 Tf
+9.24961 0 Td
+(t)Tj
+/R7 10 Tf
+5.95937 0 Td
+[(is non-NULL, the return v)25.0317(alue is also stored in the memory pointed to by)]TJ
+/R9 10 Tf
+295.439 0 Td
+(t)Tj
+/R7 10 Tf
+3.45938 0 Td
+(.)Tj
+/R8 10.95 Tf
+-350.108 -16.7996 Td
+[(RETURN V)134.973(ALUE)]TJ
+/R7 10 Tf
+36 -12 Td
+0.973 Tw
+[(On success, the v)25.0171(alue of time in seconds since the Epoch is returned.)-597.251(On error)]TJ
+3.473 Tc
+327.621 0 Td
+(,\()Tj
+0 Tc
+9.30312 0 Td
+(\(time_t\)\2551\) is returned,)Tj
+-336.924 -12 Td
+(and)Tj
+/R9 10 Tf
+16.9398 0 Td
+(errno)Tj
+/R7 10 Tf
+24.7199 0 Td
+0 Tw
+[(is set appropriately)64.9683(.)]TJ
+/R8 10.95 Tf
+-77.6598 -16.8004 Td
+[(ERR)30.0694(ORS)]TJ
+/R8 10 Tf
+36 -12 Td
+(EF)Tj
+-0.5 Tc
+11.8801 0 Td
+(AU)Tj
+-0.92 Tc
+13.9398 0 Td
+(LT)Tj
+0 Tc
+/R9 10 Tf
+10.3098 -12 Td
+(t)Tj
+/R7 10 Tf
+5.95937 0 Td
+(points outside your accessible address space.)Tj
+/R8 10.95 Tf
+-78.0891 -16.8 Td
+[(NO)39.99(TES)]TJ
+/R7 10 Tf
+36 -12 Td
+0.458 Tw
+(POSIX.1 de\214nes)Tj
+/R9 10 Tf
+70.8953 0 Td
+0.459 Tw
+(seconds since the Epoc)Tj
+93.6367 0 Td
+(h)Tj
+/R7 10 Tf
+8.23867 0 Td
+[(as a v)25.0122(alue to be interpreted as the number of seconds between a)]TJ
+-172.771 -12 Td
+0.247 Tw
+(speci\214ed time and the Epoch, according to a formula for con)Tj
+-0.15 Tc
+244.85 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion from UTC equi)Tj
+-0.25 Tc
+84.8707 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(lent to con)Tj
+-0.15 Tc
+42.3137 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+0.246 Tw
+(rsion on)Tj
+-399.804 -12 Td
+0.704 Tw
+(the nai)Tj
+-0.15 Tc
+27.3938 0 Td
+1.004 Tw
+(ve b)Tj
+0 Tc
+17.4937 0 Td
+0.704 Tw
+(asis that leap seconds are ignored and all years di)Tj
+203.316 0 Td
+0.705 Tw
+[(visible by 4 are leap years.)-570.444(This v)25.0244(alue is not)]TJ
+-248.203 -12 Td
+1.027 Tw
+(the same as the actual number of seconds between the time and the Epoch, because of leap seconds and)Tj
+12 TL
+0.544 Tw
+T*[(because clocks are not required to be synchronised to a standard reference.)-554.351(The intention is that the inter)]TJ
+429.547 0 Td
+(-)Tj
+-429.547 -12 Td
+0.12 Tw
+[(pretation of seconds since the Epoch v)25.0171(alues be consistent; see POSIX.1 Anne)]TJ
+2.62 Tc
+310.9 0 Td
+(xB2)Tj
+0 Tc
+21.8598 0 Td
+(.2.2 for further rationale.)Tj
+/R8 10.95 Tf
+-368.759 -16.7996 Td
+0 Tw
+[(CONFORMING T)17.9873(O)]TJ
+/R7 10 Tf
+36 -12 Td
+(SVr4, 4.3BSD, POSIX.1-2001.)Tj
+(Under 4.3BSD, this call is obsoleted by)'
+/R8 10 Tf
+160.85 0 Td
+(gettimeofday)Tj
+/R7 10 Tf
+55.5398 0 Td
+2.5 Tw
+(\(2\). POSIX)Tj
+50.4699 0 Td
+0 Tw
+(does not specify an)Tj
+2.5 Tc
+76.7797 0 Td
+(ye)Tj
+0 Tc
+11.9398 0 Td
+(rror conditions.)Tj
+/R8 10.95 Tf
+-391.579 -16.8004 Td
+(SEE ALSO)Tj
+/R8 10 Tf
+36 -12 Td
+(date)Tj
+/R7 10 Tf
+18.3297 0 Td
+(\(1\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(gettimeofday)Tj
+/R7 10 Tf
+55.5398 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(ctime)Tj
+/R7 10 Tf
+23.3199 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(ftime)Tj
+/R7 10 Tf
+22.2098 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(time)Tj
+/R7 10 Tf
+18.8797 0 Td
+(\(7\))Tj
+-240.918 -326.4 Td
+(Linux 2.0.30)Tj
+210.67 0 Td
+203.17 Tw
+(1997-09-09 1)Tj
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+3705
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 10 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+] /Count 1
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+10 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Encoding 11 0 R/Subtype/Type1>>
+endobj
+11 0 obj
+<</Type/Encoding/Differences[
+140/fi
+173/minus]>>
+endobj
+9 0 obj
+<</BaseFont/Times-Italic/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120228173255)
+/ModDate(D:20120228173255)>>endobj
+xref
+0 12
+0000000000 65535 f 
+0000003976 00000 n 
+0000004352 00000 n 
+0000003917 00000 n 
+0000003784 00000 n 
+0000000009 00000 n 
+0000003764 00000 n 
+0000004137 00000 n 
+0000004072 00000 n 
+0000004285 00000 n 
+0000004024 00000 n 
+0000004219 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R /Info 2 0 R
+/ID [<417BB292AE42E6C635547CD56F44E50F><417BB292AE42E6C635547CD56F44E50F>]
+>>
+startxref
+4463
+%%EOF

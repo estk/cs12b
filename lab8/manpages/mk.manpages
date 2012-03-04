@@ -1,0 +1,11 @@
+#!/bin/sh -x
+# $Id: mk.manpages,v 1.7 2012-02-28 17:32:53-08 - - $
+# Make man(1) pages for this lab.
+cid + $0
+for man in 1-ls 1-man 1-stat 2-lstat 2-readlink 2-time \
+   3-localtime 3-strerror 3-strftime
+do
+   section=`echo $man | sed 's/-.*//'`
+   manpage=`echo $man | sed 's/.*-//'`
+   mkman man.$section.$manpage -s $section $manpage
+done

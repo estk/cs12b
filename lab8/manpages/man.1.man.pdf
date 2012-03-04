@@ -1,0 +1,2547 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+407.74 Tw
+(man\(1\) man\(1\))Tj
+-0.219 Tc
+/R8 10.95 Tf
+36 TL
+(NA)'
+0 Tc
+15.5922 0 Td
+(ME)Tj
+/R7 10 Tf
+20.4078 -12 Td
+0 Tw
+(man \255 format and display the on-line manual pages)Tj
+/R8 10.95 Tf
+-36 -16.8 Td
+(SYNOPSIS)Tj
+/R8 10 Tf
+36 -12 Td
+(man)Tj
+/R7 10 Tf
+22.1977 0 Td
+([)Tj
+/R8 10 Tf
+3.32969 0 Td
+(\255acdfFhkKtwW)Tj
+3.308 Tc
+/R7 10 Tf
+69.45 0 Td
+(][)Tj
+0 Tc
+/R8 10 Tf
+9.96797 0 Td
+(--path)Tj
+3.308 Tc
+/R7 10 Tf
+26.1098 0 Td
+(][)Tj
+0 Tc
+/R8 10 Tf
+9.96797 0 Td
+<AD6D>Tj
+/R9 10 Tf
+17.3375 0 Td
+(system)Tj
+3.308 Tc
+/R7 10 Tf
+26.9797 0 Td
+(][)Tj
+0 Tc
+/R8 10 Tf
+9.96797 0 Td
+<AD70>Tj
+/R9 10 Tf
+14.5676 0 Td
+(string)Tj
+3.308 Tc
+/R7 10 Tf
+23.5598 0 Td
+(][)Tj
+0 Tc
+/R8 10 Tf
+9.96797 0 Td
+<AD43>Tj
+/R9 10 Tf
+16.2277 0 Td
+(con\214g_\214le)Tj
+3.308 Tc
+/R7 10 Tf
+41.8395 0 Td
+(][)Tj
+0 Tc
+/R8 10 Tf
+9.96797 0 Td
+<AD4D>Tj
+/R9 10 Tf
+18.4363 0 Td
+(pathlist)Tj
+3.307 Tc
+/R7 10 Tf
+30.6895 0 Td
+(][)Tj
+0 Tc
+/R8 10 Tf
+9.96719 0 Td
+<AD50>Tj
+/R9 10 Tf
+15.1164 0 Td
+(pa)Tj
+-0.1 Tc
+9.9 0 Td
+(ge)Tj
+0 Tc
+9.33984 0 Td
+(r)Tj
+3.307 Tc
+/R7 10 Tf
+4.61953 0 Td
+(][)Tj
+0 Tc
+/R8 10 Tf
+9.96719 0 Td
+<AD42>Tj
+/R9 10 Tf
+-419.475 -12 Td
+[(br)44.9768(owser)]TJ
+2.5 Tc
+/R7 10 Tf
+33.0598 0 Td
+(][)Tj
+0 Tc
+/R8 10 Tf
+9.15977 0 Td
+<AD48>Tj
+/R9 10 Tf
+15.9398 0 Td
+(htmlpa)Tj
+-0.1 Tc
+27.6797 0 Td
+(ge)Tj
+0 Tc
+9.33984 0 Td
+(r)Tj
+2.5 Tc
+/R7 10 Tf
+4.61953 0 Td
+(][)Tj
+0 Tc
+/R8 10 Tf
+9.15977 0 Td
+<AD53>Tj
+/R9 10 Tf
+13.7598 0 Td
+(section_list)Tj
+2.5 Tc
+/R7 10 Tf
+46.2395 0 Td
+(][)Tj
+0 Tc
+/R9 10 Tf
+9.5 0 Td
+(section)Tj
+/R7 10 Tf
+28.5695 0 Td
+(])Tj
+/R9 10 Tf
+6.18945 0 Td
+(name ...)Tj
+/R8 10.95 Tf
+-249.216 -28.8 Td
+(DESCRIPTION)Tj
+/R8 10 Tf
+36 -12 Td
+(man)Tj
+/R7 10 Tf
+21.6258 0 Td
+0.236 Tw
+[(formats and displays the on-line manual pages.)-523.579(If you specify)]TJ
+/R9 10 Tf
+253.5 0 Td
+(section)Tj
+/R7 10 Tf
+28.5695 0 Td
+(,)Tj
+/R8 10 Tf
+5.23672 0 Td
+(man)Tj
+/R7 10 Tf
+21.6266 0 Td
+0.237 Tw
+(only looks in that section)Tj
+-330.559 -12 Td
+0.242 Tw
+(of the manual.)Tj
+/R9 10 Tf
+63.5746 0 Td
+(name)Tj
+/R7 10 Tf
+24.5805 0 Td
+0.241 Tw
+(is normally the name of the manual page, which is typically the name of a command,)Tj
+-88.1551 -12 Td
+0.368 Tw
+(function, or \214le.)Tj
+70.6547 0 Td
+[(Ho)25(we)]TJ
+-0.15 Tc
+23.3098 0 Td
+(ve)Tj
+-0.4 Tc
+9.28984 0 Td
+1.169 Tw
+(r, i)Tj
+0 Tc
+11.1887 0 Td
+(f)Tj
+/R9 10 Tf
+6.55859 0 Td
+(name)Tj
+/R7 10 Tf
+24.7086 0 Td
+0.369 Tw
+(contains a slash \()Tj
+/R8 10 Tf
+69.7066 0 Td
+(/)Tj
+2.869 Tc
+/R7 10 Tf
+2.77969 0 Td
+(\)t)Tj
+0 Tc
+8.97891 0 Td
+(hen)Tj
+/R8 10 Tf
+17.3086 0 Td
+(man)Tj
+/R7 10 Tf
+21.7586 0 Td
+(interprets it as a \214le speci\214cation, so that)Tj
+-266.243 -12 Td
+0 Tw
+(you can do)Tj
+/R8 10 Tf
+46.3797 0 Td
+[(man ./f)25(oo.5)]TJ
+/R7 10 Tf
+49.75 0 Td
+(or e)Tj
+-0.15 Tc
+15.1297 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(n)Tj
+/R8 10 Tf
+7.5 0 Td
+[(man /cd/f)25.0317(oo/bar)100(.1.gz)]TJ
+/R7 10 Tf
+86.2492 0 Td
+(.)Tj
+-214.298 -16.7996 Td
+(See belo)Tj
+2.5 Tc
+33.9098 0 Td
+(wf)Tj
+0 Tc
+13.05 0 Td
+(or a description of where)Tj
+/R8 10 Tf
+102.8 0 Td
+(man)Tj
+/R7 10 Tf
+21.3898 0 Td
+(looks for the manual page \214les.)Tj
+/R8 10.95 Tf
+-207.15 -28.8004 Td
+(OPTIONS)Tj
+0.833 Tc
+/R8 10 Tf
+36 -12 Td
+0.834 Tw
+(\255C c)Tj
+0 Tc
+23.193 0 Td
+(on\214g_\214le)Tj
+/R7 10 Tf
+12.807 -12 Td
+0 Tw
+[(Specify the con\214guration \214le to use; the def)10.0098(ault is)]TJ
+/R8 10 Tf
+201.94 0 Td
+(/etc/man.con\214g)Tj
+5 Tc
+/R7 10 Tf
+64.7199 0 Td
+(.\()Tj
+0 Tc
+10.8297 0 Td
+(See)Tj
+/R8 10 Tf
+16.9398 0 Td
+(man.con\214g)Tj
+/R7 10 Tf
+46.95 0 Td
+(\(5\).\))Tj
+0.833 Tc
+/R8 10 Tf
+-377.379 -16.8 Td
+0.834 Tw
+(\255M p)Tj
+0 Tc
+26.523 0 Td
+(ath)Tj
+/R7 10 Tf
+9.47695 -12 Td
+0.868 Tw
+[(Specify the list of directories to search for man pages.)-586.768(Separate the directories with colons.)]TJ
+384.55 0 Td
+(An)Tj
+-384.55 -12 Td
+2.266 Tw
+(empty list is the same as not specifying)Tj
+/R8 10 Tf
+177.569 0 Td
+<AD4D>Tj
+/R7 10 Tf
+19.8965 0 Td
+2.267 Tw
+(at all.)Tj
+31.7535 0 Td
+(See)Tj
+/R8 10 Tf
+19.2066 0 Td
+(SEARCH P)Tj
+-0.95 Tc
+51.6668 0 Td
+(AT)Tj
+4.767 Tc
+12.9395 0 Td
+(HF)Tj
+0 Tc
+18.6172 0 Td
+(OR MANU)Tj
+50.1566 0 Td
+(AL)Tj
+-0.74 Tc
+-381.805 -12 Td
+-1.57 Tw
+(PA G)Tj
+0 Tc
+19.8195 0 Td
+(ES)Tj
+/R7 10 Tf
+12.2297 0 Td
+(.)Tj
+0.833 Tc
+/R8 10 Tf
+-68.0492 -16.7996 Td
+0.834 Tw
+(\255P p)Tj
+0 Tc
+23.2031 0 Td
+(ager)Tj
+/R7 10 Tf
+12.7969 -12 Td
+0.299 Tw
+(Specify which pager to use.)Tj
+117.413 0 Td
+0.298 Tw
+(This option o)Tj
+-0.15 Tc
+53.7859 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rrides the)Tj
+/R8 10 Tf
+40.8055 0 Td
+(MANP)Tj
+-0.55 Tc
+29.2398 0 Td
+(AG)Tj
+0 Tc
+14.45 0 Td
+(ER)Tj
+/R7 10 Tf
+16.5875 0 Td
+(en)Tj
+9.03984 0 Td
+[(vironment v)25.0049(ariable, which)]TJ
+-290.612 -12 Td
+0 Tw
+(in turn o)Tj
+-0.15 Tc
+33.85 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rrides the)Tj
+-0.74 Tc
+/R8 10 Tf
+40.2098 0 Td
+-1.57 Tw
+(PA G)Tj
+0 Tc
+19.8195 0 Td
+(ER)Tj
+-0.25 Tc
+/R7 10 Tf
+16.2898 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+2.5 Tw
+(riable. By)Tj
+44.5 0 Td
+[(def)10.0073(ault,)]TJ
+/R8 10 Tf
+32.6699 0 Td
+(man)Tj
+/R7 10 Tf
+21.3898 0 Td
+(uses)Tj
+/R8 10 Tf
+19.7199 0 Td
+0 Tw
+(/usr/bin/less -is)Tj
+/R7 10 Tf
+63.6297 0 Td
+(.)Tj
+0.833 Tc
+/R8 10 Tf
+-346.558 -16.8004 Td
+<AD42>Tj
+0 Tc
+/R7 10 Tf
+36 0 Td
+0.192 Tw
+[(Specify which bro)25.0342(wser to use on HTML \214les.)-519.148(This option o)]TJ
+-0.15 Tc
+243.259 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+0.193 Tw
+(rrides the)Tj
+/R8 10 Tf
+40.5957 0 Td
+(BR)Tj
+-0.5 Tc
+13.4898 0 Td
+(OW)Tj
+0 Tc
+17.2797 0 Td
+(SER)Tj
+/R7 10 Tf
+22.043 0 Td
+[(en)40.0146(vironment)]TJ
+-0.25 Tc
+-345.957 -12 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+0 Tw
+[(riable. By def)10.0073(ault,)]TJ
+/R8 10 Tf
+74.6699 0 Td
+(man)Tj
+/R7 10 Tf
+21.3898 0 Td
+(uses)Tj
+/R8 10 Tf
+19.7199 0 Td
+(/usr/bin/less)Tj
+/R7 10 Tf
+51.1297 0 Td
+(-is)Tj
+/R8 10 Tf
+10 0 Td
+(,)Tj
+0.833 Tc
+-222.099 -16.7996 Td
+<AD48>Tj
+0 Tc
+/R7 10 Tf
+35.9598 0 Td
+1.133 Tw
+(Specify a command that renders HTML \214les as te)Tj
+208.414 0 Td
+3.632 Tw
+(xt. This)Tj
+37.8234 0 Td
+1.132 Tw
+(option o)Tj
+-0.15 Tc
+34.0418 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rrides the)Tj
+/R8 10 Tf
+42.4734 0 Td
+(HTMLP)Tj
+-0.55 Tc
+35.85 0 Td
+(AG)Tj
+0 Tc
+14.45 0 Td
+(ER)Tj
+/R7 10 Tf
+-382.302 -12 Td
+0 Tw
+[(en)40.0159(vironment v)25.0085(ariable. By def)10.0244(ault,)]TJ
+/R8 10 Tf
+136.62 0 Td
+(man)Tj
+/R7 10 Tf
+21.3898 0 Td
+(uses)Tj
+/R8 10 Tf
+19.7199 0 Td
+(/bin/cat)Tj
+/R7 10 Tf
+32.2297 0 Td
+(,)Tj
+0.833 Tc
+/R8 10 Tf
+-245.959 -16.8004 Td
+0.834 Tw
+(\255S s)Tj
+0 Tc
+20.9828 0 Td
+(ection_list)Tj
+/R7 10 Tf
+15.0172 -12 Td
+0.589 Tw
+(List is a colon separated list of manual sections to search.)Tj
+241.39 0 Td
+0.59 Tw
+(This option o)Tj
+-0.15 Tc
+54.3699 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rrides the)Tj
+/R8 10 Tf
+41.3898 0 Td
+(MANSECT)Tj
+/R7 10 Tf
+-346.439 -12 Td
+0 Tw
+[(en)40.0159(vironment v)25.0085(ariable.)]TJ
+0.833 Tc
+/R8 10 Tf
+-36 -16.8 Td
+<AD61>Tj
+0 Tc
+/R7 10 Tf
+36 0 Td
+0.652 Tw
+(By def)Tj
+27.4418 0 Td
+(ault,)Tj
+/R8 10 Tf
+20.652 0 Td
+(man)Tj
+/R7 10 Tf
+22.0418 0 Td
+[(will e)15.0049(xit after displaying the \214rst manual page it \214nds.)]TJ
+228.25 0 Td
+0.651 Tw
+(Using this option forces)Tj
+/R8 10 Tf
+-298.385 -12 Td
+(man)Tj
+/R7 10 Tf
+21.3898 0 Td
+0 Tw
+(to display all the manual pages that match)Tj
+/R8 10 Tf
+170.54 0 Td
+(name,)Tj
+/R7 10 Tf
+28.3297 0 Td
+(not just the \214rst.)Tj
+0.833 Tc
+/R8 10 Tf
+-256.259 -16.7996 Td
+<AD63>Tj
+0 Tc
+/R7 10 Tf
+36 0 Td
+0.554 Tw
+(Reformat the source man page, e)Tj
+-0.15 Tc
+134.32 0 Td
+(ve)Tj
+3.054 Tc
+9.28984 0 Td
+(nw)Tj
+0 Tc
+15.2738 0 Td
+(hen an up-to-date cat page e)Tj
+115.08 0 Td
+3.054 Tw
+(xists. This)Tj
+47.2277 0 Td
+0.554 Tw
+(can be meaningful)Tj
+-321.191 -12 Td
+0.282 Tw
+[(if the cat page w)10.0024(as formatted for a screen with a dif)]TJ
+208.852 0 Td
+0.281 Tw
+(ferent number of columns, or if the preformat-)Tj
+-208.852 -12 Td
+0 Tw
+(ted page is corrupted.)Tj
+0.833 Tc
+/R8 10 Tf
+-36 -16.8 Td
+<AD64>Tj
+0 Tc
+/R7 10 Tf
+36 0 Td
+(Don')Tj
+2.5 Tc
+20.3301 0 Td
+(ta)Tj
+0 Tc
+9.71992 0 Td
+[(ctually display the man pages, b)20.0073(ut do print gobs of deb)20.0171(ugging information.)]TJ
+0.833 Tc
+/R8 10 Tf
+-66.0496 -16.8004 Td
+<AD44>Tj
+0 Tc
+/R7 10 Tf
+36.0195 0 Td
+[(Both display and print deb)20.0073(ugging info.)]TJ
+0.833 Tc
+/R8 10 Tf
+-36.0195 -16.8 Td
+<AD66>Tj
+0 Tc
+/R7 10 Tf
+36 0 Td
+(Equi)Tj
+-0.25 Tc
+18.6398 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(lent to)Tj
+/R8 10 Tf
+27.7797 0 Td
+(whatis)Tj
+/R7 10 Tf
+27.7797 0 Td
+(.)Tj
+0.833 Tc
+/R8 10 Tf
+-119.389 -16.8 Td
+<AD46>Tj
+0 Tc
+/R7 10 Tf
+15.1426 0 Td
+(or)Tj
+/R8 10 Tf
+10.9398 0 Td
+[<ADAD7072>17.9688(ef)25.0073(ormat)]TJ
+-0.15 Tc
+/R7 10 Tf
+9.91758 -12 Td
+(Fo)Tj
+0 Tc
+10.4098 0 Td
+[(rmat only - do not display)64.9683(.)]TJ
+0.833 Tc
+/R8 10 Tf
+-46.4098 -16.7996 Td
+<AD68>Tj
+0 Tc
+/R7 10 Tf
+36 0 Td
+[(Print a help message and e)15.0171(xit.)]TJ
+0.833 Tc
+/R8 10 Tf
+-36 -16.8 Td
+<AD6B>Tj
+0 Tc
+/R7 10 Tf
+36 0 Td
+(Equi)Tj
+-0.25 Tc
+18.6398 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(lent to)Tj
+/R8 10 Tf
+27.7797 0 Td
+[(apr)17.9688(opos)]TJ
+/R7 10 Tf
+34.2703 0 Td
+(.)Tj
+0.833 Tc
+/R8 10 Tf
+-125.879 -16.8004 Td
+<AD4B>Tj
+0 Tc
+/R7 10 Tf
+35.8598 0 Td
+0.328 Tw
+[(Search for the speci\214ed string in *all* man pages. W)80.0293(arning: this is probably v)]TJ
+315.493 0 Td
+0.329 Tw
+[(ery slo)25.0098(w! It helps to)]TJ
+-315.353 -12 Td
+0.024 Tw
+(specify a section.)Tj
+74.2215 0 Td
+0.023 Tw
+(\(Just to gi)Tj
+-0.15 Tc
+39.2457 0 Td
+0.323 Tw
+(ve a r)Tj
+0 Tc
+22.2156 0 Td
+0.023 Tw
+[(ough idea, on my machine this tak)10.0293(es about a minute per 500 man)]TJ
+-135.683 -12 Td
+(pages.\))Tj
+121.865 -69.6 Td
+0 Tw
+(September 19, 2005)Tj
+269.245 0 Td
+(1)Tj
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+9266
+endobj
+12 0 obj
+<</Length 13 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+407.74 Tw
+(man\(1\) man\(1\))Tj
+0.833 Tc
+/R8 10 Tf
+36 -36 Td
+0.834 Tw
+(\255m s)Tj
+0 Tc
+23.7531 0 Td
+(ystem)Tj
+/R7 10 Tf
+12.2469 -12 Td
+0 Tw
+(Specify an alternate set of man pages to search based on the system name gi)Tj
+-0.15 Tc
+304.35 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(n.)Tj
+0.833 Tc
+/R8 10 Tf
+-349.64 -16.8 Td
+0.834 Tw
+(\255p s)Tj
+0 Tc
+20.9828 0 Td
+(tring)Tj
+/R7 10 Tf
+15.0172 -12 Td
+0.043 Tw
+(Specify the sequence of preprocessors to run before)Tj
+/R8 10 Tf
+210.274 0 Td
+[(nr)17.9688(off)]TJ
+/R7 10 Tf
+24.023 0 Td
+(or)Tj
+/R8 10 Tf
+10.9828 0 Td
+[(tr)17.9761(off)]TJ
+5.043 Tc
+/R7 10 Tf
+19.25 0 Td
+(.N)Tj
+0 Tc
+14.7629 0 Td
+(ot all installations will ha)Tj
+-0.15 Tc
+101.092 0 Td
+0.344 Tw
+(ve a)Tj
+0 Tc
+-380.384 -12 Td
+1.128 Tw
+(full set of preprocessors.)Tj
+108.152 0 Td
+1.127 Tw
+(Some of the preprocessors and the letters used to designate them are:)Tj
+-108.152 -12 Td
+0.609 Tw
+[(eqn \(e\), grap \(g\), pic \(p\), tbl \(t\), vgrind \(v\), refer \(r\).)-560.889(This option o)]TJ
+-0.15 Tc
+275.246 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rrides the)Tj
+/R8 10 Tf
+41.4277 0 Td
+[(MANR)30.0146(OFFSEQ)]TJ
+/R7 10 Tf
+-325.963 -12 Td
+0 Tw
+[(en)40.0159(vironment v)25.0085(ariable.)]TJ
+0.833 Tc
+/R8 10 Tf
+-36 -16.8 Td
+<AD74>Tj
+0 Tc
+/R7 10 Tf
+36 0 Td
+(Use)Tj
+/R8 10 Tf
+18.8699 0 Td
+(/usr/bin/gr)Tj
+45.3902 0 Td
+0.82 Tw
+(off -Tps -mandoc)Tj
+/R7 10 Tf
+78.2898 0 Td
+0.819 Tw
+(to format the manual page, passing the output to)Tj
+/R8 10 Tf
+203.021 0 Td
+(stdout.)Tj
+/R7 10 Tf
+34.9887 0 Td
+(The)Tj
+-380.559 -12 Td
+(def)Tj
+12.6699 0 Td
+1.065 Tw
+(ault output format of)Tj
+/R8 10 Tf
+89.9195 0 Td
+(/usr/bin/gr)Tj
+45.3902 0 Td
+1.066 Tw
+(off -Tps -mandoc)Tj
+/R7 10 Tf
+79.0273 0 Td
+(is Postscript, refer to the manual page of)Tj
+/R8 10 Tf
+-227.007 -12 Td
+0 Tw
+[(/usr/bin/gr)17.9773(off -Tps -mandoc)]TJ
+/R7 10 Tf
+121.22 0 Td
+[(for w)10.0146(ays to pick an alternate format.)]TJ
+-157.22 -16.7996 Td
+0.196 Tw
+(Depending on the selected format and the a)Tj
+-0.25 Tc
+174.812 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+0.195 Tw
+[(ilability of printing de)25.0317(vices, the output may need to be passed)]TJ
+-184.002 -12 Td
+0 Tw
+(through some \214lter or another before being printed.)Tj
+0.833 Tc
+/R8 10 Tf
+16.8 TL
+<AD77>'
+0 Tc
+/R7 10 Tf
+16.2527 0 Td
+(or)Tj
+/R8 10 Tf
+10.9398 0 Td
+<ADAD70617468>Tj
+/R7 10 Tf
+8.80742 -12 Td
+(Don')Tj
+2.622 Tc
+20.3301 0 Td
+(ta)Tj
+0 Tc
+9.8418 0 Td
+0.122 Tw
+[(ctually display the man pages, b)20.0317(ut do print the location\(s\) of the \214les that w)]TJ
+303.438 0 Td
+0.123 Tw
+(ould be format-)Tj
+-333.609 -12 Td
+0.292 Tw
+[(ted or displayed. If no ar)17.9688(gument is gi)]TJ
+-0.15 Tc
+149.554 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(n: display \(on stdout\) the list of directories that is searched)Tj
+-158.844 -12 Td
+(by)Tj
+/R8 10 Tf
+12.5879 0 Td
+(man)Tj
+/R7 10 Tf
+21.4777 0 Td
+0.089 Tw
+(for man pages. If)Tj
+/R8 10 Tf
+71.2355 0 Td
+(manpath)Tj
+/R7 10 Tf
+40.9285 0 Td
+(is a link to man, then "manpath" is equi)Tj
+-0.25 Tc
+158.342 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(lent to "man --path".)Tj
+0.833 Tc
+/R8 10 Tf
+-349.761 -16.8 Td
+<AD57>Tj
+0 Tc
+/R7 10 Tf
+36 0 Td
+(Lik)Tj
+3.087 Tc
+13.7898 0 Td
+<65AD>Tj
+-0.65 Tc
+14 0 Td
+1.886 Tw
+(w, b)Tj
+0 Tc
+16.9555 0 Td
+0.586 Tw
+[(ut print \214le names one per line, without additional information.)-558.569(This is useful in shell)]TJ
+-44.7449 -12 Td
+0 Tw
+[(commands lik)10.0159(e)]TJ
+/R8 10 Tf
+63.2297 0 Td
+[(man -aW man | xar)10(gs ls -l)]TJ
+/R8 10.95 Tf
+-135.23 -28.7996 Td
+(CA)Tj
+2.738 Tc
+14.7719 0 Td
+(TP)Tj
+-0.602 Tc
+15.9223 0 Td
+(AG)Tj
+0 Tc
+15.8227 0 Td
+(ES)Tj
+/R7 10 Tf
+-10.5168 -12 Td
+0.076 Tw
+(Man will try to sa)Tj
+-0.15 Tc
+71.2637 0 Td
+0.376 Tw
+(ve t)Tj
+0 Tc
+14.6457 0 Td
+0.076 Tw
+(he formatted man pages, in order to sa)Tj
+-0.15 Tc
+153.962 0 Td
+0.377 Tw
+(ve f)Tj
+0 Tc
+15.1969 0 Td
+0.077 Tw
+[(ormatting time the ne)15.0293(xt time these pages are)]TJ
+-255.068 -12 Td
+3.723 Tw
+(needed. T)Tj
+42.8031 0 Td
+(raditionally)Tj
+3.723 Tc
+45.5703 0 Td
+(,f)Tj
+0 Tc
+9.55312 0 Td
+1.222 Tw
+[(ormatted v)15.0366(ersions of pages in DIR/manX are sa)]TJ
+-0.15 Tc
+198.643 0 Td
+(ve)Tj
+3.722 Tc
+9.28984 0 Td
+[(di)372.207(nD)]TJ
+0 Tc
+27.4039 0 Td
+[(IR/catX, b)20.0195(ut other map-)]TJ
+-333.264 -12 Td
+1.971 Tw
+(pings from man dir to cat dir can be speci\214ed in)Tj
+/R8 10 Tf
+216.15 0 Td
+(/etc/man.con\214g)Tj
+6.971 Tc
+/R7 10 Tf
+64.7199 0 Td
+(.N)Tj
+4.471 Tc
+16.691 0 Td
+(oc)Tj
+0 Tc
+13.9109 0 Td
+(at pages are sa)Tj
+-0.15 Tc
+63.8527 0 Td
+(ve)Tj
+4.472 Tc
+9.28984 0 Td
+(dw)Tj
+0 Tc
+16.6918 0 Td
+1.972 Tw
+(hen the)Tj
+-401.307 -12 Td
+0.365 Tw
+(required cat directory does not e)Tj
+131.245 0 Td
+2.865 Tw
+(xist. No)Tj
+37.3996 0 Td
+0.365 Tw
+(cat pages are sa)Tj
+-0.15 Tc
+63.475 0 Td
+(ve)Tj
+2.865 Tc
+9.28984 0 Td
+(dw)Tj
+0 Tc
+15.0852 0 Td
+(hen the)Tj
+2.865 Tc
+29.375 0 Td
+(ya)Tj
+0 Tc
+12.3051 0 Td
+0.364 Tw
+(re formatted for a line length dif-)Tj
+-298.175 -12 Td
+0 Tw
+[(ferent from 80.)-500(No cat pages are sa)]TJ
+-0.15 Tc
+142.58 0 Td
+(ve)Tj
+2.5 Tc
+9.28984 0 Td
+(dw)Tj
+0 Tc
+14.7199 0 Td
+[(hen man.con\214g contains the line NOCA)40.0146(CHE.)]TJ
+-166.589 -16.8004 Td
+0.16 Tw
+(It is possible to mak)Tj
+81.0598 0 Td
+(e)Tj
+/R8 10 Tf
+7.09961 0 Td
+(man)Tj
+/R7 10 Tf
+21.5496 0 Td
+[(suid to a user man. Then, if a cat directory has o)25(wner man and mode 0755 \(only)]TJ
+-109.709 -12 Td
+0.55 Tw
+(writable by man\), and the cat \214les ha)Tj
+-0.15 Tc
+151.51 0 Td
+0.85 Tw
+(ve o)Tj
+0 Tc
+17.0898 0 Td
+0.55 Tw
+(wner man and mode 0644 or 0444 \(only writable by man, or not)Tj
+-168.6 -12 Td
+0.673 Tw
+(writable at all\), no ordinary user can change the cat pages or put other \214les in the cat directory)Tj
+3.173 Tc
+388.644 0 Td
+(.I)Tj
+0 Tc
+8.96328 0 Td
+(f)Tj
+/R8 10 Tf
+6.50234 0 Td
+(man)Tj
+/R7 10 Tf
+22.0625 0 Td
+(is)Tj
+-426.172 -12 Td
+0.958 Tw
+(not made suid, then a cat directory should ha)Tj
+-0.15 Tc
+186.824 0 Td
+1.258 Tw
+(ve m)Tj
+0 Tc
+20.5277 0 Td
+0.958 Tw
+(ode 0777 if all users should be able to lea)Tj
+-0.15 Tc
+174.342 0 Td
+1.258 Tw
+(ve c)Tj
+0 Tc
+17.1879 0 Td
+0.958 Tw
+(at pages)Tj
+-398.881 -12 Td
+(there.)Tj
+0 Tw
+(The option)'
+/R8 10 Tf
+46.1098 0 Td
+<AD63>Tj
+/R7 10 Tf
+12.6398 0 Td
+(forces reformatting a page, e)Tj
+-0.15 Tc
+114.76 0 Td
+(ve)Tj
+2.5 Tc
+9.28984 0 Td
+[(ni)250.032(far)]TJ
+0 Tc
+26.4895 0 Td
+[(ecent cat page e)15.0317(xists.)]TJ
+/R8 10.95 Tf
+-245.289 -28.8004 Td
+(HTML P)Tj
+-0.602 Tc
+41.9937 0 Td
+(AG)Tj
+0 Tc
+15.8227 0 Td
+(ES)Tj
+/R7 10 Tf
+-21.8164 -12 Td
+0.02 Tw
+(Man will \214nd HTML pages if the)Tj
+2.52 Tc
+133.66 0 Td
+(yl)Tj
+-0.25 Tc
+10.3 0 Td
+-2.15 Tw
+(iv e)Tj
+0 Tc
+14.3398 0 Td
+0.02 Tw
+[(in directories named as e)15.0073(xpected to be ".html", thus a v)25(alid name for)]TJ
+-158.3 -12 Td
+0 Tw
+[(an HTML v)15.0159(ersion of the)]TJ
+/R8 10 Tf
+100.09 0 Td
+(ls)Tj
+/R7 10 Tf
+6.66992 0 Td
+[(\(1\) man page w)10.0317(ould be)]TJ
+/R9 10 Tf
+94.5996 0 Td
+[(/usr/shar)37(e/man/htmlman1/ls.1.html)]TJ
+/R7 10 Tf
+140.71 0 Td
+(.)Tj
+/R8 10.95 Tf
+-378.069 -28.8 Td
+(SEARCH P)Tj
+-1.04 Tc
+54.0934 0 Td
+(AT)Tj
+2.738 Tc
+14.1691 0 Td
+(HF)Tj
+0 Tc
+17.9035 0 Td
+[(OR MANU)59.9739(AL P)]TJ
+-0.602 Tc
+76.2344 0 Td
+(AG)Tj
+0 Tc
+15.8227 0 Td
+(ES)Tj
+/R8 10 Tf
+-142.223 -12 Td
+(man)Tj
+/R7 10 Tf
+21.4586 0 Td
+0.068 Tw
+(uses a sophisticated method of \214nding manual page \214les, based on the in)Tj
+-0.2 Tc
+291.226 0 Td
+(vo)Tj
+0 Tc
+9.8 0 Td
+(cation options and en)Tj
+85.0738 0 Td
+(viron-)Tj
+-407.558 -12 Td
+0 Tw
+[(ment v)25(ariables, the)]TJ
+/R8 10 Tf
+78.1797 0 Td
+(/etc/man.con\214g)Tj
+/R7 10 Tf
+67.2199 0 Td
+[(con\214guration \214le, and some b)20.0073(uilt in con)]TJ
+-0.15 Tc
+159.23 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(ntions and heuristics.)Tj
+-313.919 -16.7996 Td
+1.213 Tw
+(First of all, when the)Tj
+/R9 10 Tf
+92.0844 0 Td
+(name)Tj
+/R7 10 Tf
+25.5527 0 Td
+(ar)Tj
+7.7 0 Td
+1.214 Tw
+(gument to)Tj
+/R8 10 Tf
+45.2074 0 Td
+(man)Tj
+/R7 10 Tf
+22.6035 0 Td
+(contains a slash \()Tj
+/R8 10 Tf
+72.2418 0 Td
+(/)Tj
+/R7 10 Tf
+2.77969 0 Td
+(\),)Tj
+/R8 10 Tf
+9.54336 0 Td
+(man)Tj
+/R7 10 Tf
+22.6035 0 Td
+(assumes it is a \214le speci\214cation)Tj
+-300.316 -12 Td
+0 Tw
+(itself, and there is no searching in)Tj
+-0.2 Tc
+134.52 0 Td
+(vo)Tj
+0 Tc
+9.8 0 Td
+[(lv)15.0317(ed.)]TJ
+-144.32 -16.8 Td
+0.427 Tw
+(But in the normal case where)Tj
+/R9 10 Tf
+122.512 0 Td
+(name)Tj
+/R7 10 Tf
+24.7656 0 Td
+(doesn')Tj
+2.926 Tc
+26.4801 0 Td
+(tc)Tj
+0 Tc
+10.1461 0 Td
+0.426 Tw
+(ontain a slash,)Tj
+/R8 10 Tf
+60.7176 0 Td
+(man)Tj
+/R7 10 Tf
+21.8156 0 Td
+[(searches a v)25.0146(ariety of directories for a \214le)]TJ
+-266.437 -12 Td
+0 Tw
+(that could be a manual page for the topic named.)Tj
+0.178 Tw
+(If you specify the)'
+/R8 10 Tf
+73.4328 0 Td
+(-M)Tj
+/R9 10 Tf
+16.6887 0 Td
+(pathlist)Tj
+/R7 10 Tf
+32.6887 0 Td
+(option,)Tj
+/R9 10 Tf
+31.9887 0 Td
+(pathlist)Tj
+/R7 10 Tf
+33.3687 0 Td
+0.179 Tw
+(is a colon-separated list of the directories that)Tj
+/R8 10 Tf
+186.172 0 Td
+(man)Tj
+/R7 10 Tf
+21.5688 0 Td
+(searches.)Tj
+-395.908 -16.8 Td
+0.074 Tw
+(If you don')Tj
+2.574 Tc
+44.918 0 Td
+(ts)Tj
+0 Tc
+9.24414 0 Td
+(pecify)Tj
+/R8 10 Tf
+27.5637 0 Td
+(-M)Tj
+-0.2 Tc
+/R7 10 Tf
+15.3336 0 Td
+(bu)Tj
+2.574 Tc
+9.8 0 Td
+(ts)Tj
+0 Tc
+9.24414 0 Td
+(et the)Tj
+/R8 10 Tf
+24.5875 0 Td
+(MANP)Tj
+-0.95 Tc
+29.2398 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H)Tj
+/R7 10 Tf
+10.3137 0 Td
+(en)Tj
+9.03984 0 Td
+[(vironment v)25.0244(ariable, the v)]TJ
+100.482 0 Td
+0.073 Tw
+[(alue of that v)25(ariable is the list of)]TJ
+-302.705 -12 Td
+0 Tw
+(the directories that)Tj
+/R8 10 Tf
+77.15 0 Td
+(man)Tj
+/R7 10 Tf
+21.3898 0 Td
+(searches.)Tj
+-98.5398 -16.8 Td
+0.54 Tw
+(If you don')Tj
+3.04 Tc
+45.85 0 Td
+(ts)Tj
+0 Tc
+9.71016 0 Td
+[(pecify an e)15(xplicit path list with)]TJ
+/R8 10 Tf
+129.75 0 Td
+(-M)Tj
+/R7 10 Tf
+15.7996 0 Td
+(or)Tj
+/R8 10 Tf
+11.4797 0 Td
+(MANP)Tj
+-0.95 Tc
+29.2398 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H)Tj
+/R7 10 Tf
+7.73984 0 Td
+(,)Tj
+/R8 10 Tf
+5.53984 0 Td
+(man)Tj
+/R7 10 Tf
+21.9297 0 Td
+(de)Tj
+-0.15 Tc
+9.18984 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+[(lops its o)25(wn path list based on)]TJ
+-308.457 -12 Td
+0.286 Tw
+(the contents of the con\214guration \214le)Tj
+/R8 10 Tf
+149.036 0 Td
+(/etc/man.con\214g)Tj
+5.286 Tc
+/R7 10 Tf
+64.7199 0 Td
+(.T)Tj
+0 Tc
+13.8957 0 Td
+(he)Tj
+/R8 10 Tf
+12.2258 0 Td
+(MANP)Tj
+-0.95 Tc
+29.2398 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H)Tj
+/R7 10 Tf
+10.5258 0 Td
+(statements in the con\214guration \214le)Tj
+-134.718 -48 Td
+0 Tw
+(September 19, 2005)Tj
+269.245 0 Td
+(2)Tj
+ET
+Q
+Q
+endstream
+endobj
+13 0 obj
+10133
+endobj
+16 0 obj
+<</Length 17 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+407.74 Tw
+(man\(1\) man\(1\))Tj
+36 -36 Td
+0 Tw
+(identify particular directories to include in the search path.)Tj
+16.8 TL
+0.204 Tw
+(Furthermore, the)'
+/R8 10 Tf
+70.4477 0 Td
+(MANP)Tj
+-0.95 Tc
+29.2398 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H_MAP)Tj
+/R7 10 Tf
+38.2039 0 Td
+0.205 Tw
+(statements add to the search path depending on your command search)Tj
+-150.831 -12 Td
+0.172 Tw
+(path \(i.e. your)Tj
+-0.74 Tc
+/R8 10 Tf
+59.2258 0 Td
+(PA)Tj
+0 Tc
+11.6402 0 Td
+(TH)Tj
+/R7 10 Tf
+17.0805 0 Td
+(en)Tj
+9.03984 0 Td
+0.171 Tw
+(vironment v)Tj
+48.6406 0 Td
+2.671 Tw
+(ariable\). F)Tj
+43.7309 0 Td
+0.171 Tw
+(or each directory that may be in the command search path, a)Tj
+/R8 10 Tf
+-189.358 -12 Td
+(MANP)Tj
+-0.95 Tc
+29.2398 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H_MAP)Tj
+/R7 10 Tf
+38.3809 0 Td
+0.381 Tw
+(statement speci\214es a directory that should be added to the search path for manual page)Tj
+-80.5602 -12 Td
+(\214les.)Tj
+/R8 10 Tf
+25.8438 0 Td
+(man)Tj
+/R7 10 Tf
+23.0637 0 Td
+1.673 Tw
+(looks at the)Tj
+-0.74 Tc
+/R8 10 Tf
+53.6285 0 Td
+(PA)Tj
+0 Tc
+11.6402 0 Td
+(TH)Tj
+-0.25 Tc
+/R7 10 Tf
+18.5824 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(riable and adds the corresponding directories to the manual page \214le)Tj
+-141.948 -12 Td
+0.286 Tw
+(search path.)Tj
+53.4418 0 Td
+0.287 Tw
+(Thus, with the proper use of)Tj
+/R8 10 Tf
+117.202 0 Td
+(MANP)Tj
+-0.95 Tc
+29.2398 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H_MAP)Tj
+2.787 Tc
+/R7 10 Tf
+35.5 0 Td
+(,w)Tj
+0 Tc
+12.507 0 Td
+(hen you issue the command)Tj
+/R8 10 Tf
+115.034 0 Td
+(man xyz)Tj
+2.787 Tc
+/R7 10 Tf
+36.1168 0 Td
+(,y)Tj
+0 Tc
+10.2871 0 Td
+(ou)Tj
+-422.268 -12 Td
+0 Tw
+[(get a manual page for the program that w)10.0171(ould run if you issued the command)]TJ
+/R8 10 Tf
+311.68 0 Td
+(xyz)Tj
+/R7 10 Tf
+14.4398 0 Td
+(.)Tj
+-326.12 -16.8 Td
+0.368 Tw
+[(In addition, for each directory in the command search path \(we')10.0171(ll call it a "command directory"\) for which)]TJ
+12 TL
+1.508 Tw
+(you do)'
+/R9 10 Tf
+33.3758 0 Td
+(not)Tj
+/R7 10 Tf
+17.4676 0 Td
+(ha)Tj
+-0.15 Tc
+9.23984 0 Td
+1.808 Tw
+(ve a)Tj
+0 Tc
+/R8 10 Tf
+21.7457 0 Td
+(MANP)Tj
+-0.95 Tc
+29.2398 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H_MAP)Tj
+/R7 10 Tf
+39.5078 0 Td
+(statement,)Tj
+/R8 10 Tf
+44.8387 0 Td
+(man)Tj
+/R7 10 Tf
+22.8988 0 Td
+1.509 Tw
+(automatically looks for a manual page directory)Tj
+-231.254 -12 Td
+0.934 Tw
+("nearby" namely as a subdirectory in the command directory itself or in the parent directory of the com-)Tj
+0 Tw
+T*[(mand directory)64.9768(.)]TJ
+-1.1 Tc
+16.7996 TL
+(Yo)'
+7.128 Tc
+11.1199 0 Td
+(uc)Tj
+0 Tc
+16.568 0 Td
+4.628 Tw
+(an disable the automatic "nearby" searches by including a)Tj
+/R8 10 Tf
+275.263 0 Td
+(NO)Tj
+-0.5 Tc
+14.6 0 Td
+(AU)Tj
+-0.18 Tc
+13.9398 0 Td
+(TO)Tj
+-0.74 Tc
+14.2695 0 Td
+(PA)Tj
+0 Tc
+11.6402 0 Td
+(TH)Tj
+/R7 10 Tf
+21.5387 0 Td
+4.629 Tw
+(statement in)Tj
+/R8 10 Tf
+-378.939 -12 Td
+(/etc/man.con\214g)Tj
+/R7 10 Tf
+64.7199 0 Td
+(.)Tj
+-64.7199 -16.8004 Td
+0.659 Tw
+(In each directory in the search path as described abo)Tj
+-0.15 Tc
+215.281 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(,)Tj
+/R8 10 Tf
+5.65898 0 Td
+(man)Tj
+/R7 10 Tf
+22.0488 0 Td
+(searches for a \214le named)Tj
+/R9 10 Tf
+105.423 0 Td
+(topic)Tj
+/R8 10 Tf
+20.3098 0 Td
+(.)Tj
+/R9 10 Tf
+2.83984 0 Td
+(section)Tj
+3.158 Tc
+/R7 10 Tf
+28.3297 0 Td
+(,w)Tj
+0 Tc
+12.8781 0 Td
+(ith)Tj
+-422.059 -12 Td
+0.405 Tw
+[(an optional suf)25(\214x on the section number and possibly a compression suf)]TJ
+292.765 0 Td
+2.905 Tw
+(\214x. If)Tj
+27.9895 0 Td
+0.405 Tw
+(it doesn')Tj
+2.906 Tc
+34.9453 0 Td
+<748C>Tj
+0 Tc
+11.2461 0 Td
+0.406 Tw
+(nd such a \214le, it)Tj
+-366.946 -12 Td
+0.167 Tw
+(then looks in an)Tj
+2.667 Tc
+63.9609 0 Td
+(ys)Tj
+0 Tc
+11.557 0 Td
+(ubdirectories named)Tj
+/R8 10 Tf
+84.4234 0 Td
+(man)Tj
+/R9 10 Tf
+19.5895 0 Td
+(N)Tj
+/R7 10 Tf
+9.23555 0 Td
+(or)Tj
+/R8 10 Tf
+11.1055 0 Td
+(cat)Tj
+/R9 10 Tf
+13.4695 0 Td
+(N)Tj
+/R7 10 Tf
+9.23555 0 Td
+(where)Tj
+/R9 10 Tf
+27.9055 0 Td
+(N)Tj
+/R7 10 Tf
+10.3355 0 Td
+0.166 Tw
+(is the manual section number)Tj
+5.166 Tc
+117.434 0 Td
+(.I)Tj
+2.666 Tc
+10.9563 0 Td
+(ft)Tj
+0 Tc
+8.77617 0 Td
+(he \214le is)Tj
+-397.984 -12 Td
+2.14 Tw
+(in a)Tj
+/R8 10 Tf
+21.4996 0 Td
+(cat)Tj
+/R9 10 Tf
+13.4695 0 Td
+(N)Tj
+/R7 10 Tf
+11.2098 0 Td
+[(subdirectory)64.9841(,)]TJ
+/R8 10 Tf
+56.7 0 Td
+(man)Tj
+/R7 10 Tf
+23.5297 0 Td
+(assumes it is a formatted manual page \214le \(cat page\).)Tj
+238.69 0 Td
+(Otherwise,)Tj
+/R8 10 Tf
+48.3496 0 Td
+(man)Tj
+/R7 10 Tf
+-413.448 -12 Td
+0.81 Tw
+[(assumes it is unformatted.)-580.945(In either case, if the \214lename has a kno)25(wn compression suf)25.0098(\214x \(lik)]TJ
+384.569 0 Td
+(e)Tj
+/R8 10 Tf
+7.74961 0 Td
+(.gz)Tj
+/R7 10 Tf
+11.9398 0 Td
+(\),)Tj
+/R8 10 Tf
+9.13945 0 Td
+(man)Tj
+/R7 10 Tf
+-413.398 -12 Td
+0 Tw
+(assumes it is gzipped.)Tj
+0.32 Tw
+(If you w)'
+34.3797 0 Td
+0.321 Tw
+(ant to see where \(or if\))Tj
+/R8 10 Tf
+95.4457 0 Td
+(man)Tj
+-0.1 Tc
+/R7 10 Tf
+21.7105 0 Td
+(wo)Tj
+0 Tc
+12.1199 0 Td
+(uld \214nd the manual page for a particular topic, use the)Tj
+/R8 10 Tf
+222.711 0 Td
+(--path)Tj
+/R7 10 Tf
+28.9305 0 Td
+<28>Tj
+/R8 10 Tf
+3.32969 0 Td
+(-w)Tj
+/R7 10 Tf
+10.55 0 Td
+<29>Tj
+-429.177 -12 Td
+(option.)Tj
+/R8 10.95 Tf
+-36 -28.7996 Td
+[(ENVIR)30.0616(ONMENT)]TJ
+/R8 10 Tf
+36 -12 Td
+(MANP)Tj
+-0.95 Tc
+29.2398 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H)Tj
+/R7 10 Tf
+-6.1793 -12 Td
+(If)Tj
+/R8 10 Tf
+9.33984 0 Td
+(MANP)Tj
+-0.95 Tc
+29.2398 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H)Tj
+/R7 10 Tf
+10.4598 0 Td
+0.22 Tw
+(is set,)Tj
+/R8 10 Tf
+25.7199 0 Td
+(man)Tj
+/R7 10 Tf
+21.6098 0 Td
+0.219 Tw
+[(uses it as the path to search for manual page \214les.)-521.841(It o)]TJ
+-0.15 Tc
+219.287 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rrides the con-)Tj
+-337.886 -12 Td
+0.772 Tw
+(\214guration \214le and the automatic search path, b)Tj
+190.954 0 Td
+0.773 Tw
+(ut is o)Tj
+-0.15 Tc
+25.8457 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rridden by the)Tj
+/R8 10 Tf
+61.1383 0 Td
+(-M)Tj
+/R7 10 Tf
+16.0324 0 Td
+(in)Tj
+-0.2 Tc
+7.37969 0 Td
+(vo)Tj
+0 Tc
+9.8 0 Td
+(cation option.)Tj
+61.5453 0 Td
+(See)Tj
+/R8 10 Tf
+-381.985 -12 Td
+0 Tw
+(SEARCH P)Tj
+-0.95 Tc
+49.4 0 Td
+(AT)Tj
+2.5 Tc
+12.9395 0 Td
+(HF)Tj
+0 Tc
+16.35 0 Td
+[(OR MANU)60.0146(AL P)]TJ
+-0.55 Tc
+69.6199 0 Td
+(AG)Tj
+0 Tc
+14.45 0 Td
+(ES)Tj
+/R7 10 Tf
+12.2297 0 Td
+(.)Tj
+/R8 10 Tf
+-210.989 -16.8004 Td
+(MANPL)Tj
+/R7 10 Tf
+36 -12 Td
+(If)Tj
+/R8 10 Tf
+9.28477 0 Td
+(MANPL)Tj
+/R7 10 Tf
+39.2848 0 Td
+0.165 Tw
+[(is set, its v)25(alue is used as the display page length.)-516.46(Otherwise, the entire man page will)]TJ
+-48.5695 -12 Td
+(occup)Tj
+2.5 Tc
+23.7797 0 Td
+(yo)Tj
+0 Tc
+12.5 0 Td
+0 Tw
+(ne \(long\) page.)Tj
+/R8 10 Tf
+-72.2797 -16.7996 Td
+[(MANR)30.0159(OFFSEQ)]TJ
+/R7 10 Tf
+36 -12 Td
+(If)Tj
+/R8 10 Tf
+9.89766 0 Td
+[(MANR)30.0159(OFFSEQ)]TJ
+/R7 10 Tf
+73.9773 0 Td
+0.778 Tw
+[(is set, its v)25.0342(alue is used to determine the set of preprocessors run before run-)]TJ
+-83.875 -12 Td
+(ning)Tj
+/R8 10 Tf
+20.2797 0 Td
+[(nr)17.9688(off)]TJ
+/R7 10 Tf
+23.9801 0 Td
+(or)Tj
+/R8 10 Tf
+10.9398 0 Td
+[(tr)17.9761(off)]TJ
+5 Tc
+/R7 10 Tf
+19.25 0 Td
+(.B)Tj
+2.5 Tc
+14.1199 0 Td
+(yd)Tj
+0 Tc
+12.5 0 Td
+0 Tw
+[(ef)10.0073(ault, pages are passed through the tbl preprocessor before)]TJ
+/R8 10 Tf
+240.49 0 Td
+[(nr)17.9688(off)]TJ
+/R7 10 Tf
+21.4801 0 Td
+(.)Tj
+/R8 10 Tf
+-399.039 -16.8004 Td
+(MANSECT)Tj
+/R7 10 Tf
+36 -12 Td
+(If)Tj
+/R8 10 Tf
+9.11992 0 Td
+(MANSECT)Tj
+/R7 10 Tf
+52.4898 0 Td
+[(is set, its v)25.0317(alue is used to determine which manual sections to search.)]TJ
+/R8 10 Tf
+-97.6098 -16.8 Td
+(MANWIDTH)Tj
+/R7 10 Tf
+36 -12 Td
+(If)Tj
+/R8 10 Tf
+9.94688 0 Td
+(MANWIDTH)Tj
+/R7 10 Tf
+62.7066 0 Td
+0.827 Tw
+[(is set, its v)25.0073(alue is used as the width manpages should be displayed.)]TJ
+282.15 0 Td
+(Otherwise)Tj
+-354.803 -12 Td
+0 Tw
+(the pages may be displayed o)Tj
+-0.15 Tc
+117.33 0 Td
+(ve)Tj
+2.5 Tc
+9.28984 0 Td
+(rt)Tj
+0 Tc
+8.71992 0 Td
+(he whole width of your screen.)Tj
+/R8 10 Tf
+-171.339 -16.7996 Td
+(MANP)Tj
+-0.55 Tc
+29.2398 0 Td
+(AG)Tj
+0 Tc
+14.45 0 Td
+(ER)Tj
+/R7 10 Tf
+-7.68984 -12 Td
+(If)Tj
+/R8 10 Tf
+9.13789 0 Td
+(MANP)Tj
+-0.55 Tc
+29.2398 0 Td
+(AG)Tj
+0 Tc
+14.45 0 Td
+(ER)Tj
+/R7 10 Tf
+16.3078 0 Td
+0.018 Tw
+(is set, its v)Tj
+42.034 0 Td
+0.019 Tw
+(alue is used as the name of the program to use to display the man page.)Tj
+-111.17 -12 Td
+0 Tw
+(If not, then)Tj
+-0.74 Tc
+/R8 10 Tf
+46.6199 0 Td
+-1.57 Tw
+(PA G)Tj
+0 Tc
+19.8195 0 Td
+(ER)Tj
+/R7 10 Tf
+16.2898 0 Td
+0 Tw
+[(is used. If that has no v)25(alue either)40.0146(,)]TJ
+/R8 10 Tf
+138.84 0 Td
+(/usr/bin/less -is)Tj
+/R7 10 Tf
+66.1297 0 Td
+(is used.)Tj
+/R8 10 Tf
+-323.699 -16.8 Td
+(BR)Tj
+-0.5 Tc
+13.4898 0 Td
+(OW)Tj
+0 Tc
+17.2797 0 Td
+(SER)Tj
+/R7 10 Tf
+5.23047 -12 Td
+0.304 Tw
+(The name of a bro)Tj
+74.3859 0 Td
+0.303 Tw
+[(wser to use for displaying HTML manual pages.)-530.244(If it is not set, /usr/bin/less -is)]TJ
+-74.3859 -12 Td
+0 Tw
+(is used.)Tj
+/R8 10 Tf
+-36 -16.8004 Td
+(HTMLP)Tj
+-0.55 Tc
+35.85 0 Td
+(AG)Tj
+0 Tc
+14.45 0 Td
+(ER)Tj
+/R7 10 Tf
+-14.3 -12 Td
+(The command to use for rendering HTML manual pages as te)Tj
+247.22 0 Td
+2.5 Tw
+(xt. If)Tj
+24.4 0 Td
+0 Tw
+(it is not set, /bin/cat is used.)Tj
+/R8 10 Tf
+-307.62 -16.8 Td
+(LANG)Tj
+/R7 10 Tf
+35.9695 0 Td
+(If)Tj
+/R8 10 Tf
+10.6668 0 Td
+(LANG)Tj
+/R7 10 Tf
+32.9066 0 Td
+1.547 Tw
+[(is set, its v)25.0293(alue de\214nes the name of the subdirectory where man \214rst looks for man)]TJ
+-43.543 -12 Td
+0.239 Tw
+(pages. Thus, the command `LANG=dk man 1 foo' will cause man to look for the foo man page in)Tj
+12 TL
+0.175 Tw
+(.../dk/man1/foo.1, and if it cannot \214nd such a \214le, then in .../man1/foo.1, where ... is a directory on)'
+121.865 -40.8 Td
+0 Tw
+(September 19, 2005)Tj
+269.245 0 Td
+(3)Tj
+ET
+Q
+Q
+endstream
+endobj
+17 0 obj
+9422
+endobj
+20 0 obj
+<</Length 21 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+407.74 Tw
+(man\(1\) man\(1\))Tj
+72 -36 Td
+0 Tw
+(the search path.)Tj
+/R8 10 Tf
+-36 -16.8 Td
+(NLSP)Tj
+-0.95 Tc
+24.7898 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+[(H, LC_MESSA)55.0171(GES, LANG)]TJ
+/R7 10 Tf
+-1.7293 -12 Td
+0.465 Tw
+[(The en)40.0317(vironment v)]TJ
+76.4895 0 Td
+(ariables)Tj
+/R8 10 Tf
+34.1746 0 Td
+(NLSP)Tj
+-0.95 Tc
+24.7898 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H)Tj
+/R7 10 Tf
+10.7047 0 Td
+(and)Tj
+/R8 10 Tf
+17.4047 0 Td
+[(LC_MESSA)55(GES)]TJ
+/R7 10 Tf
+75.7246 0 Td
+(\(or)Tj
+/R8 10 Tf
+14.7348 0 Td
+(LANG)Tj
+/R7 10 Tf
+31.8246 0 Td
+(when the latter does not)Tj
+-0.15 Tc
+-298.787 -12 Td
+(ex)Tj
+0 Tc
+9.28984 0 Td
+0.266 Tw
+(ist\) play a role in locating the message catalog.)Tj
+194.973 0 Td
+0.267 Tw
+(\(But the English messages are compiled in, and)Tj
+-204.263 -12 Td
+1.288 Tw
+[(for English no catalog is required.\))-628.772(Note that programs lik)]TJ
+246.732 0 Td
+(e)Tj
+/R8 10 Tf
+8.22773 0 Td
+(col\(1\))Tj
+/R7 10 Tf
+27.6676 0 Td
+(called by man also use e.g.)Tj
+-282.627 -12 Td
+(LC_CTYPE.)Tj
+-0.74 Tc
+/R8 10 Tf
+-36 -16.8 Td
+(PA)Tj
+0 Tc
+11.6402 0 Td
+7.41 Tw
+(TH P)Tj
+-0.95 Tc
+29.6898 0 Td
+(AT)Tj
+0 Tc
+12.9395 0 Td
+(H)Tj
+/R7 10 Tf
+10.7145 0 Td
+0.476 Tw
+(helps determine the search path for manual page \214les.)Tj
+224.844 0 Td
+(See)Tj
+/R8 10 Tf
+17.4156 0 Td
+(SEARCH P)Tj
+-0.95 Tc
+49.8758 0 Td
+(AT)Tj
+2.976 Tc
+12.9395 0 Td
+(HF)Tj
+0 Tc
+16.8262 0 Td
+(OR MAN-)Tj
+-0.6 Tc
+-350.885 -12 Td
+(UA)Tj
+2.5 Tc
+13.8398 0 Td
+(LP)Tj
+-0.55 Tc
+14.5102 0 Td
+(AG)Tj
+0 Tc
+14.45 0 Td
+(ES)Tj
+/R7 10 Tf
+12.2297 0 Td
+(.)Tj
+/R8 10 Tf
+-91.0297 -16.7996 Td
+(SYSTEM)Tj
+36 -12 Td
+(SYSTEM)Tj
+/R7 10 Tf
+43.6098 0 Td
+0 Tw
+[(is used to get the def)10.0171(ault alternate system name \(for use with the)]TJ
+/R8 10 Tf
+259.8 0 Td
+<AD6D>Tj
+/R7 10 Tf
+16.5297 0 Td
+(option\).)Tj
+-0.11 Tc
+/R8 10.95 Tf
+-391.939 -16.8 Td
+(BU)Tj
+0 Tc
+15.0992 0 Td
+(GS)Tj
+/R7 10 Tf
+20.9008 -12 Td
+(The)Tj
+/R8 10 Tf
+18.05 0 Td
+<AD74>Tj
+/R7 10 Tf
+11.5297 0 Td
+[(option only w)10.0232(orks if a trof)25.0317(f-lik)]TJ
+2.5 Tc
+122.259 0 Td
+(ep)Tj
+0 Tc
+11.9398 0 Td
+(rogram is installed.)Tj
+-163.779 -12 Td
+[(If you see blinking \\255 or <AD> instead of h)5.01709(yphens, put `LESSCHARSET=latin1' in your en)40.0342(vironment.)]TJ
+/R8 10.95 Tf
+-36 -16.8004 Td
+(TIPS)Tj
+/R7 10 Tf
+36 -12 Td
+(If you add the line)Tj
+2.5 -24 Td
+(\(global-set-k)Tj
+-0.15 Tc
+51 0 Td
+0.3 Tw
+(ey [)Tj
+0 Tc
+15.1199 0 Td
+0 Tw
+(\(f1\)] \(lambda \(\) \(interacti)Tj
+-0.15 Tc
+101.21 0 Td
+(ve)Tj
+2.5 Tc
+9.28984 0 Td
+<2928>Tj
+0 Tc
+9.15977 0 Td
+[(manual-entry \(current-w)10(ord\)\)\)\))]TJ
+-188.279 -24 Td
+0.157 Tw
+(to your)Tj
+/R9 10 Tf
+31.5336 0 Td
+(.emacs)Tj
+/R7 10 Tf
+30.1465 0 Td
+(\214le, then hitting F1 will gi)Tj
+-0.15 Tc
+105.555 0 Td
+0.457 Tw
+(ve y)Tj
+0 Tc
+16.9469 0 Td
+0.156 Tw
+(ou the man page for the library call at the current cursor posi-)Tj
+-184.182 -12 Td
+(tion.)Tj
+-0.8 Tc
+16.7996 TL
+1.6 Tw
+(To g)'
+0 Tc
+17.8098 0 Td
+0 Tw
+[(et a plain te)15.0317(xt v)15.0317(ersion of a man page, without backspaces and underscores, try)]TJ
+2.5 Tc
+-12.8098 -24 Td
+(#m)Tj
+0 Tc
+15.2797 0 Td
+(an foo | col -b > foo.mantxt)Tj
+-0.548 Tc
+/R8 10.95 Tf
+-56.2797 -16.8004 Td
+(AU)Tj
+0 Tc
+15.2633 0 Td
+(THOR)Tj
+/R7 10 Tf
+20.7367 -12 Td
+2.181 Tw
+(John W)Tj
+4.681 Tc
+32.091 0 Td
+(.E)Tj
+0 Tc
+13.291 0 Td
+[(aton w)10.0293(as the original author of)]TJ
+/R8 10 Tf
+138.186 0 Td
+(man)Tj
+7.181 Tc
+/R7 10 Tf
+18.8898 0 Td
+(.Z)Tj
+-0.15 Tc
+15.791 0 Td
+(ey)Tj
+4.681 Tc
+9.28984 0 Td
+[(dM)468.105(.B)]TJ
+0 Tc
+32.3117 0 Td
+2.182 Tw
+(en-Halim released man 1.2, and Andries)Tj
+-259.85 -12 Td
+0.637 Tw
+(Brouwer follo)Tj
+56.9367 0 Td
+0.636 Tw
+[(wed up with v)15.0342(ersions 1.3 thru 1.5p.)-563.591(Federico Lucifredi <\215ucifredi@acm.or)17.998(g> is the current)]TJ
+-56.9367 -12 Td
+[(maintainer)55.0317(.)]TJ
+/R8 10.95 Tf
+-36 -16.7996 Td
+0 Tw
+(SEE ALSO)Tj
+/R7 10 Tf
+36 -12 Td
+[(apropos\(1\), whatis\(1\), less\(1\), grof)25.0317(f\(1\), man.con\214g\(5\).)]TJ
+157.865 -309.6 Td
+(September 19, 2005)Tj
+269.245 0 Td
+(4)Tj
+ET
+Q
+Q
+endstream
+endobj
+21 0 obj
+3966
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 10 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+11 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 14 0 R
+>>
+/Contents 12 0 R
+>>
+endobj
+15 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 18 0 R
+>>
+/Contents 16 0 R
+>>
+endobj
+19 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 22 0 R
+>>
+/Contents 20 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+11 0 R
+15 0 R
+19 0 R
+] /Count 4
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+10 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+14 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+18 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+22 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Encoding 23 0 R/Subtype/Type1>>
+endobj
+23 0 obj
+<</Type/Encoding/Differences[
+140/fi
+173/minus]>>
+endobj
+7 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Encoding 24 0 R/Subtype/Type1>>
+endobj
+24 0 obj
+<</Type/Encoding/Differences[
+140/fi/fl
+173/minus]>>
+endobj
+9 0 obj
+<</BaseFont/Times-Italic/Type/Font
+/Encoding 25 0 R/Subtype/Type1>>
+endobj
+25 0 obj
+<</Type/Encoding/Differences[
+140/fi]>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120228173253)
+/ModDate(D:20120228173253)>>endobj
+xref
+0 26
+0000000000 65535 f 
+0000033704 00000 n 
+0000034381 00000 n 
+0000033624 00000 n 
+0000033086 00000 n 
+0000000009 00000 n 
+0000009325 00000 n 
+0000034091 00000 n 
+0000033944 00000 n 
+0000034242 00000 n 
+0000033752 00000 n 
+0000033219 00000 n 
+0000009345 00000 n 
+0000019530 00000 n 
+0000033800 00000 n 
+0000033354 00000 n 
+0000019552 00000 n 
+0000029026 00000 n 
+0000033848 00000 n 
+0000033489 00000 n 
+0000029047 00000 n 
+0000033065 00000 n 
+0000033896 00000 n 
+0000034025 00000 n 
+0000034173 00000 n 
+0000034325 00000 n 
+trailer
+<< /Size 26 /Root 1 0 R /Info 2 0 R
+/ID [<EBBFDCA745786604AFE005DC109F3510><EBBFDCA745786604AFE005DC109F3510>]
+>>
+startxref
+34492
+%%EOF

@@ -1,0 +1,1373 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+130.68 Tw
+(CTIME\(3\) Linux)Tj
+202.24 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual CTIME\(3\))Tj
+-0.219 Tc
+/R8 10.95 Tf
+-270.52 -36 Td
+(NA)Tj
+0 Tc
+15.5922 0 Td
+(ME)Tj
+/R7 10 Tf
+20.4078 -12 Td
+0.217 Tw
+(asctime, ctime, gmtime, localtime, mktime, asctime_r)Tj
+2.717 Tc
+215.785 0 Td
+(,c)Tj
+0 Tc
+9.65703 0 Td
+(time_r)Tj
+2.717 Tc
+25.8199 0 Td
+(,g)Tj
+0 Tc
+10.2172 0 Td
+(mtime_r)Tj
+2.717 Tc
+33.6 0 Td
+(,l)Tj
+0 Tc
+7.99688 0 Td
+0.216 Tw
+(ocaltime_r \255 transform date and)Tj
+-303.076 -12 Td
+0 Tw
+[(time to brok)10(en-do)25.0073(wn time or ASCII)]TJ
+/R8 10.95 Tf
+-36 -16.8 Td
+(SYNOPSIS)Tj
+/R8 10 Tf
+36 -12 Td
+(#include <time.h>)Tj
+24 TL
+(char *asctime\(const struct tm *)'
+/R9 10 Tf
+133.98 0 Td
+(tm)Tj
+/R8 10 Tf
+10.3199 0 Td
+(\);)Tj
+-144.3 -12 Td
+(char *asctime_r\(const struct tm *)Tj
+/R9 10 Tf
+143.42 0 Td
+(tm)Tj
+2.5 Tc
+/R8 10 Tf
+10.3199 0 Td
+(,c)Tj
+0 Tc
+9.43984 0 Td
+(har *)Tj
+-0.2 Tc
+/R9 10 Tf
+22.5 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+/R8 10 Tf
+4.73945 0 Td
+(\);)Tj
+-200.219 -24 Td
+(char *ctime\(const time_t *)Tj
+/R9 10 Tf
+113.15 0 Td
+(timep)Tj
+/R8 10 Tf
+22.4098 0 Td
+(\);)Tj
+-135.559 -12 Td
+(char *ctime_r\(const time_t *)Tj
+/R9 10 Tf
+122.589 0 Td
+(timep)Tj
+2.5 Tc
+/R8 10 Tf
+22.4098 0 Td
+(,c)Tj
+0 Tc
+9.43984 0 Td
+(har *)Tj
+-0.2 Tc
+/R9 10 Tf
+22.5 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+/R8 10 Tf
+4.73945 0 Td
+(\);)Tj
+-191.479 -24 Td
+(struct tm *gmtime\(const time_t *)Tj
+/R9 10 Tf
+141.75 0 Td
+(timep)Tj
+/R8 10 Tf
+22.4098 0 Td
+(\);)Tj
+-164.159 -12 Td
+(struct tm *gmtime_r\(const time_t *)Tj
+/R9 10 Tf
+151.189 0 Td
+(timep)Tj
+2.5 Tc
+/R8 10 Tf
+22.4098 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+(truct tm *)Tj
+-0.37 Tc
+/R9 10 Tf
+42.7598 0 Td
+(re)Tj
+0 Tc
+7.95977 0 Td
+(sult)Tj
+/R8 10 Tf
+15.1297 0 Td
+(\);)Tj
+-248.338 -24 Td
+(struct tm *localtime\(const time_t *)Tj
+/R9 10 Tf
+148.42 0 Td
+(timep)Tj
+/R8 10 Tf
+22.4098 0 Td
+(\);)Tj
+-170.829 -12 Td
+(struct tm *localtime_r\(const time_t *)Tj
+/R9 10 Tf
+157.859 0 Td
+(timep)Tj
+2.5 Tc
+/R8 10 Tf
+22.4098 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+(truct tm *)Tj
+-0.37 Tc
+/R9 10 Tf
+42.7598 0 Td
+(re)Tj
+0 Tc
+7.95977 0 Td
+(sult)Tj
+/R8 10 Tf
+15.1297 0 Td
+(\);)Tj
+-255.008 -24 Td
+(time_t mktime\(struct tm *)Tj
+/R9 10 Tf
+112.589 0 Td
+(tm)Tj
+/R8 10 Tf
+10.3199 0 Td
+(\);)Tj
+/R8 10.95 Tf
+-158.909 -16.8004 Td
+(DESCRIPTION)Tj
+/R7 10 Tf
+36 -12 Td
+(The)Tj
+/R8 10 Tf
+18.3578 0 Td
+(ctime)Tj
+/R7 10 Tf
+23.3199 0 Td
+(\(\),)Tj
+/R8 10 Tf
+11.9676 0 Td
+(gmtime)Tj
+/R7 10 Tf
+32.2098 0 Td
+0.308 Tw
+(\(\) and)Tj
+/R8 10 Tf
+26.7156 0 Td
+(localtime)Tj
+/R7 10 Tf
+38.8797 0 Td
+(\(\) functions all tak)Tj
+2.808 Tc
+74.4238 0 Td
+[(ea)280.811(na)]TJ
+-0.18 Tc
+23.9359 0 Td
+(rg)Tj
+0 Tc
+8.25938 0 Td
+(ument of data type)Tj
+/R9 10 Tf
+78.4418 0 Td
+(time_t)Tj
+/R7 10 Tf
+27.8078 0 Td
+(which represents)Tj
+-364.319 -12 Td
+1.268 Tw
+[(calendar time.)-626.77(When interpreted as an absolute time v)]TJ
+227.954 0 Td
+1.267 Tw
+(alue, it represents the number of seconds elapsed)Tj
+-227.954 -12 Td
+0 Tw
+(since 00:00:00 on January 1, 1970, Coordinated Uni)Tj
+-0.15 Tc
+209.12 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+[(rsal T)34.9854(ime \(UTC\).)]TJ
+-218.41 -16.7996 Td
+(The)Tj
+/R8 10 Tf
+19.077 0 Td
+(asctime)Tj
+/R7 10 Tf
+32.2098 0 Td
+1.027 Tw
+(\(\) and)Tj
+/R8 10 Tf
+28.1547 0 Td
+(mktime)Tj
+/R7 10 Tf
+32.7699 0 Td
+1.028 Tw
+(\(\) functions both tak)Tj
+3.528 Tc
+84.3637 0 Td
+[(ea)352.781(na)]TJ
+-0.18 Tc
+25.3762 0 Td
+(rg)Tj
+0 Tc
+8.25938 0 Td
+(ument representing brok)Tj
+100.046 0 Td
+(en-do)Tj
+22.5199 0 Td
+(wn time which is a)Tj
+-352.776 -12 Td
+0 Tw
+(representation separated into year)Tj
+2.5 Tc
+134.72 0 Td
+(,m)Tj
+0 Tc
+12.7797 0 Td
+(onth, day)Tj
+2.5 Tc
+36.5703 0 Td
+(,e)Tj
+0 Tc
+9.43984 0 Td
+(tc.)Tj
+-193.51 -16.8004 Td
+[(Brok)10.0232(en-do)25.0073(wn time is stored in the structure)]TJ
+/R9 10 Tf
+176.409 0 Td
+(tm)Tj
+/R7 10 Tf
+12.5 0 Td
+(which is de\214ned in)Tj
+/R9 10 Tf
+78.3297 0 Td
+[(<time)15.0073(.h>)]TJ
+/R7 10 Tf
+40.5699 0 Td
+[(as follo)25.0098(ws:)]TJ
+-271.809 -24 Td
+(struct tm {)Tj
+10 -12 Td
+[(int tm_sec;)-2249.99(/* seconds */)]TJ
+12 TL
+T*[(int tm_min;)-2249.98(/* minutes */)]TJ
+T*[(int tm_hour;)-2000(/* hours */)]TJ
+T*[(int tm_mday;)-2000(/* day of the month */)]TJ
+T*[(int tm_mon;)-2249.97(/* month */)]TJ
+T*[(int tm_year;)-2000(/* year */)]TJ
+T*[(int tm_wday;)-2000(/* day of the week */)]TJ
+T*[(int tm_yday;)-2000(/* day in the year */)]TJ
+T*[(int tm_isdst;)-1749.98(/* daylight sa)20.0171(ving time */)]TJ
+-10 -12 Td
+(};)Tj
+-36 -16.8 Td
+(The members of the)Tj
+/R9 10 Tf
+82.8699 0 Td
+(tm)Tj
+/R7 10 Tf
+12.5 0 Td
+(structure are:)Tj
+/R9 10 Tf
+-95.2402 -16.7996 Td
+(tm_sec)Tj
+/R7 10 Tf
+35.8699 0 Td
+1.202 Tw
+(The number of seconds after the minute, normally in the range 0 to 59, b)Tj
+307.578 0 Td
+1.201 Tw
+(ut can be up to 60 to)Tj
+-307.577 -12 Td
+(allo)Tj
+2.5 Tc
+14.75 0 Td
+(wf)Tj
+0 Tc
+13.05 0 Td
+0 Tw
+(or leap seconds.)Tj
+/R9 10 Tf
+-63.6703 -16.8 Td
+(tm_min)Tj
+/R7 10 Tf
+35.8699 0 Td
+(The number of minutes after the hour)Tj
+2.5 Tc
+149.9 0 Td
+[(,i)250.032(nt)]TJ
+0 Tc
+18.0594 0 Td
+(he range 0 to 59.)Tj
+/R9 10 Tf
+-203.829 -16.8004 Td
+(tm_hour)Tj
+/R7 10 Tf
+35.8703 -12 Td
+(The number of hours past midnight, in the range 0 to 23.)Tj
+/R9 10 Tf
+-35.8703 -16.8 Td
+(tm_mday)Tj
+/R7 10 Tf
+35.8703 -12 Td
+(The day of the month, in the range 1 to 31.)Tj
+/R9 10 Tf
+-35.8703 -16.8 Td
+(tm_mon)Tj
+/R7 10 Tf
+35.8703 -12 Td
+(The number of months since January)Tj
+2.5 Tc
+147.6 0 Td
+[(,i)250.032(nt)]TJ
+0 Tc
+18.0594 0 Td
+(he range 0 to 11.)Tj
+-26.9898 -72 Td
+203.17 Tw
+(2004-11-16 1)Tj
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+5436
+endobj
+12 0 obj
+<</Length 13 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+130.68 Tw
+(CTIME\(3\) Linux)Tj
+202.24 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual CTIME\(3\))Tj
+/R9 10 Tf
+-234.39 -36 Td
+(tm_year)Tj
+/R7 10 Tf
+35.8703 -12 Td
+0 Tw
+(The number of years since 1900.)Tj
+/R9 10 Tf
+-35.8703 -16.8 Td
+(tm_wday)Tj
+/R7 10 Tf
+35.8703 -12 Td
+(The number of days since Sunday)Tj
+2.5 Tc
+135.27 0 Td
+[(,i)250.032(nt)]TJ
+0 Tc
+18.0594 0 Td
+(he range 0 to 6.)Tj
+/R9 10 Tf
+-189.2 -16.8 Td
+(tm_yday)Tj
+/R7 10 Tf
+35.8703 -12 Td
+(The number of days since January 1, in the range 0 to 365.)Tj
+/R9 10 Tf
+-35.8703 -16.7996 Td
+(tm_isdst)Tj
+3.142 Tc
+/R7 10 Tf
+35.8703 -12 Td
+<418D>Tj
+0 Tc
+15.9219 0 Td
+0.642 Tw
+[(ag that indicates whether daylight sa)20.0317(ving time is in ef)]TJ
+219.027 0 Td
+0.643 Tw
+[(fect at the time described.)-564.268(The v)25.0049(alue is)]TJ
+-234.949 -12 Td
+(positi)Tj
+-0.15 Tc
+21.9797 0 Td
+0.913 Tw
+(ve i)Tj
+3.113 Tc
+15.1828 0 Td
+(fd)Tj
+0 Tc
+11.443 0 Td
+0.613 Tw
+[(aylight sa)20.0342(ving time is in ef)25.0366(fect, zero if it is not, and ne)]TJ
+-0.05 Tc
+222.955 0 Td
+(ga)Tj
+0 Tc
+9.38984 0 Td
+(ti)Tj
+-0.15 Tc
+5.30977 0 Td
+0.912 Tw
+(ve i)Tj
+3.112 Tc
+15.1816 0 Td
+(ft)Tj
+0 Tc
+9.22227 0 Td
+0.612 Tw
+(he information is not)Tj
+-0.2 Tc
+-310.664 -12 Td
+(av)Tj
+0 Tc
+8.98984 0 Td
+(ailable.)Tj
+-44.9898 -16.8 Td
+0.506 Tw
+(The call)Tj
+/R8 10 Tf
+36.0016 0 Td
+(ctime\()Tj
+/R9 10 Tf
+26.7797 0 Td
+(t)Tj
+/R8 10 Tf
+3.45938 0 Td
+<29>Tj
+/R7 10 Tf
+6.33555 0 Td
+(is equi)Tj
+-0.25 Tc
+26.6457 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(lent to)Tj
+/R8 10 Tf
+28.7918 0 Td
+(asctime\(localtime\()Tj
+/R9 10 Tf
+77.8797 0 Td
+(t)Tj
+/R8 10 Tf
+3.45938 0 Td
+<2929>Tj
+5.506 Tc
+/R7 10 Tf
+5.96016 0 Td
+(.I)Tj
+3.006 Tc
+11.2961 0 Td
+(tc)Tj
+0 Tc
+10.2258 0 Td
+(on)Tj
+-0.15 Tc
+9.6 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+0.507 Tw
+(rts the calendar time)Tj
+/R9 10 Tf
+86.1176 0 Td
+(t)Tj
+/R7 10 Tf
+5.78633 0 Td
+(into a string of the)Tj
+-356.818 -12 Td
+(form)Tj
+36 -24 Td
+0 Tw
+[("W)80.0073(ed Jun 30 21:49:08 1993\\n")]TJ
+-36 -24 Td
+1.145 Tw
+(The abbre)Tj
+41.2648 0 Td
+1.144 Tw
+[(viations for the days of the week are `Sun', `Mon', `T)44.9609(ue', `W)80.0024(ed', `Thu', `Fri', and `Sat'.)]TJ
+375.564 0 Td
+(The)Tj
+-416.829 -12 Td
+(abbre)Tj
+22.0699 0 Td
+0.534 Tw
+[(viations for the months are `Jan', `Feb', `Mar', `)80.0049(Apr', `May', `Jun', `Jul', `)80.0391(Aug', `Sep', `Oct', `No)]TJ
+399.529 0 Td
+(v',)Tj
+-421.599 -12 Td
+1.171 Tw
+[(and `Dec'.)-617.056(The return v)25.0195(alue points to a statically allocated string which might be o)]TJ
+-0.15 Tc
+348.453 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+1.17 Tw
+(rwritten by subse-)Tj
+-357.743 -12 Td
+0.67 Tw
+(quent calls to an)Tj
+3.17 Tc
+67.1297 0 Td
+[(yo)317.008(ft)]TJ
+0 Tc
+22.45 0 Td
+(he date and time functions.)Tj
+116.391 0 Td
+0.671 Tw
+[(The function also sets the e)15.0342(xternal v)]TJ
+148.155 0 Td
+(ariable)Tj
+/R9 10 Tf
+30.4906 0 Td
+(tzname)Tj
+/R7 10 Tf
+31.5004 0 Td
+(\(see)Tj
+/R8 10 Tf
+-416.117 -12 Td
+(tzset)Tj
+/R7 10 Tf
+19.4297 0 Td
+0.09 Tw
+[(\(3\)\) with information about the current time zone.)-508.975(The re-entrant v)]TJ
+270.13 0 Td
+(ersion)Tj
+/R8 10 Tf
+27.1398 0 Td
+(ctime_r)Tj
+/R7 10 Tf
+32.7598 0 Td
+(\(\) does the same, b)Tj
+75.4199 0 Td
+(ut)Tj
+-424.879 -12 Td
+0 Tw
+[(stores the string in a user)20.0171(-supplied b)20.0073(uf)25.0317(fer of length at least 26. It need not set)]TJ
+/R9 10 Tf
+308.869 0 Td
+(tzname)Tj
+/R7 10 Tf
+28.3297 0 Td
+(.)Tj
+-337.199 -16.8 Td
+(The)Tj
+/R8 10 Tf
+18.6328 0 Td
+(gmtime)Tj
+/R7 10 Tf
+32.2098 0 Td
+0.583 Tw
+(\(\) function con)Tj
+-0.15 Tc
+60.1957 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+0.584 Tw
+(rts the calendar time)Tj
+/R9 10 Tf
+86.4258 0 Td
+(timep)Tj
+/R7 10 Tf
+25.3039 0 Td
+(to brok)Tj
+29.2039 0 Td
+(en-do)Tj
+22.5199 0 Td
+[(wn time representation, e)15.0293(xpressed in)]TJ
+-283.782 -12 Td
+0.861 Tw
+(Coordinated Uni)Tj
+-0.15 Tc
+67.6609 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+[(rsal T)34.9902(ime \(UTC\). It may return NULL when the year does not \214t into an inte)]TJ
+319.435 0 Td
+(ger)Tj
+5.86 Tc
+12.3297 0 Td
+(.T)Tj
+0 Tc
+14.4699 0 Td
+(he)Tj
+-423.185 -12 Td
+0.407 Tw
+[(return v)25.0366(alue points to a statically allocated struct which might be o)]TJ
+-0.15 Tc
+270.766 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rwritten by subsequent calls to an)Tj
+2.908 Tc
+136.255 0 Td
+(yo)Tj
+0 Tc
+12.9078 0 Td
+(f)Tj
+-429.219 -12 Td
+0.277 Tw
+(the date and time functions.)Tj
+117.205 0 Td
+(The)Tj
+/R8 10 Tf
+18.327 0 Td
+(gmtime_r)Tj
+/R7 10 Tf
+41.65 0 Td
+0.276 Tw
+[(\(\) function does the same, b)20.0073(ut stores the data in a user)]TJ
+217.816 0 Td
+(-supplied)Tj
+-394.997 -12 Td
+(struct.)Tj
+16.7996 TL
+(The)'
+/R8 10 Tf
+18.3477 0 Td
+(localtime)Tj
+/R7 10 Tf
+38.8797 0 Td
+0.298 Tw
+(\(\) function con)Tj
+-0.15 Tc
+59.6258 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rts the calendar time)Tj
+/R9 10 Tf
+85.2816 0 Td
+(timep)Tj
+/R7 10 Tf
+25.0176 0 Td
+0.299 Tw
+[(to brok)10.0244(en-time representation, e)15.0195(xpressed relati)]TJ
+-0.15 Tc
+187.036 0 Td
+(ve)Tj
+0 Tc
+-423.478 -12 Td
+0.694 Tw
+(to the user')Tj
+3.194 Tc
+45.9379 0 Td
+(ss)Tj
+0 Tc
+10.9742 0 Td
+[(peci\214ed time zone.)-1069.36(The function acts as if it called)]TJ
+/R8 10 Tf
+218.569 0 Td
+(tzset)Tj
+/R7 10 Tf
+19.4297 0 Td
+(\(3\) and sets the e)Tj
+70.3859 0 Td
+0.693 Tw
+(xternal v)Tj
+35.8227 0 Td
+(ariables)Tj
+/R9 10 Tf
+-401.12 -12 Td
+(tzname)Tj
+/R7 10 Tf
+32.0336 0 Td
+1.204 Tw
+(with information about the current time zone,)Tj
+/R9 10 Tf
+193.179 0 Td
+(timezone)Tj
+/R7 10 Tf
+39.2547 0 Td
+1.205 Tw
+[(with the dif)25.0098(ference between Coordinated)]TJ
+-264.467 -12 Td
+(Uni)Tj
+-0.15 Tc
+14.75 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+0.258 Tw
+[(rsal T)34.9646(ime \(UTC\) and local standard time in seconds, and)]TJ
+/R9 10 Tf
+231.58 0 Td
+(daylight)Tj
+/R7 10 Tf
+35.5375 0 Td
+0.257 Tw
+[(to a non-zero v)25.0391(alue if daylight sa)]TJ
+132.841 0 Td
+(v-)Tj
+-423.999 -12 Td
+0.776 Tw
+(ings time rules apply during some part of the year)Tj
+5.776 Tc
+206.014 0 Td
+(.T)Tj
+0 Tc
+14.3859 0 Td
+[(he return v)25.0195(alue points to a statically allocated struct)]TJ
+-220.4 -12 Td
+0.748 Tw
+(which might be o)Tj
+-0.15 Tc
+71.8137 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rwritten by subsequent calls to an)Tj
+3.247 Tc
+137.96 0 Td
+[(yo)324.712(ft)]TJ
+0 Tc
+22.6039 0 Td
+0.747 Tw
+(he date and time functions.)Tj
+116.775 0 Td
+(The)Tj
+/R8 10 Tf
+18.7969 0 Td
+(localtime_r)Tj
+/R7 10 Tf
+48.3199 0 Td
+<2829>Tj
+-425.559 -12 Td
+0 Tw
+[(function does the same, b)20.0317(ut stores the data in a user)20.0171(-supplied struct. It need not set)]TJ
+/R9 10 Tf
+331.509 0 Td
+(tzname)Tj
+/R7 10 Tf
+28.3297 0 Td
+(.)Tj
+-359.839 -16.8 Td
+(The)Tj
+/R8 10 Tf
+19.8129 0 Td
+(asctime)Tj
+/R7 10 Tf
+32.2098 0 Td
+1.763 Tw
+(\(\) function con)Tj
+-0.15 Tc
+62.5559 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rts the brok)Tj
+49.1957 0 Td
+(en-do)Tj
+22.5199 0 Td
+1.764 Tw
+(wn time v)Tj
+43.2777 0 Td
+(alue)Tj
+/R9 10 Tf
+20.9234 0 Td
+(tm)Tj
+/R7 10 Tf
+14.2637 0 Td
+(into a string with the same format as)Tj
+/R8 10 Tf
+-274.049 -12 Td
+(ctime)Tj
+/R7 10 Tf
+23.3199 0 Td
+3.138 Tw
+(\(\). The)Tj
+33.4855 0 Td
+0.638 Tw
+(return v)Tj
+31.9879 0 Td
+0.637 Tw
+(alue points to a statically allocated string which might be o)Tj
+-0.15 Tc
+241.87 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rwritten by subsequent)Tj
+-339.953 -12 Td
+0.156 Tw
+(calls to an)Tj
+2.656 Tc
+40.7117 0 Td
+[(yo)265.614(ft)]TJ
+0 Tc
+21.4219 0 Td
+(he date and time functions.)Tj
+113.82 0 Td
+(The)Tj
+/R8 10 Tf
+18.2059 0 Td
+(asctime_r)Tj
+/R7 10 Tf
+41.65 0 Td
+(\(\) function does the same, b)Tj
+111.67 0 Td
+0.157 Tw
+(ut stores the string in)Tj
+2.5 Tc
+-347.479 -12 Td
+(au)Tj
+0 Tc
+11.9398 0 Td
+0 Tw
+[(ser)20.0073(-supplied b)20.0085(uf)25.0317(fer of length at least 26.)]TJ
+-11.9398 -16.8004 Td
+(The)Tj
+/R8 10 Tf
+19.1879 0 Td
+(mktime)Tj
+/R7 10 Tf
+32.7699 0 Td
+1.138 Tw
+(\(\) function con)Tj
+-0.15 Tc
+61.3059 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+1.137 Tw
+(rts a brok)Tj
+40.1637 0 Td
+(en-do)Tj
+22.5199 0 Td
+[(wn time structure, e)15.0073(xpressed as local time, to calendar time)]TJ
+-185.237 -12 Td
+2.638 Tw
+(representation. The)Tj
+82.6957 0 Td
+0.138 Tw
+(function ignores the speci\214ed contents of the structure members)Tj
+/R9 10 Tf
+260.252 0 Td
+(tm_wday)Tj
+/R7 10 Tf
+38.7484 0 Td
+(and)Tj
+/R9 10 Tf
+17.0785 0 Td
+(tm_yday)Tj
+/R7 10 Tf
+-398.775 -12 Td
+0.57 Tw
+(and recomputes them from the other information in the brok)Tj
+246.38 0 Td
+(en-do)Tj
+22.5199 0 Td
+[(wn time structure.)-556.992(If structure members)]TJ
+-268.9 -12 Td
+0.365 Tw
+(are outside their le)Tj
+-0.05 Tc
+75.3148 0 Td
+(ga)Tj
+2.865 Tc
+9.38984 0 Td
+(li)Tj
+0 Tc
+8.425 0 Td
+(nterv)Tj
+20.4098 0 Td
+(al, the)Tj
+2.865 Tc
+24.6547 0 Td
+(yw)Tj
+0 Tc
+15.0852 0 Td
+0.366 Tw
+(ill be normalized \(so that, e.g., 40 October is changed into 9 No)Tj
+-0.15 Tc
+258.872 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(m-)Tj
+-421.441 -12 Td
+2.628 Tw
+(ber\). Calling)Tj
+/R8 10 Tf
+55.9156 0 Td
+(mktime)Tj
+/R7 10 Tf
+32.7699 0 Td
+0.128 Tw
+[(\(\) also sets the e)15.0195(xternal v)]TJ
+100.05 0 Td
+(ariable)Tj
+/R9 10 Tf
+29.9477 0 Td
+(tzname)Tj
+/R7 10 Tf
+30.9574 0 Td
+(with information about the current time zone.)Tj
+-249.64 -12 Td
+2.298 Tw
+(If the speci\214ed brok)Tj
+87.1238 0 Td
+(en-do)Tj
+22.5199 0 Td
+2.299 Tw
+(wn time cannot be represented as calendar time \(seconds since the epoch\),)Tj
+/R8 10 Tf
+-109.644 -12 Td
+(mktime)Tj
+/R7 10 Tf
+32.7699 0 Td
+0.28 Tw
+[(\(\) returns a v)25.0317(alue of \(time_t\)\(\2551\) and does not alter the)]TJ
+/R9 10 Tf
+224.579 0 Td
+(tm_wday)Tj
+/R7 10 Tf
+38.8895 0 Td
+(and)Tj
+/R9 10 Tf
+17.2195 0 Td
+(tm_yday)Tj
+/R7 10 Tf
+36.6594 0 Td
+(members of the bro-)Tj
+-0.1 Tc
+-350.118 -12 Td
+(ke)Tj
+0 Tc
+9.33984 0 Td
+0 Tw
+[(n-do)25.0317(wn time structure.)]TJ
+/R8 10.95 Tf
+-45.3398 -16.8 Td
+[(RETURN V)134.973(ALUE)]TJ
+/R7 10 Tf
+36 -12 Td
+0.096 Tw
+(Each of these functions returns the v)Tj
+146.626 0 Td
+0.097 Tw
+(alue described, or NULL \(\2551 in case of)Tj
+/R8 10 Tf
+160.756 0 Td
+(mktime)Tj
+/R7 10 Tf
+32.7699 0 Td
+(\(\)\) in case an error w)Tj
+84.2848 0 Td
+(as)Tj
+-424.436 -12 Td
+(detected.)Tj
+174.67 -76.8 Td
+203.17 Tw
+(2004-11-16 2)Tj
+ET
+Q
+Q
+endstream
+endobj
+13 0 obj
+9778
+endobj
+16 0 obj
+<</Length 17 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+130.68 Tw
+(CTIME\(3\) Linux)Tj
+202.24 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual CTIME\(3\))Tj
+/R8 10.95 Tf
+-270.52 -36 Td
+[(NO)39.99(TES)]TJ
+/R7 10 Tf
+36 -12 Td
+0.828 Tw
+(The four functions)Tj
+/R8 10 Tf
+79.5234 0 Td
+(asctime)Tj
+/R7 10 Tf
+32.2098 0 Td
+(\(\),)Tj
+/R8 10 Tf
+12.4875 0 Td
+(ctime)Tj
+/R7 10 Tf
+23.3199 0 Td
+(\(\),)Tj
+/R8 10 Tf
+12.4875 0 Td
+(gmtime)Tj
+/R7 10 Tf
+32.2098 0 Td
+0.827 Tw
+(\(\) and)Tj
+/R8 10 Tf
+27.7539 0 Td
+(localtime)Tj
+/R7 10 Tf
+38.8797 0 Td
+(\(\) return a pointer to static data and hence)Tj
+-258.871 -12 Td
+0.237 Tw
+[(are not thread-safe.)-523.662(Thread-safe v)]TJ
+138.287 0 Td
+(ersions)Tj
+/R8 10 Tf
+31.1766 0 Td
+(asctime_r)Tj
+/R7 10 Tf
+41.65 0 Td
+(\(\),)Tj
+/R8 10 Tf
+11.8965 0 Td
+(ctime_r)Tj
+/R7 10 Tf
+32.7598 0 Td
+(\(\),)Tj
+/R8 10 Tf
+11.8965 0 Td
+(gmtime_r)Tj
+/R7 10 Tf
+41.65 0 Td
+(\(\) and)Tj
+/R8 10 Tf
+26.5746 0 Td
+(localtime_r)Tj
+/R7 10 Tf
+48.3199 0 Td
+0.238 Tw
+(\(\) are speci-)Tj
+-384.211 -12 Td
+0 Tw
+(\214ed by SUSv2, and a)Tj
+-0.25 Tc
+84.5199 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(ilable since libc 5.2.5.)Tj
+-93.7098 -16.8 Td
+0.142 Tw
+(In man)Tj
+2.642 Tc
+28.002 0 Td
+(yi)Tj
+0 Tc
+10.4219 0 Td
+(mplementations, including)Tj
+/R9 10 Tf
+109.454 0 Td
+(glibc)Tj
+2.642 Tc
+/R7 10 Tf
+20.3098 0 Td
+(,a0i)Tj
+0 Tc
+22.6461 0 Td
+(n)Tj
+/R9 10 Tf
+7.77187 0 Td
+(tm_mday)Tj
+/R7 10 Tf
+39.6215 0 Td
+0.141 Tw
+(is interpreted as meaning the last day of the pre-)Tj
+-238.227 -12 Td
+0 Tw
+(ceding month.)Tj
+16.8 TL
+T*[(The glibc v)15(ersion of struct tm has additional \214elds)]TJ
+36 -24 Td
+(long tm_gmtof)Tj
+59.4797 0 Td
+25 Tw
+(f; /*)Tj
+43.8898 0 Td
+0 Tw
+(Seconds east of UTC */)Tj
+-103.37 -12 Td
+[(const char *tm_zone;)-1500(/* T)34.9756(imezone abbre)25(viation */)]TJ
+-36 -24 Td
+1.312 Tw
+[(de\214ned when _BSD_SOURCE w)10.0391(as set before including)]TJ
+/R9 10 Tf
+236.533 0 Td
+[(<time)15.0073(.h>)]TJ
+6.312 Tc
+/R7 10 Tf
+38.0699 0 Td
+(.T)Tj
+0 Tc
+14.9223 0 Td
+(his is a BSD e)Tj
+61.6777 0 Td
+1.313 Tw
+(xtension, present in)Tj
+-351.203 -12 Td
+(4.3BSD-Reno.)Tj
+/R8 10.95 Tf
+-36 -16.7996 Td
+0 Tw
+[(CONFORMING T)17.9873(O)]TJ
+/R7 10 Tf
+36 -12 Td
+(SVr4, POSIX.1-2001, 4.3BSD, C89, C99.)Tj
+/R8 10.95 Tf
+-36 -16.8004 Td
+(SEE ALSO)Tj
+/R8 10 Tf
+36 -12 Td
+(date)Tj
+/R7 10 Tf
+18.3297 0 Td
+(\(1\),)Tj
+/R8 10 Tf
+19.4066 0 Td
+(gettimeofday)Tj
+/R7 10 Tf
+55.5398 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+19.4066 0 Td
+(time)Tj
+/R7 10 Tf
+18.8797 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+19.4055 0 Td
+(utime)Tj
+/R7 10 Tf
+24.4398 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+19.4055 0 Td
+(clock)Tj
+/R7 10 Tf
+22.2199 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+19.4055 0 Td
+(difftime)Tj
+/R7 10 Tf
+33.8797 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+19.4055 0 Td
+(strftime)Tj
+/R7 10 Tf
+33.8699 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+19.4055 0 Td
+[(str)10.0244(ptime)]TJ
+/R7 10 Tf
+36 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+19.4055 0 Td
+(tzset)Tj
+/R7 10 Tf
+19.4297 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+-417.834 -12 Td
+(time)Tj
+/R7 10 Tf
+18.8797 0 Td
+(\(7\))Tj
+155.79 -460.8 Td
+203.17 Tw
+(2004-11-16 3)Tj
+ET
+Q
+Q
+endstream
+endobj
+17 0 obj
+2983
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 10 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+11 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 14 0 R
+>>
+/Contents 12 0 R
+>>
+endobj
+15 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 18 0 R
+>>
+/Contents 16 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+11 0 R
+15 0 R
+] /Count 3
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+10 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+14 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+18 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Encoding 19 0 R/Subtype/Type1>>
+endobj
+19 0 obj
+<</Type/Encoding/Differences[
+140/fi/fl
+173/minus]>>
+endobj
+9 0 obj
+<</BaseFont/Times-Italic/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120228173255)
+/ModDate(D:20120228173255)>>endobj
+xref
+0 20
+0000000000 65535 f 
+0000018898 00000 n 
+0000019373 00000 n 
+0000018825 00000 n 
+0000018422 00000 n 
+0000000009 00000 n 
+0000005495 00000 n 
+0000019155 00000 n 
+0000019090 00000 n 
+0000019306 00000 n 
+0000018946 00000 n 
+0000018555 00000 n 
+0000005515 00000 n 
+0000015345 00000 n 
+0000018994 00000 n 
+0000018690 00000 n 
+0000015366 00000 n 
+0000018401 00000 n 
+0000019042 00000 n 
+0000019237 00000 n 
+trailer
+<< /Size 20 /Root 1 0 R /Info 2 0 R
+/ID [<0F707AB5B80D38412449A8EC680C3B09><0F707AB5B80D38412449A8EC680C3B09>]
+>>
+startxref
+19484
+%%EOF

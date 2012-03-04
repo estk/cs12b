@@ -1,0 +1,1884 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+(ST)Tj
+-1.11 Tc
+10.7402 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+138.83 Tw
+(\(2\) Linux)Tj
+179.38 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual ST)Tj
+-1.11 Tc
+173.73 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+(\(2\))Tj
+-0.219 Tc
+/R8 10.95 Tf
+-456.569 -36 Td
+(NA)Tj
+0 Tc
+15.5922 0 Td
+(ME)Tj
+/R7 10 Tf
+20.4078 -12 Td
+0 Tw
+(stat, fstat, lstat \255 get \214le status)Tj
+/R8 10.95 Tf
+-36 -16.8 Td
+(SYNOPSIS)Tj
+/R8 10 Tf
+36 -12 Td
+(#include <sys/types.h>)Tj
+12 TL
+(#include <sys/stat.h>)'
+(#include <unistd.h>)'
+24 TL
+(int stat\(const char *)'
+/R9 10 Tf
+85.9598 0 Td
+(path)Tj
+2.5 Tc
+/R8 10 Tf
+18.0594 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+(truct stat *)Tj
+-0.2 Tc
+/R9 10 Tf
+46.65 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+/R8 10 Tf
+4.73945 0 Td
+(\);)Tj
+-174.098 -12 Td
+(int fstat\(int)Tj
+/R9 10 Tf
+52.4598 0 Td
+(\214ledes)Tj
+2.5 Tc
+/R8 10 Tf
+25.8199 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+(truct stat *)Tj
+-0.2 Tc
+/R9 10 Tf
+46.65 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+/R8 10 Tf
+4.73945 0 Td
+(\);)Tj
+-148.359 -12 Td
+(int lstat\(const char *)Tj
+/R9 10 Tf
+88.7398 0 Td
+(path)Tj
+2.5 Tc
+/R8 10 Tf
+18.0594 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+(truct stat *)Tj
+-0.2 Tc
+/R9 10 Tf
+46.65 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+/R8 10 Tf
+4.73945 0 Td
+(\);)Tj
+/R8 10.95 Tf
+-212.879 -16.8 Td
+(DESCRIPTION)Tj
+/R7 10 Tf
+36 -12 Td
+0.264 Tw
+[(These functions return information about a \214le.)-526.357(No permissions are required on the \214le itself, b)]TJ
+386.699 0 Td
+0.263 Tw
+(ut \212 in the)Tj
+-386.699 -12 Td
+1.036 Tw
+(case of)Tj
+/R8 10 Tf
+32.6117 0 Td
+(stat)Tj
+/R7 10 Tf
+15.55 0 Td
+(\(\) and)Tj
+/R8 10 Tf
+28.1719 0 Td
+(lstat)Tj
+/R7 10 Tf
+18.3297 0 Td
+(\(\) \212 e)Tj
+-0.15 Tc
+28.0219 0 Td
+(xe)Tj
+0 Tc
+9.28984 0 Td
+(cute \(search\) permission is required on all of the directories in)Tj
+/R9 10 Tf
+264.087 0 Td
+(path)Tj
+/R7 10 Tf
+21.5965 0 Td
+(that)Tj
+-417.658 -12 Td
+0 Tw
+(lead to the \214le.)Tj
+/R8 10 Tf
+16.7996 TL
+(stat)'
+/R7 10 Tf
+15.55 0 Td
+(\(\) stats the \214le pointed to by)Tj
+/R9 10 Tf
+115.97 0 Td
+(path)Tj
+/R7 10 Tf
+20.5594 0 Td
+(and \214lls in)Tj
+-0.2 Tc
+/R9 10 Tf
+44.7297 0 Td
+(bu)Tj
+0 Tc
+9.8 0 Td
+(f)Tj
+/R7 10 Tf
+4.73945 0 Td
+(.)Tj
+/R8 10 Tf
+-211.348 -24 Td
+(lstat)Tj
+/R7 10 Tf
+18.3297 0 Td
+0.481 Tw
+(\(\) is identical to)Tj
+/R8 10 Tf
+67.4738 0 Td
+(stat)Tj
+/R7 10 Tf
+15.55 0 Td
+[(\(\), e)15.0146(xcept that if)]TJ
+/R9 10 Tf
+69.3934 0 Td
+(path)Tj
+/R7 10 Tf
+21.0406 0 Td
+0.48 Tw
+(is a symbolic link, then the link itself is stat-ed, not the \214le)Tj
+-191.787 -12 Td
+0 Tw
+(that it refers to.)Tj
+/R8 10 Tf
+24 TL
+(fstat)'
+/R7 10 Tf
+18.8797 0 Td
+(\(\) is identical to)Tj
+/R8 10 Tf
+65.55 0 Td
+(stat)Tj
+/R7 10 Tf
+15.55 0 Td
+[(\(\), e)15(xcept that the \214le to be stat-ed is speci\214ed by the \214le descriptor)]TJ
+/R9 10 Tf
+271.42 0 Td
+(\214ledes)Tj
+/R7 10 Tf
+25.8199 0 Td
+(.)Tj
+-397.22 -16.8004 Td
+(All of these system calls return a)Tj
+/R9 10 Tf
+134.15 0 Td
+(stat)Tj
+/R7 10 Tf
+17.6297 0 Td
+[(structure, which contains the follo)25.0171(wing \214elds:)]TJ
+-133.779 -16.8 Td
+(struct stat {)Tj
+10 -12 Td
+(de)Tj
+9.18984 0 Td
+10 Tw
+[(v_t st_de)25.0159(v; /*)]TJ
+76.6996 0 Td
+0 Tw
+[(ID of de)25.0146(vice containing \214le */)]TJ
+-85.8895 -12 Td
+10 Tw
+(ino_t st_ino; /*)Tj
+83.0699 0 Td
+0 Tw
+(inode number */)Tj
+-83.0699 -12 Td
+7.5 Tw
+(mode_t st_mode; /*)Tj
+96.95 0 Td
+0 Tw
+(protection */)Tj
+-96.95 -12 Td
+5 Tw
+(nlink_t st_nlink; /*)Tj
+88.6297 0 Td
+0 Tw
+(number of hard links */)Tj
+-88.6297 -12 Td
+10 Tw
+(uid_t st_uid; /*)Tj
+83.0699 0 Td
+0 Tw
+[(user ID of o)25.0073(wner */)]TJ
+-83.0699 -12 Td
+10 Tw
+(gid_t st_gid; /*)Tj
+83.0699 0 Td
+0 Tw
+[(group ID of o)25.0171(wner */)]TJ
+-83.0699 -12 Td
+(de)Tj
+9.18984 0 Td
+10 Tw
+(v_t st_rde)Tj
+49.5797 0 Td
+7.5 Tw
+(v; /*)Tj
+28.0598 0 Td
+0 Tw
+[(de)25.0146(vice ID \(if special \214le\) */)]TJ
+-86.8293 -12 Td
+(of)Tj
+8.07969 0 Td
+10 Tw
+(f_t st_size;)Tj
+63.6098 0 Td
+0 Tw
+(/* total size, in bytes */)Tj
+-71.6895 -12 Td
+(blksize_t st_blksize; /* blocksize for \214lesystem I/O */)Tj
+12 TL
+2.5 Tw
+(blkcnt_t st_blocks; /*)'
+93.6199 0 Td
+0 Tw
+(number of blocks allocated */)Tj
+-93.6199 -12 Td
+7.5 Tw
+(time_t st_atime;)Tj
+79.7297 0 Td
+0 Tw
+(/* time of last access */)Tj
+-79.7297 -12 Td
+7.5 Tw
+(time_t st_mtime;)Tj
+83.0699 0 Td
+0 Tw
+(/* time of last modi\214cation */)Tj
+-83.0699 -12 Td
+7.5 Tw
+(time_t st_ctime;)Tj
+79.7297 0 Td
+0 Tw
+(/* time of last status change */)Tj
+-89.7297 -12 Td
+(};)Tj
+-18 -16.7996 Td
+(The)Tj
+/R9 10 Tf
+18.3898 0 Td
+[(st_de)15.0232(v)]TJ
+/R7 10 Tf
+28.2195 0 Td
+[(\214eld describes the de)25.0244(vice on which this \214le resides.)]TJ
+-46.6094 -24 Td
+(The)Tj
+/R9 10 Tf
+18.3898 0 Td
+[(st_r)37.0154(de)15.0159(v)]TJ
+/R7 10 Tf
+31.7395 0 Td
+[(\214eld describes the de)25.0244(vice that this \214le \(inode\) represents.)]TJ
+-50.1293 -24 Td
+(The)Tj
+/R9 10 Tf
+19.0777 0 Td
+(st_size)Tj
+/R7 10 Tf
+30.0379 0 Td
+0.688 Tw
+(\214eld gi)Tj
+-0.15 Tc
+28.4977 0 Td
+(ve)Tj
+3.188 Tc
+9.28984 0 Td
+(st)Tj
+0 Tc
+9.85781 0 Td
+(he size of the \214le \(if it is a re)Tj
+120.852 0 Td
+0.689 Tw
+[(gular \214le or a symbolic link\) in bytes.)-568.862(The size of a)]TJ
+-217.613 -12 Td
+0 Tw
+(symlink is the length of the pathname it contains, without a trailing null byte.)Tj
+24 TL
+(The)'
+/R9 10 Tf
+20.2109 0 Td
+[(st_bloc)20.0159(ks)]TJ
+/R7 10 Tf
+41.6102 0 Td
+1.821 Tw
+(\214eld indicates the number of blocks allocated to the \214le, 512-byte units.)Tj
+313.881 0 Td
+1.82 Tw
+(\(This may be)Tj
+-375.702 -12 Td
+0 Tw
+(smaller than)Tj
+/R9 10 Tf
+51.7699 0 Td
+(st_size)Tj
+/R7 10 Tf
+26.8496 0 Td
+[(/512, for e)15.0146(xample, when the \214le has holes.\))]TJ
+-78.6195 -24 Td
+(The)Tj
+/R9 10 Tf
+18.1699 0 Td
+(st_blksize)Tj
+/R7 10 Tf
+41.5098 0 Td
+0.12 Tw
+(\214eld gi)Tj
+-0.15 Tc
+27.9297 0 Td
+(ve)Tj
+2.62 Tc
+9.28984 0 Td
+(st)Tj
+0 Tc
+9.28984 0 Td
+(he "preferred" blocksize for ef)Tj
+122.11 0 Td
+0.121 Tw
+[(\214cient \214le system I/O.)-512.061(\(Writing to a \214le in smaller)]TJ
+-228.299 -12 Td
+0 Tw
+[(chunks may cause an inef)25(\214cient read-modify-re)25(write.\))]TJ
+16.8 TL
+0.155 Tw
+T*[(Not all of the Linux \214lesystems implement all of the time \214elds.)-515.469(Some \214le system types allo)]TJ
+2.655 Tc
+373.35 0 Td
+(wm)Tj
+0 Tc
+17.6551 0 Td
+(ounting in)Tj
+-391.005 -12 Td
+0 Tw
+[(such a w)10.0159(ay that \214le accesses do not cause an update of the)]TJ
+/R9 10 Tf
+235.459 0 Td
+(st_atime)Tj
+/R7 10 Tf
+36.5695 0 Td
+(\214eld. \(See `noatime' in)Tj
+/R8 10 Tf
+94.7098 0 Td
+(mount)Tj
+/R7 10 Tf
+27.7797 0 Td
+(\(8\).\))Tj
+-394.518 -24 Td
+0.215 Tw
+(The \214eld)Tj
+/R9 10 Tf
+39.0996 0 Td
+(st_atime)Tj
+/R7 10 Tf
+36.7848 0 Td
+(is changed by \214le accesses, e.g. by)Tj
+/R8 10 Tf
+142.585 0 Td
+[(execv)10.0073(e)]TJ
+/R7 10 Tf
+27.6598 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.8754 0 Td
+(mknod)Tj
+/R7 10 Tf
+30.0098 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.8754 0 Td
+(pipe)Tj
+/R7 10 Tf
+18.3398 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.8754 0 Td
+(utime)Tj
+/R7 10 Tf
+24.4398 0 Td
+0.216 Tw
+(\(2\) and)Tj
+-0.18 Tc
+/R8 10 Tf
+31.5312 0 Td
+(re)Tj
+0 Tc
+8.69961 0 Td
+(ad)Tj
+/R7 10 Tf
+10.5598 0 Td
+(\(2\))Tj
+-456.335 -38.4004 Td
+0 Tw
+(Linux 2.6.7)Tj
+210.67 0 Td
+203.17 Tw
+(2004-06-23 1)Tj
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+6979
+endobj
+12 0 obj
+<</Length 13 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+(ST)Tj
+-1.11 Tc
+10.7402 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+138.83 Tw
+(\(2\) Linux)Tj
+179.38 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual ST)Tj
+-1.11 Tc
+173.73 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+(\(2\))Tj
+-420.569 -36 Td
+0 Tw
+[(\(of more than zero bytes\). Other routines, lik)10.0098(e)]TJ
+/R8 10 Tf
+186.41 0 Td
+(mmap)Tj
+/R7 10 Tf
+27.2199 0 Td
+(\(2\), may or may not update)Tj
+/R9 10 Tf
+111.48 0 Td
+(st_atime)Tj
+/R7 10 Tf
+34.0695 0 Td
+(.)Tj
+-359.179 -24 Td
+0.289 Tw
+(The \214eld)Tj
+/R9 10 Tf
+39.2477 0 Td
+(st_mtime)Tj
+/R7 10 Tf
+39.0785 0 Td
+(is changed by \214le modi\214cations, e.g. by)Tj
+/R8 10 Tf
+163.682 0 Td
+(mknod)Tj
+/R7 10 Tf
+30.0098 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.9477 0 Td
+(truncate)Tj
+/R7 10 Tf
+36.1 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.9477 0 Td
+(utime)Tj
+/R7 10 Tf
+24.4398 0 Td
+0.288 Tw
+(\(2\) and)Tj
+/R8 10 Tf
+31.6758 0 Td
+(write)Tj
+/R7 10 Tf
+22.2098 0 Td
+(\(2\))Tj
+-420.338 -12 Td
+0.234 Tw
+(\(of more than zero bytes\).)Tj
+109.97 0 Td
+(Moreo)Tj
+-0.15 Tc
+26.5598 0 Td
+(ve)Tj
+-0.4 Tc
+9.28984 0 Td
+(r,)Tj
+0 Tc
+/R9 10 Tf
+8.61367 0 Td
+(st_mtime)Tj
+/R7 10 Tf
+39.0234 0 Td
+0.235 Tw
+(of a directory is changed by the creation or deletion of \214les)Tj
+-193.457 -12 Td
+0.255 Tw
+(in that directory)Tj
+5.255 Tc
+63.9602 0 Td
+(.T)Tj
+0 Tc
+13.8652 0 Td
+(he)Tj
+/R9 10 Tf
+12.5348 0 Td
+(st_mtime)Tj
+/R7 10 Tf
+39.0445 0 Td
+(\214eld is)Tj
+/R9 10 Tf
+30.3195 0 Td
+(not)Tj
+/R7 10 Tf
+16.2145 0 Td
+0.254 Tw
+(changed for changes in o)Tj
+100.846 0 Td
+(wner)Tj
+2.754 Tc
+19.7 0 Td
+(,g)Tj
+0 Tc
+10.2539 0 Td
+(roup, hard link count, or mode.)Tj
+-306.738 -24 Td
+1.281 Tw
+(The \214eld)Tj
+/R9 10 Tf
+41.2316 0 Td
+(st_ctime)Tj
+/R7 10 Tf
+37.2906 0 Td
+(is changed by writing or by setting inode information \(i.e., o)Tj
+254.26 0 Td
+(wner)Tj
+3.782 Tc
+19.7 0 Td
+(,g)Tj
+0 Tc
+11.282 0 Td
+1.282 Tw
+(roup, link count,)Tj
+-363.764 -12 Td
+0 Tw
+(mode, etc.\).)Tj
+16.8 TL
+T*[(The follo)25.0159(wing POSIX macros are de\214ned to check the \214le type using the)]TJ
+/R9 10 Tf
+293.8 0 Td
+(st_mode)Tj
+/R7 10 Tf
+36.0094 0 Td
+(\214eld:)Tj
+-293.809 -16.8 Td
+30.01 Tw
+(S_ISREG\(m\) is)Tj
+95.4797 0 Td
+0 Tw
+[(it a re)15.0317(gular \214le?)]TJ
+-95.4797 -16.7996 Td
+32.79 Tw
+(S_ISDIR\(m\) directory?)Tj
+29.45 Tw
+(S_ISCHR\(m\) character)'
+125.6 0 Td
+[(de)25.0146(vice?)]TJ
+-125.6 -16.8004 Td
+30.01 Tw
+(S_ISBLK\(m\) block)Tj
+110.81 0 Td
+[(de)25.0146(vice?)]TJ
+-110.81 -16.7996 Td
+28.34 Tw
+(S_ISFIFO\(m\) FIFO)Tj
+110.45 0 Td
+0 Tw
+(\(named pipe\)?)Tj
+-110.45 -16.8004 Td
+29.46 Tw
+(S_ISLNK\(m\) symbolic)Tj
+125.31 0 Td
+0 Tw
+(link? \(Not in POSIX.1-1996.\))Tj
+-125.31 -16.7996 Td
+23.34 Tw
+(S_ISSOCK\(m\) sock)Tj
+104.37 0 Td
+0 Tw
+(et? \(Not in POSIX.1-1996.\))Tj
+-140.37 -16.8004 Td
+[(The follo)25.0159(wing \215ags are de\214ned for the)]TJ
+/R9 10 Tf
+156.67 0 Td
+(st_mode)Tj
+/R7 10 Tf
+36.0094 0 Td
+(\214eld:)Tj
+-192.679 -16.8 Td
+24.17 Tw
+(S_IFMT 0170000)Tj
+111.02 0 Td
+0 Tw
+(bitmask for the \214le type bit\214elds)Tj
+-111.02 -12 Td
+12.5 Tw
+(S_IFSOCK 0140000 sock)Tj
+129.09 0 Td
+(et)Tj
+-129.09 -12 Td
+18.62 Tw
+(S_IFLNK 0120000)Tj
+110.86 0 Td
+0 Tw
+(symbolic link)Tj
+-110.86 -12 Td
+19.17 Tw
+(S_IFREG 0100000)Tj
+111.03 0 Td
+0 Tw
+[(re)15.0317(gular \214le)]TJ
+-111.03 -12 Td
+19.17 Tw
+(S_IFBLK 0060000)Tj
+110.81 0 Td
+0 Tw
+[(block de)25.0244(vice)]TJ
+-110.81 -12 Td
+21.95 Tw
+(S_IFDIR 0040000)Tj
+110.95 0 Td
+(directory)Tj
+-110.95 -12 Td
+18.61 Tw
+(S_IFCHR 0020000)Tj
+110.96 0 Td
+0 Tw
+[(character de)25(vice)]TJ
+-110.96 -12 Td
+23.06 Tw
+(S_IFIFO 0010000)Tj
+111.04 0 Td
+(FIFO)Tj
+-111.04 -12 Td
+21.4 Tw
+(S_ISUID 0004000)Tj
+111 0 Td
+0 Tw
+(set UID bit)Tj
+-111 -12 Td
+21.4 Tw
+(S_ISGID 0002000)Tj
+111 0 Td
+0 Tw
+[(set-group-ID bit \(see belo)25.0244(w\))]TJ
+-111 -12 Td
+18.62 Tw
+(S_ISVTX 0001000)Tj
+111.08 0 Td
+(stick)Tj
+2.5 Tc
+18.7398 0 Td
+(yb)Tj
+0 Tc
+12.5 0 Td
+0 Tw
+[(it \(see belo)25.0317(w\))]TJ
+-142.32 -12 Td
+(S_IR)Tj
+19.9199 0 Td
+14.73 Tw
+(WXU 00700)Tj
+91.1098 0 Td
+0 Tw
+[(mask for \214le o)25.0244(wner permissions)]TJ
+-111.03 -12 Td
+(S_IR)Tj
+20.0699 0 Td
+19.01 Tw
+(USR 00400)Tj
+-0.25 Tc
+90.9098 0 Td
+(ow)Tj
+0 Tc
+11.9699 0 Td
+0 Tw
+(ner has read permission)Tj
+-122.95 -12 Td
+15.84 Tw
+(S_IWUSR 00200)Tj
+-0.25 Tc
+111.03 0 Td
+(ow)Tj
+0 Tc
+11.9699 0 Td
+0 Tw
+(ner has write permission)Tj
+-123 -12 Td
+18.06 Tw
+(S_IXUSR 00100)Tj
+-0.25 Tc
+111.03 0 Td
+(ow)Tj
+0 Tc
+11.9699 0 Td
+0 Tw
+(ner has e)Tj
+-0.15 Tc
+35.5 0 Td
+(xe)Tj
+0 Tc
+9.28984 0 Td
+(cute permission)Tj
+-167.789 -12 Td
+(S_IR)Tj
+19.9199 0 Td
+14.73 Tw
+(WXG 00070)Tj
+91.1098 0 Td
+0 Tw
+(mask for group permissions)Tj
+-111.03 -12 Td
+18.61 Tw
+(S_IRGRP 00040)Tj
+110.94 0 Td
+0 Tw
+(group has read permission)Tj
+-110.94 -12 Td
+15.84 Tw
+(S_IWGRP 00020)Tj
+110.99 0 Td
+0 Tw
+(group has write permission)Tj
+-110.99 -12 Td
+18.06 Tw
+(S_IXGRP 00010)Tj
+110.99 0 Td
+0 Tw
+(group has e)Tj
+-0.15 Tc
+46.0598 0 Td
+(xe)Tj
+0 Tc
+9.28984 0 Td
+(cute permission)Tj
+-166.339 -12 Td
+(S_IR)Tj
+19.9199 0 Td
+14.73 Tw
+(WXO 00007)Tj
+91.1098 0 Td
+0 Tw
+(mask for permissions for others \(not in group\))Tj
+-111.03 -12 Td
+(S_IR)Tj
+-0.4 Tc
+20.0699 0 Td
+(OT)Tj
+20.81 Tc
+12.9297 0 Td
+(H0)Tj
+0 Tc
+32.9602 0 Td
+22.5 Tw
+(0004 others)Tj
+72.05 0 Td
+(ha)Tj
+-0.15 Tc
+9.23984 0 Td
+0.3 Tw
+(ve r)Tj
+0 Tc
+15.2297 0 Td
+0 Tw
+(ead permission)Tj
+-162.479 -12 Td
+(S_IW)Tj
+-0.4 Tc
+23.1898 0 Td
+(OT)Tj
+17.74 Tc
+12.9297 0 Td
+(H0)Tj
+0 Tc
+29.8898 0 Td
+22.5 Tw
+(0002 others)Tj
+72.05 0 Td
+(ha)Tj
+-0.15 Tc
+9.23984 0 Td
+0.3 Tw
+(ve w)Tj
+0 Tc
+19.0098 0 Td
+0 Tw
+(rite permission)Tj
+-166.309 -12 Td
+(S_IXO)Tj
+27.8898 0 Td
+17.36 Tw
+(TH 00001)Tj
+83.1199 0 Td
+0 Tw
+(others ha)Tj
+-0.15 Tc
+36.2898 0 Td
+0.3 Tw
+(ve exe)Tj
+0 Tc
+25.3699 0 Td
+0 Tw
+(cute permission)Tj
+-172.67 -16.7996 Td
+0.198 Tw
+(The set-group-ID bit \(S_ISGID\) has se)Tj
+-0.15 Tc
+156.45 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(ral special uses.)Tj
+-0.15 Tc
+68.7434 0 Td
+(Fo)Tj
+2.698 Tc
+10.4098 0 Td
+(rad)Tj
+0 Tc
+18.2762 0 Td
+(irectory it indicates that BSD semantics is)Tj
+-263.169 -12 Td
+0.129 Tw
+(to be used for that directory: \214les created there inherit their group ID from the directory)Tj
+2.629 Tc
+352.615 0 Td
+(,n)Tj
+0 Tc
+10.1289 0 Td
+(ot from the ef)Tj
+54.9566 0 Td
+(fec-)Tj
+-417.701 -12 Td
+(ti)Tj
+-0.15 Tc
+5.30977 0 Td
+0.673 Tw
+(ve g)Tj
+0 Tc
+17.1629 0 Td
+0.373 Tw
+(roup ID of the creating process, and directories created there will also get the S_ISGID bit set.)Tj
+-0.15 Tc
+389.05 0 Td
+(Fo)Tj
+2.872 Tc
+10.4098 0 Td
+(ra)Tj
+0 Tc
+-421.932 -12 Td
+1.254 Tw
+(\214le that does not ha)Tj
+-0.15 Tc
+83.1457 0 Td
+1.554 Tw
+(ve t)Tj
+0 Tc
+15.8238 0 Td
+1.254 Tw
+(he group e)Tj
+-0.15 Tc
+44.6777 0 Td
+(xe)Tj
+0 Tc
+9.28984 0 Td
+(cution bit \(S_IXGRP\) set, the set-group-ID bit indicates mandatory)Tj
+-152.937 -12 Td
+0 Tw
+(\214le/record locking.)Tj
+0.074 Tw
+T*[(The `stick)15.0256(y' bit \(S_ISVTX\) on a directory means that a \214le in that directory can be renamed or deleted only)]TJ
+12 TL
+0 Tw
+T*[(by the o)25.0085(wner of the \214le, by the o)25(wner of the directory)]TJ
+2.5 Tc
+213.69 0 Td
+(,a)Tj
+0 Tc
+9.43984 0 Td
+[(nd by a pri)25.0244(vile)15(ged process.)]TJ
+-259.13 -74.4004 Td
+(Linux 2.6.7)Tj
+210.67 0 Td
+203.17 Tw
+(2004-06-23 2)Tj
+ET
+Q
+Q
+endstream
+endobj
+13 0 obj
+6997
+endobj
+16 0 obj
+<</Length 17 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+(ST)Tj
+-1.11 Tc
+10.7402 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+138.83 Tw
+(\(2\) Linux)Tj
+179.38 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual ST)Tj
+-1.11 Tc
+173.73 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+(\(2\))Tj
+/R8 10.95 Tf
+-456.569 -36 Td
+0 Tw
+[(LINUX NO)40.0223(TES)]TJ
+/R7 10 Tf
+36 -12 Td
+1.151 Tw
+[(Since k)10.0293(ernel 2.5.48, the)]TJ
+/R9 10 Tf
+101.883 0 Td
+(stat)Tj
+/R7 10 Tf
+18.7809 0 Td
+1.152 Tw
+(structure supports nanosecond resolution for the three \214le timestamp \214elds.)Tj
+-120.664 -12 Td
+0.776 Tw
+(Glibc e)Tj
+29.7859 0 Td
+0.775 Tw
+(xposes the nanosecond component of each \214eld using names either of the form)Tj
+/R9 10 Tf
+328.295 0 Td
+(st_atim.tv_nsec)Tj
+3.275 Tc
+/R7 10 Tf
+62.2496 0 Td
+(,i)Tj
+0 Tc
+8.55469 0 Td
+(f)Tj
+-428.885 -12 Td
+0.171 Tw
+(the _BSD_SOURCE or _SVID_SOURCE feature test macro is de\214ned, or of the form)Tj
+/R9 10 Tf
+350.804 0 Td
+(st_atimensec)Tj
+2.672 Tc
+/R7 10 Tf
+51.9695 0 Td
+[(,i)267.207(fn)]TJ
+0 Tc
+18.9539 0 Td
+(ei-)Tj
+-421.727 -12 Td
+0.25 Tw
+(ther of these macros is de\214ned.)Tj
+131.14 0 Td
+0.249 Tw
+(On \214le systems that do not support sub-second timestamps, these nanosec-)Tj
+-131.14 -12 Td
+0 Tw
+[(ond \214elds are returned with the v)25.0317(alue 0.)]TJ
+-0.15 Tc
+24 TL
+(Fo)'
+3.212 Tc
+10.4098 0 Td
+(rm)Tj
+0 Tc
+14.432 0 Td
+0.712 Tw
+(ost \214les under the)Tj
+/R9 10 Tf
+77.4375 0 Td
+[(/pr)44.9683(oc)]TJ
+/R7 10 Tf
+24.182 0 Td
+[(directory)64.9683(,)]TJ
+/R8 10 Tf
+41.382 0 Td
+(stat)Tj
+/R7 10 Tf
+15.55 0 Td
+(\(\) does not return the \214le size in the)Tj
+/R9 10 Tf
+151.668 0 Td
+(st_size)Tj
+/R7 10 Tf
+30.0617 0 Td
+0.713 Tw
+(\214eld; instead the)Tj
+-365.123 -12 Td
+0 Tw
+[(\214eld is returned with the v)25.0171(alue 0.)]TJ
+/R8 10.95 Tf
+-36 -16.8 Td
+[(RETURN V)134.973(ALUE)]TJ
+/R7 10 Tf
+36 -12 Td
+[(On success, zero is returned.)-500(On error)]TJ
+2.5 Tc
+153.82 0 Td
+[<2CAD>250.015(1i)250.032(sr)]TJ
+0 Tc
+30.7492 0 Td
+(eturned, and)Tj
+/R9 10 Tf
+52.2297 0 Td
+(errno)Tj
+/R7 10 Tf
+24.8996 0 Td
+[(is set appropriately)64.9707(.)]TJ
+/R8 10.95 Tf
+-297.698 -16.8 Td
+[(ERR)30.0694(ORS)]TJ
+/R8 10 Tf
+36 -12 Td
+[(EA)55.0159(CCES)]TJ
+/R7 10 Tf
+36 -12 Td
+2.306 Tw
+(Search permission is denied for one of the directories in the path pre\214x of)Tj
+/R9 10 Tf
+330.113 0 Td
+(path)Tj
+7.305 Tc
+/R7 10 Tf
+18.0594 0 Td
+(.\()Tj
+0 Tc
+13.1352 0 Td
+2.305 Tw
+(See also)Tj
+/R8 10 Tf
+-361.307 -12 Td
+[(path_r)17.9846(esolution)]TJ
+/R7 10 Tf
+67.05 0 Td
+(\(2\).\))Tj
+/R8 10 Tf
+-103.05 -16.7996 Td
+[(EB)30.0159(ADF)]TJ
+/R9 10 Tf
+37.9098 -12 Td
+(\214ledes)Tj
+/R7 10 Tf
+28.3199 0 Td
+0 Tw
+(is bad.)Tj
+/R8 10 Tf
+-66.2297 -16.8004 Td
+(EF)Tj
+-0.5 Tc
+11.8801 0 Td
+(AU)Tj
+-0.92 Tc
+13.9398 0 Td
+(LT)Tj
+0 Tc
+/R7 10 Tf
+10.1801 -12 Td
+(Bad address.)Tj
+/R8 10 Tf
+-36 -16.8 Td
+(ELOOP)Tj
+-0.8 Tc
+/R7 10 Tf
+36 -12 Td
+(To)Tj
+2.5 Tc
+10.3098 0 Td
+(om)Tj
+0 Tc
+15.2797 0 Td
+(an)Tj
+2.5 Tc
+9.28984 0 Td
+(ys)Tj
+0 Tc
+11.3898 0 Td
+(ymbolic links encountered while tra)Tj
+-0.15 Tc
+143.89 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsing the path.)Tj
+/R8 10 Tf
+-235.449 -16.7996 Td
+[(EN)20.0159(AMET)17.9846(OOLONG)]TJ
+/R7 10 Tf
+36 -12 Td
+(File name too long.)Tj
+/R8 10 Tf
+-36 -16.8004 Td
+(ENOENT)Tj
+2.5 Tc
+/R7 10 Tf
+36 -12 Td
+(Ac)Tj
+0 Tc
+14.1598 0 Td
+(omponent of the path)Tj
+/R9 10 Tf
+89.0199 0 Td
+(path)Tj
+/R7 10 Tf
+20.5594 0 Td
+[(does not e)15(xist, or the path is an empty string.)]TJ
+/R8 10 Tf
+-159.739 -16.7996 Td
+(ENOMEM)Tj
+/R7 10 Tf
+36 -12 Td
+[(Out of memory \(i.e. k)10.0073(ernel memory\).)]TJ
+/R8 10 Tf
+-36 -16.8004 Td
+[(ENO)40.0073(TDIR)]TJ
+2.5 Tc
+/R7 10 Tf
+36 -12 Td
+(Ac)Tj
+0 Tc
+14.1598 0 Td
+[(omponent of the path is not a directory)64.9927(.)]TJ
+/R8 10.95 Tf
+-86.1598 -16.8 Td
+[(CONFORMING T)17.9873(O)]TJ
+/R7 10 Tf
+36 -12 Td
+(These system calls conform to SVr4, 4.3BSD, POSIX.1-2001.)Tj
+0.479 Tw
+(Use of the)'
+/R9 10 Tf
+45.3766 0 Td
+[(st_bloc)20.0159(ks)]TJ
+/R7 10 Tf
+40.2684 0 Td
+(and)Tj
+/R9 10 Tf
+17.7586 0 Td
+(st_blksize)Tj
+/R7 10 Tf
+42.0488 0 Td
+(\214elds may be less portable. \(The)Tj
+2.98 Tc
+132.335 0 Td
+(yw)Tj
+0 Tc
+15.2 0 Td
+0.48 Tw
+[(ere introduced in BSD.)-547.939(The inter)]TJ
+136.029 0 Td
+(-)Tj
+-429.016 -12 Td
+0 Tw
+[(pretation dif)25.0085(fers between systems, and possibly on a single system when NFS mounts are in)]TJ
+-0.2 Tc
+367.15 0 Td
+(vo)Tj
+0 Tc
+9.8 0 Td
+[(lv)15.0293(ed.\))]TJ
+-376.95 -16.7996 Td
+0.55 Tw
+(POSIX does not describe the S_IFMT)Tj
+3.05 Tc
+154.43 0 Td
+(,S)Tj
+0 Tc
+11.1102 0 Td
+(_IFSOCK, S_IFLNK, S_IFREG, S_IFBLK, S_IFDIR, S_IFCHR,)Tj
+-165.54 -12 Td
+1.038 Tw
+[(S_IFIFO, S_ISVTX bits, b)20.0098(ut instead demands the use of the macros S_ISDIR\(\), etc.)-603.76(The S_ISLNK and)]TJ
+12 TL
+1.15 Tw
+(S_ISSOCK macros are not in POSIX.1-1996, b)'
+196.57 0 Td
+1.149 Tw
+(ut both are present in POSIX.1-2001; the former is from)Tj
+-196.57 -12 Td
+0 Tw
+(SVID 4, the latter from SUSv2.)Tj
+16.8 TL
+0.127 Tw
+(Unix V7 \(and later systems\) had S_IREAD, S_IWRITE, S_IEXEC, where POSIX prescribes the synon)'
+415.391 0 Td
+(yms)Tj
+-415.391 -12 Td
+0 Tw
+[(S_IR)40.0073(USR, S_IWUSR, S_IXUSR.)]TJ
+-0.438 Tc
+/R8 10.95 Tf
+-36 -16.8004 Td
+(OT)Tj
+0 Tc
+15.3844 0 Td
+(HER SYSTEMS)Tj
+-1.11 Tc
+/R7 10 Tf
+20.6156 -12 Td
+(Va)Tj
+0 Tc
+10.5496 0 Td
+(lues that ha)Tj
+-0.15 Tc
+45.35 0 Td
+0.3 Tw
+(ve b)Tj
+0 Tc
+16.7898 0 Td
+0 Tw
+[(een \(or are\) in use on v)25.0244(arious systems:)]TJ
+-72.6895 -21.6 Td
+(he)Tj
+20.71 Tc
+9.28984 0 Td
+(xn)Tj
+0 Tc
+30.7102 0 Td
+38.62 Tw
+(ame ls)Tj
+88.3297 0 Td
+23.06 Tw
+(octal description)Tj
+-128.33 -12 Td
+14.17 Tw
+(f000 S_IFMT)Tj
+128.23 0 Td
+12.5 Tw
+(170000 mask)Tj
+68.6098 0 Td
+0 Tw
+(for \214le type)Tj
+-196.839 -12 Td
+105.83 Tw
+(0000 000000)Tj
+173.33 0 Td
+0 Tw
+[(SCO out-of-service inode, BSD unkno)25.0342(wn type)]TJ
+12 TL
+(SVID-v2 and XPG2 ha)'
+-0.15 Tc
+92.7199 0 Td
+0.3 Tw
+(ve b)Tj
+0 Tc
+16.7898 0 Td
+0 Tw
+(oth 0 and 0100000 for ordinary \214le)Tj
+-282.839 -12 Td
+12.5 Tw
+(1000 S_IFIFO)Tj
+97.6996 0 Td
+21.05 Tw
+(p| 010000)Tj
+75.55 0 Td
+0 Tw
+(FIFO \(named pipe\))Tj
+-209.25 -60 Td
+(Linux 2.6.7)Tj
+210.67 0 Td
+203.17 Tw
+(2004-06-23 3)Tj
+ET
+Q
+Q
+endstream
+endobj
+17 0 obj
+5957
+endobj
+20 0 obj
+<</Length 21 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+(ST)Tj
+-1.11 Tc
+10.7402 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+138.83 Tw
+(\(2\) Linux)Tj
+179.38 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual ST)Tj
+-1.11 Tc
+173.73 0 Td
+(AT)Tj
+0 Tc
+12.2195 0 Td
+(\(2\))Tj
+-420.569 -36 Td
+12.5 Tw
+(2000 S_IFCHR)Tj
+26.11 Tc
+97.6199 0 Td
+(c0)Tj
+0 Tc
+35.55 0 Td
+(20000 character)Tj
+79.3598 0 Td
+0 Tw
+(special \(V7\))Tj
+-212.53 -12 Td
+12.5 Tw
+[(3000 S_IFMPC)-5275.94(030000 multiple)]TJ
+-0.15 Tc
+206.379 0 Td
+(xe)Tj
+2.5 Tc
+9.28984 0 Td
+(dc)Tj
+0 Tc
+11.9398 0 Td
+0 Tw
+(haracter special \(V7\))Tj
+-227.609 -12 Td
+12.5 Tw
+(4000 S_IFDIR)Tj
+97.6098 0 Td
+20.27 Tw
+(d/ 040000)Tj
+75.55 0 Td
+0 Tw
+(directory \(V7\))Tj
+-173.16 -12 Td
+12.5 Tw
+(5000 S_IFN)Tj
+61.2801 0 Td
+48.4 Tw
+(AM 050000)Tj
+111.95 0 Td
+0 Tw
+(XENIX named special \214le)Tj
+0.0996094 -12 Td
+(with tw)Tj
+2.5 Tc
+30.1797 0 Td
+(os)Tj
+0 Tc
+11.3898 0 Td
+(ubtypes, distinguished by st_rde)Tj
+2.5 Tc
+128.75 0 Td
+(vv)Tj
+0 Tc
+12.25 0 Td
+(alues 1, 2:)Tj
+-355.899 -12 Td
+12.5 Tw
+(0001 S_INSEM)Tj
+26.66 Tc
+97.6797 0 Td
+(s0)Tj
+0 Tc
+35.55 0 Td
+(00001 XENIX)Tj
+73.5598 0 Td
+0 Tw
+[(semaphore subtype of IFN)34.9756(AM)]TJ
+-206.789 -12 Td
+12.5 Tw
+(0002 S_INSHD)Tj
+22.77 Tc
+97.6297 0 Td
+(m0)Tj
+0 Tc
+35.55 0 Td
+(00002 XENIX)Tj
+73.5598 0 Td
+0 Tw
+[(shared data subtype of IFN)34.9951(AM)]TJ
+-206.739 -12 Td
+12.5 Tw
+(6000 S_IFBLK)Tj
+25.55 Tc
+97.4695 0 Td
+(b0)Tj
+0 Tc
+35.55 0 Td
+(60000 block)Tj
+64.7199 0 Td
+0 Tw
+(special \(V7\))Tj
+-197.739 -12 Td
+12.5 Tw
+[(7000 S_IFMPB)-5275.94(070000 multiple)]TJ
+-0.15 Tc
+206.329 0 Td
+(xe)Tj
+2.5 Tc
+9.28984 0 Td
+(db)Tj
+0 Tc
+12.5 0 Td
+0 Tw
+(lock special \(V7\))Tj
+-228.119 -12 Td
+12.5 Tw
+(8000 S_IFREG)Tj
+27.22 Tc
+97.6895 0 Td
+(-1)Tj
+0 Tc
+35.55 0 Td
+(00000 re)Tj
+47.7297 0 Td
+0 Tw
+(gular \(V7\))Tj
+-180.969 -12 Td
+12.5 Tw
+[(9000 S_IFCMP)-5275.94(110000 VxFS)]TJ
+199.029 0 Td
+(compressed)Tj
+-199.029 -12 Td
+(9000 S_IFNWK)Tj
+25.55 Tc
+97.5199 0 Td
+(n1)Tj
+0 Tc
+35.55 0 Td
+(10000 netw)Tj
+59.3398 0 Td
+0 Tw
+(ork special \(HP-UX\))Tj
+-192.41 -12 Td
+13.06 Tw
+(a000 S_IFLNK)Tj
+97.5195 0 Td
+16.06 Tw
+(l@ 120000)Tj
+75.55 0 Td
+0 Tw
+(symbolic link \(BSD\))Tj
+-173.07 -12 Td
+12.5 Tw
+[(b000 S_IFSHAD)-4665.97(130000 Solaris)]TJ
+203.57 0 Td
+(shado)Tj
+2.5 Tc
+23.0797 0 Td
+(wi)Tj
+0 Tc
+12.5 0 Td
+0 Tw
+[(node for A)40.0317(CL \(not seen by userspace\))]TJ
+-239.149 -12 Td
+13.06 Tw
+(c000 S_IFSOCK)Tj
+97.5195 0 Td
+18.52 Tw
+(s= 140000)Tj
+75.55 0 Td
+0 Tw
+[(sock)10.0317(et \(BSD; also "S_IFSOC" on VxFS\))]TJ
+-173.07 -12 Td
+12.5 Tw
+[(d000 S_IFDOOR D>)-1768.98(150000 Solaris)]TJ
+203.55 0 Td
+(door)Tj
+-203.55 -12 Td
+13.06 Tw
+(e000 S_IFWHT)Tj
+97.6695 0 Td
+12.5 Tw
+(w% 160000 BSD)Tj
+97.4098 0 Td
+0 Tw
+(whiteout \(not used for inode\))Tj
+-195.079 -24 Td
+12.5 Tw
+[(0200 S_ISVTX)-5332.95(001000 `stick)]TJ
+2.5 Tc
+195.359 0 Td
+(yb)Tj
+0 Tc
+12.5 0 Td
+0 Tw
+(it': sa)Tj
+-0.15 Tc
+22.3 0 Td
+0.3 Tw
+(ve s)Tj
+-0.1 Tc
+15.6797 0 Td
+(wa)Tj
+0 Tc
+11.5598 0 Td
+0 Tw
+[(pped te)15.0244(xt e)]TJ
+-0.15 Tc
+43.4797 0 Td
+(ve)Tj
+2.5 Tc
+9.28984 0 Td
+(na)Tj
+0 Tc
+11.9398 0 Td
+(fter use \(V7\))Tj
+-148.779 -12 Td
+[(reserv)15(ed \(SVID-v2\))]TJ
+12 TL
+(On non-directories: don')'
+2.5 Tc
+98.9102 0 Td
+(tc)Tj
+0 Tc
+9.71992 0 Td
+(ache this \214le \(SunOS\))Tj
+-108.63 -12 Td
+(On directories: restricted deletion \215ag \(SVID-v4.2\))Tj
+-173.33 -12 Td
+12.5 Tw
+[(0400 S_ISGID)-5610.98(002000 set-group-ID)]TJ
+227.389 0 Td
+0 Tw
+(on e)Tj
+-0.15 Tc
+16.7898 0 Td
+(xe)Tj
+0 Tc
+9.28984 0 Td
+(cution \(V7\))Tj
+-80.1395 -12 Td
+[(for directories: use BSD semantics for propag)5.02441(ation of GID)]TJ
+-173.33 -12 Td
+12.5 Tw
+[(0400 S_ENFMT)-4887.95(002000 SysV)]TJ
+197.439 0 Td
+0 Tw
+(\214le locking enforcement \(shared with S_ISGID\))Tj
+-197.439 -12 Td
+12.5 Tw
+[(0800 S_ISUID)-5610.98(004000 set-user)]TJ
+204.22 0 Td
+0 Tw
+(-ID on e)Tj
+-0.15 Tc
+33.0898 0 Td
+(xe)Tj
+0 Tc
+9.28984 0 Td
+(cution \(V7\))Tj
+-246.599 -12 Td
+12.5 Tw
+[(0800 S_CDF)-6331.98(004000 directory)]TJ
+212.11 0 Td
+0 Tw
+[(is a conte)15.0073(xt dependent \214le \(HP-UX\))]TJ
+2.5 Tc
+-212.11 -24 Td
+(As)Tj
+0 Tc
+13.6098 0 Td
+(tick)Tj
+2.5 Tc
+14.85 0 Td
+(yc)Tj
+0 Tc
+11.9398 0 Td
+[(ommand appeared in V)110.977(ersion 32V A)110.994(T&T UNIX.)]TJ
+/R8 10.95 Tf
+-76.3996 -16.7996 Td
+(SEE ALSO)Tj
+/R8 10 Tf
+36 -12 Td
+(access)Tj
+/R7 10 Tf
+26.1 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(chmod)Tj
+/R7 10 Tf
+28.8898 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+[(cho)10(wn)]TJ
+/R7 10 Tf
+27.6797 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(fstatat)Tj
+/R7 10 Tf
+27.2098 0 Td
+(\(2\),)Tj
+-0.18 Tc
+/R8 10 Tf
+16.6598 0 Td
+(re)Tj
+0 Tc
+8.69961 0 Td
+(adlink)Tj
+/R7 10 Tf
+27.2398 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(utime)Tj
+/R7 10 Tf
+24.4398 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(capabilities)Tj
+/R7 10 Tf
+48.3398 0 Td
+(\(7\))Tj
+-354.557 -319.2 Td
+(Linux 2.6.7)Tj
+210.67 0 Td
+203.17 Tw
+(2004-06-23 4)Tj
+ET
+Q
+Q
+endstream
+endobj
+21 0 obj
+4762
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 10 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+11 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 14 0 R
+>>
+/Contents 12 0 R
+>>
+endobj
+15 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 18 0 R
+>>
+/Contents 16 0 R
+>>
+endobj
+19 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 22 0 R
+>>
+/Contents 20 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+11 0 R
+15 0 R
+19 0 R
+] /Count 4
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+10 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+14 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+18 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+22 0 obj
+<</R8
+8 0 R/R7
+7 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Encoding 23 0 R/Subtype/Type1>>
+endobj
+23 0 obj
+<</Type/Encoding/Differences[
+138/emdash
+140/fi/fl
+173/minus]>>
+endobj
+9 0 obj
+<</BaseFont/Times-Italic/Type/Font
+/Encoding 24 0 R/Subtype/Type1>>
+endobj
+24 0 obj
+<</Type/Encoding/Differences[
+140/fi]>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120228173254)
+/ModDate(D:20120228173254)>>endobj
+xref
+0 25
+0000000000 65535 f 
+0000025611 00000 n 
+0000026208 00000 n 
+0000025531 00000 n 
+0000024993 00000 n 
+0000000009 00000 n 
+0000007038 00000 n 
+0000025907 00000 n 
+0000025842 00000 n 
+0000026069 00000 n 
+0000025659 00000 n 
+0000025126 00000 n 
+0000007058 00000 n 
+0000014107 00000 n 
+0000025707 00000 n 
+0000025261 00000 n 
+0000014128 00000 n 
+0000020137 00000 n 
+0000025755 00000 n 
+0000025396 00000 n 
+0000020158 00000 n 
+0000024972 00000 n 
+0000025803 00000 n 
+0000025989 00000 n 
+0000026152 00000 n 
+trailer
+<< /Size 25 /Root 1 0 R /Info 2 0 R
+/ID [<10CB2478E2B17D126594C9EEE0400EBD><10CB2478E2B17D126594C9EEE0400EBD>]
+>>
+startxref
+26319
+%%EOF

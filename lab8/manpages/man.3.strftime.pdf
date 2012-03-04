@@ -1,0 +1,1711 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+113.45 Tw
+(STRFTIME\(3\) Linux)Tj
+202.19 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual STRFTIME\(3\))Tj
+-0.219 Tc
+/R8 10.95 Tf
+-270.47 -36 Td
+(NA)Tj
+0 Tc
+15.5922 0 Td
+(ME)Tj
+/R7 10 Tf
+20.4078 -12 Td
+0 Tw
+(strftime \255 format date and time)Tj
+/R8 10.95 Tf
+-36 -16.8 Td
+(SYNOPSIS)Tj
+/R8 10 Tf
+36 -12 Td
+(#include <time.h>)Tj
+24 TL
+(size_t strftime\(char *)'
+/R9 10 Tf
+90.8598 0 Td
+(s)Tj
+2.5 Tc
+/R8 10 Tf
+4.15977 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+(ize_t)Tj
+/R9 10 Tf
+22.8695 0 Td
+(max)Tj
+2.5 Tc
+/R8 10 Tf
+17.1895 0 Td
+(,c)Tj
+0 Tc
+9.43984 0 Td
+(onst char *)Tj
+/R9 10 Tf
+49.1898 0 Td
+(format)Tj
+/R8 10 Tf
+27.3496 0 Td
+(,)Tj
+-85.9477 -12 Td
+(const struct tm *)Tj
+/R9 10 Tf
+71.4996 0 Td
+(tm)Tj
+/R8 10 Tf
+10.3199 0 Td
+(\);)Tj
+/R8 10.95 Tf
+-261.82 -16.8 Td
+(DESCRIPTION)Tj
+/R7 10 Tf
+36 -12 Td
+(The)Tj
+/R8 10 Tf
+18.502 0 Td
+(strftime)Tj
+/R7 10 Tf
+33.8699 0 Td
+0.452 Tw
+(\(\) function formats the brok)Tj
+113.018 0 Td
+(en-do)Tj
+22.5199 0 Td
+(wn time)Tj
+/R9 10 Tf
+35.9027 0 Td
+(tm)Tj
+/R7 10 Tf
+12.9508 0 Td
+0.451 Tw
+(according to the format speci\214cation)Tj
+/R9 10 Tf
+151.614 0 Td
+(format)Tj
+/R7 10 Tf
+29.6207 0 Td
+(and)Tj
+-417.998 -12 Td
+0 Tw
+(places the result in the character array)Tj
+/R9 10 Tf
+154.66 0 Td
+(s)Tj
+/R7 10 Tf
+6.38984 0 Td
+(of size)Tj
+/R9 10 Tf
+28.8797 0 Td
+(max)Tj
+/R7 10 Tf
+16.6598 0 Td
+(.)Tj
+-206.589 -16.7996 Td
+0.831 Tw
+(Ordinary characters placed in the format string are copied to)Tj
+/R9 10 Tf
+252.9 0 Td
+(s)Tj
+/R7 10 Tf
+7.2207 0 Td
+(without con)Tj
+-0.15 Tc
+47.9309 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion.)Tj
+/R9 10 Tf
+28.2805 0 Td
+[(Con)40.0098(ver)]TJ
+28.9398 0 Td
+(sion speci\214ca-)Tj
+-374.561 -12 Td
+(tions)Tj
+/R7 10 Tf
+24.5039 0 Td
+2.284 Tw
+(are introduced by a `%' character)Tj
+4.784 Tc
+145.01 0 Td
+(,a)Tj
+0 Tc
+11.7238 0 Td
+(nd terminated by a)Tj
+/R9 10 Tf
+86.4559 0 Td
+[(con)40.0146(ver)]TJ
+26.7098 0 Td
+(sion speci\214er c)Tj
+64.4078 0 Td
+[(har)15.0146(acter)]TJ
+4.784 Tc
+/R7 10 Tf
+35.0195 0 Td
+(,a)Tj
+0 Tc
+11.7238 0 Td
+(nd are)Tj
+-405.554 -12 Td
+0 Tw
+(replaced in)Tj
+/R9 10 Tf
+46.7598 0 Td
+(s)Tj
+/R7 10 Tf
+6.38984 0 Td
+[(as follo)25.0085(ws:)]TJ
+/R8 10 Tf
+-53.1496 -16.8004 Td
+(%a)Tj
+/R7 10 Tf
+36 0 Td
+[(The abbre)25.0085(viated weekday name according to the current locale.)]TJ
+/R8 10 Tf
+-36 -16.8 Td
+(%A)Tj
+/R7 10 Tf
+36 0 Td
+(The full weekday name according to the current locale.)Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(%b)Tj
+/R7 10 Tf
+36 0 Td
+[(The abbre)25.0085(viated month name according to the current locale.)]TJ
+/R8 10 Tf
+-36 -16.8004 Td
+(%B)Tj
+/R7 10 Tf
+36 0 Td
+(The full month name according to the current locale.)Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(%c)Tj
+/R7 10 Tf
+36 0 Td
+(The preferred date and time representation for the current locale.)Tj
+/R8 10 Tf
+-36 -16.8004 Td
+(%C)Tj
+/R7 10 Tf
+36 0 Td
+[(The century number \(year/100\) as a 2-digit inte)15.0244(ger)]TJ
+2.5 Tc
+202.189 0 Td
+(.\()Tj
+0 Tc
+8.32969 0 Td
+(SU\))Tj
+/R8 10 Tf
+-246.519 -16.8 Td
+(%d)Tj
+/R7 10 Tf
+36 0 Td
+(The day of the month as a decimal number \(range 01 to 31\).)Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(%D)Tj
+/R7 10 Tf
+36.0195 0 Td
+(Equi)Tj
+-0.25 Tc
+18.6398 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+1.322 Tw
+(lent to %m/%d/%y)Tj
+3.822 Tc
+78.1043 0 Td
+(.\()Tj
+-1 Tc
+9.65195 0 Td
+(Ye)Tj
+0 Tc
+10.6598 0 Td
+(cch \212 for Americans only)Tj
+6.322 Tc
+111.498 0 Td
+(.A)Tj
+0 Tc
+16.0418 0 Td
+1.323 Tw
+(mericans should note that in other)Tj
+-253.805 -12 Td
+1.33 Tw
+[(countries %d/%m/%y is rather common. This means that in international conte)15.0195(xt this format is)]TJ
+12 TL
+0 Tw
+(ambiguous and should not be used.\) \(SU\))'
+/R8 10 Tf
+-36 -16.8004 Td
+(%e)Tj
+/R7 10 Tf
+36 0 Td
+(Lik)Tj
+3.617 Tc
+13.7898 0 Td
+(e%)Tj
+0 Tc
+16.3871 0 Td
+1.117 Tw
+(d, the day of the month as a decimal number)Tj
+3.617 Tc
+187.513 0 Td
+(,b)Tj
+0 Tc
+10.9172 0 Td
+1.118 Tw
+(ut a leading zero is replaced by a space.)Tj
+-228.607 -12 Td
+(\(SU\))Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(%E)Tj
+/R7 10 Tf
+36 0 Td
+0 Tw
+(Modi\214er: use alternati)Tj
+-0.15 Tc
+88.7898 0 Td
+0.3 Tw
+(ve f)Tj
+0 Tc
+15.1199 0 Td
+0 Tw
+(ormat, see belo)Tj
+-0.65 Tc
+60.6797 0 Td
+1.3 Tw
+(w. \()Tj
+0 Tc
+14.8996 0 Td
+(SU\))Tj
+/R8 10 Tf
+-215.489 -16.8004 Td
+(%F)Tj
+/R7 10 Tf
+36 0 Td
+(Equi)Tj
+-0.25 Tc
+18.6398 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+0 Tw
+[(lent to %Y)111.008(-%m-%d \(the ISO 8601 date format\). \(C99\))]TJ
+/R8 10 Tf
+-63.8293 -16.8 Td
+(%G)Tj
+/R7 10 Tf
+36 0 Td
+0.449 Tw
+(The ISO 8601 year with century as a decimal number)Tj
+5.449 Tc
+217.901 0 Td
+(.T)Tj
+0 Tc
+14.059 0 Td
+0.448 Tw
+(he 4-digit year corresponding to the ISO)Tj
+-231.959 -12 Td
+0.721 Tw
+[(week number \(see %V\).)-572.043(This has the same format and v)25.0391(alue as %y)]TJ
+3.221 Tc
+277.901 0 Td
+(,e)Tj
+0 Tc
+10.0109 0 Td
+(xcept that if the ISO week)Tj
+-287.912 -12 Td
+0 Tw
+[(number belongs to the pre)25(vious or ne)15(xt year)]TJ
+2.5 Tc
+176 0 Td
+(,t)Tj
+0 Tc
+7.77969 0 Td
+(hat year is used instead. \(TZ\))Tj
+/R8 10 Tf
+-219.78 -16.7996 Td
+(%g)Tj
+/R7 10 Tf
+36 0 Td
+(Lik)Tj
+2.5 Tc
+13.7898 0 Td
+(e%)Tj
+0 Tc
+15.2699 0 Td
+[(G, b)20.0073(ut without century)]TJ
+2.5 Tc
+89.8102 0 Td
+(,i)Tj
+0 Tc
+7.77969 0 Td
+(.e., with a 2-digit year \(00-99\). \(TZ\))Tj
+/R8 10 Tf
+-162.65 -16.8 Td
+(%h)Tj
+/R7 10 Tf
+36 0 Td
+(Equi)Tj
+-0.25 Tc
+18.6398 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(lent to %b)Tj
+2.5 Tc
+40.7098 0 Td
+(.\()Tj
+0 Tc
+8.32969 0 Td
+(SU\))Tj
+/R8 10 Tf
+-112.869 -16.8004 Td
+(%H)Tj
+/R7 10 Tf
+35.9598 0 Td
+(The hour as a decimal number using a 24-hour clock \(range 00 to 23\).)Tj
+/R8 10 Tf
+-35.9598 -16.8 Td
+(%I)Tj
+/R7 10 Tf
+35.9695 0 Td
+(The hour as a decimal number using a 12-hour clock \(range 01 to 12\).)Tj
+/R8 10 Tf
+-35.9695 -16.8 Td
+(%j)Tj
+/R7 10 Tf
+36 0 Td
+(The day of the year as a decimal number \(range 001 to 366\).)Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(%k)Tj
+/R7 10 Tf
+36 0 Td
+1.257 Tw
+(The hour \(24-hour clock\) as a decimal number \(range 0 to 23\); single digits are preceded by a)Tj
+0 Tw
+(blank. \(See also %H.\) \(TZ\))'
+/R8 10 Tf
+-36 -16.8 Td
+(%l)Tj
+/R7 10 Tf
+36 0 Td
+1.257 Tw
+(The hour \(12-hour clock\) as a decimal number \(range 1 to 12\); single digits are preceded by a)Tj
+0 Tw
+(blank. \(See also %I.\) \(TZ\))'
+/R8 10 Tf
+-36 -16.8004 Td
+(%m)Tj
+/R7 10 Tf
+36 0 Td
+(The month as a decimal number \(range 01 to 12\).)Tj
+/R8 10 Tf
+-36 -16.8 Td
+(%M)Tj
+/R7 10 Tf
+35.9895 0 Td
+(The minute as a decimal number \(range 00 to 59\).)Tj
+/R8 10 Tf
+-35.9895 -16.8 Td
+(%n)Tj
+2.5 Tc
+/R7 10 Tf
+36 0 Td
+(An)Tj
+-0.25 Tc
+14.7199 0 Td
+(ew)Tj
+0 Tc
+11.4098 0 Td
+(line character)Tj
+2.5 Tc
+53.8098 0 Td
+(.\()Tj
+0 Tc
+8.32969 0 Td
+(SU\))Tj
+/R8 10 Tf
+-124.269 -16.7996 Td
+(%O)Tj
+/R7 10 Tf
+36 0 Td
+(Modi\214er: use alternati)Tj
+-0.15 Tc
+88.7898 0 Td
+0.3 Tw
+(ve f)Tj
+0 Tc
+15.1199 0 Td
+0 Tw
+(ormat, see belo)Tj
+-0.65 Tc
+60.6797 0 Td
+1.3 Tw
+(w. \()Tj
+0 Tc
+14.8996 0 Td
+(SU\))Tj
+-251.489 -55.2004 Td
+186.51 Tw
+(GNU 2005-11-23)Tj
+463 0 Td
+(1)Tj
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+6778
+endobj
+12 0 obj
+<</Length 13 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+113.45 Tw
+(STRFTIME\(3\) Linux)Tj
+202.19 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual STRFTIME\(3\))Tj
+/R8 10 Tf
+-234.47 -36 Td
+(%p)Tj
+/R7 10 Tf
+36 0 Td
+0.037 Tw
+[(Either `)80.0208(AM' or `PM' according to the gi)]TJ
+-0.15 Tc
+160.739 0 Td
+(ve)Tj
+2.536 Tc
+9.28984 0 Td
+(nt)Tj
+0 Tc
+10.316 0 Td
+0.036 Tw
+[(ime v)25.0073(alue, or the corresponding strings for the current)]TJ
+-180.344 -12 Td
+2.5 Tw
+(locale. Noon)Tj
+56.1 0 Td
+0 Tw
+(is treated as `pm' and midnight as `am'.)Tj
+/R8 10 Tf
+-92.1 -16.8 Td
+(%P)Tj
+/R7 10 Tf
+36 0 Td
+(Lik)Tj
+2.5 Tc
+13.7898 0 Td
+[(e%)250.007(pb)]TJ
+0 Tc
+27.5699 0 Td
+[(ut in lo)25.0146(wercase: `am' or `pm' or a corresponding string for the current locale. \(GNU\))]TJ
+/R8 10 Tf
+-77.3594 -16.8 Td
+(%r)Tj
+/R7 10 Tf
+36 0 Td
+1.223 Tw
+(The time in a.m. or p.m. notation.)Tj
+148.392 0 Td
+1.224 Tw
+(In the POSIX locale this is equi)Tj
+-0.25 Tc
+133.634 0 Td
+(va)Tj
+0 Tc
+9.18984 0 Td
+(lent to `%I:%M:%S %p'.)Tj
+-291.215 -12 Td
+(\(SU\))Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(%R)Tj
+/R7 10 Tf
+35.8996 0 Td
+0.262 Tw
+(The time in 24-hour notation \(%H:%M\). \(SU\) F)Tj
+194.424 0 Td
+0.261 Tw
+[(or a v)15.0049(ersion including the seconds, see %T belo)]TJ
+-0.65 Tc
+192.708 0 Td
+(w.)Tj
+0 Tc
+/R8 10 Tf
+-423.031 -16.8 Td
+(%s)Tj
+/R7 10 Tf
+36 0 Td
+0 Tw
+(The number of seconds since the Epoch, i.e., since 1970-01-01 00:00:00 UTC. \(TZ\))Tj
+/R8 10 Tf
+-36 -16.8004 Td
+(%S)Tj
+/R7 10 Tf
+36 0 Td
+0.494 Tw
+[(The second as a decimal number \(range 00 to 60\).)-549.336(\(The range is up to 60 to allo)]TJ
+2.995 Tc
+329.247 0 Td
+(wf)Tj
+0 Tc
+13.5449 0 Td
+0.495 Tw
+(or occasional)Tj
+-342.792 -12 Td
+0 Tw
+(leap seconds.\))Tj
+/R8 10 Tf
+-36 -16.8 Td
+(%t)Tj
+2.5 Tc
+/R7 10 Tf
+36 0 Td
+(At)Tj
+0 Tc
+12.5 0 Td
+(ab character)Tj
+2.5 Tc
+48.25 0 Td
+(.\()Tj
+0 Tc
+8.32969 0 Td
+(SU\))Tj
+/R8 10 Tf
+-105.079 -16.8 Td
+(%T)Tj
+/R7 10 Tf
+36 0 Td
+(The time in 24-hour notation \(%H:%M:%S\). \(SU\))Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(%u)Tj
+/R7 10 Tf
+36 0 Td
+[(The day of the week as a decimal, range 1 to 7, Monday being 1.)-500(See also %w)]TJ
+2.5 Tc
+314.61 0 Td
+(.\()Tj
+0 Tc
+8.32969 0 Td
+(SU\))Tj
+/R8 10 Tf
+-358.939 -16.8004 Td
+(%U)Tj
+/R7 10 Tf
+36 0 Td
+0.7 Tw
+(The week number of the current year as a decimal number)Tj
+3.199 Tc
+240.41 0 Td
+(,r)Tj
+0 Tc
+9.13906 0 Td
+0.699 Tw
+(ange 00 to 53, starting with the \214rst)Tj
+-249.548 -12 Td
+0 Tw
+[(Sunday as the \214rst day of week 01. See also %V and %W)91.9922(.)]TJ
+/R8 10 Tf
+-36 -16.8 Td
+(%V)Tj
+/R7 10 Tf
+36 0 Td
+0.431 Tw
+(The ISO 8601:1988 week number of the current year as a decimal number)Tj
+2.931 Tc
+302.432 0 Td
+(,r)Tj
+0 Tc
+8.87109 0 Td
+0.432 Tw
+(ange 01 to 53, where)Tj
+-311.302 -12 Td
+0.731 Tw
+(week 1 is the \214rst week that has at least 4 days in the current year)Tj
+3.231 Tc
+272.895 0 Td
+(,a)Tj
+0 Tc
+10.1711 0 Td
+(nd with Monday as the \214rst)Tj
+-283.066 -12 Td
+0 Tw
+(day of the week. See also %U and %W)Tj
+2.5 Tc
+155.98 0 Td
+(.\()Tj
+0 Tc
+8.32969 0 Td
+(SU\))Tj
+/R8 10 Tf
+-200.31 -16.7996 Td
+(%w)Tj
+/R7 10 Tf
+36 0 Td
+[(The day of the week as a decimal, range 0 to 6, Sunday being 0.)-500(See also %u.)]TJ
+/R8 10 Tf
+-36 -16.8004 Td
+(%W)Tj
+/R7 10 Tf
+36 0 Td
+0.699 Tw
+(The week number of the current year as a decimal number)Tj
+3.2 Tc
+240.4 0 Td
+(,r)Tj
+0 Tc
+9.13984 0 Td
+0.7 Tw
+(ange 00 to 53, starting with the \214rst)Tj
+-249.54 -12 Td
+0 Tw
+(Monday as the \214rst day of week 01.)Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(%x)Tj
+/R7 10 Tf
+36 0 Td
+(The preferred date representation for the current locale without the time.)Tj
+/R8 10 Tf
+-36 -16.8004 Td
+(%X)Tj
+/R7 10 Tf
+36 0 Td
+(The preferred time representation for the current locale without the date.)Tj
+/R8 10 Tf
+-36 -16.8 Td
+(%y)Tj
+/R7 10 Tf
+36 0 Td
+(The year as a decimal number without a century \(range 00 to 99\).)Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(%Y)Tj
+/R7 10 Tf
+36 0 Td
+[(The year as a decimal number including the century)64.9854(.)]TJ
+/R8 10 Tf
+-36 -16.8004 Td
+(%z)Tj
+/R7 10 Tf
+36 0 Td
+1.814 Tw
+(The time-zone as hour of)Tj
+107.646 0 Td
+1.813 Tw
+(fset from GMT)Tj
+6.813 Tc
+64.0359 0 Td
+(.R)Tj
+0 Tc
+15.9328 0 Td
+[(equired to emit RFC)-249.98(822-conformant dates \(using)]TJ
+-187.614 -12 Td
+0 Tw
+("%a, %d %b %Y %H:%M:%S %z"\). \(GNU\))Tj
+/R8 10 Tf
+-36 -16.7996 Td
+(%Z)Tj
+/R7 10 Tf
+36 0 Td
+[(The time zone or name or abbre)25.0073(viation.)]TJ
+/R8 10 Tf
+-36 -16.8004 Td
+(%+)Tj
+/R7 10 Tf
+36 0 Td
+(The date and time in)Tj
+/R8 10 Tf
+84.7098 0 Td
+(date)Tj
+/R7 10 Tf
+18.3297 0 Td
+(\(1\) format. \(TZ\) \(Not supported in glibc2.\))Tj
+/R8 10 Tf
+-139.039 -16.8 Td
+(%%)Tj
+2.5 Tc
+/R7 10 Tf
+36 0 Td
+(Al)Tj
+0 Tc
+12.5 0 Td
+[(iteral `%' character)55.0244(.)]TJ
+-48.5 -16.7996 Td
+0.194 Tw
+(Some con)Tj
+-0.15 Tc
+39.5137 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion speci\214cations can be modi\214ed by preceding the con)Tj
+-0.15 Tc
+230.782 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion speci\214er character by the E or)Tj
+-288.875 -12 Td
+(O)Tj
+/R9 10 Tf
+10.8699 0 Td
+(modi\214er)Tj
+/R7 10 Tf
+37.3297 0 Td
+0.77 Tw
+(to indicate that an alternati)Tj
+-0.15 Tc
+109.59 0 Td
+1.07 Tw
+(ve f)Tj
+0 Tc
+15.8898 0 Td
+0.77 Tw
+[(ormat should be used.)-576.975(If the alternati)]TJ
+-0.15 Tc
+153.97 0 Td
+1.07 Tw
+(ve f)Tj
+0 Tc
+15.8898 0 Td
+0.77 Tw
+(ormat or speci\214cation)Tj
+-343.539 -12 Td
+1.278 Tw
+(does not e)Tj
+42.9559 0 Td
+1.279 Tw
+[(xist for the current locale, the beha)20.0024(viour will be as if the unmodi\214ed con)]TJ
+-0.15 Tc
+305.867 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion speci\214cation)Tj
+-358.113 -12 Td
+0.267 Tw
+(were used. \(SU\) The Single Unix Speci\214cation mentions %Ec, %EC, %Ex, %EX, %Ey)Tj
+2.767 Tc
+352.894 0 Td
+(,%)Tj
+0 Tc
+13.5969 0 Td
+(EY)Tj
+2.767 Tc
+12.0398 0 Td
+(,%)Tj
+0 Tc
+13.5969 0 Td
+(Od, %Oe,)Tj
+-392.128 -12 Td
+0.036 Tw
+(%OH, %OI, %Om, %OM, %OS, %Ou, %OU, %O)Tj
+-1.29 Tc
+203.982 0 Td
+2.616 Tw
+(V, %)Tj
+0 Tc
+19.2957 0 Td
+(Ow)Tj
+2.536 Tc
+13.7902 0 Td
+(,%)Tj
+-0.35 Tc
+13.366 0 Td
+(OW)Tj
+2.536 Tc
+15.3898 0 Td
+(,%)Tj
+0 Tc
+13.366 0 Td
+(Oy)Tj
+2.536 Tc
+11.5703 0 Td
+(,w)Tj
+0 Tc
+12.2559 0 Td
+0.036 Tw
+[(here the ef)25.0342(fect of the O modi\214er)]TJ
+-303.016 -12 Td
+0.676 Tw
+(is to use alternati)Tj
+-0.15 Tc
+69.9379 0 Td
+0.976 Tw
+(ve n)Tj
+0 Tc
+17.4656 0 Td
+0.676 Tw
+(umeric symbols \(say)Tj
+3.175 Tc
+83.582 0 Td
+(,r)Tj
+0 Tc
+9.11523 0 Td
+0.675 Tw
+(oman numerals\), and that of the E modi\214er is to use a locale-)Tj
+-180.101 -12 Td
+0 Tw
+(dependent alternati)Tj
+-0.15 Tc
+76.2297 0 Td
+0.3 Tw
+(ve r)Tj
+0 Tc
+15.2297 0 Td
+(epresentation.)Tj
+-91.4594 -16.8 Td
+0 Tw
+[(The brok)10.0159(en-do)25.0073(wn time structure)]TJ
+/R9 10 Tf
+131.62 0 Td
+(tm)Tj
+/R7 10 Tf
+12.5 0 Td
+(is de\214ned in)Tj
+/R9 10 Tf
+51.3898 0 Td
+[(<time)15.0073(.h>)]TJ
+5 Tc
+/R7 10 Tf
+38.0699 0 Td
+(.S)Tj
+0 Tc
+13.0598 0 Td
+(ee also)Tj
+/R8 10 Tf
+29.9898 0 Td
+(ctime)Tj
+/R7 10 Tf
+23.3199 0 Td
+(\(3\).)Tj
+/R8 10.95 Tf
+-335.949 -16.8004 Td
+[(RETURN V)134.973(ALUE)]TJ
+/R7 10 Tf
+36 -12 Td
+(The)Tj
+/R8 10 Tf
+18.1289 0 Td
+(strftime)Tj
+/R7 10 Tf
+33.8699 0 Td
+0.079 Tw
+(\(\) function returns the number of characters placed in the array)Tj
+/R9 10 Tf
+255.17 0 Td
+(s)Tj
+2.58 Tc
+/R7 10 Tf
+3.88984 0 Td
+(,n)Tj
+0 Tc
+10.0801 0 Td
+0.08 Tw
+(ot including the terminating)Tj
+-321.138 -12 Td
+0.226 Tw
+[(null byte, pro)15.0122(vided the string, including the terminating null byte, \214ts.)-522.573(Otherwise, it returns 0, and the con-)]TJ
+12 TL
+0.506 Tw
+T*[(tents of the array is unde\214ned.)-550.569(\(Thus at least since libc 4.4.4; v)]TJ
+259.441 0 Td
+0.507 Tw
+[(ery old v)15.0171(ersions of libc, such as libc 4.4.1,)]TJ
+-0.1 Tc
+-259.441 -12 Td
+(wo)Tj
+0 Tc
+12.1199 0 Td
+0 Tw
+(uld return)Tj
+/R9 10 Tf
+41.8797 0 Td
+(max)Tj
+/R7 10 Tf
+19.1598 0 Td
+[(if the array w)10.0244(as too small.\))]TJ
+-73.1594 -16.8 Td
+0.471 Tw
+[(Note that the return v)25.0256(alue 0 does not necessarily indicate an error; for e)]TJ
+291.143 0 Td
+0.47 Tw
+(xample, in man)Tj
+2.97 Tc
+62.7297 0 Td
+(yl)Tj
+0 Tc
+10.75 0 Td
+(ocales %p yields)Tj
+-364.622 -12 Td
+0 Tw
+(an empty string.)Tj
+-36 -52.8 Td
+186.51 Tw
+(GNU 2005-11-23)Tj
+463 0 Td
+(2)Tj
+ET
+Q
+Q
+endstream
+endobj
+13 0 obj
+7909
+endobj
+16 0 obj
+<</Length 17 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+113.45 Tw
+(STRFTIME\(3\) Linux)Tj
+202.19 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual STRFTIME\(3\))Tj
+/R8 10.95 Tf
+-270.47 -36 Td
+[(ENVIR)30.0616(ONMENT)]TJ
+/R7 10 Tf
+36 -12 Td
+0 Tw
+[(The en)40.0159(vironment v)25.0085(ariables TZ and LC_TIME are used.)]TJ
+/R8 10.95 Tf
+-36 -16.8 Td
+[(CONFORMING T)17.9873(O)]TJ
+/R7 10 Tf
+36 -12 Td
+0.663 Tw
+[(SVr4, C89, C99.)-566.283(There are strict inclusions between the set of con)]TJ
+-0.15 Tc
+274.793 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsions gi)Tj
+-0.15 Tc
+34.693 0 Td
+(ve)Tj
+3.163 Tc
+9.28984 0 Td
+[(ni)316.304(nA)]TJ
+0 Tc
+26.3258 0 Td
+0.664 Tw
+(NSI C \(unmark)Tj
+62.9578 0 Td
+(ed\),)Tj
+-417.349 -12 Td
+2.413 Tw
+(those gi)Tj
+-0.15 Tc
+33.5527 0 Td
+(ve)Tj
+4.913 Tc
+9.28984 0 Td
+(ni)Tj
+4.912 Tc
+12.693 0 Td
+(nt)Tj
+0 Tc
+12.6922 0 Td
+2.412 Tw
+[(he Single Unix Speci\214cation \(mark)10.0195(ed SU\), those gi)]TJ
+-0.15 Tc
+222.184 0 Td
+(ve)Tj
+4.912 Tc
+9.28984 0 Td
+[(ni)491.182(nO)]TJ
+0 Tc
+29.8242 0 Td
+(lson')Tj
+4.912 Tc
+19.45 0 Td
+(st)Tj
+0 Tc
+11.582 0 Td
+(imezone package)Tj
+-360.557 -12 Td
+(\(mark)Tj
+23.8898 0 Td
+0.907 Tw
+(ed TZ\), and those gi)Tj
+-0.15 Tc
+84.1977 0 Td
+(ve)Tj
+3.408 Tc
+9.28984 0 Td
+[(ni)340.811(ng)]TJ
+0 Tc
+24.5957 0 Td
+0.908 Tw
+[(libc \(mark)10.0342(ed GNU\), e)15.0073(xcept that %+ is not supported in glibc2. On the)]TJ
+-141.973 -12 Td
+0.452 Tw
+(other hand glibc2 has se)Tj
+-0.15 Tc
+98.318 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(ral more e)Tj
+41.5137 0 Td
+2.952 Tw
+(xtensions. POSIX.1)Tj
+84.9938 0 Td
+0.452 Tw
+(only refers to ANSI C; POSIX.2 describes under)Tj
+/R8 10 Tf
+-234.115 -12 Td
+(date)Tj
+/R7 10 Tf
+18.3297 0 Td
+2.211 Tw
+(\(1\) se)Tj
+-0.15 Tc
+24.4508 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(ral e)Tj
+19.6609 0 Td
+2.212 Tw
+(xtensions that could apply to)Tj
+/R8 10 Tf
+128.559 0 Td
+(strftime)Tj
+/R7 10 Tf
+33.8699 0 Td
+[(\(\) as well.)-721.169(The %F con)]TJ
+-0.15 Tc
+104.25 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion is in C99 and)Tj
+-347.7 -12 Td
+(POSIX.1-2001.)Tj
+24 TL
+0.322 Tw
+T*[(In SUSv2, the %S speci\214ed allo)25(wed a range of 00 to 61, to allo)]TJ
+2.821 Tc
+256.786 0 Td
+(wf)Tj
+0 Tc
+13.3711 0 Td
+0.321 Tw
+(or the theoretical possibility of a minute)Tj
+-270.157 -12 Td
+0 Tw
+(that included a double leap second \(there ne)Tj
+-0.15 Tc
+175.65 0 Td
+(ve)Tj
+2.5 Tc
+9.28984 0 Td
+(rh)Tj
+0 Tc
+10.9398 0 Td
+(as been such a minute\).)Tj
+/R8 10.95 Tf
+-231.88 -16.8 Td
+[(GLIBC NO)40.0235(TES)]TJ
+/R7 10 Tf
+36 -12 Td
+2.523 Tw
+[(Glibc pro)15.0195(vides some e)15.0146(xtensions for con)]TJ
+-0.15 Tc
+170.725 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+[(rsion speci\214cations.)-752.231(\(These e)]TJ
+126.118 0 Td
+2.524 Tw
+(xtensions are not speci\214ed in)Tj
+-306.132 -12 Td
+0.101 Tw
+[(POSIX.1-2001, b)20.0378(ut a fe)]TJ
+2.601 Tc
+94.4824 0 Td
+(wo)Tj
+0 Tc
+14.8211 0 Td
+[(ther systems pro)15.0122(vide similar features.\))]TJ
+158.825 0 Td
+0.1 Tw
+(Between the % character and the con)Tj
+-0.15 Tc
+148.65 0 Td
+(ve)Tj
+-0.2 Tc
+9.28984 0 Td
+(r-)Tj
+0 Tc
+-426.068 -12 Td
+0.006 Tw
+(sion speci\214er character)Tj
+2.506 Tc
+92.1316 0 Td
+[(,a)250.591(no)]TJ
+0 Tc
+21.952 0 Td
+(ptional)Tj
+/R9 10 Tf
+32.1953 0 Td
+[<8D61>10(g)]TJ
+/R7 10 Tf
+17.6258 0 Td
+(and \214eld)Tj
+/R9 10 Tf
+37.5715 0 Td
+(width)Tj
+/R7 10 Tf
+25.0156 0 Td
+[(may be speci\214ed.)-500.574(\(These precede the E or O modi-)]TJ
+-226.492 -12 Td
+0 Tw
+(\214ers, if present.\))Tj
+T*[(The follo)25.0159(wing \215ag characters are permitted:)]TJ
+/R8 10 Tf
+16.7996 TL
+(_)'
+/R7 10 Tf
+36 0 Td
+[(\(underscore\) P)15.0085(ad a numeric result string with spaces.)]TJ
+/R8 10 Tf
+-36 -16.8004 Td
+<AD>Tj
+/R7 10 Tf
+36 0 Td
+(\(dash\) Do not pad a numeric result string.)Tj
+/R8 10 Tf
+-36 -16.8 Td
+(0)Tj
+-0.15 Tc
+/R7 10 Tf
+36 0 Td
+(Pa)Tj
+4.76 Tc
+9.80977 0 Td
+(dan)Tj
+0 Tc
+23.9602 0 Td
+2.26 Tw
+(umeric result string with zeros e)Tj
+-0.15 Tc
+140.08 0 Td
+(ve)Tj
+4.76 Tc
+9.28984 0 Td
+[(ni)475.977(ft)]TJ
+0 Tc
+23.4102 0 Td
+(he con)Tj
+-0.15 Tc
+28.2398 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion speci\214er character uses space-)Tj
+-244.079 -12 Td
+0 Tw
+[(padding by def)10.0159(ault.)]TJ
+/R8 10 Tf
+-36 -16.7996 Td
+(^)Tj
+/R7 10 Tf
+36 0 Td
+(Con)Tj
+-0.15 Tc
+16.2699 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rt alphabetic characters in result string to upper case.)Tj
+/R8 10 Tf
+-61.5594 -16.8004 Td
+(#)Tj
+/R7 10 Tf
+36 0 Td
+(Sw)Tj
+12.6797 0 Td
+0.436 Tw
+(ap the case of the result string.)Tj
+130.193 0 Td
+0.437 Tw
+[(\(This \215ag only w)10.0293(orks with certain con)]TJ
+-0.15 Tc
+155.102 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(rsion speci\214er charac-)Tj
+-307.264 -12 Td
+0 Tw
+(ters, and of these, it is only really useful with %Z\).)Tj
+-36 -16.7996 Td
+0.313 Tw
+(An optional decimal width speci\214er may follo)Tj
+2.813 Tc
+186.168 0 Td
+(wt)Tj
+0 Tc
+12.8129 0 Td
+(he \(possibly absent\) \215ag.)Tj
+106.242 0 Td
+0.312 Tw
+(If the natural size of the \214eld is)Tj
+-305.223 -12 Td
+0 Tw
+(smaller than this width, then the result string is padded \(on the left\) to the speci\214ed width.)Tj
+-0.11 Tc
+/R8 10.95 Tf
+-36 -16.8004 Td
+(BU)Tj
+0 Tc
+15.0992 0 Td
+(GS)Tj
+/R7 10 Tf
+20.9008 -12 Td
+0.462 Tw
+[(Some b)20.0208(uggy v)15.0281(ersions of gcc complain about the use of %c:)]TJ
+/R9 10 Tf
+244.531 0 Td
+(warning: `%c' yields only last 2 digits of year)Tj
+-244.531 -12 Td
+0.018 Tw
+(in some locales)Tj
+5.018 Tc
+/R7 10 Tf
+61.9656 0 Td
+(.O)Tj
+2.518 Tc
+14.7379 0 Td
+(fc)Tj
+0 Tc
+10.2879 0 Td
+0.017 Tw
+(ourse programmers are encouraged to use %c, it gi)Tj
+-0.15 Tc
+203.546 0 Td
+(ve)Tj
+2.517 Tc
+9.28984 0 Td
+(st)Tj
+0 Tc
+9.18711 0 Td
+(he preferred date and time rep-)Tj
+-309.014 -12 Td
+0.415 Tw
+(resentation. One meets all kinds of strange obfuscations to circumv)Tj
+272.765 0 Td
+0.416 Tw
+(ent this gcc problem. A relati)Tj
+-0.15 Tc
+118.7 0 Td
+(ve)Tj
+0 Tc
+9.28984 0 Td
+(ly clean)Tj
+-400.755 -12 Td
+0 Tw
+(one is to add an intermediate function)Tj
+36 -12 Td
+(size_t my_strftime\(char *s, size_t max, const char *fmt, const struct tm *tm\) {)Tj
+36 -12 Td
+(return strftime\(s, max, fmt, tm\);)Tj
+-36 -12 Td
+(})Tj
+/R8 10.95 Tf
+-72 -16.8 Td
+(EXAMPLE)Tj
+/R7 10 Tf
+36 -12 Td
+(The program belo)Tj
+2.5 Tc
+71.6199 0 Td
+(wc)Tj
+0 Tc
+14.1598 0 Td
+[(an be used to e)15.0317(xperiment with)]TJ
+/R8 10 Tf
+122.72 0 Td
+(strftime)Tj
+/R7 10 Tf
+33.8699 0 Td
+(\(\).)Tj
+-242.369 -24 Td
+(#include <time.h>)Tj
+12 TL
+(#include <stdio.h>)'
+T*[(#include <stdlib)40.0232(.h>)]TJ
+24 TL
+(int)'
+12 TL
+T*[(main\(int ar)17.9773(gc, char *ar)17.9846(gv[]\))]TJ
+({)'
+10 -12 Td
+(char outstr[200];)Tj
+(time_t t;)'
+(struct tm *tmp;)'
+-46 -60 Td
+186.51 Tw
+(GNU 2005-11-23)Tj
+463 0 Td
+(3)Tj
+ET
+Q
+Q
+endstream
+endobj
+17 0 obj
+6452
+endobj
+20 0 obj
+<</Length 21 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R7 10 Tf
+1 0 0 1 72 744 Tm
+113.45 Tw
+(STRFTIME\(3\) Linux)Tj
+202.19 0 Td
+(Programmer')Tj
+2.5 Tc
+53.0598 0 Td
+(sM)Tj
+0 Tc
+15.2199 0 Td
+(anual STRFTIME\(3\))Tj
+2.5 Tc
+-224.47 -36 Td
+(t=t)Tj
+0 Tc
+16.2 0 Td
+(ime\(NULL\);)Tj
+-16.2 -12 Td
+0 Tw
+(tmp = localtime\(&t\);)Tj
+12 TL
+(if \(tmp == NULL\) {)'
+10 -12 Td
+(perror\("localtime"\);)Tj
+-0.15 Tc
+(ex)'
+0 Tc
+9.28984 0 Td
+[(it\(EXIT_F)74.0161(AILURE\);)]TJ
+-19.2898 -12 Td
+(})Tj
+24 TL
+(if \(strftime\(outstr)'
+2.5 Tc
+68.9797 0 Td
+(,s)Tj
+0 Tc
+8.88984 0 Td
+[(izeof\(outstr\), ar)17.9761(gv[1], tmp\) == 0\) {)]TJ
+-67.8695 -12 Td
+(fprintf\(stderr)Tj
+2.5 Tc
+51.5797 0 Td
+(,")Tj
+0 Tc
+9.07969 0 Td
+(strftime returned 0"\);)Tj
+-0.15 Tc
+-60.6594 -12 Td
+(ex)Tj
+0 Tc
+9.28984 0 Td
+[(it\(EXIT_F)74.0161(AILURE\);)]TJ
+-19.2898 -12 Td
+(})Tj
+(printf\("Result string is \\"%s\\"\\n", outstr\);)'
+-0.15 Tc
+12 TL
+(ex)'
+0 Tc
+9.28984 0 Td
+(it\(EXIT_SUCCESS\);)Tj
+2.5 Tc
+-19.2898 -12 Td
+[(}/)250.032(*m)]TJ
+0 Tc
+25.3594 0 Td
+(ain */)Tj
+-25.3594 -16.7996 Td
+[(Some e)15.0085(xamples of the result string produced by the glibc implementation of)]TJ
+/R8 10 Tf
+306.82 0 Td
+(strftime)Tj
+/R7 10 Tf
+33.8699 0 Td
+[(\(\) are as follo)25(ws:)]TJ
+2.5 Tc
+-340.69 -24 Td
+($.)Tj
+0 Tc
+10 0 Td
+(/a.out "%m")Tj
+-10 -12 Td
+(Result string is "11")Tj
+2.5 Tc
+($.)'
+0 Tc
+10 0 Td
+(/a.out "%5m")Tj
+-10 -12 Td
+(Result string is "00011")Tj
+2.5 Tc
+($.)'
+0 Tc
+10 0 Td
+(/a.out "%_5m")Tj
+-10 -12 Td
+[(Result string is ")-750(11")]TJ
+/R8 10.95 Tf
+-36 -16.8004 Td
+(SEE ALSO)Tj
+/R8 10 Tf
+36 -12 Td
+(date)Tj
+/R7 10 Tf
+18.3297 0 Td
+(\(1\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(time)Tj
+/R7 10 Tf
+18.8797 0 Td
+(\(2\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(ctime)Tj
+/R7 10 Tf
+23.3199 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(setlocale)Tj
+/R7 10 Tf
+36.1 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+(sprintf)Tj
+/R7 10 Tf
+28.8898 0 Td
+(\(3\),)Tj
+/R8 10 Tf
+16.6598 0 Td
+[(str)10.0244(ptime)]TJ
+/R7 10 Tf
+36 0 Td
+(\(3\))Tj
+-280.818 -386.4 Td
+186.51 Tw
+(GNU 2005-11-23)Tj
+463 0 Td
+(4)Tj
+ET
+Q
+Q
+endstream
+endobj
+21 0 obj
+1997
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 10 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+11 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 14 0 R
+>>
+/Contents 12 0 R
+>>
+endobj
+15 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 18 0 R
+>>
+/Contents 16 0 R
+>>
+endobj
+19 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 22 0 R
+>>
+/Contents 20 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+11 0 R
+15 0 R
+19 0 R
+] /Count 4
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+10 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+14 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+18 0 obj
+<</R8
+8 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+22 0 obj
+<</R8
+8 0 R/R7
+7 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Encoding 23 0 R/Subtype/Type1>>
+endobj
+23 0 obj
+<</Type/Encoding/Differences[
+94/circumflex
+173/minus]>>
+endobj
+7 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Encoding 24 0 R/Subtype/Type1>>
+endobj
+24 0 obj
+<</Type/Encoding/Differences[
+138/emdash
+140/fi/fl
+173/minus]>>
+endobj
+9 0 obj
+<</BaseFont/Times-Italic/Type/Font
+/Encoding 25 0 R/Subtype/Type1>>
+endobj
+25 0 obj
+<</Type/Encoding/Differences[
+140/fi/fl]>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120228173256)
+/ModDate(D:20120228173256)>>endobj
+xref
+0 26
+0000000000 65535 f 
+0000024052 00000 n 
+0000024741 00000 n 
+0000023972 00000 n 
+0000023434 00000 n 
+0000000009 00000 n 
+0000006837 00000 n 
+0000024437 00000 n 
+0000024283 00000 n 
+0000024599 00000 n 
+0000024100 00000 n 
+0000023567 00000 n 
+0000006857 00000 n 
+0000014818 00000 n 
+0000024148 00000 n 
+0000023702 00000 n 
+0000014839 00000 n 
+0000021343 00000 n 
+0000024196 00000 n 
+0000023837 00000 n 
+0000021364 00000 n 
+0000023413 00000 n 
+0000024244 00000 n 
+0000024364 00000 n 
+0000024519 00000 n 
+0000024682 00000 n 
+trailer
+<< /Size 26 /Root 1 0 R /Info 2 0 R
+/ID [<E6A459B38D4D6D2DE989B8CCF9EB4E6F><E6A459B38D4D6D2DE989B8CCF9EB4E6F>]
+>>
+startxref
+24852
+%%EOF
