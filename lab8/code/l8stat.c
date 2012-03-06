@@ -44,10 +44,11 @@ void print_stat(stat_ref stat) {
 
 void print_link(ssize_t idx, char *link, char *name) {
   link[idx < PATH_MAX+1 ? idx : PATH_MAX] = '\0';
-  printf ("%s -> \"%s\"\n", name, link);
+  printf ("%s -> %s\n", name, link);
 }
 
 void statfile(char *name) {
+
   ssize_t linkres = readlink (name, buf, sizeof buf);
   int statres = lstat (name, filestat);
 
@@ -69,7 +70,7 @@ int main(int argc, char *argv[])
   filestat = malloc (sizeof (struct stat));
 
   if (argc-1 == 0) {
-    statfile("-");
+    statfile(".");
   } else {
     for (int i=1 ; i < argc ; i++) {
       statfile (argv[i]);
