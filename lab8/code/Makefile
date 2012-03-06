@@ -6,3 +6,5 @@ all : ${EXECBIN}
 
 ${EXECBIN} : ${CSOURCE}
 	${GCC} ${CSOURCE} -o ${EXECBIN}
+
+%.c : ${EXECBIN}
