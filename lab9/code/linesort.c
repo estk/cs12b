@@ -10,8 +10,11 @@
 char **array;
 char *buf;
 
-int scmp(const void *str1, const void *str2) {
-  return (strcmp (*(char **)str1, *(char **)str2));
+int scmp(const void *a, const void *b) {
+  const char **a1 = (const char **)a;
+  const char **b1 = (const char **)b;
+
+  return strcmp(*a1, *b1);
 }
 
 int main(int argc, const char *argv[])
@@ -27,11 +30,11 @@ int main(int argc, const char *argv[])
     array[i] = strdup(buf);
   }
 
-  for (int i=0 ; i<lines ; i++)
-    printf("%s\n", array[i]);
+  /*for (int i=0 ; i<lines ; i++)*/
+    /*printf("%s\n", array[i]);*/
 
   // sort zem
-  qsort(array, lines, sizeof(char**)*1000, scmp);
+  qsort(array, lines, sizeof(char *), scmp);
 
   // print zem
   for (int i=0 ; i<lines ; i++)
