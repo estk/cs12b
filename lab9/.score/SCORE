@@ -1,0 +1,77 @@
+$Id: SCORE,v 1.1 2012-03-08 18:53:47-08 - - $
+
+Copy all files from this directory into the student's directory.
+
+Student name:
+
+For any point deduction, note it in the left margin and add a
+comment under it indicating why the loss of points.  Assign a
+point value for each between 0 and the max indicated in parens.
+
+DO NOT DEDUCT POINTS FOR THE FOLLOWING LINT MESSAGES:
+function returns value which is ... ignored
+
+run mk.build
+ruh mk.tests if mk.build succeeded
+
+*****************************************************************
+
+CODE = 15 points
+
+   Check each of the following and assign between 0 and 2 points
+   for each.
+
+   (2) checksource did not complain
+
+   (2) lint did not complain (except for msg about ret val ignored)
+
+   (2) numsort, linesort each had a correct comparison function
+
+   (3) each had a read loop that stops as per specs
+
+   (3) inssort correctly used memcpy to move elements around
+
+   (3) correctly allocated a tmp buffer using malloc, alloca,
+       or a variable dimensioned array
+
+code total=
+min 1, max 15
+
+*****************************************************************
+
+TESTING = 15 points
+
+For this section, verify that inssort.c is actually called,
+and there is no monkey business about calling some other sorting
+function, or hand coding different sorts for each.
+Assign 0 points to this section if inssort void* was not called.
+
+For each of the following assign up to 4 points
+Assign 0 points for any test run that seg faults
+
+   (4) runprogram.perl -0num.data -oout.test.num numsort
+
+   (4) runprogram.perl -0line.data -oout.test.lines linesort
+
+   (4) valgrind --leak-check=full numsort <num.data
+       reports no memory leaks
+   
+   (4) valgrind --leak-check=full linesort <line.data
+       reports no memory leaks
+
+If everything is correct assign max 15 points, not 16.
+
+testing total=
+min 0, max 15
+
+*****************************************************************
+
+SUBTOTAL=
+min 1, max 30
+
+If pair programming, TOTALSCORE = SUBTOTAL - TOTAL2.
+If not, TOTALSCORE = SUBTOTAL.
+
+TOTALSCORE=
+min 1, max 30
+

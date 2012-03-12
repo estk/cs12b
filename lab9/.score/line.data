@@ -1,0 +1,17 @@
+This is a test file for linesort.
+Note that output should be in lexicographic order.
+1234567890-=\`
+!@#$%^&*()_+|~
+foo bar baz qux
+Lines are printed, one per line of output.
+HELLO WORLD
+hello world
+[Brackets come in the proper place.]
+<Angle brackets are earlier.>
+``What about quotation marks?''
+"Double quotes too?"
+$40.66
+7.2
+88.9
+1004.3e9
+$Id: line.data,v 1.1 2012-03-08 18:53:47-08 - - $
