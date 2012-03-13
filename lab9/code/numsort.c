@@ -28,7 +28,8 @@ int main(void)
     nums++;
   }
   // sort zem
-  insertion_sort(array, nums, sizeof(double), lgcmp);
+  // LINTED
+  insertion_sort(array, (size_t)nums, sizeof(double), lgcmp);
 
   // print zem
   for (int i=0 ; i<nums ; i++)

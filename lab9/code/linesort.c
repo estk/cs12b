@@ -20,8 +20,8 @@ int scmp(const void *a, const void *b)
 
 int main(void)
 {
-	array = malloc (sizeof(char*) * ARYLEN);
-	buf = malloc (sizeof(char) * BUFLEN);
+  array = malloc (sizeof(char*) * ARYLEN);
+  buf = malloc (sizeof(char) * BUFLEN);
   // read lines
   int lines = 0;
   for (int i=0 ; i<ARYLEN ; i++)
@@ -32,6 +32,7 @@ int main(void)
     array[i] = strdup(buf);
   }
   // sort zem
+  // LINTED
   insertion_sort(array, lines, sizeof(char *), scmp);
 
   // print zem
