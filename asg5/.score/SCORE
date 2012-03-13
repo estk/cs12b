@@ -1,0 +1,99 @@
+$Id: SCORE,v 1.3 2012-03-12 13:00:15-07 - - $
+
+Copy this SCORE file and other files into the student's submit
+directory.  For any point deduction, note it in the left margin,
+and add a comment under it indicating the reason for the loss of
+points.
+
+*****************************************************************
+
+SOURCE CODE = 30 points
+
+General considerations:
+
+    (3) checksource:
+        3 pts if <= 5 complaints; 2 pts for 6 to 15 complaints;
+        1 pt for 16 to 30 complaints; 0 pts if >30.
+        . DO NOT DEDUCT ANY POINTS FOR COMPLAINTS ABOUT SCANNER.C
+
+    (3) lint is quiet, no complaints, except do not deduct points
+        for any of:
+        . any complaint about scanner.c or any of its yy-variables
+        . function returns value which is ignored
+        . declared global, could be static
+        Note:  their Makefile must have the same gmake lint as
+        is provided in the code/ subdirectory
+
+Implementation of stack as a linked list:
+
+    (3) new_stack and free_stack impelemented
+
+    (3) pop_stack, push_stack
+
+    (3) peek_stack, is_empty_stack, length_stack, is_stack
+
+Bigint implementation:
+
+    (3) add_bigint and sub_bigint make proper three-way test and
+        call do_add or do_sub to do the work
+
+    (3) do_add
+
+    (3) do_sub
+
+    (3) mul_bigint implements multiplication properly
+
+    (3) free_bigint, is_bigint
+
+source total=
+min 1, max:30
+
+*****************************************************************
+
+TESTING = 30 points
+
+    0 points total for this section if compilation failed.
+
+    mk.tests
+    output in *.stdout *.stderr and status in *.status
+
+General:
+
+    (3) gmake built the executable image
+        grader build it by cmd if not, and deduct these 3 pts.
+
+    (3) stdout and stderr, consistent with dc
+
+Check to see if dc and a5dc produce same output
+
+    (3) test1.data
+
+    (3) test1.data
+
+    (3) test3.data
+
+    (3) test4.data
+
+core dumps and memory leak
+
+    (4) testv.data produced no memory leaks from any user written
+        function
+
+    (8) Deduct 3 points for each test run that produced a seg fault
+        or core dump, but not more than 8 points.
+
+
+testing total=
+min 0, max:30
+
+*****************************************************************
+
+SUBTOTAL=
+min 1, max 60
+
+If pair programming, TOTALSCORE = SUBTOTAL - TOTAL1.
+If not, TOTALSCORE = SUBTOTAL.
+
+TOTALSCORE=
+min 1, max 60
+

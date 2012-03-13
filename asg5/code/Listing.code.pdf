@@ -1,0 +1,1825 @@
+%PDF-1.2
+5 0 obj
+<</Length 6 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+1 i
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 281.311 736.5 Tm
+(debugf.h)Tj
+-140.57 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(// $Id: debugf.h,v 1.1 2012-03-05 19:43:01-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#ifndef __DEBUGF_H__)]TJ
+T*[(4:)-600(#define __DEBUGF_H__)]TJ
+(5:)'
+T*[(6:)-600(//)]TJ
+T*[(7:)-600(// DESCRIPTION)]TJ
+T*[(8:)-600(//    Debugging library containing miscellaneous useful things.)]TJ
+T*[(9:)-600(//)]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(//)]TJ
+T*[(12:)-600(// Tell debugf what program is running.)]TJ
+T*[(13:)-600(//)]TJ
+T*[(14:)-600(void set_execname \(char *name\);)]TJ
+(15:)'
+T*[(16:)-600(//)]TJ
+T*[(17:)-600(// Support for stub messages.)]TJ
+T*[(18:)-600(//)]TJ
+T*[(19:)-600(#define STUBPRINTF\(...\) \\)]TJ
+T*[(20:)-600(        __stubprintf \(__FILE__, __LINE__, __func__, __VA_ARGS__\))]TJ
+T*[(21:)-600(void __stubprintf \(char *file, int line, const char *func,)]TJ
+T*[(22:)-600(                   char *format, ...\);)]TJ
+(23:)'
+T*[(24:)-600(//)]TJ
+T*[(25:)-600(// Debugging utility.)]TJ
+T*[(26:)-600(//)]TJ
+(27:)'
+T*[(28:)-600(void set_debugflags \(char *flags\);)]TJ
+T*[(29:)-600(   //)]TJ
+T*[(30:)-600(   // Sets a string of debug flags to be used by DEBUGF statements.)]TJ
+T*[(31:)-600(   // Uses the address of the string, and does not copy it, so it)]TJ
+T*[(32:)-600(   // must not be dangling.  If a particular debug flag has been set,)]TJ
+T*[(33:)-600(   // messages are printed.  The format is identical to printf format.)]TJ
+T*[(34:)-600(   // The flag "@" turns on all flags.)]TJ
+T*[(35:)-600(   //)]TJ
+(36:)'
+T*[(37:)-600(#ifdef NDEBUG)]TJ
+T*[(38:)-600(#define DEBUGF\(FLAG,...\) // DEBUG \(FLAG, __VA_ARGS__\))]TJ
+T*[(39:)-600(#else)]TJ
+T*[(40:)-600(#define DEBUGF\(FLAG,...\) \\)]TJ
+T*[(41:)-600(        __debugprintf \(FLAG, __FILE__, __LINE__, __VA_ARGS__\))]TJ
+T*[(42:)-600(void __debugprintf \(char flag, char *file, int line,)]TJ
+T*[(43:)-600(                    char *format, ...\);)]TJ
+T*[(44:)-600(#endif)]TJ
+(45:)'
+T*[(46:)-600(#endif)]TJ
+(47:)'
+ET
+Q
+Q
+endstream
+endobj
+6 0 obj
+2405
+endobj
+14 0 obj
+<</Length 15 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 286.366 736.5 Tm
+(stack.h)Tj
+-145.624 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(// $Id: stack.h,v 1.1 2012-03-05 19:43:01-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#ifndef __STACK_H__)]TJ
+T*[(4:)-600(#define __STACK_H__)]TJ
+(5:)'
+T*[(6:)-600(#include <stdbool.h>)]TJ
+(7:)'
+T*[(8:)-600(typedef struct stack *stack_ref;)]TJ
+T*[(9:)-600(typedef struct bigint *stack_item;)]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(//)]TJ
+T*[(12:)-600(// Create a new empty stack.)]TJ
+T*[(13:)-600(//)]TJ
+T*[(14:)-600(stack_ref new_stack \(void\);)]TJ
+(15:)'
+T*[(16:)-600(//)]TJ
+T*[(17:)-600(// Free up the stack.)]TJ
+T*[(18:)-600(// Precondition: stack must be empty.)]TJ
+T*[(19:)-600(//)]TJ
+T*[(20:)-600(void free_stack \(stack_ref\);)]TJ
+(21:)'
+T*[(22:)-600(//)]TJ
+T*[(23:)-600(// Push a new stack_item onto the top of the stack.)]TJ
+T*[(24:)-600(//)]TJ
+T*[(25:)-600(void push_stack \(stack_ref, stack_item\);)]TJ
+(26:)'
+T*[(27:)-600(//)]TJ
+T*[(28:)-600(// Pop the top stack_item from the stack and return it.)]TJ
+T*[(29:)-600(//)]TJ
+T*[(30:)-600(stack_item pop_stack \(stack_ref\);)]TJ
+(31:)'
+T*[(32:)-600(//)]TJ
+T*[(33:)-600(// Peek into the stack and return a selected stack_item, with)]TJ
+T*[(34:)-600(// item 0 being the element at the top.)]TJ
+T*[(35:)-600(// and item length_stack - 1 being the element at the bottom.)]TJ
+T*[(36:)-600(// Precondition: 0 <= index && index < length_stack.)]TJ
+T*[(37:)-600(//)]TJ
+T*[(38:)-600(stack_item peek_stack \(stack_ref, int index\);)]TJ
+(39:)'
+T*[(40:)-600(//)]TJ
+T*[(41:)-600(// Indicate whether the stack is empty or not.)]TJ
+T*[(42:)-600(//)]TJ
+T*[(43:)-600(bool is_empty_stack \(stack_ref\);)]TJ
+(44:)'
+T*[(45:)-600(//)]TJ
+T*[(46:)-600(// Return a count of the number of items on the stack.)]TJ
+T*[(47:)-600(//)]TJ
+T*[(48:)-600(int length_stack \(stack_ref\);)]TJ
+(49:)'
+T*[(50:)-600(//)]TJ
+T*[(51:)-600(// Indixate whether or not a pointer points at a stack.)]TJ
+T*[(52:)-600(//)]TJ
+T*[(53:)-600(bool is_stack \(stack_ref\);)]TJ
+(54:)'
+T*[(55:)-600(#endif)]TJ
+(56:)'
+ET
+Q
+Q
+endstream
+endobj
+15 0 obj
+2442
+endobj
+18 0 obj
+<</Length 19 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 284.412 736.5 Tm
+(bigint.h)Tj
+-143.671 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(// $Id: bigint.h,v 1.2 2012-03-05 20:19:38-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#ifndef __BIGINT_H__)]TJ
+T*[(4:)-600(#define __BIGINT_H__)]TJ
+(5:)'
+T*[(6:)-600(#include <stdbool.h>)]TJ
+(7:)'
+T*[(8:)-600(typedef struct bigint *bigint_ref;)]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(typedef bigint_ref \(*bigint_binop\) \(bigint_ref, bigint_ref\);)]TJ
+(11:)'
+T*[(12:)-600(bigint_ref new_bigint \(size_t length\);)]TJ
+(13:)'
+T*[(14:)-600(bigint_ref from_string_bigint \(char *string\);)]TJ
+(15:)'
+T*[(16:)-600(void free_bigint \(bigint_ref\);)]TJ
+(17:)'
+T*[(18:)-600(void print_bigint \(bigint_ref\);)]TJ
+(19:)'
+T*[(20:)-600(bigint_ref add_bigint \(bigint_ref left, bigint_ref right\);)]TJ
+(21:)'
+T*[(22:)-600(bigint_ref sub_bigint \(bigint_ref left, bigint_ref right\);)]TJ
+(23:)'
+T*[(24:)-600(bigint_ref mul_bigint \(bigint_ref left, bigint_ref right\);)]TJ
+(25:)'
+T*[(26:)-600(bool is_bigint \(bigint_ref\);)]TJ
+(27:)'
+T*[(28:)-600(#endif)]TJ
+(29:)'
+ET
+Q
+Q
+endstream
+endobj
+19 0 obj
+1472
+endobj
+22 0 obj
+<</Length 23 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 285.196 736.5 Tm
+(token.h)Tj
+-144.455 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(// $Id: token.h,v 1.2 2012-03-05 20:19:38-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#ifndef __TOKEN_H__)]TJ
+T*[(4:)-600(#define __TOKEN_H__)]TJ
+(5:)'
+T*[(6:)-600(#define NUMBER 256)]TJ
+(7:)'
+T*[(8:)-600(typedef struct token *token_ref;)]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(token_ref new_token \(FILE*\);)]TJ
+(11:)'
+T*[(12:)-600(int scan_token \(token_ref\);)]TJ
+(13:)'
+T*[(14:)-600(char *peek_token \(token_ref\);)]TJ
+(15:)'
+T*[(16:)-600(#endif)]TJ
+(17:)'
+ET
+Q
+Q
+endstream
+endobj
+23 0 obj
+978
+endobj
+26 0 obj
+<</Length 27 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 281.704 736.5 Tm
+(debugf.c)Tj
+-140.962 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(// $Id: debugf.c,v 1.1 2012-03-05 19:43:01-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <errno.h>)]TJ
+T*[(4:)-600(#include <stdarg.h>)]TJ
+T*[(5:)-600(#include <stdbool.h>)]TJ
+T*[(6:)-600(#include <stdio.h>)]TJ
+T*[(7:)-600(#include <stdlib.h>)]TJ
+T*[(8:)-600(#include <string.h>)]TJ
+T*[(9:)-600(#include <unistd.h>)]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(#include "debugf.h")]TJ
+(12:)'
+T*[(13:)-600(static char *debugflags = "";)]TJ
+T*[(14:)-600(static bool alldebugflags = false;)]TJ
+T*[(15:)-600(static char *execname = NULL;)]TJ
+(16:)'
+T*[(17:)-600(void set_execname \(char *name\) {)]TJ
+T*[(18:)-600(   execname = name;)]TJ
+T*[(19:)-600(})]TJ
+(20:)'
+T*[(21:)-600(void print_execname \(FILE *out\) {)]TJ
+T*[(22:)-600(   if \(execname != NULL\) fprintf \(out, "%s: ", execname\);)]TJ
+T*[(23:)-600(})]TJ
+(24:)'
+T*[(25:)-600(void __stubprintf \(char *filename, int line, const char *func,)]TJ
+T*[(26:)-600(                   char *format, ...\) {)]TJ
+T*[(27:)-600(   va_list args;)]TJ
+T*[(28:)-600(   fflush \(NULL\);)]TJ
+T*[(29:)-600(   print_execname \(stdout\);)]TJ
+T*[(30:)-600(   fprintf \(stdout, "STUB: %s[%d] %s:\\n", filename, line, func\);)]TJ
+T*[(31:)-600(   va_start \(args, format\);)]TJ
+T*[(32:)-600(   vfprintf \(stdout, format, args\);)]TJ
+T*[(33:)-600(   va_end \(args\);)]TJ
+T*[(34:)-600(   fflush \(NULL\);)]TJ
+T*[(35:)-600(})]TJ
+(36:)'
+T*[(37:)-600(void set_debugflags \(char *flags\) {)]TJ
+T*[(38:)-600(   debugflags = flags;)]TJ
+T*[(39:)-600(   if \(strchr \(debugflags, '@'\) != NULL\) alldebugflags = true;)]TJ
+T*[(40:)-600(   DEBUGF \('a', "Debugflags = \\"%s\\"\\n", debugflags\);)]TJ
+T*[(41:)-600(})]TJ
+(42:)'
+T*[(43:)-600(void __debugprintf \(char flag, char *file, int line,)]TJ
+T*[(44:)-600(                    char *format, ...\) {)]TJ
+T*[(45:)-600(   va_list args;)]TJ
+T*[(46:)-600(   if \(alldebugflags || strchr \(debugflags, flag\) != NULL\) {)]TJ
+T*[(47:)-600(      fflush \(NULL\);)]TJ
+T*[(48:)-600(      print_execname \(stderr\);)]TJ
+T*[(49:)-600(      fprintf \(stderr, "DEBUGF\(%c\): %s[%d]:\\n",)]TJ
+T*[(50:)-600(                flag, file, line\);)]TJ
+T*[(51:)-600(      va_start \(args, format\);)]TJ
+T*[(52:)-600(      vfprintf \(stderr, format, args\);)]TJ
+T*[(53:)-600(      va_end \(args\);)]TJ
+T*[(54:)-600(      fflush \(NULL\);)]TJ
+T*[(55:)-600(   })]TJ
+T*[(56:)-600(})]TJ
+(57:)'
+ET
+Q
+Q
+endstream
+endobj
+27 0 obj
+2860
+endobj
+30 0 obj
+<</Length 31 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 286.758 736.5 Tm
+(stack.c)Tj
+-146.016 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(// $Id: stack.c,v 1.3 2012-03-06 16:27:19-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <stdio.h>)]TJ
+T*[(4:)-600(#include <assert.h>)]TJ
+(5:)'
+T*[(6:)-600(#include "stack.h")]TJ
+(7:)'
+T*[(8:)-600(typedef struct stack_node *stack_node_ref;)]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(static char *stack_tag = "struct stack";)]TJ
+T*[(11:)-600(static char *stack_node_tag = "struct stack_node";)]TJ
+(12:)'
+T*[(13:)-600(struct stack {)]TJ
+T*[(14:)-600(   char *tag;)]TJ
+T*[(15:)-600(   stack_node_ref top;)]TJ
+T*[(16:)-600(};)]TJ
+(17:)'
+T*[(18:)-600(struct stack_node {)]TJ
+T*[(19:)-600(   char *tag;)]TJ
+T*[(20:)-600(   stack_item item;)]TJ
+T*[(21:)-600(   stack_node_ref link;)]TJ
+T*[(22:)-600(};)]TJ
+(23:)'
+T*[(24:)-600(stack_ref new_stack \(void\) {)]TJ
+T*[(25:)-600(   return NULL;)]TJ
+T*[(26:)-600(})]TJ
+(27:)'
+T*[(28:)-600(void free_stack \(stack_ref stack\) {)]TJ
+T*[(29:)-600(   assert \(is_stack \(stack\)\);)]TJ
+T*[(30:)-600(   assert \(is_empty_stack \(stack\)\);)]TJ
+T*[(31:)-600(})]TJ
+(32:)'
+T*[(33:)-600(void push_stack \(stack_ref stack, stack_item item\) {)]TJ
+T*[(34:)-600(   assert \(is_stack \(stack\)\);)]TJ
+T*[(35:)-600(})]TJ
+(36:)'
+T*[(37:)-600(stack_item pop_stack \(stack_ref stack\) {)]TJ
+T*[(38:)-600(   assert \(is_stack \(stack\)\);)]TJ
+T*[(39:)-600(   assert \(! is_empty_stack \(stack\)\);)]TJ
+T*[(40:)-600(   return NULL;)]TJ
+T*[(41:)-600(})]TJ
+(42:)'
+T*[(43:)-600(stack_item peek_stack \(stack_ref stack, int index\) {)]TJ
+T*[(44:)-600(   assert \(is_stack \(stack\)\);)]TJ
+T*[(45:)-600(   assert \(index >= 0\);)]TJ
+T*[(46:)-600(   assert \(index < length_stack \(stack\)\);)]TJ
+T*[(47:)-600(   return NULL;)]TJ
+T*[(48:)-600(})]TJ
+(49:)'
+T*[(50:)-600(bool is_empty_stack \(stack_ref stack\) {)]TJ
+T*[(51:)-600(   assert \(is_stack \(stack\)\);)]TJ
+T*[(52:)-600(   return false;)]TJ
+T*[(53:)-600(})]TJ
+(54:)'
+T*[(55:)-600(int length_stack \(stack_ref stack\) {)]TJ
+T*[(56:)-600(   assert \(is_stack \(stack\)\);)]TJ
+T*[(57:)-600(   return 0;)]TJ
+T*[(58:)-600(})]TJ
+(59:)'
+T*[(60:)-600(bool is_stack \(stack_ref stack\) {)]TJ
+T*[(61:)-600(   return false;)]TJ
+T*[(62:)-600(})]TJ
+(63:)'
+ET
+Q
+Q
+endstream
+endobj
+31 0 obj
+2635
+endobj
+34 0 obj
+<</Length 35 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 284.804 736.5 Tm
+(bigint.c)Tj
+-144.063 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(// $Id: bigint.c,v 1.3 2012-03-06 16:27:19-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <assert.h>)]TJ
+T*[(4:)-600(#include <stdio.h>)]TJ
+T*[(5:)-600(#include <stdlib.h>)]TJ
+T*[(6:)-600(#include <string.h>)]TJ
+(7:)'
+T*[(8:)-600(#include "bigint.h")]TJ
+(9:)'
+-6 -11 Td
+[(10:)-600(static char *bigint_tag = "struct bigint";)]TJ
+(11:)'
+T*[(12:)-600(struct bigint {)]TJ
+T*[(13:)-600(   char *tag;)]TJ
+T*[(14:)-600(   bool is_negative;)]TJ
+T*[(15:)-600(   size_t length;)]TJ
+T*[(16:)-600(   size_t digits;)]TJ
+T*[(17:)-600(   char *buffer;)]TJ
+T*[(18:)-600(};)]TJ
+(19:)'
+T*[(20:)-600(static void trim_zeros \(bigint_ref bigint\) {)]TJ
+T*[(21:)-600(   while \(bigint->digits > 0\) {)]TJ
+T*[(22:)-600(      size_t digitpos = bigint->digits - 1;)]TJ
+T*[(23:)-600(      if \(bigint->buffer[digitpos] != 0\) break;)]TJ
+T*[(24:)-600(      --bigint->digits;)]TJ
+T*[(25:)-600(   })]TJ
+T*[(26:)-600(})]TJ
+(27:)'
+T*[(28:)-600(static bigint_ref do_add \(bigint_ref left, bigint_ref right\) {)]TJ
+T*[(29:)-600(})]TJ
+(30:)'
+T*[(31:)-600(static bigint_ref do_sub \(bigint_ref left, bigint_ref right\) {)]TJ
+T*[(32:)-600(})]TJ
+(33:)'
+ET
+Q
+Q
+endstream
+endobj
+35 0 obj
+1649
+endobj
+38 0 obj
+<</Length 39 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 284.804 736.5 Tm
+(bigint.c)Tj
+-144.063 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-78.7414 -35.5 Td
+(34:)Tj
+11 TL
+T*[(35:)-600(bigint_ref new_bigint \(size_t length\) {)]TJ
+T*[(36:)-600(   bigint_ref bigint = malloc \(sizeof \(struct bigint\)\);)]TJ
+T*[(37:)-600(   assert \(bigint != NULL\);)]TJ
+T*[(38:)-600(   bigint->tag = bigint_tag;)]TJ
+T*[(39:)-600(   bigint->is_negative = false;)]TJ
+T*[(40:)-600(   bigint->length = length;)]TJ
+T*[(41:)-600(   bigint->digits = 0;)]TJ
+T*[(42:)-600(   bigint->buffer = calloc \(length, sizeof \(char\)\);)]TJ
+T*[(43:)-600(   assert \(bigint->buffer != NULL\);)]TJ
+T*[(44:)-600(   return bigint;)]TJ
+T*[(45:)-600(})]TJ
+(46:)'
+T*[(47:)-600(bigint_ref from_string_bigint \(char *string\) {)]TJ
+T*[(48:)-600(   assert \(string != NULL\);)]TJ
+T*[(49:)-600(   size_t length = strlen \(string\);)]TJ
+T*[(50:)-600(   bigint_ref bigint = new_bigint \(length\);)]TJ
+T*[(51:)-600(   if \(*string == '_'\) {)]TJ
+T*[(52:)-600(      bigint->is_negative = true;)]TJ
+T*[(53:)-600(      ++string;)]TJ
+T*[(54:)-600(      --length;)]TJ
+T*[(55:)-600(   })]TJ
+T*[(56:)-600(   int index = 0;)]TJ
+T*[(57:)-600(   while \(--length > 0\) {)]TJ
+T*[(58:)-600(      // LINTED \(assignment of 32-bit integer to 8-bit integer\))]TJ
+T*[(59:)-600(      char digit = string[length] - '0';)]TJ
+T*[(60:)-600(      assert \(0 <= digit && digit <= 9\);)]TJ
+T*[(61:)-600(      bigint->buffer[index++] = digit;)]TJ
+T*[(62:)-600(   })]TJ
+T*[(63:)-600(   trim_zeros \(bigint\);)]TJ
+T*[(64:)-600(   return NULL;)]TJ
+T*[(65:)-600(})]TJ
+(66:)'
+ET
+Q
+Q
+endstream
+endobj
+39 0 obj
+1965
+endobj
+42 0 obj
+<</Length 43 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(3)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 284.804 736.5 Tm
+(bigint.c)Tj
+-144.063 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-78.7414 -35.5 Td
+(67:)Tj
+11 TL
+T*[(68:)-600(void free_bigint \(bigint_ref bigint\) {)]TJ
+T*[(69:)-600(   assert \(is_bigint \(bigint\)\);)]TJ
+T*[(70:)-600(})]TJ
+(71:)'
+T*[(72:)-600(void print_bigint \(bigint_ref bigint\) {)]TJ
+T*[(73:)-600(   assert \(is_bigint \(bigint\)\);)]TJ
+T*[(74:)-600(})]TJ
+(75:)'
+T*[(76:)-600(bigint_ref add_bigint \(bigint_ref left, bigint_ref right\) {)]TJ
+T*[(77:)-600(   assert \(is_bigint \(left\)\);)]TJ
+T*[(78:)-600(   assert \(is_bigint \(right\)\);)]TJ
+T*[(79:)-600(   return NULL;)]TJ
+T*[(80:)-600(})]TJ
+(81:)'
+T*[(82:)-600(bigint_ref sub_bigint \(bigint_ref left, bigint_ref right\) {)]TJ
+T*[(83:)-600(   assert \(is_bigint \(left\)\);)]TJ
+T*[(84:)-600(   assert \(is_bigint \(right\)\);)]TJ
+T*[(85:)-600(   return NULL;)]TJ
+T*[(86:)-600(})]TJ
+(87:)'
+T*[(88:)-600(bigint_ref mul_bigint \(bigint_ref left, bigint_ref right\) {)]TJ
+T*[(89:)-600(   assert \(is_bigint \(left\)\);)]TJ
+T*[(90:)-600(   assert \(is_bigint \(right\)\);)]TJ
+T*[(91:)-600(   return NULL;)]TJ
+T*[(92:)-600(})]TJ
+(93:)'
+T*[(94:)-600(bool is_bigint \(bigint_ref bigint\) {)]TJ
+T*[(95:)-600(   return false;)]TJ
+T*[(96:)-600(})]TJ
+(97:)'
+ET
+Q
+Q
+endstream
+endobj
+43 0 obj
+1652
+endobj
+46 0 obj
+<</Length 47 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/05/12)Tj
+-0.659766 -12.8004 Td
+(20:20:48)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 285.588 736.5 Tm
+(token.c)Tj
+-144.847 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(// $id$)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <ctype.h>)]TJ
+T*[(4:)-600(#include <assert.h>)]TJ
+T*[(5:)-600(#include <stdio.h>)]TJ
+T*[(6:)-600(#include <stdlib.h>)]TJ
+(7:)'
+T*[(8:)-600(#include "token.h")]TJ
+T*[(9:)-600(#include "debugf.h")]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(#define BUFFER_LENGTH 16)]TJ
+(12:)'
+T*[(13:)-600(struct token {)]TJ
+T*[(14:)-600(   FILE *file;)]TJ
+T*[(15:)-600(   int token;)]TJ
+T*[(16:)-600(   size_t length;)]TJ
+T*[(17:)-600(   size_t chars;)]TJ
+T*[(18:)-600(   char *buffer;)]TJ
+T*[(19:)-600(};)]TJ
+(20:)'
+T*[(21:)-600(token_ref new_token \(FILE *file\) {)]TJ
+T*[(22:)-600(   token_ref new = malloc \(sizeof \(struct token\)\);)]TJ
+T*[(23:)-600(   assert \(new != NULL\);)]TJ
+T*[(24:)-600(   new->file = file;)]TJ
+T*[(25:)-600(   new->token = 0;)]TJ
+T*[(26:)-600(   new->length = BUFFER_LENGTH;)]TJ
+T*[(27:)-600(   new->buffer = malloc \(new->length\);)]TJ
+T*[(28:)-600(   assert \(new->buffer != NULL\);)]TJ
+T*[(29:)-600(   new->buffer[0] = '\\0';)]TJ
+T*[(30:)-600(   new->chars = 0;)]TJ
+T*[(31:)-600(   DEBUGF \('t', "token_ref=%p\\n", new\);)]TJ
+T*[(32:)-600(   return new;)]TJ
+T*[(33:)-600(})]TJ
+(34:)'
+T*[(35:)-600(char *peek_token \(token_ref token\) {)]TJ
+T*[(36:)-600(   DEBUGF \('t', "peek %p [%d] \\"%s\\"\\n", token, token->chars,)]TJ
+T*[(37:)-600(           token->buffer\);)]TJ
+T*[(38:)-600(   return token->buffer;)]TJ
+T*[(39:)-600(})]TJ
+(40:)'
+ET
+Q
+Q
+endstream
+endobj
+47 0 obj
+1921
+endobj
+50 0 obj
+<</Length 51 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/05/12)Tj
+-0.659766 -12.8004 Td
+(20:20:48)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 285.588 736.5 Tm
+(token.c)Tj
+-144.847 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-78.7414 -35.5 Td
+(41:)Tj
+11 TL
+T*[(42:)-600(int scan_token \(token_ref token\) {)]TJ
+T*[(43:)-600(   token->chars = 0;)]TJ
+T*[(44:)-600(   token->buffer[token->chars] = '\\0';)]TJ
+T*[(45:)-600(   int result = EOF;)]TJ
+T*[(46:)-600(   int nextchar = 0;)]TJ
+T*[(47:)-600(   do {)]TJ
+T*[(48:)-600(      nextchar = fgetc \(token->file\);)]TJ
+T*[(49:)-600(   } while \(isspace \(nextchar\)\);)]TJ
+T*[(50:)-600(   if \(nextchar == EOF\) {)]TJ
+T*[(51:)-600(      result = EOF;)]TJ
+T*[(52:)-600(   }else if \(nextchar == '_' || isdigit \(nextchar\)\) {)]TJ
+T*[(53:)-600(      do {)]TJ
+T*[(54:)-600(         // LINTED \(assignment of 32-bit integer to 8-bit integer\))]TJ
+T*[(55:)-600(         token->buffer[token->chars++] = nextchar;)]TJ
+T*[(56:)-600(         if \(token->chars == token->length\) {)]TJ
+T*[(57:)-600(            token->length *= 2;)]TJ
+T*[(58:)-600(            token->buffer = realloc \(token->buffer, token->length\);)]TJ
+T*[(59:)-600(            assert \(token->buffer\);)]TJ
+T*[(60:)-600(         })]TJ
+T*[(61:)-600(         nextchar = fgetc \(token->file\);)]TJ
+T*[(62:)-600(      } while \(isdigit \(nextchar\)\);)]TJ
+T*[(63:)-600(      token->buffer[token->chars] = '\\0';)]TJ
+T*[(64:)-600(      int ungetchar = ungetc \(nextchar, token->file\);)]TJ
+T*[(65:)-600(      assert \(ungetchar == nextchar\);)]TJ
+T*[(66:)-600(      result = NUMBER;)]TJ
+T*[(67:)-600(   }else {)]TJ
+T*[(68:)-600(      result = nextchar;)]TJ
+T*[(69:)-600(   })]TJ
+T*[(70:)-600(   DEBUGF \('t', "scan %p [%d] \\"%s\\" %d\\n", token, token->chars,)]TJ
+T*[(71:)-600(           token->buffer, result\);)]TJ
+T*[(72:)-600(   return result;)]TJ
+T*[(73:)-600(})]TJ
+(74:)'
+ET
+Q
+Q
+endstream
+endobj
+51 0 obj
+2160
+endobj
+54 0 obj
+<</Length 55 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 287.143 736.5 Tm
+(main.c)Tj
+-146.401 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(// $Id: main.c,v 1.3 2012-03-06 16:27:19-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(#include <assert.h>)]TJ
+T*[(4:)-600(#include <ctype.h>)]TJ
+T*[(5:)-600(#include <libgen.h>)]TJ
+T*[(6:)-600(#include <stdio.h>)]TJ
+T*[(7:)-600(#include <stdlib.h>)]TJ
+T*[(8:)-600(#include <string.h>)]TJ
+T*[(9:)-600(#include <unistd.h>)]TJ
+-6 -11 Td
+(10:)Tj
+T*[(11:)-600(#include "bigint.h")]TJ
+T*[(12:)-600(#include "debugf.h")]TJ
+T*[(13:)-600(#include "stack.h")]TJ
+T*[(14:)-600(#include "token.h")]TJ
+(15:)'
+T*[(16:)-600(char *execname = NULL;)]TJ
+(17:)'
+T*[(18:)-600(#define DO_NOTHING\(X\) {DEBUGF \('s', ""\); return X; })]TJ
+(19:)'
+T*[(20:)-600(bool not_enough \(stack_ref stack, int enough\) {)]TJ
+T*[(21:)-600(   DO_NOTHING\(false\);)]TJ
+T*[(22:)-600(   if \(length_stack \(stack\) >= enough\) return true;)]TJ
+T*[(23:)-600(   printf \("%s: stack empty\\n", execname\);)]TJ
+T*[(24:)-600(   return false;)]TJ
+T*[(25:)-600(})]TJ
+(26:)'
+T*[(27:)-600(void do_push \(stack_ref stack, char *yytext\) {)]TJ
+T*[(28:)-600(   DO_NOTHING\(\);)]TJ
+T*[(29:)-600(   bigint_ref bigint = from_string_bigint \(yytext\);)]TJ
+T*[(30:)-600(   push_stack \(stack, bigint\);)]TJ
+T*[(31:)-600(})]TJ
+(32:)'
+T*[(33:)-600(void do_binop \(stack_ref stack, bigint_binop binop\) {)]TJ
+T*[(34:)-600(   DO_NOTHING\(\);)]TJ
+T*[(35:)-600(   if \(not_enough \(stack, 2\)\) return;)]TJ
+T*[(36:)-600(   bigint_ref right = pop_stack \(stack\);)]TJ
+T*[(37:)-600(   bigint_ref left = pop_stack \(stack\);)]TJ
+T*[(38:)-600(   bigint_ref answer = binop \(left, right\);)]TJ
+T*[(39:)-600(   push_stack \(stack, answer\);)]TJ
+T*[(40:)-600(   free_bigint \(left\);)]TJ
+T*[(41:)-600(   free_bigint \(right\);)]TJ
+T*[(42:)-600(})]TJ
+(43:)'
+T*[(44:)-600(void do_clear \(stack_ref stack\) {)]TJ
+T*[(45:)-600(   DO_NOTHING\(\);)]TJ
+T*[(46:)-600(   while \(! is_empty_stack \(stack\)\) {)]TJ
+T*[(47:)-600(      bigint_ref bigint = pop_stack \(stack\);)]TJ
+T*[(48:)-600(      free_bigint \(bigint\);)]TJ
+T*[(49:)-600(   })]TJ
+T*[(50:)-600(})]TJ
+(51:)'
+ET
+Q
+Q
+endstream
+endobj
+55 0 obj
+2518
+endobj
+58 0 obj
+<</Length 59 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(2)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 287.143 736.5 Tm
+(main.c)Tj
+-146.401 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-78.7414 -35.5 Td
+(52:)Tj
+11 TL
+T*[(53:)-600(void do_print \(stack_ref stack\) {)]TJ
+T*[(54:)-600(   DO_NOTHING\(\);)]TJ
+T*[(55:)-600(   if \(not_enough \(stack, 1\)\) return;)]TJ
+T*[(56:)-600(   print_bigint \(peek_stack \(stack, 0\)\);)]TJ
+T*[(57:)-600(})]TJ
+(58:)'
+T*[(59:)-600(void do_print_all \(stack_ref stack\) {)]TJ
+T*[(60:)-600(   DO_NOTHING\(\);)]TJ
+T*[(61:)-600(   int length = length_stack \(stack\);)]TJ
+T*[(62:)-600(   for \(int index = 0; index < length; ++index\) {)]TJ
+T*[(63:)-600(      print_bigint \(peek_stack \(stack, index\)\);)]TJ
+T*[(64:)-600(   })]TJ
+T*[(65:)-600(})]TJ
+(66:)'
+T*[(67:)-600(void unimplemented \(int oper\) {)]TJ
+T*[(68:)-600(   printf \("%s: ", execname\);)]TJ
+T*[(69:)-600(   if \(isgraph \(oper\)\) printf \("'%c' \(0%o\)", oper, oper\);)]TJ
+T*[(70:)-600(                  else printf \("0%o", oper\);)]TJ
+T*[(71:)-600(   printf \(" unimplemented\\n"\);)]TJ
+T*[(72:)-600(})]TJ
+(73:)'
+T*[(74:)-600(void scan_options \(int argc, char **argv\) {)]TJ
+T*[(75:)-600(   opterr = false;)]TJ
+T*[(76:)-600(   for \(;;\) {)]TJ
+T*[(77:)-600(      int option = getopt \(argc, argv, "y@:"\);)]TJ
+T*[(78:)-600(      if \(option == EOF\) break;)]TJ
+T*[(79:)-600(      switch \(option\) {)]TJ
+T*[(80:)-600(         case '@': set_debugflags \(optarg\);)]TJ
+T*[(81:)-600(                   break;)]TJ
+T*[(82:)-600(         default : printf \("%s: -%c: invalid option\\n",)]TJ
+T*[(83:)-600(                           execname, optopt\);)]TJ
+T*[(84:)-600(                   break;)]TJ
+T*[(85:)-600(      })]TJ
+T*[(86:)-600(   })]TJ
+T*[(87:)-600(})]TJ
+(88:)'
+T*[(89:)-600(int main \(int argc, char **argv\) {)]TJ
+T*[(90:)-600(   execname = basename \(argv[0]\);)]TJ
+T*[(91:)-600(   set_execname \(execname\);)]TJ
+T*[(92:)-600(   scan_options \(argc, argv\);)]TJ
+T*[(93:)-600(   stack_ref stack = new_stack \(\);)]TJ
+T*[(94:)-600(   token_ref scanner = new_token \(stdin\);)]TJ
+T*[(95:)-600(   for \(;;\) {)]TJ
+T*[(96:)-600(      int token = scan_token \(scanner\);)]TJ
+T*[(97:)-600(      if \(token == EOF\) break;)]TJ
+T*[(98:)-600(      switch \(token\) {)]TJ
+T*[(99:)-600(         case NUMBER: do_push \(stack, peek_token \(scanner\)\); break;)]TJ
+-6 -11 Td
+[(100:)-600(         case '+': do_binop \(stack, add_bigint\); break;)]TJ
+T*[(101:)-600(         case '-': do_binop \(stack, sub_bigint\); break;)]TJ
+T*[(102:)-600(         case '*': do_binop \(stack, mul_bigint\); break;)]TJ
+T*[(103:)-600(         case 'c': do_clear \(stack\); break;)]TJ
+T*[(104:)-600(         case 'f': do_print_all \(stack\); break;)]TJ
+T*[(105:)-600(         case 'p': do_print \(stack\); break;)]TJ
+T*[(106:)-600(         default: unimplemented \(token\); break;)]TJ
+T*[(107:)-600(      })]TJ
+T*[(108:)-600(   })]TJ
+T*[(109:)-600(   return EXIT_SUCCESS;)]TJ
+T*[(110:)-600(})]TJ
+ET
+Q
+Q
+endstream
+endobj
+59 0 obj
+3288
+endobj
+62 0 obj
+<</Length 63 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 280.773 736.5 Tm
+(Makefile)Tj
+-140.031 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(# $Id: Makefile,v 1.3 2012-03-06 18:41:37-08 - - $)]TJ
+11 TL
+(2:)'
+T*[(3:)-600(MKFILE    = Makefile)]TJ
+T*[(4:)-600(DEPSFILE  = ${MKFILE}.deps)]TJ
+T*[(5:)-600(NOINCLUDE = ci clean spotless)]TJ
+T*[(6:)-600(NEEDINCL  = ${filter ${NOINCLUDE}, ${MAKECMDGOALS}})]TJ
+T*[(7:)-600(GMAKE     = gmake --no-print-directory)]TJ
+(8:)'
+T*[(9:)-600(GCC       = gcc -g -O0 -Wall -Wextra -std=gnu99)]TJ
+-6 -11 Td
+[(10:)-600(MKDEPS    = gcc -MM)]TJ
+T*[(11:)-600(LINT      = lint -Xa -fd -m -u -x -errchk=%all)]TJ
+(12:)'
+T*[(13:)-600(CSOURCE   = debugf.c stack.c bigint.c token.c main.c)]TJ
+T*[(14:)-600(CHEADER   = debugf.h stack.h bigint.h token.h)]TJ
+T*[(15:)-600(OBJECTS   = ${CSOURCE:.c=.o})]TJ
+T*[(16:)-600(EXECBIN   = a5dc)]TJ
+T*[(17:)-600(SUBMITS   = ${CHEADER} ${CSOURCE} ${MKFILE})]TJ
+T*[(18:)-600(SOURCES   = ${SUBMITS})]TJ
+T*[(19:)-600(LISTING   = Listing.code.ps)]TJ
+T*[(20:)-600(PROJECT   = cmps012b-wm.w12 asg5)]TJ
+(21:)'
+T*[(22:)-600(all : ${EXECBIN})]TJ
+(23:)'
+T*[(24:)-600(${EXECBIN} : ${OBJECTS})]TJ
+T*[(25:)-600(        ${GCC} -o $@ ${OBJECTS})]TJ
+(26:)'
+T*[(27:)-600(%.o : %.c)]TJ
+T*[(28:)-600(        ${GCC} -c $<)]TJ
+(29:)'
+T*[(30:)-600(lint : ${CSOURCE})]TJ
+T*[(31:)-600(        ${LINT} ${CSOURCE})]TJ
+T*[(32:)-600(        checksource ${SUBMITS})]TJ
+(33:)'
+T*[(34:)-600(ci : ${SOURCES})]TJ
+T*[(35:)-600(        cid + ${SOURCES})]TJ
+T*[(36:)-600(        checksource ${SUBMITS})]TJ
+(37:)'
+T*[(38:)-600(lis : ${SOURCES} ${DEPSFILE})]TJ
+T*[(39:)-600(        mkpspdf ${LISTING} ${SOURCES} ${DEPSFILE})]TJ
+(40:)'
+T*[(41:)-600(clean :)]TJ
+T*[(42:)-600(        - rm ${OBJECTS} ${DEPSFILE} core ${EXECBIN}.errs)]TJ
+(43:)'
+T*[(44:)-600(spotless : clean)]TJ
+T*[(45:)-600(        - rm ${EXECBIN})]TJ
+(46:)'
+T*[(47:)-600(submit : ${SUBMITS})]TJ
+T*[(48:)-600(        submit ${PROJECT} ${SUBMITS})]TJ
+(49:)'
+T*[(50:)-600(deps : ${CSOURCE} ${CHEADER})]TJ
+T*[(51:)-600(        @ echo "# ${DEPSFILE} created `date`" >${DEPSFILE})]TJ
+T*[(52:)-600(        ${MKDEPS} ${CSOURCE} >>${DEPSFILE})]TJ
+(53:)'
+T*[(54:)-600(${DEPSFILE} :)]TJ
+T*[(55:)-600(        @ touch ${DEPSFILE})]TJ
+T*[(56:)-600(        ${GMAKE} deps)]TJ
+(57:)'
+T*[(58:)-600(again :)]TJ
+T*[(59:)-600(        ${GMAKE} spotless deps ci lint all lis)]TJ
+(60:)'
+T*[(61:)-600(ifeq "${NEEDINCL}" "")]TJ
+T*[(62:)-600(include ${DEPSFILE})]TJ
+T*[(63:)-600(endif)]TJ
+(64:)'
+ET
+Q
+Q
+endstream
+endobj
+63 0 obj
+2845
+endobj
+66 0 obj
+<</Length 67 0 R>>
+stream
+q 0.1 0 0 0.1 0 0 cm
+0 G
+380 240 5360 7080 re
+S
+0.949219 g
+380 7320 5360 180 re
+f
+0.699219 g
+380 7320 720 360 re
+f
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R9 12 Tf
+1 0 0 1 52.6641 752 Tm
+(03/06/12)Tj
+-0.659766 -12.8004 Td
+(18:41:37)Tj
+ET
+Q
+0.699219 g
+5020 7320 720 360 re
+f
+1 G
+1 g
+q
+10 0 0 10 0 0 cm BT
+/R7 28.8 Tf
+1 0 0 1 529.993 739.2 Tm
+(1)Tj
+ET
+Q
+0 G
+0 g
+q
+10 0 0 10 0 0 cm BT
+/R8 14 Tf
+1 0 0 1 266.192 736.5 Tm
+(Makefile.deps)Tj
+-125.451 18 Td
+($cmps012b-wm/Assignments/asg5c-dc-stackbignum/code/)Tj
+/R10 10 Tf
+-72.7414 -35.5 Td
+[(1:)-600(# Makefile.deps created Tue Mar  6 18:41:37 PST 2012)]TJ
+11 TL
+T*[(2:)-600(debugf.o: debugf.c debugf.h)]TJ
+T*[(3:)-600(stack.o: stack.c stack.h)]TJ
+T*[(4:)-600(bigint.o: bigint.c bigint.h)]TJ
+T*[(5:)-600(token.o: token.c token.h debugf.h)]TJ
+T*[(6:)-600(main.o: main.c bigint.h debugf.h stack.h token.h)]TJ
+ET
+Q
+Q
+endstream
+endobj
+67 0 obj
+846
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 12 0 R
+>>
+/Contents 5 0 R
+>>
+endobj
+13 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 16 0 R
+>>
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 20 0 R
+>>
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 24 0 R
+>>
+/Contents 22 0 R
+>>
+endobj
+25 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 28 0 R
+>>
+/Contents 26 0 R
+>>
+endobj
+29 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 32 0 R
+>>
+/Contents 30 0 R
+>>
+endobj
+33 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 36 0 R
+>>
+/Contents 34 0 R
+>>
+endobj
+37 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 40 0 R
+>>
+/Contents 38 0 R
+>>
+endobj
+41 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 44 0 R
+>>
+/Contents 42 0 R
+>>
+endobj
+45 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 48 0 R
+>>
+/Contents 46 0 R
+>>
+endobj
+49 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 52 0 R
+>>
+/Contents 50 0 R
+>>
+endobj
+53 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 56 0 R
+>>
+/Contents 54 0 R
+>>
+endobj
+57 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 60 0 R
+>>
+/Contents 58 0 R
+>>
+endobj
+61 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 64 0 R
+>>
+/Contents 62 0 R
+>>
+endobj
+65 0 obj
+<</Type/Page/MediaBox [0 0 612 792]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF /Text]
+/Font 68 0 R
+>>
+/Contents 66 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+13 0 R
+17 0 R
+21 0 R
+25 0 R
+29 0 R
+33 0 R
+37 0 R
+41 0 R
+45 0 R
+49 0 R
+53 0 R
+57 0 R
+61 0 R
+65 0 R
+] /Count 15
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+>>
+endobj
+12 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R/R11
+11 0 R>>
+endobj
+16 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+20 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+24 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+28 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+32 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+36 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+40 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+44 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+48 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+52 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+56 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+60 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+64 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+68 0 obj
+<</R8
+8 0 R/R10
+10 0 R/R7
+7 0 R/R9
+9 0 R>>
+endobj
+8 0 obj
+<</BaseFont/Times-Roman/Type/Font
+/Subtype/Type1>>
+endobj
+10 0 obj
+<</BaseFont/Courier/Type/Font
+/Subtype/Type1>>
+endobj
+7 0 obj
+<</BaseFont/Helvetica-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+9 0 obj
+<</BaseFont/Times-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+11 0 obj
+<</BaseFont/Courier-Bold/Type/Font
+/Subtype/Type1>>
+endobj
+2 0 obj
+<</Producer(ESP Ghostscript 815.02)
+/CreationDate(D:20120306184138)
+/ModDate(D:20120306184138)>>endobj
+xref
+0 69
+0000000000 65535 f 
+0000034916 00000 n 
+0000036191 00000 n 
+0000034758 00000 n 
+0000032735 00000 n 
+0000000009 00000 n 
+0000002464 00000 n 
+0000035989 00000 n 
+0000035860 00000 n 
+0000036058 00000 n 
+0000035926 00000 n 
+0000036123 00000 n 
+0000034964 00000 n 
+0000032868 00000 n 
+0000002484 00000 n 
+0000004978 00000 n 
+0000035034 00000 n 
+0000033003 00000 n 
+0000004999 00000 n 
+0000006523 00000 n 
+0000035093 00000 n 
+0000033138 00000 n 
+0000006544 00000 n 
+0000007574 00000 n 
+0000035152 00000 n 
+0000033273 00000 n 
+0000007594 00000 n 
+0000010506 00000 n 
+0000035211 00000 n 
+0000033408 00000 n 
+0000010527 00000 n 
+0000013214 00000 n 
+0000035270 00000 n 
+0000033543 00000 n 
+0000013235 00000 n 
+0000014936 00000 n 
+0000035329 00000 n 
+0000033678 00000 n 
+0000014957 00000 n 
+0000016974 00000 n 
+0000035388 00000 n 
+0000033813 00000 n 
+0000016995 00000 n 
+0000018699 00000 n 
+0000035447 00000 n 
+0000033948 00000 n 
+0000018720 00000 n 
+0000020693 00000 n 
+0000035506 00000 n 
+0000034083 00000 n 
+0000020714 00000 n 
+0000022926 00000 n 
+0000035565 00000 n 
+0000034218 00000 n 
+0000022947 00000 n 
+0000025517 00000 n 
+0000035624 00000 n 
+0000034353 00000 n 
+0000025538 00000 n 
+0000028878 00000 n 
+0000035683 00000 n 
+0000034488 00000 n 
+0000028899 00000 n 
+0000031796 00000 n 
+0000035742 00000 n 
+0000034623 00000 n 
+0000031817 00000 n 
+0000032715 00000 n 
+0000035801 00000 n 
+trailer
+<< /Size 69 /Root 1 0 R /Info 2 0 R
+/ID [<EFE517B1E6D23D01914C7E4D412CA441><EFE517B1E6D23D01914C7E4D412CA441>]
+>>
+startxref
+36302
+%%EOF
