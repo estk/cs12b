@@ -10,29 +10,27 @@
 char **array;
 char *buf;
 
-int scmp(const void *a, const void *b) {
+int scmp(const void *a, const void *b)
+{
   const char **a1 = (const char **)a;
   const char **b1 = (const char **)b;
 
   return strcmp(*a1, *b1);
 }
 
-int main(int argc, const char *argv[])
+int main(void)
 {
 	array = malloc (sizeof(char*) * ARYLEN);
 	buf = malloc (sizeof(char) * BUFLEN);
   // read lines
   int lines = 0;
-  for (int i=0 ; i<ARYLEN ; i++) {
+  for (int i=0 ; i<ARYLEN ; i++)
+  {
     int res = scanf("%s\n", buf);
     if (res != 1) break;
     lines++;
     array[i] = strdup(buf);
   }
-
-  /*for (int i=0 ; i<lines ; i++)*/
-    /*printf("%s\n", array[i]);*/
-
   // sort zem
   insertion_sort(array, lines, sizeof(char *), scmp);
 

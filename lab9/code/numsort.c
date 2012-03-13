@@ -5,7 +5,8 @@
 
 #define ARYLEN 1000
 
-int lgcmp(const void *a, const void *b) {
+int lgcmp(const void *a, const void *b)
+{
   const double *a1 = a;
   const double *b1 = b;
 
@@ -14,7 +15,8 @@ int lgcmp(const void *a, const void *b) {
   return 0;
 }
 
-int main(int argc, const char *argv[]) {
+int main(void)
+{
   double *array = malloc (sizeof (double) * ARYLEN);
   // read nums
   int nums = 0;
@@ -25,12 +27,6 @@ int main(int argc, const char *argv[]) {
     array[i] = tmp;
     nums++;
   }
-  // debug
-  /*printf("%p", &array);*/
-  /*for (int i=0 ; i<nums ; i++)*/
-    /*printf("%20.15g\n", array[i]);*/
-  /*printf("\n\n");*/
-
   // sort zem
   insertion_sort(array, nums, sizeof(double), lgcmp);
 
