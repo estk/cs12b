@@ -32,7 +32,7 @@ int main(int argc, const char *argv[]) {
   /*printf("\n\n");*/
 
   // sort zem
-  qsort(array, nums, sizeof(double), lgcmp);
+  insertion_sort(array, nums, sizeof(double), lgcmp);
 
   // print zem
   for (int i=0 ; i<nums ; i++)

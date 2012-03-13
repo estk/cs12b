@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-/*#include "insort.h"*/
+#include "inssort.h"
 
 #define ARYLEN 1000
 #define BUFLEN 1000
