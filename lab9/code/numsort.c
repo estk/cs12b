@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <stdio.h>
-/*#include "insort.h"*/
+#include "inssort.h"
 
 #define ARYLEN 1000
 
