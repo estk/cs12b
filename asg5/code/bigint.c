@@ -31,6 +31,10 @@ static bigint_ref do_add (bigint_ref left, bigint_ref right) {
 static bigint_ref do_sub (bigint_ref left, bigint_ref right) {
 }
 
+int cmpbig(bigint_ref left, bigint_ref right) {
+   
+}
+
 
 bigint_ref new_bigint (size_t length) {
    bigint_ref bigint = malloc (sizeof (struct bigint));
@@ -76,13 +80,33 @@ void print_bigint (bigint_ref bigint) {
 bigint_ref add_bigint (bigint_ref left, bigint_ref right) {
    assert (is_bigint (left));
    assert (is_bigint (right));
-   return NULL;
+   bigint_ref res;
+   if (left->is_negative == right->is_negative) {
+      res = do_add(left, right);
+      res->is_negative = left->is_negative;
+   } else {
+     int cmp = cmpbig (left, right);
+      if (cmp >= 0) {
+        res = do_sub(left, right);
+        res->is_negative = left->is_negative;
+      } else {
+        res = do_sub(right, left);
+        res->is_negative = right->is_negative;
+      }
+   }
+   return res;
 }
 
 bigint_ref sub_bigint (bigint_ref left, bigint_ref right) {
    assert (is_bigint (left));
    assert (is_bigint (right));
-   return NULL;
+   bigint_ref res;
+   if (left->is_negative != right->is_negative) {
+      res = do_add(left, right);
+   } else {
+      res = do_sub(left, right);
+   }
+   return res;
 }
 
 bigint_ref mul_bigint (bigint_ref left, bigint_ref right) {
