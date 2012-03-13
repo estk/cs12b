@@ -34,7 +34,7 @@ int main(int argc, const char *argv[])
     /*printf("%s\n", array[i]);*/
 
   // sort zem
-  qsort(array, lines, sizeof(char *), scmp);
+  insertion_sort(array, lines, sizeof(char *), scmp);
 
   // print zem
   for (int i=0 ; i<lines ; i++)
