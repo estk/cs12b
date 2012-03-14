@@ -25,14 +25,87 @@ static void trim_zeros (bigint_ref bigint) {
    }
 }
 
+static size_t maxdigits (bigint_ref left, bigint_ref right) {
+   return left->digits > right->digits ?
+      left->digits : right->digits;
+}
+
+static int cmpdigits (bigint_ref left, bigint_ref right) {
+   int res;
+   if (left->digits > right->digits)
+      res = 1;
+   else if (right->digits > left->digits)
+      res = -1;
+   else
+      res = 0;
+
+   return res;
+}
+
+static char cmpbuffers (bigint_ref left, bigint_ref right) {
+   char *lbuf = left->buffer;
+   char *rbuf = right->buffer;
+   size_t i = left->digits;
+   do {
+      i--;
+      if (lbuf[i] > rbuf[i])
+         return 1;
+      else if (lbuf[i] < rbuf[i])
+         return -1;
+   } while (i != 0);
+
+   return 0;
+}
+
 static bigint_ref do_add (bigint_ref left, bigint_ref right) {
+   size_t size = 1 + maxdigits (left, right);
+   bigint_ref res = new_bigint (size);
+
+   char *lbuf = left->buffer;
+   char *rbuf = right->buffer;
+
+   char sum, carry;
+   carry = 0;
+   for (size_t i=0 ; i<size-1 ; i++) {
+      sum = lbuf[i] + rbuf[i] + carry;
+      res->buffer[i] = sum % 10;
+      carry = sum / 10;
+   }
+
+   trim_zeros(res);
+   return res;
 }
 
 static bigint_ref do_sub (bigint_ref left, bigint_ref right) {
+   size_t size = left->digits;
+   bigint_ref res = new_bigint (size);
+
+   char *lbuf = left->buffer;
+   char *rbuf = right->buffer;
+
+   char diff, carry;
+   carry = 0;
+   for (size_t i=0 ; i<size-1 ; i++) {
+      diff = lbuf[i] - rbuf[i] - carry;
+      if (diff < 0) diff += 10;
+      res->buffer[i] = diff % 10;
+      carry = diff / 10;
+   }
+
+   trim_zeros(res);
+   return res;
 }
 
-int cmpbig(bigint_ref left, bigint_ref right) {
-   
+char cmpbig(bigint_ref left, bigint_ref right) {
+   char res;
+   char cmp = cmpdigits(left, right);
+   if (cmp > 0)
+      res = 1;
+   else if (cmp < 0)
+      res = -1;
+   else
+      res = cmpbuffers(left, right);
+   return res;
 }
 
 
@@ -85,7 +158,7 @@ bigint_ref add_bigint (bigint_ref left, bigint_ref right) {
       res = do_add(left, right);
       res->is_negative = left->is_negative;
    } else {
-     int cmp = cmpbig (left, right);
+     char cmp = cmpbig (left, right);
       if (cmp >= 0) {
         res = do_sub(left, right);
         res->is_negative = left->is_negative;
@@ -116,6 +189,7 @@ bigint_ref mul_bigint (bigint_ref left, bigint_ref right) {
 }
 
 bool is_bigint (bigint_ref bigint) {
-   return false;
+   char cmp = strcmp(bigint->tag, bigint_tag);
+   return cmp == 0 ? 1 : 0;
 }
 
