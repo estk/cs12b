@@ -1,5 +1,4 @@
-// $Id: stack.c,v 1.3 2012-03-06 16:27:19-08 - - $
-
+#include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
 
@@ -21,43 +20,91 @@ struct stack_node {
    stack_node_ref link;
 };
 
-stack_ref new_stack (void) {
-   return NULL;
+static stack_node_ref new_stack_node (void) {
+   stack_node_ref res = malloc (sizeof (struct stack_node));
+   assert (res != NULL);
+   res->tag = stack_node_tag;
+   return res;
 }
+
+stack_ref new_stack (void) {
+   stack_ref res = malloc (sizeof (struct stack));
+   assert (res != NULL);
+   res->tag = stack_tag;
+   return res;
+}
+
 
 void free_stack (stack_ref stack) {
    assert (is_stack (stack));
    assert (is_empty_stack (stack));
+
+   stack_node_ref top = stack->top;
+   free (stack);
+   while (top != NULL) {
+      stack_node_ref next = top->link;
+      free (top);
+      top = next;
+   }
 }
 
 void push_stack (stack_ref stack, stack_item item) {
    assert (is_stack (stack));
+   assert (item != NULL);
+
+   stack_node_ref newtop = new_stack_node();
+   newtop->item = item;
+   newtop->link = stack->top;
+   stack->top = newtop;
+
+   assert (stack->top != NULL);
+   assert (stack->top->item == item);
 }
 
 stack_item pop_stack (stack_ref stack) {
    assert (is_stack (stack));
    assert (! is_empty_stack (stack));
-   return NULL;
-}
 
-stack_item peek_stack (stack_ref stack, int index) {
-   assert (is_stack (stack));
-   assert (index >= 0);
-   assert (index < length_stack (stack));
-   return NULL;
-}
-
-bool is_empty_stack (stack_ref stack) {
-   assert (is_stack (stack));
-   return false;
+   stack_item res = stack->top->item;
+   stack->top = stack->top->link;
+   return res;
 }
 
 int length_stack (stack_ref stack) {
    assert (is_stack (stack));
-   return 0;
+
+   int count = 0;
+   stack_node_ref tmp = stack->top;
+   while (tmp != NULL) {
+      count++;
+      tmp = tmp->link;
+   }
+   return count;
+}
+
+stack_item peek_stack (stack_ref stack, int index) {
+   assert (stack != NULL);
+   assert (stack->top != NULL);
+   assert (is_stack (stack));
+   assert (index >= 0);
+   assert (index < length_stack (stack));
+
+   stack_node_ref res = stack->top;
+   for (int i=0 ;; i++) {
+      if (i == index) 
+         break;
+      res = res->link;
+   }
+   assert (res->item != NULL);
+   return res->item;
+}
+
+bool is_empty_stack (stack_ref stack) {
+   assert (is_stack (stack));
+   return stack->top == NULL;
 }
 
 bool is_stack (stack_ref stack) {
-   return false;
+   return stack->tag == stack_tag;
 }
 

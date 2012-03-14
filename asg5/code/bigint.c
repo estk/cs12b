@@ -82,14 +82,15 @@ static bigint_ref do_sub (bigint_ref left, bigint_ref right) {
 
    char *lbuf = left->buffer;
    char *rbuf = right->buffer;
+   /*printf("size : %d", (int)size);*/
 
    char diff, carry;
    carry = 0;
-   for (size_t i=0 ; i<size-1 ; i++) {
+   for (size_t i=0 ; i<size ; i++) {
       diff = lbuf[i] - rbuf[i] - carry;
       if (diff < 0) diff += 10;
-      res->buffer[i] = diff % 10;
-      carry = diff / 10;
+      res->buffer[i] = diff;
+      /*carry = diff / 10;*/
    }
 
    trim_zeros(res);
@@ -115,7 +116,7 @@ bigint_ref new_bigint (size_t length) {
    bigint->tag = bigint_tag;
    bigint->is_negative = false;
    bigint->length = length;
-   bigint->digits = 0;
+   bigint->digits = length;
    bigint->buffer = calloc (length, sizeof (char));
    assert (bigint->buffer != NULL);
    return bigint;
@@ -131,23 +132,32 @@ bigint_ref new_bigint_string (char *string) {
       --length;
    }
    int index = 0;
-   while (--length > 0) {
+   while (length-- > 0) {
       // LINTED (assignment of 32-bit integer to 8-bit integer)
       char digit = string[length] - '0';
       assert (0 <= digit && digit <= 9);
       bigint->buffer[index++] = digit;
    }
    trim_zeros (bigint);
-   return NULL;
+   return bigint;
 }
 
 
 void free_bigint (bigint_ref bigint) {
    assert (is_bigint (bigint));
+   free (bigint);
 }
 
 void print_bigint (bigint_ref bigint) {
    assert (is_bigint (bigint));
+   size_t size = bigint->digits;
+   if (bigint->is_negative)
+      printf("_");
+   for (int i=size-1 ; ; i--) {
+      printf("%d", bigint->buffer[i]);
+      if (i == 0) break;
+   }
+   printf("\n");
 }
 
 bigint_ref add_bigint (bigint_ref left, bigint_ref right) {
@@ -174,21 +184,48 @@ bigint_ref sub_bigint (bigint_ref left, bigint_ref right) {
    assert (is_bigint (left));
    assert (is_bigint (right));
    bigint_ref res;
-   if (left->is_negative != right->is_negative) {
-      res = do_add(left, right);
+
+   bool lneg, rneg;
+   lneg = left->is_negative;
+   rneg = right->is_negative;
+   char cmp = cmpbig (left, right);
+   if (lneg != rneg) {
+      printf("signs neq\n");
+      res = do_add(right, left);
+      if (cmp > 0)
+         res->is_negative = lneg;
+      else
+         res->is_negative = rneg;
    } else {
-      res = do_sub(left, right);
+      if (cmp >= 0) {
+         res = do_sub(left, right);
+         res->is_negative = lneg ?
+            lneg : !lneg;
+      }else {
+         res = do_sub(right, left);
+         res->is_negative = rneg ?
+            !rneg : rneg;
+      }
    }
+   /*printf("got:\n");*/
+   /*print_bigint(res);*/
    return res;
 }
 
 bigint_ref mul_bigint (bigint_ref left, bigint_ref right) {
    assert (is_bigint (left));
    assert (is_bigint (right));
-   return NULL;
+
+   size_t size = left->digits + right->digits;
+   bigint_ref res = new_bigint (size);
+
+
+   return res;
 }
 
 bool is_bigint (bigint_ref bigint) {
+   assert (bigint != NULL);
+   assert (bigint->tag != NULL);
    char cmp = strcmp(bigint->tag, bigint_tag);
    return cmp == 0 ? 1 : 0;
 }

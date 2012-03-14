@@ -18,20 +18,20 @@ char *execname = NULL;
 #define DO_NOTHING(X) {DEBUGF ('s', ""); return X; }
 
 bool not_enough (stack_ref stack, int enough) {
-   DO_NOTHING(false);
-   if (length_stack (stack) >= enough) return true;
+   /*DO_NOTHING(false);*/
+   if (length_stack (stack) >= enough) return false;
    printf ("%s: stack empty\n", execname);
-   return false;
+   return true;
 }
 
 void do_push (stack_ref stack, char *yytext) {
-   DO_NOTHING();
+   /*DO_NOTHING();*/
    bigint_ref bigint = new_bigint_string (yytext);
    push_stack (stack, bigint);
 }
 
 void do_binop (stack_ref stack, bigint_binop binop) {
-   DO_NOTHING();
+   /*DO_NOTHING();*/
    if (not_enough (stack, 2)) return;
    bigint_ref right = pop_stack (stack);
    bigint_ref left = pop_stack (stack);
@@ -42,7 +42,7 @@ void do_binop (stack_ref stack, bigint_binop binop) {
 }
 
 void do_clear (stack_ref stack) {
-   DO_NOTHING();
+   /*DO_NOTHING();*/
    while (! is_empty_stack (stack)) {
       bigint_ref bigint = pop_stack (stack);
       free_bigint (bigint);
@@ -51,13 +51,14 @@ void do_clear (stack_ref stack) {
 
 
 void do_print (stack_ref stack) {
-   DO_NOTHING();
+   /*DO_NOTHING();*/
+   assert (stack != NULL);
    if (not_enough (stack, 1)) return;
    print_bigint (peek_stack (stack, 0));
 }
 
 void do_print_all (stack_ref stack) {
-   DO_NOTHING();
+   /*DO_NOTHING();*/
    int length = length_stack (stack);
    for (int index = 0; index < length; ++index) {
       print_bigint (peek_stack (stack, index));
