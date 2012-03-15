@@ -41,13 +41,13 @@ void free_stack (stack_ref stack) {
    assert (is_stack (stack));
    assert (is_empty_stack (stack));
 
-   stack_node_ref top = stack->top;
+   /*stack_node_ref top = stack->top;*/
    free (stack);
-   while (top != NULL) {
-      stack_node_ref next = top->link;
-      free (top);
-      top = next;
-   }
+   /*while (top != NULL) {*/
+      /*stack_node_ref next = top->link;*/
+      /*free (top);*/
+      /*top = next;*/
+   /*}*/
 }
 
 void push_stack (stack_ref stack, stack_item item) {

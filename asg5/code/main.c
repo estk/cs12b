@@ -43,7 +43,6 @@ void do_clear (stack_ref stack) {
       bigint_ref bigint = pop_stack (stack);
       free_bigint (bigint);
    }
-   free(stack);
 }
 
 
@@ -103,5 +102,7 @@ int main (int argc, char **argv) {
       }
    }
    free_token(scanner);
+   do_clear(stack);
+   free_stack(stack);
    return EXIT_SUCCESS;
 }
