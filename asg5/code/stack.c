@@ -24,6 +24,7 @@ static stack_node_ref new_stack_node (void) {
    stack_node_ref res = malloc (sizeof (struct stack_node));
    assert (res != NULL);
    res->tag = stack_node_tag;
+   res->link = NULL;
    return res;
 }
 
@@ -31,6 +32,7 @@ stack_ref new_stack (void) {
    stack_ref res = malloc (sizeof (struct stack));
    assert (res != NULL);
    res->tag = stack_tag;
+   res->top = NULL;
    return res;
 }
 
@@ -65,13 +67,16 @@ stack_item pop_stack (stack_ref stack) {
    assert (is_stack (stack));
    assert (! is_empty_stack (stack));
 
-   stack_item res = stack->top->item;
+   stack_node_ref tmp = stack->top;
+   stack_item res = tmp->item;
    stack->top = stack->top->link;
+   free (tmp);
    return res;
 }
 
 int length_stack (stack_ref stack) {
    assert (is_stack (stack));
+   assert (stack != NULL);
 
    int count = 0;
    stack_node_ref tmp = stack->top;

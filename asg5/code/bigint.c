@@ -78,8 +78,8 @@ static bigint_ref do_add (bigint_ref left, bigint_ref right) {
    char *lbuf = left->buffer;
    char *rbuf = right->buffer;
 
-   char sum, carry;
-   carry = 0;
+   char sum = 0;
+   char carry = 0;
    for (size_t i=0 ; i<stop ; i++) {
       assert (carry >= 0);
       assert (lbuf[i] >= 0);
@@ -123,8 +123,8 @@ static bigint_ref do_sub (bigint_ref left, bigint_ref right) {
    char *lbuf = left->buffer;
    char *rbuf = right->buffer;
 
-   char diff, carry;
-   carry = 0;
+   char diff = 0;
+   char carry = 0;
    for (size_t i=0 ; i<stop ; i++) {
       // LINTED
       diff = lbuf[i] - rbuf[i] - carry;
@@ -138,7 +138,7 @@ static bigint_ref do_sub (bigint_ref left, bigint_ref right) {
       res->buffer[i] = diff;
    }
 
-   char sum;
+   char sum = 0;
    for (size_t i=stop ; i<size ; i++) {
       // LINTED
       sum = lbuf[i] - carry;
@@ -158,14 +158,13 @@ static bigint_ref do_mul (bigint_ref left, bigint_ref right) {
    size_t size = left->digits + right->digits;
    bigint_ref res = new_bigint (size);
 
-   char *lbuf, *rbuf;
-   lbuf = left->buffer;
-   rbuf = right->buffer;
+   char *lbuf = left->buffer;
+   char *rbuf = right->buffer;
    bigint_ref tmpbig = new_bigint (size);
    char *tbuf = tmpbig->buffer;
 
-   char mul, rem;
-   rem = 0;
+   char mul = 0;
+   char rem = 0;
    for (size_t i=0 ; i<left->digits ; i++) {
 
       for (size_t j=0 ; j<right->digits ; j++) {
@@ -182,13 +181,12 @@ static bigint_ref do_mul (bigint_ref left, bigint_ref right) {
 
       tmpbig->digits = right->digits+i+1;
       assert (tmpbig != NULL);
-      /*printf("tmp= ");*/
-      /*print_bigint(tmpbig);*/
+      bigint_ref tmpf = res;
       res = do_add (res, tmpbig);
+      free_bigint (tmpf);
       memset(tbuf, 0, size*sizeof (char));
-      /*printf("tmpemp= ");*/
-      /*print_bigint(tmpbig);*/
    }
+   free_bigint(tmpbig);
    trim_zeros(res);
    return res;
 }
@@ -219,9 +217,8 @@ bigint_ref sub_bigint (bigint_ref left, bigint_ref right) {
    assert (is_bigint (right));
    bigint_ref res;
 
-   bool lneg, rneg;
-   lneg = left->is_negative;
-   rneg = right->is_negative;
+   bool lneg = left->is_negative;
+   bool rneg = right->is_negative;
    char cmp = cmpbig (left, right);
 
    if (lneg != rneg) {
@@ -293,6 +290,7 @@ bigint_ref new_bigint_string (char *string) {
 
 void free_bigint (bigint_ref bigint) {
    assert (is_bigint (bigint));
+   free(bigint->buffer);
    free (bigint);
 }
 
