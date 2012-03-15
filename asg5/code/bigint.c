@@ -30,8 +30,8 @@ static size_t maxdigits (bigint_ref left, bigint_ref right) {
       left->digits : right->digits;
 }
 
-static int cmpdigits (bigint_ref left, bigint_ref right) {
-   int res;
+static char cmpdigits (bigint_ref left, bigint_ref right) {
+   char res;
    if (left->digits > right->digits)
       res = 1;
    else if (right->digits > left->digits)
@@ -86,21 +86,28 @@ static bigint_ref do_add (bigint_ref left, bigint_ref right) {
       /*printf("%d\n", rbuf[i]);*/
       assert (rbuf[i] >= 0);
 
+      // LINTED
       sum = lbuf[i] + rbuf[i] + carry;
 
       assert (sum >= 0);
+      // LINTED
       res->buffer[i] = sum % 10;
+      // LINTED
       carry = sum / 10;
    }
    if (size == stop) res->buffer[stop] = carry;
 
    for (size_t i=stop ; i<size-1 ; i++) {
       if (cmpd > 0)
+         // LINTED
          sum = lbuf[i] + carry;
       else
+         // LINTED
          sum = rbuf[i] + carry;
 
+      // LINTED
       res->buffer[i] = sum % 10;
+      // LINTED
       carry = sum / 10;
    }
 
@@ -119,8 +126,10 @@ static bigint_ref do_sub (bigint_ref left, bigint_ref right) {
    char diff, carry;
    carry = 0;
    for (size_t i=0 ; i<stop ; i++) {
+      // LINTED
       diff = lbuf[i] - rbuf[i] - carry;
       if (diff < 0) {
+         // LINTED
          diff += 10;
          carry = 1;
       }
@@ -131,8 +140,11 @@ static bigint_ref do_sub (bigint_ref left, bigint_ref right) {
 
    char sum;
    for (size_t i=stop ; i<size ; i++) {
+      // LINTED
       sum = lbuf[i] - carry;
+      // LINTED
       res->buffer[i] = sum % 10;
+      // LINTED
       carry = sum / 10;
    }
 
@@ -157,9 +169,12 @@ static bigint_ref do_mul (bigint_ref left, bigint_ref right) {
    for (size_t i=0 ; i<left->digits ; i++) {
 
       for (size_t j=0 ; j<right->digits ; j++) {
+         // LINTED
          mul = lbuf[i] * rbuf[j] + rem;
          assert (mul >= 0);
+         // LINTED
          tbuf[j+i] = mul % 10;
+         // LINTED
          rem = mul / 10;
       }
       tbuf[right->digits+i] = rem;
@@ -221,6 +236,7 @@ bigint_ref sub_bigint (bigint_ref left, bigint_ref right) {
          res->is_negative = lneg;
       }else {
          res = do_sub(right, left);
+         // LINTED
          res->is_negative = !rneg;
       }
    }
@@ -238,6 +254,7 @@ bigint_ref mul_bigint (bigint_ref left, bigint_ref right) {
    else
       res = do_mul (right, left);
 
+   // LINTED
    res->is_negative = left->is_negative ^ right->is_negative;
    return res;
 }
@@ -285,7 +302,7 @@ void print_bigint (bigint_ref bigint) {
    if (bigint->is_negative)
       printf("-");
    size_t count = 1;
-   for (int i=size-1 ; ; i--) {
+   for (size_t i=size-1 ; ; i--) {
       assert (bigint->buffer[i] >= 0);
       if (count % 70 == 0) printf("\\\n");
       printf("%d", bigint->buffer[i]);
@@ -298,7 +315,8 @@ void print_bigint (bigint_ref bigint) {
 bool is_bigint (bigint_ref bigint) {
    assert (bigint != NULL);
    assert (bigint->tag != NULL);
-   char cmp = strcmp(bigint->tag, bigint_tag);
+   int cmp = strcmp(bigint->tag, bigint_tag);
+   // LINTED
    return cmp == 0 ? 1 : 0;
 }
 

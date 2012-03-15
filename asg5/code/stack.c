@@ -101,10 +101,12 @@ stack_item peek_stack (stack_ref stack, int index) {
 
 bool is_empty_stack (stack_ref stack) {
    assert (is_stack (stack));
+   // LINTED
    return stack->top == NULL;
 }
 
 bool is_stack (stack_ref stack) {
+   // LINTED
    return stack->tag == stack_tag;
 }
 
