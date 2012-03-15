@@ -126,14 +126,12 @@ static bigint_ref do_sub (bigint_ref left, bigint_ref right) {
       }
       else carry = 0;
       assert (diff >= 0);
-      res->buffer[i] = diff; //% 10;
-//      carry = diff / 10;
+      res->buffer[i] = diff;
    }
-   if (size == stop) res->buffer[stop] = carry;
 
    char sum;
    for (size_t i=stop ; i<size ; i++) {
-      sum = lbuf[i] + carry;
+      sum = lbuf[i] - carry;
       res->buffer[i] = sum % 10;
       carry = sum / 10;
    }
@@ -151,25 +149,30 @@ static bigint_ref do_mul (bigint_ref left, bigint_ref right) {
    char *lbuf, *rbuf;
    lbuf = left->buffer;
    rbuf = right->buffer;
-   /*printf("left: %d", lbuf[0]);*/
-
    bigint_ref tmpbig = new_bigint (size);
    char *tbuf = tmpbig->buffer;
 
    char mul, rem;
    rem = 0;
-   size_t oset = 0;
    for (size_t i=0 ; i<left->digits ; i++) {
-      for(size_t j=0 ; j<right->digits ; j++) {
+
+      for (size_t j=0 ; j<right->digits ; j++) {
          mul = lbuf[i] * rbuf[j] + rem;
-         tbuf[j+oset] = mul % 10;
+         assert (mul >= 0);
+         tbuf[j+i] = mul % 10;
          rem = mul / 10;
       }
-      /*printf("tbuf : %d %d\n", tbuf[0], tbuf[1]);*/
-      tbuf[left->digits+oset] = rem;
+      tbuf[right->digits+i] = rem;
+      rem = 0;
+
+      tmpbig->digits = right->digits+i+1;
       assert (tmpbig != NULL);
+      /*printf("tmp= ");*/
+      /*print_bigint(tmpbig);*/
       res = do_add (res, tmpbig);
-      oset++;
+      memset(tbuf, 0, size*sizeof (char));
+      /*printf("tmpemp= ");*/
+      /*print_bigint(tmpbig);*/
    }
    trim_zeros(res);
    return res;
@@ -185,13 +188,12 @@ bigint_ref add_bigint (bigint_ref left, bigint_ref right) {
       res = do_add(left, right);
       res->is_negative = left->is_negative;
    } else {
-      char cmp = cmpbig (left, right);
-      if (cmp >= 0) {
-        res = do_sub(left, right);
-        res->is_negative = left->is_negative;
+      if (right->is_negative) {
+         right->is_negative = false;
+         res = sub_bigint(left, right);
       } else {
-        res = do_sub(left, right);
-        res->is_negative = right->is_negative;
+         left->is_negative = false;
+         res = sub_bigint(right, left);
       }
    }
    return res;
@@ -236,7 +238,7 @@ bigint_ref mul_bigint (bigint_ref left, bigint_ref right) {
    else
       res = do_mul (right, left);
 
-   res->is_negative = left->is_negative * right->is_negative;
+   res->is_negative = left->is_negative ^ right->is_negative;
    return res;
 }
 
@@ -282,10 +284,13 @@ void print_bigint (bigint_ref bigint) {
    size_t size = bigint->digits;
    if (bigint->is_negative)
       printf("-");
+   size_t count = 1;
    for (int i=size-1 ; ; i--) {
       assert (bigint->buffer[i] >= 0);
+      if (count % 70 == 0) printf("\\\n");
       printf("%d", bigint->buffer[i]);
       if (i == 0) break;
+      count++;
    }
    printf("\n");
 }
