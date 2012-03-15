@@ -20,7 +20,7 @@ char *execname = NULL;
 bool not_enough (stack_ref stack, int enough) {
    /*DO_NOTHING(false);*/
    if (length_stack (stack) >= enough) return false;
-   printf ("%s: stack empty\n", execname);
+   fprintf (stdin, "%s: stack empty\n", execname);
    return true;
 }
 
